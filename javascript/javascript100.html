@@ -175,7 +175,6 @@
 
     ol {
       list-style: none;
-      margin-bottom: 40px;
     }
 
     ol li {
@@ -205,7 +204,7 @@
       color: #fff;
     }
 
-    .mt20{
+    .mt20 {
       margin-top: 20px;
     }
   </style>
@@ -227,7 +226,7 @@
     <li><a href="javascript200.html">반복문</a></li>
   </ol>
 
-  <h2>데이터 저장하기</h2>
+  <h2 class="mt20">데이터 저장하기</h2>
   <ul>
     <li><a href="#sample1">01. 변수 : 데이터 저장</a></li>
     <li><a href="#sample2">02. 변수 : 데이터 저장 + 데이터 변경</a></li>
@@ -717,7 +716,7 @@
       document.write(obj.b, "<br>");
       document.write(obj.c, "<br><br>");
     }
-    
+
     //sample11
     // 11. 객체 : 데이터 저장(키와 값) : 표현 방법3 : 키워드 생략
     {
@@ -735,7 +734,7 @@
     //sample12
     //12. 객체 : 데이터 저장(키와 값) : 표현 방법4 
     {
-      const obj = {a:100,b:200,c:"javascript"};
+      const obj = { a: 100, b: 200, c: "javascript" };
 
       document.write("*** 12. 객체 ***<br>");
       document.write(obj.a, "<br>");
@@ -747,8 +746,8 @@
     //13. 객체 : 데이터 저장(키와 값) : 표현 방법5 : 배열 속에 객체
     {
       const obj = [
-        {a:100, b:200},
-        {c:"javascript"}
+        { a: 100, b: 200 },
+        { c: "javascript" }
       ];
 
       document.write("*** 13. 객체 ***<br>");
@@ -761,9 +760,9 @@
     //14. 객체 : 데이터 저장(키와 값) : 표현 방법5 : 객체 속에 배열
     {
       const obj = {
-        a:100,
-        b:[200,300],
-        c:"javascript"
+        a: 100,
+        b: [200, 300],
+        c: "javascript"
       };
 
       document.write("*** 14. 객체 ***<br>");
@@ -781,7 +780,7 @@
       const b = 200;
       const c = "javascript";
 
-      const obj = {a, b, c};
+      const obj = { a, b, c };
 
       document.write("*** 15. 객체 ***<br>");
       document.write(obj.a, "<br>");
@@ -796,17 +795,17 @@
         a: 100,
         b: [200, 300],
         c: "javascript",
-        d: function(){
+        d: function () {
           document.write("자바스크립트가 실행 되었습니다.<br>");
         },
-        e: function(){
+        e: function () {
           document.write(obj.c + "가 실행 되었습니다.<br>");
         },
-        f: function(){
+        f: function () {
           document.write(this.c + "가 실행 되었습니다.<br>");
-        }       
+        }
       }
-      
+
       document.write("*** 16. 객체 ***<br>");
       document.write(obj.a, "<br>");
       document.write(obj.b, "<br>");
@@ -817,7 +816,7 @@
       obj.e();
       obj.f();
     }
-    
+
   </script>
 </body>
 
