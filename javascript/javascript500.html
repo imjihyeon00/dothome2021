@@ -409,6 +409,23 @@
 
         //7월 26일 숙제
         //배열 데이터의 합을 출력하세요!!
+        {
+            const arr = [100, 200, 300, 400, 500];
+            let sum = 0;
+            document.write("*** 7월 26일 숙제 : 배열 데이터의 합을 출력하세요!! ***<br>");
+            for (let i = 0; i < arr.length; i++) {
+                sum+=arr[i];
+                document.write(arr[i]);
+                if(i < arr.length-1){
+                  document.write(" + ");
+                }else {
+                  document.write(" = ");
+
+                }
+            }
+            document.write(sum, "<br>");
+        }
+
 
     </script>
 </body>
