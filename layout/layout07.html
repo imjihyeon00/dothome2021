@@ -87,7 +87,6 @@
         #content2-inner {
             height: 1270px;
             line-height: 1270px;
-            clear: both;
         }
 
         #content3 {
@@ -107,7 +106,7 @@
         .container {
             width: 1200px;
             height: inherit;
-            background-color: rgba(0, 0, 0, 0.3);
+            background-color: rgba(190, 78, 185, 0.3);
             margin: 0 auto;
         }
     </style>
@@ -127,17 +126,21 @@
 
         <div id="contents">
             <div id="content1">
-                <div id="title" class="container">title</div>
-                <div id="content1-inner" class="container">content1</div>
+                <div class="container">
+                    <div id="title">title</div>
+                    <div id="content1-inner">content1</div>
+                </div>
             </div>
             <!-- content1 -->
 
             <div id="content2">
-                <div id="box">
-                    <div class="box-inner">box1</div>
-                    <div class="box-inner">box2</div>
+                <div class="container">
+                    <div id="box">
+                        <div class="box-inner ">box1</div>
+                        <div class="box-inner ">box2</div>
+                    </div>
+                    <div id="content2-inner">content2</div>
                 </div>
-                <div id="content2-inner" class="container">content2</div>
             </div>
             <!-- content2 -->
 
