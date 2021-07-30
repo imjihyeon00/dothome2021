@@ -600,15 +600,17 @@
         searchBox.addEventListener("keyup", () => {   //키보드 이벤트
             const searchWord = searchBox.value;      //사용자가 입력한 정보
 
-            cssList.forEach((el, idx) => {
-
-                const cssName = el.dataset.name;
-                const cssTopic = el.dataset.topic;
-
-                if (searchWord.charAt(0) === cssName.charAt(0) || searchWord.charAt(0) === cssTopic.charAt(0)) {
-                    el.classList.remove("hide");
-                } else {
-                    el.classList.add("hide");
+            cssProp.find(el => {
+                if (el.name === searchWord) {
+                    cssList.forEach(list => {
+                        const cssName = list.dataset.name;
+                        const cssTopic = list.dataset.topic;
+                        if (el.name === cssName) {
+                            list.classList.remove('hide');
+                        } else {
+                            list.classList.add('hide');
+                        }
+                    });
                 }
             });
         });
