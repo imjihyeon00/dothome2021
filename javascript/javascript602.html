@@ -833,7 +833,7 @@
     const text5 = str.slice(5, 1);
     document.querySelector(".sample07_R5").innerHTML = text5;
 
-    const text6 = str.substring(6, 1);
+    const text6 = str.substring(5, 1);
     document.querySelector(".sample07_R6").innerHTML = text6;
 
     const text7 = str.substr(4, 2);
@@ -1084,7 +1084,7 @@
 
       document.querySelector(".sample04_N1").innerHTML = "1";
       document.querySelector(".sample04_Q1").innerHTML = "'&nbsp;&nbsp;&nbsp;javascript&nbsp;&nbsp;&nbsp;'";
-      document.querySelector(".sample04_M1").innerHTML = "toUpperCase()";
+      document.querySelector(".sample04_M1").innerHTML = " trim()";
       document.querySelector(".sample04_R1").innerHTML = currentStr1;
     }
 
@@ -1157,12 +1157,14 @@
       document.querySelector(".sample05_M9").innerHTML = "includes('jquery')";
       document.querySelector(".sample05_R9").innerHTML = text9;
 
+      //해당 문자열이 특정 문자열로 시작하는지 확인하는 메소드
       const text10 = str.startsWith("자바스크립트");
       document.querySelector(".sample05_N10").innerHTML = "10";
       document.querySelector(".sample05_Q10").innerHTML = str;
       document.querySelector(".sample05_M10").innerHTML = "startsWith('자바스크립트')";
       document.querySelector(".sample05_R10").innerHTML = text10;
 
+      //해당 문자열이 특정 문자열로 끝나는지 확인하는 메소드
       const text11 = str.endsWith("javascript");
       document.querySelector(".sample05_N11").innerHTML = "11";
       document.querySelector(".sample05_Q11").innerHTML = str;
@@ -1179,7 +1181,7 @@
 
       document.querySelector(".sample06_N1").innerHTML = "1";
       document.querySelector(".sample06_Q1").innerHTML = str;
-      document.querySelector(".sample06_M1").innerHTML = "charAt(3)";
+      document.querySelector(".sample06_M1").innerHTML = "charAt(4)";
       document.querySelector(".sample06_R1").innerHTML = text1;
 
       //charAt()을 공란으로 두면 0번째 인덱스의 글자를 가져온다
