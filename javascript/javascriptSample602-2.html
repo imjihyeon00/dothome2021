@@ -114,7 +114,7 @@
             display: none;
         }
 
-        .search-result{
+        .search-result {
             font-family: 'GyeonggiBatang';
             padding: 20px;
             background-color: #BDD6E6;
@@ -170,7 +170,7 @@
                 <input id="search-box" class="search-input" type="text">
             </div>
             <div class="search-result">
-                
+
             </div>
         </div>
         <div class="girl">
@@ -384,29 +384,29 @@
             { name: "word-wrap", desc: "줄바꿈을 설정합니다." },
             { name: "z-index", desc: "요소의 위치가 겹칠 경우 순서를 정의합니다." }
         ];
-        
+
         // const searchBox = document.getElementById('search-Box');
         const searchInput = document.querySelector('.search-input');
         const searchResult = document.querySelector('.search-result');
 
-        searchInput.addEventListener('keyup',()=>{    //input에 keyup이벤트가 일어날 때 실행
+        searchInput.addEventListener('keyup', () => {    //input에 keyup이벤트가 일어날 때 실행
             const searchWord = searchInput.value; //input박스의 작성된 값
-            
+
             findDesc(searchWord);
         });
 
-        function findDesc(searchWord){
+        function findDesc(searchWord) {
             //사용자 입력 값과 데이터 값의 일치여부
             const findData = cssProp.find(el => el.name === searchWord);
-            
-            if(findData == undefined){
+
+            if (findData == undefined) {
                 searchResult.textContent = '*** 해당 속성이 존재하지 않습니다. ***';
             } else {
                 //데이터 있으면 출력
                 searchResult.textContent = findData.desc;
             }
         }
-  
+
         //사용자가 쓴 데이터 값 => searchWord
 
 
