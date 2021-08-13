@@ -52,14 +52,15 @@
     .title {
       border-top: 3px solid #0c43f1;
       border-bottom: 1px solid #0c43f1;
-      padding: 15px 0 10px;
       margin-bottom: 20px;
     }
 
-    .title h1 {
+    .title h1 a {
       font-family: 'TmonMonsori';
       color: #0c43f1;
-      font-size: 4vw;
+      font-size: 50px;
+      display: inline-block;
+      padding: 15px 0 12px;
       text-transform: uppercase;
     }
 
@@ -82,12 +83,47 @@
       border-radius: 50px;
       font-size: 16px;
       margin: 4px 1px;
+      box-shadow: inset 0 0 0 #0c43f1;
+      transition: all 0.4s;
+    }
+
+    .menu li a:hover {
+      box-shadow: inset 0 -100px 0 #0c43f1;
+      color: #fff;
+      border-style: solid;
     }
 
     .list a {
       font-family: 'NEXON Lv1 Gothic OTF';
       font-size: 14px;
       line-height: 1.4;
+    }
+
+    @media (max-width: 800px) {
+      #wrap {
+        margin: 0;
+      }
+
+      .title h1 {
+        text-align: center;
+      }
+
+      .title h1 a {
+        font-size: 40px;
+      }
+
+      .menu {
+        text-align: center;
+      }
+
+      .menu li a {
+        font-size: 12px;
+        padding: 5px 20px;
+      }
+
+      .list li a {
+        font-size: 12px;
+      }
     }
   </style>
 </head>
@@ -96,7 +132,7 @@
   <div id="wrap">
     <main id="contents">
       <div class="title">
-        <h1>데이터 저장하기</h1>
+        <h1><a href="index.html">데이터 저장하기</a></h1>
       </div>
       <nav class="menu">
         <ul>
