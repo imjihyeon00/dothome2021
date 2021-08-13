@@ -39,7 +39,7 @@
     }
 
     h1 {
-      padding: 20px 0;
+      padding: 40px 0 20px 0;
     }
 
     h1 a {
@@ -238,9 +238,9 @@
     .view table {
       width: 100%;
       /* border-width: 1px;
-        border-style: solid;
-        border-color: #e6e6e6;
-      */
+          border-style: solid;
+          border-color: #e6e6e6;
+        */
       /* 속기형 작성법 */
       border: 1px solid #e6e6e6;
       text-align: center;
@@ -250,15 +250,15 @@
 
     .view table th {
       /* 
-      padding-top: 13px;
-      padding-right: 5px;
-      padding-bottom: 11px;
-      padding-left: 5px; 
-      padding: 13px 5px 11px 5px;  위 오른쪽 아래 왼쪽
-      padding: 13px 5px 11px;      위 왼쪽,오른쪽 아래
-      padding: 13px 5px;           위,아래 왼쪽,오른쪽
-      padding: 13px;               위,오른쪽,아래,왼쪽
-      */
+        padding-top: 13px;
+        padding-right: 5px;
+        padding-bottom: 11px;
+        padding-left: 5px; 
+        padding: 13px 5px 11px 5px;  위 오른쪽 아래 왼쪽
+        padding: 13px 5px 11px;      위 왼쪽,오른쪽 아래
+        padding: 13px 5px;           위,아래 왼쪽,오른쪽
+        padding: 13px;               위,오른쪽,아래,왼쪽
+        */
       padding: 13px 5px 11px 5px;
     }
 
@@ -270,7 +270,7 @@
     .view table td.result {
       color: #fff;
       transition: all 0.3s;
-      cursor: pointer;
+      cursor: zoom-in;
     }
 
     .view table td.result:hover {
@@ -293,6 +293,14 @@
     }
 
     @media (max-width: 800px) {
+      body {
+        font-size: 13px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
       .menu li a {
         font-size: 12px;
         padding: 5px 20px;
@@ -307,8 +315,9 @@
       }
 
       .sample h2 {
-        padding: 12px 10px 10px 10px;
+        padding: 7px 5px 5px;
         font-size: 14px;
+        font-weight: normal;
       }
 
       .sample h2 .dot {
@@ -317,6 +326,20 @@
 
       .sample pre {
         font-size: 14px;
+      }
+
+      .view {
+        padding: 5px;
+        max-width: 800px;
+        overflow-x: scroll;
+      }
+
+      .view th {
+        font-weight: normal;
+      }
+
+      .view table td.result {
+        color: #000;
       }
 
       #top {
