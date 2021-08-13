@@ -64,6 +64,10 @@
       list-style: none;
     }
 
+    ol {
+      padding-left: 2px;
+    }
+
     a {
       text-decoration: none;
       color: #333;
@@ -231,6 +235,61 @@
       border-style: solid;
     }
 
+    .view {
+      padding: 20px;
+    }
+
+    .view table {
+      width: 100%;
+      /* border-width: 1px;
+          border-style: solid;
+          border-color: #e6e6e6;
+        */
+      /* 속기형 작성법 */
+      border: 1px solid #e6e6e6;
+      text-align: center;
+      vertical-align: center;
+      border-collapse: collapse;
+    }
+
+    .view table th {
+      /* 
+        padding-top: 13px;
+        padding-right: 5px;
+        padding-bottom: 11px;
+        padding-left: 5px; 
+        padding: 13px 5px 11px 5px;  위 오른쪽 아래 왼쪽
+        padding: 13px 5px 11px;      위 왼쪽,오른쪽 아래
+        padding: 13px 5px;           위,아래 왼쪽,오른쪽
+        padding: 13px;               위,오른쪽,아래,왼쪽
+        */
+      padding: 13px 5px 11px 5px;
+    }
+
+    .view table td {
+      border: 1px solid #e6e6e6;
+      padding: 13px 5px 11px 5px;
+    }
+
+    .view table td.result {
+      color: #fff;
+      transition: all 0.3s;
+      cursor: zoom-in;
+    }
+
+    .view table td.result:hover {
+      color: #333;
+      background-color: #f5f5f5;
+    }
+
+    .sam {
+      background-color: #000;
+      color: #fff;
+      border-radius: 30px;
+      padding: 0 20px;
+      margin-left: 5px;
+    }
+
     @media (max-width:1200px) {
       .sample h2 {
         padding-right: 60px;
@@ -260,8 +319,9 @@
       }
 
       .sample h2 {
-        padding: 12px 10px 10px 10px;
+        padding: 7px 5px 5px;
         font-size: 14px;
+        font-weight: normal;
       }
 
       .sample h2 .dot {
@@ -270,6 +330,27 @@
 
       .sample pre {
         font-size: 14px;
+      }
+
+      .view {
+        padding: 5px;
+        max-width: 800px;
+        overflow: auto;
+      }
+
+      .view th {
+        font-weight: normal;
+      }
+
+      .view table th,
+      .view table td {
+        font-size: 13px;
+        white-space: nowrap;
+      }
+
+      .view table td.result {
+        color: #4e4e4e;
+        background-color: #f1f1f1;
       }
 
       #top {
@@ -329,23 +410,25 @@
   </nav>
 
   <h2 class="mt20">데이터 제어하기</h2>
-  <ul class="list">
-    <li><a href="#sample1">01. if문<a></li>
-    <li><a href="#sample2">02. 다중 if문</a></li>
-    <li><a href="#sample3">03. 중첩 if문</a></li>
-    <li><a href="#sample4">04. switch문</a></li>
-    <li><a href="#sample5">05. 삼항 연산자</a></li>
-    <li><a href="#sample6">06. if문 생략</a></li>
-    <li><a href="#sample7">07. while문</a></li>
-    <li><a href="#sample8">08. do while문</a></li>
-    <li><a href="#sample9">09. for문</a></li>
-    <li><a href="#sample10">10. 중첩 for문</a></li>
-    <li><a href="#sample11">11. forEach()</a></li>
-    <li><a href="#sample12">12. for of문</a></li>
-    <li><a href="#sample13">13. for in문</a></li>
-    <li><a href="#sample14">14. break문</a></li>
-    <li><a href="#sample15">15. continue문</a></li>
-  </ul>
+  <div class="list">
+    <ol>
+      <li><a href="#sample1">if문<a></li>
+      <li><a href="#sample2">다중 if문</a></li>
+      <li><a href="#sample3">중첩 if문</a></li>
+      <li><a href="#sample4">switch문</a></li>
+      <li><a href="#sample5">삼항 연산자</a></li>
+      <li><a href="#sample6">if문 생략</a></li>
+      <li><a href="#sample7">while문</a></li>
+      <li><a href="#sample8">do while문</a></li>
+      <li><a href="#sample9">for문</a></li>
+      <li><a href="#sample10">중첩 for문</a></li>
+      <li><a href="#sample11">forEach()</a></li>
+      <li><a href="#sample12">for of문</a></li>
+      <li><a href="#sample13">for in문</a></li>
+      <li><a href="#sample14">break문</a></li>
+      <li><a href="#sample15">continue문</a></li>
+    </ol>
+  </div>
   <hr>
 
   <!-- sample1 -->

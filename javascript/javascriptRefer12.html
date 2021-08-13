@@ -64,6 +64,10 @@
       list-style: none;
     }
 
+    ol {
+      padding-left: 2px;
+    }
+
     a {
       text-decoration: none;
       color: #333;
@@ -238,9 +242,9 @@
     .view table {
       width: 100%;
       /* border-width: 1px;
-        border-style: solid;
-        border-color: #e6e6e6;
-      */
+          border-style: solid;
+          border-color: #e6e6e6;
+        */
       /* 속기형 작성법 */
       border: 1px solid #e6e6e6;
       text-align: center;
@@ -250,15 +254,15 @@
 
     .view table th {
       /* 
-      padding-top: 13px;
-      padding-right: 5px;
-      padding-bottom: 11px;
-      padding-left: 5px; 
-      padding: 13px 5px 11px 5px;  위 오른쪽 아래 왼쪽
-      padding: 13px 5px 11px;      위 왼쪽,오른쪽 아래
-      padding: 13px 5px;           위,아래 왼쪽,오른쪽
-      padding: 13px;               위,오른쪽,아래,왼쪽
-      */
+        padding-top: 13px;
+        padding-right: 5px;
+        padding-bottom: 11px;
+        padding-left: 5px; 
+        padding: 13px 5px 11px 5px;  위 오른쪽 아래 왼쪽
+        padding: 13px 5px 11px;      위 왼쪽,오른쪽 아래
+        padding: 13px 5px;           위,아래 왼쪽,오른쪽
+        padding: 13px;               위,오른쪽,아래,왼쪽
+        */
       padding: 13px 5px 11px 5px;
     }
 
@@ -315,8 +319,9 @@
       }
 
       .sample h2 {
-        padding: 12px 10px 10px 10px;
+        padding: 7px 5px 5px;
         font-size: 14px;
+        font-weight: normal;
       }
 
       .sample h2 .dot {
@@ -325,6 +330,27 @@
 
       .sample pre {
         font-size: 14px;
+      }
+
+      .view {
+        padding: 5px;
+        max-width: 800px;
+        overflow: auto;
+      }
+
+      .view th {
+        font-weight: normal;
+      }
+
+      .view table th,
+      .view table td {
+        font-size: 13px;
+        white-space: nowrap;
+      }
+
+      .view table td.result {
+        color: #4e4e4e;
+        background-color: #f1f1f1;
       }
 
       #top {
@@ -385,14 +411,16 @@
 
 
   <h2 class="mt20">문자열 객체 샘플</h2>
-  <ul class="list">
-    <li><a href="javascriptSample01.html">01. CSS 속성 첫 글자만 검색하기</a><a class="sam"
-        href="javascriptRefer05.html#sample06">charAt()</a></li>
-    <li><a href="javascriptSample02.html">02. CSS 속성 검색하면 설명 보여주기</a><a class="sam"
-        href="javascriptRefer06.html#sample10">find()</a></li>
-    <li><a href="javascriptSample03.html#sample06">03. CSS 속성 정렬하기</a><a class="sam"
-        href="javascriptRefer06.html#sample06">sort()</a></li>
-  </ul>
+  <div class="list">
+    <ol>
+      <li><a href="javascriptSample01.html">CSS 속성 첫 글자만 검색하기</a><a class="sam"
+          href="javascriptRefer05.html#sample06">charAt()</a></li>
+      <li><a href="javascriptSample02.html">CSS 속성 검색하면 설명 보여주기</a><a class="sam"
+          href="javascriptRefer06.html#sample10">find()</a></li>
+      <li><a href="javascriptSample03.html#sample06">CSS 속성 정렬하기</a><a class="sam"
+          href="javascriptRefer06.html#sample06">sort()</a></li>
+    </ol>
+  </div>
   <!-- <h2 class="mt20">샘플</h2>
   <ul>
     <li><a href="javascriptSample603-1.html">01. HTML 요소 첫 글자만 검색하기</a></li>
@@ -400,10 +428,12 @@
     <li><a href="javascriptSample603-3.html">03. HTML 요소 정렬하기</a></li>
   </ul> -->
   <h2 class="mt20">날짜 객체 샘플</h2>
-  <ul class="list">
-    <li><a href="javascriptSample04.html">01. 시계 만들기</a><a class="sam"
-        href="javascriptRefer07.html#sample01">getHours()</a></a></li>
-  </ul>
+  <div class="list">
+    <ol>
+      <li><a href="javascriptSample04.html">시계 만들기</a><a class="sam"
+          href="javascriptRefer07.html#sample01">getHours()</a></a></li>
+    </ol>
+  </div>
   <hr>
 
 </body>

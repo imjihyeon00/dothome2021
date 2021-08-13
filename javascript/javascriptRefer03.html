@@ -64,6 +64,10 @@
       list-style: none;
     }
 
+    ol {
+      padding-left: 2px;
+    }
+
     a {
       text-decoration: none;
       color: #333;
@@ -231,6 +235,61 @@
       border-style: solid;
     }
 
+    .view {
+      padding: 20px;
+    }
+
+    .view table {
+      width: 100%;
+      /* border-width: 1px;
+          border-style: solid;
+          border-color: #e6e6e6;
+        */
+      /* 속기형 작성법 */
+      border: 1px solid #e6e6e6;
+      text-align: center;
+      vertical-align: center;
+      border-collapse: collapse;
+    }
+
+    .view table th {
+      /* 
+        padding-top: 13px;
+        padding-right: 5px;
+        padding-bottom: 11px;
+        padding-left: 5px; 
+        padding: 13px 5px 11px 5px;  위 오른쪽 아래 왼쪽
+        padding: 13px 5px 11px;      위 왼쪽,오른쪽 아래
+        padding: 13px 5px;           위,아래 왼쪽,오른쪽
+        padding: 13px;               위,오른쪽,아래,왼쪽
+        */
+      padding: 13px 5px 11px 5px;
+    }
+
+    .view table td {
+      border: 1px solid #e6e6e6;
+      padding: 13px 5px 11px 5px;
+    }
+
+    .view table td.result {
+      color: #fff;
+      transition: all 0.3s;
+      cursor: zoom-in;
+    }
+
+    .view table td.result:hover {
+      color: #333;
+      background-color: #f5f5f5;
+    }
+
+    .sam {
+      background-color: #000;
+      color: #fff;
+      border-radius: 30px;
+      padding: 0 20px;
+      margin-left: 5px;
+    }
+
     @media (max-width:1200px) {
       .sample h2 {
         padding-right: 60px;
@@ -260,8 +319,9 @@
       }
 
       .sample h2 {
-        padding: 12px 10px 10px 10px;
+        padding: 7px 5px 5px;
         font-size: 14px;
+        font-weight: normal;
       }
 
       .sample h2 .dot {
@@ -270,6 +330,27 @@
 
       .sample pre {
         font-size: 14px;
+      }
+
+      .view {
+        padding: 5px;
+        max-width: 800px;
+        overflow: auto;
+      }
+
+      .view th {
+        font-weight: normal;
+      }
+
+      .view table th,
+      .view table td {
+        font-size: 13px;
+        white-space: nowrap;
+      }
+
+      .view table td.result {
+        color: #4e4e4e;
+        background-color: #f1f1f1;
       }
 
       #top {
@@ -329,31 +410,33 @@
   </nav>
 
   <h2 class="mt20">데이터 실행하기</h2>
-  <ul class="list">
-    <li><a href="#sample01">01. 선언적 함수</a></li>
-    <li><a href="#sample02">02. 익명 함수</a></li>
-    <li><a href="#sample03">03. 매개변수 함수</a></li>
-    <li><a href="#sample04">04. 리턴값 함수</a></li>
-    <li><a href="#sample05">05. 화살표 함수 : 선언적 함수</a></li>
-    <li><a href="#sample06">06. 화살표 함수 : 익명 함수</a></li>
-    <li><a href="#sample07">07. 화살표 함수: 리턴값 함수</a></li>
-    <li><a href="#sample08">08. 화살표 함수 : 익명함수 + 매개변수 + 리턴값</a></li>
-    <li><a href="#sample09">09. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략</a></li>
-    <li><a href="#sample10">10. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</a></li>
-    <li><a href="#sample11">11. 화살표 함수 : 선언적함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴생략</a></li>
-    <li><a href="#sample12">12. 내부 함수 : 함수의 충돌을 방지하기 위해서</a></li>
-    <li><a href="#sample13">13. 즉시실행 함수 : 함수의 충돌을 방지하기 위해서</a></li>
-    <li><a href="#sample14">14. 파라미터 함수</a></li>
-    <li><a href="#sample15">15. 아규먼트 함수</a></li>
-    <li><a href="#sample16">16. 재귀 함수</a></li>
-    <li><a href="#sample17">17. 콜백 함수</a></li>
-    <li><a href="#sample18">18. 콜백 함수 : 반복문</a></li>
-    <li><a href="#sample19">19. 콜백 함수 : 동기 / 비동기</a></li>
-    <li><a href="#sample100">20. setInterval()</a></li>
-    <li><a href="#sample100">21. clearInterval()</a></li>
-    <li><a href="#sample200">22. setTimeout()</a></li>
-    <li><a href="#sample200">23. clearTimeout()</a></li>
-  </ul>
+  <div class="list">
+    <ol>
+      <li><a href="#sample01">선언적 함수</a></li>
+      <li><a href="#sample02">익명 함수</a></li>
+      <li><a href="#sample03">매개변수 함수</a></li>
+      <li><a href="#sample04">리턴값 함수</a></li>
+      <li><a href="#sample05">화살표 함수 : 선언적 함수</a></li>
+      <li><a href="#sample06">화살표 함수 : 익명 함수</a></li>
+      <li><a href="#sample07">화살표 함수: 리턴값 함수</a></li>
+      <li><a href="#sample08">화살표 함수 : 익명함수 + 매개변수 + 리턴값</a></li>
+      <li><a href="#sample09">화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략</a></li>
+      <li><a href="#sample10">화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</a></li>
+      <li><a href="#sample11">화살표 함수 : 선언적함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴생략</a></li>
+      <li><a href="#sample12">내부 함수 : 함수의 충돌을 방지하기 위해서</a></li>
+      <li><a href="#sample13">즉시실행 함수 : 함수의 충돌을 방지하기 위해서</a></li>
+      <li><a href="#sample14">파라미터 함수</a></li>
+      <li><a href="#sample15">아규먼트 함수</a></li>
+      <li><a href="#sample16">재귀 함수</a></li>
+      <li><a href="#sample17">콜백 함수</a></li>
+      <li><a href="#sample18">콜백 함수 : 반복문</a></li>
+      <li><a href="#sample19">콜백 함수 : 동기 / 비동기</a></li>
+      <li><a href="#sample100">setInterval()</a></li>
+      <li><a href="#sample100">clearInterval()</a></li>
+      <li><a href="#sample200">setTimeout()</a></li>
+      <li><a href="#sample200">clearTimeout()</a></li>
+    </ol>
+  </div>
   <hr>
 
   <!-- sample01 -->

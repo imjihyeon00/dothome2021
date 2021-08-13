@@ -64,6 +64,10 @@
       list-style: none;
     }
 
+    ol {
+      padding-left: 2px;
+    }
+
     a {
       text-decoration: none;
       color: #333;
@@ -231,6 +235,61 @@
       border-style: solid;
     }
 
+    .view {
+      padding: 20px;
+    }
+
+    .view table {
+      width: 100%;
+      /* border-width: 1px;
+          border-style: solid;
+          border-color: #e6e6e6;
+        */
+      /* 속기형 작성법 */
+      border: 1px solid #e6e6e6;
+      text-align: center;
+      vertical-align: center;
+      border-collapse: collapse;
+    }
+
+    .view table th {
+      /* 
+        padding-top: 13px;
+        padding-right: 5px;
+        padding-bottom: 11px;
+        padding-left: 5px; 
+        padding: 13px 5px 11px 5px;  위 오른쪽 아래 왼쪽
+        padding: 13px 5px 11px;      위 왼쪽,오른쪽 아래
+        padding: 13px 5px;           위,아래 왼쪽,오른쪽
+        padding: 13px;               위,오른쪽,아래,왼쪽
+        */
+      padding: 13px 5px 11px 5px;
+    }
+
+    .view table td {
+      border: 1px solid #e6e6e6;
+      padding: 13px 5px 11px 5px;
+    }
+
+    .view table td.result {
+      color: #fff;
+      transition: all 0.3s;
+      cursor: zoom-in;
+    }
+
+    .view table td.result:hover {
+      color: #333;
+      background-color: #f5f5f5;
+    }
+
+    .sam {
+      background-color: #000;
+      color: #fff;
+      border-radius: 30px;
+      padding: 0 20px;
+      margin-left: 5px;
+    }
+
     @media (max-width:1200px) {
       .sample h2 {
         padding-right: 60px;
@@ -260,8 +319,9 @@
       }
 
       .sample h2 {
-        padding: 12px 10px 10px 10px;
+        padding: 7px 5px 5px;
         font-size: 14px;
+        font-weight: normal;
       }
 
       .sample h2 .dot {
@@ -270,6 +330,27 @@
 
       .sample pre {
         font-size: 14px;
+      }
+
+      .view {
+        padding: 5px;
+        max-width: 800px;
+        overflow: auto;
+      }
+
+      .view th {
+        font-weight: normal;
+      }
+
+      .view table th,
+      .view table td {
+        font-size: 13px;
+        white-space: nowrap;
+      }
+
+      .view table td.result {
+        color: #4e4e4e;
+        background-color: #f1f1f1;
       }
 
       #top {
@@ -329,30 +410,32 @@
   </nav>
 
   <h2 class="mt20">데이터 불러오기</h2>
-  <ul class="list">
-    <li><a href="#sample01">01. 변수 : 데이터 불러오기</a></li>
-    <li><a href="#sample02">02. 상수 : 데이터 불러오기</a></li>
-    <li><a href="#sample03">03. 배열 : 데이터 불러오기</a></li>
-    <li><a href="#sample04">04. 배열: 데이터 불러오기 : 2차 배열</a></li>
-    <li><a href="#sample05">05. 배열: 데이터 불러오기 : 갯수 구하기</a></li>
-    <li><a href="#sample06">06. 배열: 데이터 불러오기 : for문</a></li>
-    <li><a href="#sample07">07. 배열: 데이터 불러오기 : forEach()</a></li>
-    <li><a href="#sample08">08. 배열: 데이터 불러오기 : for of문</a></li>
-    <li><a href="#sample09">09. 배열: 데이터 불러오기 : for in문</a></li>
-    <li><a href="#sample10">10. 배열: 데이터 불러오기 : map()</a></li>
-    <li><a href="#sample11">11. 배열: 데이터 불러오기 : 펼침 연산자</a></li>
-    <li><a href="#sample12">12. 객체: 데이터 불러오기 : 기본</a></li>
-    <li><a href="#sample13">13. 객체: 데이터 불러오기 : Object</a></li>
-    <li><a href="#sample14">14. 객체: 데이터 불러오기 : 변수</a></li>
-    <li><a href="#sample15">15. 객체: 데이터 불러오기 : for in문</a></li>
-    <li><a href="#sample16">16. 객체: 데이터 불러오기 : map()</a></li>
-    <li><a href="#sample17">17. 객체: 데이터 불러오기 : hasOwnProperty()</a></li>
-    <li><a href="#sample18">18. 객체: 데이터 불러오기 : 펼침 연산자 - 복사</a></li>
-    <li><a href="#sample19">19. 객체: 데이터 불러오기 : 펼침 연산자 - 추가</a></li>
-    <li><a href="#sample20">20. 객체: 데이터 불러오기 : 펼침 연산자 - 결합</a></li>
-    <li><a href="#sample21">21. 객체: 데이터 불러오기 : 비구조화 할당</a></li>
-    <li><a href="#sample22">22. 객체: 데이터 불러오기 : 비구조화 할당 : 별도 이름 저장</a></li>
-  </ul>
+  <div class="list">
+    <ol>
+      <li><a href="#sample01">변수 : 데이터 불러오기</a></li>
+      <li><a href="#sample02">상수 : 데이터 불러오기</a></li>
+      <li><a href="#sample03">배열 : 데이터 불러오기</a></li>
+      <li><a href="#sample04">배열: 데이터 불러오기 : 2차 배열</a></li>
+      <li><a href="#sample05">배열: 데이터 불러오기 : 갯수 구하기</a></li>
+      <li><a href="#sample06">배열: 데이터 불러오기 : for문</a></li>
+      <li><a href="#sample07">배열: 데이터 불러오기 : forEach()</a></li>
+      <li><a href="#sample08">배열: 데이터 불러오기 : for of문</a></li>
+      <li><a href="#sample09">배열: 데이터 불러오기 : for in문</a></li>
+      <li><a href="#sample10">배열: 데이터 불러오기 : map()</a></li>
+      <li><a href="#sample11">배열: 데이터 불러오기 : 펼침 연산자</a></li>
+      <li><a href="#sample12">객체: 데이터 불러오기 : 기본</a></li>
+      <li><a href="#sample13">객체: 데이터 불러오기 : Object</a></li>
+      <li><a href="#sample14">객체: 데이터 불러오기 : 변수</a></li>
+      <li><a href="#sample15">객체: 데이터 불러오기 : for in문</a></li>
+      <li><a href="#sample16">객체: 데이터 불러오기 : map()</a></li>
+      <li><a href="#sample17">객체: 데이터 불러오기 : hasOwnProperty()</a></li>
+      <li><a href="#sample18">객체: 데이터 불러오기 : 펼침 연산자 - 복사</a></li>
+      <li><a href="#sample19">객체: 데이터 불러오기 : 펼침 연산자 - 추가</a></li>
+      <li><a href="#sample20">객체: 데이터 불러오기 : 펼침 연산자 - 결합</a></li>
+      <li><a href="#sample21">객체: 데이터 불러오기 : 비구조화 할당</a></li>
+      <li><a href="#sample22">객체: 데이터 불러오기 : 비구조화 할당 : 별도 이름 저장</a></li>
+    </ol>
+  </div>
   <hr>
   <!-- sample1 -->
   <div id="sample01" class="sample">

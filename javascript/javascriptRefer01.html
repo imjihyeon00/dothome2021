@@ -64,6 +64,10 @@
       list-style: none;
     }
 
+    ol {
+      padding-left: 2px;
+    }
+
     a {
       text-decoration: none;
       color: #333;
@@ -231,6 +235,61 @@
       border-style: solid;
     }
 
+    .view {
+      padding: 20px;
+    }
+
+    .view table {
+      width: 100%;
+      /* border-width: 1px;
+          border-style: solid;
+          border-color: #e6e6e6;
+        */
+      /* 속기형 작성법 */
+      border: 1px solid #e6e6e6;
+      text-align: center;
+      vertical-align: center;
+      border-collapse: collapse;
+    }
+
+    .view table th {
+      /* 
+        padding-top: 13px;
+        padding-right: 5px;
+        padding-bottom: 11px;
+        padding-left: 5px; 
+        padding: 13px 5px 11px 5px;  위 오른쪽 아래 왼쪽
+        padding: 13px 5px 11px;      위 왼쪽,오른쪽 아래
+        padding: 13px 5px;           위,아래 왼쪽,오른쪽
+        padding: 13px;               위,오른쪽,아래,왼쪽
+        */
+      padding: 13px 5px 11px 5px;
+    }
+
+    .view table td {
+      border: 1px solid #e6e6e6;
+      padding: 13px 5px 11px 5px;
+    }
+
+    .view table td.result {
+      color: #fff;
+      transition: all 0.3s;
+      cursor: zoom-in;
+    }
+
+    .view table td.result:hover {
+      color: #333;
+      background-color: #f5f5f5;
+    }
+
+    .sam {
+      background-color: #000;
+      color: #fff;
+      border-radius: 30px;
+      padding: 0 20px;
+      margin-left: 5px;
+    }
+
     @media (max-width:1200px) {
       .sample h2 {
         padding-right: 60px;
@@ -260,8 +319,9 @@
       }
 
       .sample h2 {
-        padding: 12px 10px 10px 10px;
+        padding: 7px 5px 5px;
         font-size: 14px;
+        font-weight: normal;
       }
 
       .sample h2 .dot {
@@ -270,6 +330,27 @@
 
       .sample pre {
         font-size: 14px;
+      }
+
+      .view {
+        padding: 5px;
+        max-width: 800px;
+        overflow: auto;
+      }
+
+      .view th {
+        font-weight: normal;
+      }
+
+      .view table th,
+      .view table td {
+        font-size: 13px;
+        white-space: nowrap;
+      }
+
+      .view table td.result {
+        color: #4e4e4e;
+        background-color: #f1f1f1;
       }
 
       #top {
@@ -329,31 +410,35 @@
   </nav>
 
   <h2 class="mt20">데이터 저장하기</h2>
-  <ul class="list">
-    <li><a href="#sample1">01. 변수 : 데이터 저장</a></li>
-    <li><a href="#sample2">02. 변수 : 데이터 저장 + 데이터 변경</a></li>
-    <li><a href="#sample3">03. 변수 : 데이터 저장 + 데이터 변경 + 데이터 추가</a></li>
-    <li><a href="#sample4">04. 상수 : 데이터 저장(변하지 않음)</a></li>
-    <li><a href="#sample5">05. 배열 : 데이터 저장(여러개 저장) : 표현 방법1</a></li>
-    <li><a href="#sample6">06. 배열 : 데이터 저장(여러개 저장) : 표현 방법2</a></li>
-    <li><a href="#sample7">07. 배열 : 데이터 저장(여러개 저장) : 표현 방법3</a></li>
-    <li><a href="#sample8">08. 배열 : 데이터 저장(여러개 저장) : 표현 방법4</a></li>
-    <li><a href="#sample9">09. 객체 : 데이터 저장(키와 값) : 표현 방법1 : 배열 스타일</a></li>
-    <li><a href="#sample10">10. 객체 : 데이터 저장(키와 값) : 표현 방법2 : 객체 스타일</a></li>
-    <li><a href="#sample11">11. 객체 : 데이터 저장(키와 값) : 표현 방법3 : 키워드 생략</a></li>
-    <li><a href="#sample12">12. 객체 : 데이터 저장(키와 값) : 표현 방법4</a></li>
-    <li><a href="#sample13">13. 객체 : 데이터 저장(키와 값) : 표현 방법5 : 배열 속에 객체</a></li>
-    <li><a href="#sample14">14. 객체 : 데이터 저장(키와 값) : 표현 방법6 : 객체 속에 배열</a></li>
-    <li><a href="#sample15">15. 객체 : 데이터 저장(키와 값) : 표현 방법7 : 객체 속에 변수</a></li>
-    <li><a href="#sample16">16. 객체 : 데이터 저장(키와 값) : 표현 방법8 : 객체 속에 함수</a></li>
-  </ul>
+  <div class="list">
+    <ol>
+      <li><a href="#sample1">변수 : 데이터 저장</a></li>
+      <li><a href="#sample2">변수 : 데이터 저장 + 데이터 변경</a></li>
+      <li><a href="#sample3">변수 : 데이터 저장 + 데이터 변경 + 데이터 추가</a></li>
+      <li><a href="#sample4">상수 : 데이터 저장(변하지 않음)</a></li>
+      <li><a href="#sample5">배열 : 데이터 저장(여러개 저장) : 표현 방법1</a></li>
+      <li><a href="#sample6">배열 : 데이터 저장(여러개 저장) : 표현 방법2</a></li>
+      <li><a href="#sample7">배열 : 데이터 저장(여러개 저장) : 표현 방법3</a></li>
+      <li><a href="#sample8">배열 : 데이터 저장(여러개 저장) : 표현 방법4</a></li>
+      <li><a href="#sample9">객체 : 데이터 저장(키와 값) : 표현 방법1 : 배열 스타일</a></li>
+      <li><a href="#sample10">객체 : 데이터 저장(키와 값) : 표현 방법2 : 객체 스타일</a></li>
+      <li><a href="#sample11">객체 : 데이터 저장(키와 값) : 표현 방법3 : 키워드 생략</a></li>
+      <li><a href="#sample12">객체 : 데이터 저장(키와 값) : 표현 방법4</a></li>
+      <li><a href="#sample13">객체 : 데이터 저장(키와 값) : 표현 방법5 : 배열 속에 객체</a></li>
+      <li><a href="#sample14">객체 : 데이터 저장(키와 값) : 표현 방법6 : 객체 속에 배열</a></li>
+      <li><a href="#sample15">객체 : 데이터 저장(키와 값) : 표현 방법7 : 객체 속에 변수</a></li>
+      <li><a href="#sample16">객체 : 데이터 저장(키와 값) : 표현 방법8 : 객체 속에 함수</a></li>
+    </ol>
+  </div>
 
   <h2 class="mt20">추가</h2>
-  <ul>
-    <li><a href="#sample17">01. 변수의 종류 : 변수(전역/지역), 매개변수</a></li>
-    <li><a href="#sample18">02. 변수의 변환 : 형 변환</a></li>
-    <li><a href="#sample19">03. 변수의 유형 : 데이터 타입</a></li>
-  </ul>
+  <div class="list">
+    <ol>
+      <li><a href="#sample17">변수의 종류 : 변수(전역/지역), 매개변수</a></li>
+      <li><a href="#sample18">변수의 변환 : 형 변환</a></li>
+      <li><a href="#sample19">변수의 유형 : 데이터 타입</a></li>
+    </ol>
+  </div>
 
   <hr>
 

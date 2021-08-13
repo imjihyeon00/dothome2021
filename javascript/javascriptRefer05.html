@@ -64,6 +64,10 @@
       list-style: none;
     }
 
+    ol {
+      padding-left: 2px;
+    }
+
     a {
       text-decoration: none;
       color: #333;
@@ -331,7 +335,7 @@
       .view {
         padding: 5px;
         max-width: 800px;
-        overflow-x: auto;
+        overflow: auto;
       }
 
       .view th {
@@ -341,10 +345,12 @@
       .view table th,
       .view table td {
         font-size: 13px;
+        white-space: nowrap;
       }
 
       .view table td.result {
-        color: #000;
+        color: #4e4e4e;
+        background-color: #f1f1f1;
       }
 
       #top {
@@ -404,32 +410,34 @@
   </nav>
 
   <h2 class="mt20">문자열 객체</h2>
-  <ul class="list">
-    <li><a href="#sample01">01. 문자열 : 문자열 합치기</a></li>
-    <li><a href="#sample02">02. 문자열 속성 : length : 문자열 길이 구하기 : 반환(숫자)</a></li>
-    <li><a href="#sample03">03. 문자열 메서드 : toUpperCase() : 문자열 대문자 변경하기 : 반환(문자열)</a></li>
-    <li><a href="#sample03">03. 문자열 메서드 : toLowerCase() : 문자열 소문자 변경하기 : 반환(문자열)</a></li>
-    <li><a href="#sample04">04. 문자열 메서드 : trim() : 문자열 공백 제거하기 : 반환(문자열)</a></li>
-    <li><a href="#sample05">05. 문자열 메서드 : indexOf() : 문자열 검색하기 : 반환(숫자)</a></li>
-    <li><a href="#sample05">05. 문자열 메서드 : lastIndexOf() : 문자열 검색하기 : 반환(숫자)</a></li>
-    <li><a href="#sample05">05. 문자열 메서드 : search() : 문자열 검색하기 : 반환(숫자)</a></li>
-    <li><a href="#sample05">05. 문자열 메서드 : includes() : 문자열 포함여부 : 반환(불린)</a></li>
-    <li><a href="#sample05">05. 문자열 메서드 : startWith() : 문자열 포함여부 : 반환(불린)</a></li>
-    <li><a href="#sample05">05. 문자열 메서드 : endtWith() : 문자열 포함여부 : 반환(불린)</a></li>
-    <li><a href="#sample06">06. 문자열 메서드 : charAt() : 지정한 인덱스의 문자 추출 : 반환(문자)</a><a class="sam"
-        href="javascriptSample01.html">sample</a> </li>
-    <li><a href="#sample07">07. 문자열 메서드 : slice() : 지정한 범위 내의 문자열 추출 : 반환(문자열)</a></li>
-    <li><a href="#sample07">07. 문자열 메서드 : subString() : 지정한 범위 내의 문자열 추출 : 반환(문자열)</a></li>
-    <li><a href="#sample07">07. 문자열 메서드 : substr() : 지정한 범위 내의 문자열 추출 : 반환(문자열)</a></li>
-    <li><a href="#sample08">08. 문자열 메서드 : replace() : 문자열 변경 : 반환(문자열)</a></li>
-    <li><a href="#sample09">09. 문자열 메서드 : split() : 문자열 반환 : 반환(문자열)</a></li>
-    <li><a href="#sample10">10. 문자열 메서드 : padStart() : 문자열 시작 부분에 문자열 추가 : 반환(문자열)</a></li>
-    <li><a href="#sample10">10. 문자열 메서드 : padEnd() : 문자열 끝 부분에 문자열 추가 : 반환(문자열)</a></li>
-    <li><a href="#sample11">11. 문자열 메서드 : encodeURI() : 문자열을 인코딩 : 반환(문자열)</a></li>
-    <li><a href="#sample11">11. 문자열 메서드 : encodeURIComponet() : 문자열을 인코딩 : 반환(문자열)</a></li>
-    <li><a href="#sample11">11. 문자열 메서드 : decodeURI() : 문자열을 디코딩 : 반환(문자열)</a></li>
-    <li><a href="#sample11">11. 문자열 메서드 : decodeURIComponet() : 문자열을 디코딩 : 반환(문자열)</a></li>
-  </ul>
+  <div class="list">
+    <ol>
+      <li><a href="#sample01">문자열 : 문자열 합치기</a></li>
+      <li><a href="#sample02">문자열 속성 : length : 문자열 길이 구하기 : 반환(숫자)</a></li>
+      <li><a href="#sample03">문자열 메서드 : toUpperCase() : 문자열 대문자 변경하기 : 반환(문자열)</a></li>
+      <li><a href="#sample03">문자열 메서드 : toLowerCase() : 문자열 소문자 변경하기 : 반환(문자열)</a></li>
+      <li><a href="#sample04">문자열 메서드 : trim() : 문자열 공백 제거하기 : 반환(문자열)</a></li>
+      <li><a href="#sample05">문자열 메서드 : indexOf() : 문자열 검색하기 : 반환(숫자)</a></li>
+      <li><a href="#sample05">문자열 메서드 : lastIndexOf() : 문자열 검색하기 : 반환(숫자)</a></li>
+      <li><a href="#sample05">문자열 메서드 : search() : 문자열 검색하기 : 반환(숫자)</a></li>
+      <li><a href="#sample05">문자열 메서드 : includes() : 문자열 포함여부 : 반환(불린)</a></li>
+      <li><a href="#sample05">문자열 메서드 : startWith() : 문자열 포함여부 : 반환(불린)</a></li>
+      <li><a href="#sample05">문자열 메서드 : endtWith() : 문자열 포함여부 : 반환(불린)</a></li>
+      <li><a href="#sample06">문자열 메서드 : charAt() : 지정한 인덱스의 문자 추출 : 반환(문자)</a><a class="sam"
+          href="javascriptSample01.html">sample</a> </li>
+      <li><a href="#sample07">문자열 메서드 : slice() : 지정한 범위 내의 문자열 추출 : 반환(문자열)</a></li>
+      <li><a href="#sample07">문자열 메서드 : subString() : 지정한 범위 내의 문자열 추출 : 반환(문자열)</a></li>
+      <li><a href="#sample07">문자열 메서드 : substr() : 지정한 범위 내의 문자열 추출 : 반환(문자열)</a></li>
+      <li><a href="#sample08">문자열 메서드 : replace() : 문자열 변경 : 반환(문자열)</a></li>
+      <li><a href="#sample09">문자열 메서드 : split() : 문자열 반환 : 반환(문자열)</a></li>
+      <li><a href="#sample10">문자열 메서드 : padStart() : 문자열 시작 부분에 문자열 추가 : 반환(문자열)</a></li>
+      <li><a href="#sample10">문자열 메서드 : padEnd() : 문자열 끝 부분에 문자열 추가 : 반환(문자열)</a></li>
+      <li><a href="#sample11">문자열 메서드 : encodeURI() : 문자열을 인코딩 : 반환(문자열)</a></li>
+      <li><a href="#sample11">문자열 메서드 : encodeURIComponet() : 문자열을 인코딩 : 반환(문자열)</a></li>
+      <li><a href="#sample11">문자열 메서드 : decodeURI() : 문자열을 디코딩 : 반환(문자열)</a></li>
+      <li><a href="#sample11">문자열 메서드 : decodeURIComponet() : 문자열을 디코딩 : 반환(문자열)</a></li>
+    </ol>
+  </div>
   <hr>
 
 

@@ -64,6 +64,10 @@
       list-style: none;
     }
 
+    ol {
+      padding-left: 2px;
+    }
+
     a {
       text-decoration: none;
       color: #333;
@@ -238,9 +242,9 @@
     .view table {
       width: 100%;
       /* border-width: 1px;
-        border-style: solid;
-        border-color: #e6e6e6;
-      */
+          border-style: solid;
+          border-color: #e6e6e6;
+        */
       /* 속기형 작성법 */
       border: 1px solid #e6e6e6;
       text-align: center;
@@ -250,15 +254,15 @@
 
     .view table th {
       /* 
-      padding-top: 13px;
-      padding-right: 5px;
-      padding-bottom: 11px;
-      padding-left: 5px; 
-      padding: 13px 5px 11px 5px;  위 오른쪽 아래 왼쪽
-      padding: 13px 5px 11px;      위 왼쪽,오른쪽 아래
-      padding: 13px 5px;           위,아래 왼쪽,오른쪽
-      padding: 13px;               위,오른쪽,아래,왼쪽
-      */
+        padding-top: 13px;
+        padding-right: 5px;
+        padding-bottom: 11px;
+        padding-left: 5px; 
+        padding: 13px 5px 11px 5px;  위 오른쪽 아래 왼쪽
+        padding: 13px 5px 11px;      위 왼쪽,오른쪽 아래
+        padding: 13px 5px;           위,아래 왼쪽,오른쪽
+        padding: 13px;               위,오른쪽,아래,왼쪽
+        */
       padding: 13px 5px 11px 5px;
     }
 
@@ -331,15 +335,22 @@
       .view {
         padding: 5px;
         max-width: 800px;
-        overflow-x: scroll;
+        overflow: auto;
       }
 
       .view th {
         font-weight: normal;
       }
 
+      .view table th,
+      .view table td {
+        font-size: 13px;
+        white-space: nowrap;
+      }
+
       .view table td.result {
-        color: #000;
+        color: #4e4e4e;
+        background-color: #f1f1f1;
       }
 
       #top {
@@ -399,9 +410,11 @@
   </nav>
 
   <h2 class="mt20">이벤트 객체</h2>
-  <ul class="list">
-    <li><a href="#sample01">01. </a></li>
-  </ul>
+  <div class="list">
+    <ol>
+      <li><a href="#sample01"></a></li>
+    </ol>
+  </div>
   <hr>
 
 

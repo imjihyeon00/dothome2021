@@ -64,6 +64,10 @@
       list-style: none;
     }
 
+    ol {
+      padding-left: 2px;
+    }
+
     a {
       text-decoration: none;
       color: #333;
@@ -231,20 +235,59 @@
       border-style: solid;
     }
 
-    #top {
-      width: 50px;
-      height: 50px;
-      background-color: #f5f5f5;
-      border-radius: 50%;
-      position: fixed;
-      bottom: 20px;
-      right: 10px;
-      text-align: center;
-      z-index: 1;
+    .view {
+      padding: 20px;
     }
 
-    #top div {
-      margin: 10px;
+    .view table {
+      width: 100%;
+      /* border-width: 1px;
+          border-style: solid;
+          border-color: #e6e6e6;
+        */
+      /* 속기형 작성법 */
+      border: 1px solid #e6e6e6;
+      text-align: center;
+      vertical-align: center;
+      border-collapse: collapse;
+    }
+
+    .view table th {
+      /* 
+        padding-top: 13px;
+        padding-right: 5px;
+        padding-bottom: 11px;
+        padding-left: 5px; 
+        padding: 13px 5px 11px 5px;  위 오른쪽 아래 왼쪽
+        padding: 13px 5px 11px;      위 왼쪽,오른쪽 아래
+        padding: 13px 5px;           위,아래 왼쪽,오른쪽
+        padding: 13px;               위,오른쪽,아래,왼쪽
+        */
+      padding: 13px 5px 11px 5px;
+    }
+
+    .view table td {
+      border: 1px solid #e6e6e6;
+      padding: 13px 5px 11px 5px;
+    }
+
+    .view table td.result {
+      color: #fff;
+      transition: all 0.3s;
+      cursor: zoom-in;
+    }
+
+    .view table td.result:hover {
+      color: #333;
+      background-color: #f5f5f5;
+    }
+
+    .sam {
+      background-color: #000;
+      color: #fff;
+      border-radius: 30px;
+      padding: 0 20px;
+      margin-left: 5px;
     }
 
     @media (max-width:1200px) {
@@ -276,8 +319,9 @@
       }
 
       .sample h2 {
-        padding: 12px 10px 10px 10px;
+        padding: 7px 5px 5px;
         font-size: 14px;
+        font-weight: normal;
       }
 
       .sample h2 .dot {
@@ -288,9 +332,47 @@
         font-size: 14px;
       }
 
+      .view {
+        padding: 5px;
+        max-width: 800px;
+        overflow: auto;
+      }
+
+      .view th {
+        font-weight: normal;
+      }
+
+      .view table th,
+      .view table td {
+        font-size: 13px;
+        white-space: nowrap;
+      }
+
+      .view table td.result {
+        color: #4e4e4e;
+        background-color: #f1f1f1;
+      }
+
       #top {
         display: none;
       }
+    }
+
+
+    #top {
+      width: 50px;
+      height: 50px;
+      background-color: #f5f5f5;
+      border-radius: 50%;
+      position: fixed;
+      bottom: 20px;
+      right: 10px;
+      text-align: center;
+      z-index: 1;
+    }
+
+    #top div {
+      margin: 10px;
     }
   </style>
 </head>
@@ -328,17 +410,19 @@
   </nav>
 
   <h2 class="mt20">데이터 제어하기</h2>
-  <ul class="list">
-    <li><a href="#sample01">01. 1부터 100까지 출력하기<a></li>
-    <li><a href="#sample02">02. 1부터 100까지 출력하기: 짝수만<a></li>
-    <li><a href="#sample03">03. 1부터 100까지 출력하기: 5의 배수만<a></li>
-    <li><a href="#sample04">04. 1부터 100까지 출력하기: 짝수는 빨간색, 홀수는 파란색 출력<a></li>
-    <li><a href="#sample05">05. 1부터 100까지의 합 출력하기<a></li>
-    <li><a href="#sample06">06. 구구단 출력하기<a></li>
-    <li><a href="#sample07">07. 테이블 만들기1<a></li>
-    <li><a href="#sample08">08. 테이블 만들기2<a></li>
-    <li><a href="#sample09">09. 테이블 만들기3 : 짝수만<a></li>
-  </ul>
+  <div class="list">
+    <ol>
+      <li><a href="#sample01">1부터 100까지 출력하기<a></li>
+      <li><a href="#sample02">1부터 100까지 출력하기: 짝수만<a></li>
+      <li><a href="#sample03">1부터 100까지 출력하기: 5의 배수만<a></li>
+      <li><a href="#sample04">1부터 100까지 출력하기: 짝수는 빨간색, 홀수는 파란색 출력<a></li>
+      <li><a href="#sample05">1부터 100까지의 합 출력하기<a></li>
+      <li><a href="#sample06">구구단 출력하기<a></li>
+      <li><a href="#sample07">테이블 만들기1<a></li>
+      <li><a href="#sample08">테이블 만들기2<a></li>
+      <li><a href="#sample09">테이블 만들기3 : 짝수만<a></li>
+    </ol>
+  </div>
   <hr>
 
   <!-- sample01 -->
