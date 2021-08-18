@@ -493,16 +493,29 @@
     @media (max-width: 800px) {
 
       .view {
-        padding: 10px;
+        padding: 10px 10px 0 10px;
       }
 
       .view li {
         padding: 10px;
-        margin: 0 8px 0 0;
+        margin: 0 8px 8px 0;
       }
 
       .btn {
         padding: 10px;
+      }
+
+      .table {
+        overflow: auto;
+      }
+
+      .table table th {
+        font-weight: normal;
+        white-space: nowrap;
+      }
+
+      .table table td {
+        white-space: nowrap;
       }
     }
   </style>
@@ -650,6 +663,42 @@
       $(".view1 *").addClass("blue");
     });
   </script>
+  <!-- !sample01 -->
+
+  <!-- sample01j -->
+  <div id="sample01j" class="sample">
+    <h2>01. 기본 선택자 - javascript <span class="dot"></span></h2>
+    <div class="view view1j">
+      <ul>
+        <li>$("li")</li>
+        <li class="class">$(".class")</li>
+        <li id="id">$("#id")</li>
+        <li>$(".class, #id")</li>
+        <li>$("*")</li>
+      </ul>
+    </div>
+    <div class="btn btn1">
+      <a href="#c" class="resetj">리셋</a>
+      <a href="#c" class="btn1-1j">클릭하면 클래스(.class)를 선택합니다.</a>
+      <a href="#c" class="btn1-2j">클릭하면 아이디(#id)를 선택합니다.</a>
+      <a href="#c" class="btn1-3j">클릭하면 기본(li) 태그를 선택합니다.</a>
+      <a href="#c" class="btn1-4j">클릭하면 여러가지(.class, #id) 태그를 선택합니다.</a>
+      <a href="#c" class="btn1-5j">클릭하면 전체 태그(*)를 선택합니다.</a>
+    </div>
+    <div class="code">
+      <pre class="line-numbers"><code class="language-js">{
+}
+</code></pre>
+    </div>
+  </div>
+  <hr>
+  <script>
+    const btn1 = document.querySelector(".btn-1j");
+    btn1.addEventListener('click', function () {
+      document.querySelector('.view1j .class').classList.add('red');
+    })
+  </script>
+  <!-- !sample01j -->
 
 
 
