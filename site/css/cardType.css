@@ -1,0 +1,271 @@
+/* 카드 타입 유형 */
+
+body {
+  background-color: #f3f3f3;
+}
+
+.cardType {
+  margin: 150px 0;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+/* chadType01 */
+.cardType01 {
+  font-family: 'GmarketSans';
+  padding: 100px 0;
+}
+
+.cardType01 h2 {
+  font-weight: 500;
+  font-size: 50px;
+  margin-bottom: 7px;
+}
+
+.cardType01 p {
+  font-weight: 200;
+  font-size: 26px;
+  line-height: 1.28;
+  margin-bottom: 40px;
+}
+
+/* float을 이용한 레이아웃 */
+/* .card-wrap {
+  overflow: hidden;
+}
+.card-wrap>div {
+  float: left;
+  width: 387px;
+  margin-right: 19px;
+}
+.card-wrap>div:last-child {
+  margin-right: 0;
+} */
+
+/* flex를 이용한 레이아웃 */
+.cardType01 .card-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardType01 .card-wrap>div {
+  width: 387px;
+}
+
+.cardType01 .card {}
+
+.cardType01 .card .card-img {}
+
+.cardType01 .card .card-title {
+  display: block;
+  font-size: 32px;
+  /* 한 줄 효과 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cardType01 .card .card-desc {
+  display: block;
+  font-size: 20px;
+  font-weight: 300;
+  /* 두 줄 효과 */
+  overflow: hidden;
+  display: -webkit-box;
+  /* 벤터 프리픽스 */
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.cardType01 .card .card-keyword {
+  font-size: 16px;
+  font-weight: 300;
+  opacity: 0.5;
+}
+
+
+/* chadType02 */
+.cardType02 {
+  font-family: S-CoreDream;
+  padding: 97px 0 100px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.cardType02 h2 {
+  font-weight: 500;
+  font-size: 50px;
+  margin: 0 115px 22px 116px;
+  text-align: center;
+}
+
+.cardType02 p {
+  font-weight: 300;
+  font-size: 26px;
+  text-align: center;
+}
+
+.cardType02 .card-wrap {
+  display: grid;
+  grid-template-columns: repeat(4, 285px);
+  gap: 20px;
+}
+
+.cardType02 .card {
+  display: inline-block;
+  width: 285px;
+  height: 356px;
+  margin: 40px 20px 0 0;
+  padding: 15px 15px 16px 14px;
+  border-radius: 5px;
+  border: solid 1px #e6e6e6;
+  box-sizing: border-box;
+}
+
+.cardType02 .card:last-child {
+  margin: 40px 0 0 0;
+}
+
+.cardType02 .card a {}
+
+.cardType02 .card img {}
+
+.cardType02 .card .card-title {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 24px;
+  font-style: normal;
+  margin: 8px 0 6px 0;
+}
+
+.cardType02 .card .card-desc {
+  display: inline-block;
+  font-weight: 300;
+  font-size: 14px;
+  font-style: normal;
+}
+
+.cardType02 .card .card-word {}
+
+.cardType02 .card .card-word span {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 10px;
+  color: #fff;
+  padding: 4px 16px 3px;
+  margin-top: 6px;
+  border-radius: 20px;
+  background-color: #000;
+}
+
+
+/* cardType03 */
+.cardType03 {
+  font-family: NanumSquare;
+  padding: 97px 0 100px;
+  background-color: #fff;
+}
+
+.cardType03 .title {
+  position: relative;
+  margin-bottom: 47px;
+}
+
+.cardType03 .title h2 {
+  font-size: 50px;
+  font-weight: 800;
+  margin-bottom: 22px;
+}
+
+.cardType03 .title .title-desc {
+  display: inline;
+  font-size: 20px;
+  line-height: 1.28;
+}
+
+.cardType03 .title .title-cat{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.cardType03 .title .title-cat span{
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+.cardType03 .title .title-cat span:first-child{
+  color: #ff2626;
+}
+
+.cardType03 .card-wrap {}
+
+.cardType03 .card-wrap .card {
+  margin-top: 30px;
+}
+
+.cardType03 .card-wrap .card a {
+  display: grid;
+  grid-template-columns: 285px 895px;
+  margin-left: 10px;
+  column-gap: 19px;
+}
+
+.cardType03 .card-wrap .card img {
+  border-radius: 10px;
+  grid-row-start: 1;
+  grid-row-end: 5;
+}
+
+.cardType03 .card-wrap .card .contents {
+  position: relative;
+}
+
+.cardType03 .card-wrap .card .card-cat {
+  padding: 1px 14px 4px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* 카테고리 색상 */
+.cardType03 .card-wrap .card .card-cat.html {
+  background-color: #ff5151;
+}
+
+.cardType03 .card-wrap .card .card-cat.css {
+  background-color: #5465ff;
+}
+
+.cardType03 .card-wrap .card .card-cat.javascript {
+  background-color: #ff4646;
+}
+
+.cardType03 .card-wrap .card .card-cat.jquery {
+  background-color: #11c865;
+}
+
+.cardType03 .card-wrap .card .card-title {
+  display: block;
+  font-size: 26px;
+  font-weight: bold;
+  margin: 0 0 14px 0;
+}
+
+.cardType03 .card-wrap .card .card-desc {
+  font-size: 15px;
+  line-height: 1.53;
+  color: #555;
+  margin: 0 0 17px 0;
+}
+
+.cardType03 .card-wrap .card .card-date {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.4;
+  color: #555;
+  text-decoration: underline;
+}
