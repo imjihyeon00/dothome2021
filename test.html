@@ -1,51 +1,88 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
-    <script>
-        let inputStr = prompt('제일 먼저 잡고 싶은 물건은 무엇인가요?','1. 과일, 2. 떡, 3. 수정구슬, 4. 현찰, 5. 반지');
-        
-        //switch문
-        switch(inputStr){
-            case '과일':
-                document.write('당신은 생각이 많고 진지해 보이는 연상 타입입니다.');
-            break;
-            case '떡':
-                document.write('당신은 무드에 약해 화술과 매너가 좋은 타입입니다.');
-            break;
-            case '수정구슬':
-                document.write('당신은 정열적이고 열중하는 타입입니다.');
-            break;
-            case '현찰':
-                document.write('당신은 부드럽고 따뜻한 타입입니다.');
-            break;
-            case '반지':
-                document.write('당신은 자기를 보호해 줄 수 있는 이성 타입입니다.');
-            break;
-            default:
-                document.write('유효하지 않은 값입니다.');
-            break;
+    <style>
+        body {
+            background-color: #fce4ec;
         }
 
-        //if문
-        if(inputStr === '과일'){
-            document.write('당신은 생각이 많고 진지해 보이는 연상 타입입니다.');
-        } else if(inputStr === '떡'){
-            document.write('당신은 무드에 약해 화술과 매너가 좋은 타입입니다.');
-        } else if(inputStr === '수정구슬'){
-            document.write('당신은 정열적이고 열중하는 타입입니다.');
-        } else if(inputStr === '현찰'){
-            document.write('당신은 부드럽고 따뜻한 타입입니다.');
-        } else if(inputStr === '반지'){
-            document.write('당신은 자기를 보호해 줄 수 있는 이성 타입입니다.');
-        } else {
-            document.write('유효하지 않은 값입니다.');
+        .wrap {
+            width: 1200px;
+            height: 100vh;
+            margin: 0 auto;
+            color: #fff;
+            font-size: 30px;
+            text-align: center;
         }
-    </script>
+
+        header {
+            height: 10%;
+            background-color: #880e4f;
+        }
+
+        nav {
+            height: 10%;
+            background-color: #ad1457;
+        }
+
+        main {
+            height: 70%;
+            background-color: #e91e63;
+        }
+
+        aside {
+            width: 30%;
+            height: 100%;
+            background-color: #ec407a;
+            float: left;
+        }
+
+        section {
+            width: 70%;
+            height: 50%;
+            background-color: #f06292;
+            float: left;
+            text-align: center;
+        }
+        
+        section:last-child{
+            background-color: #f48fb1;
+        }
+
+        article {
+            width: 320px;
+            padding: 150px 26px;
+            margin: 17px;
+            background-color: #f06292;
+            display: inline-block;
+        }
+
+        footer {
+            height: 10%;
+            background-color: #ad1457;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>HEADER</header>
+        <nav>NAV</nav>
+        <main>
+            <aside>SIDE</aside>
+            <section>CONTNET1</section>
+            <section>
+                <article>cont1</article>
+                <article>cont2</article>
+            </section>
+        </main>
+        <footer>FOOTER</footer>
+    </div>
 </body>
+
 </html>
