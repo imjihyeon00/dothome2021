@@ -105,9 +105,9 @@ body {
   text-align: center;
 }
 
-.cardType02 .card-wrap{
+.cardType02 .card-wrap {
   display: grid;
-  grid-template-columns: repeat(4,285px);
+  grid-template-columns: repeat(4, 285px);
   gap: 20px;
 }
 
@@ -122,9 +122,10 @@ body {
   box-sizing: border-box;
 }
 
-.cardType02 .card:last-child{
+.cardType02 .card:last-child {
   margin: 40px 0 0 0;
 }
+
 .cardType02 .card a {}
 
 .cardType02 .card img {}
@@ -146,7 +147,7 @@ body {
 
 .cardType02 .card .card-word {}
 
-.cardType02 .card .card-word span{
+.cardType02 .card .card-word span {
   display: inline-block;
   font-weight: 400;
   font-size: 10px;
@@ -155,4 +156,116 @@ body {
   margin-top: 6px;
   border-radius: 20px;
   background-color: #000;
+}
+
+
+/* cardType03 */
+.cardType03 {
+  font-family: NanumSquare;
+  padding: 97px 0 100px;
+  background-color: #fff;
+}
+
+.cardType03 .title {
+  position: relative;
+  margin-bottom: 47px;
+}
+
+.cardType03 .title h2 {
+  font-size: 50px;
+  font-weight: 800;
+  margin-bottom: 22px;
+}
+
+.cardType03 .title .title-desc {
+  display: inline;
+  font-size: 20px;
+  line-height: 1.28;
+}
+
+.cardType03 .title .title-cat{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.cardType03 .title .title-cat span{
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+.cardType03 .title .title-cat span:first-child{
+  color: #ff2626;
+}
+
+.cardType03 .card-wrap {}
+
+.cardType03 .card-wrap .card {
+  margin-top: 30px;
+}
+
+.cardType03 .card-wrap .card a {
+  display: grid;
+  grid-template-columns: 285px 895px;
+  gap: 19px;
+  margin-left: 10px;
+}
+
+.cardType03 .card-wrap .card img {
+  border-radius: 10px;
+}
+
+.cardType03 .card-wrap .card .contents {
+  position: relative;
+}
+
+.cardType03 .card-wrap .card .card-cat {
+  padding: 1px 14px 4px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* 카테고리 색상 */
+.cardType03 .card-wrap .card .card-cat.html {
+  background-color: #ff5151;
+}
+
+.cardType03 .card-wrap .card .card-cat.css {
+  background-color: #5465ff;
+}
+
+.cardType03 .card-wrap .card .card-cat.javascript {
+  background-color: #ff4646;
+}
+
+.cardType03 .card-wrap .card .card-cat.jquery {
+  background-color: #11c865;
+}
+
+.cardType03 .card-wrap .card .card-title {
+  display: block;
+  font-size: 26px;
+  font-weight: bold;
+  margin: 0 0 14px 0;
+}
+
+.cardType03 .card-wrap .card .card-desc {
+  font-size: 15px;
+  line-height: 1.53;
+  color: #555;
+  margin: 0 0 17px 0;
+}
+
+.cardType03 .card-wrap .card .card-date {
+  position: absolute;
+  bottom: 0;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.4;
+  color: #555;
+  text-decoration: underline;
 }
