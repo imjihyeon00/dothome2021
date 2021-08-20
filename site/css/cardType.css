@@ -85,86 +85,74 @@ body {
 
 
 /* chadType02 */
-.cardType {}
-
 .cardType02 {
-  font-family: 'S-CoreDream';
-  padding: 150px 0;
+  font-family: S-CoreDream;
+  padding: 97px 0 100px;
+  background-color: #fff;
+  box-sizing: border-box;
 }
 
 .cardType02 h2 {
   font-weight: 500;
   font-size: 50px;
-  margin-bottom: 7px;
+  margin: 0 115px 22px 116px;
   text-align: center;
 }
 
 .cardType02 p {
-  font-weight: 200;
+  font-weight: 300;
   font-size: 26px;
-  line-height: 1.28;
-  margin-bottom: 40px;
   text-align: center;
 }
 
-/* float */
-/* .cardType02 .card-wrap {
-  overflow: hidden;
-}
-
-.cardType02 .card-wrap .card {
-  float: left;
-}
-
-.cardType02 .card-wrap .card:last-child {
-  margin-right: 0;
-} */
-
-/* flex */
-/* .cardType02 .card-wrap {
-  display: flex;
-}
-.cardType02 .card-wrap .card{} */
-
-/* grid */
-.cardType02 .card-wrap {
+.cardType02 .card-wrap{
   display: grid;
-  grid-template-columns: repeat(4, 285px);
+  grid-template-columns: repeat(4,285px);
   gap: 20px;
 }
 
-.cardType02 .card-wrap .card {}
-
-.cardType02 .card-wrap .card {
+.cardType02 .card {
+  display: inline-block;
   width: 285px;
   height: 356px;
   margin: 40px 20px 0 0;
   padding: 15px 15px 16px 14px;
   border-radius: 5px;
-  border: solid 1px #E6E6E6;
+  border: solid 1px #e6e6e6;
   box-sizing: border-box;
 }
 
-.cardType02 .card-wrap .card .title {
-  display: block;
-  font-size: 24px;
+.cardType02 .card:last-child{
+  margin: 40px 0 0 0;
+}
+.cardType02 .card a {}
+
+.cardType02 .card img {}
+
+.cardType02 .card .card-title {
+  display: inline-block;
   font-weight: 500;
+  font-size: 24px;
+  font-style: normal;
+  margin: 8px 0 6px 0;
 }
 
-.cardType02 .card-wrap .card .desc {
-  display: block;
+.cardType02 .card .card-desc {
+  display: inline-block;
+  font-weight: 300;
+  font-size: 14px;
+  font-style: normal;
 }
 
-.cardType02 .card-wrap .card .card-word {}
+.cardType02 .card .card-word {}
 
-.cardType02 .card-wrap .card .card-word span {
-  width: 53px;
-  height: 21px;
-  margin: 6px 202px 0 1px;
+.cardType02 .card .card-word span{
+  display: inline-block;
+  font-weight: 400;
+  font-size: 10px;
+  color: #fff;
   padding: 4px 16px 3px;
+  margin-top: 6px;
   border-radius: 20px;
   background-color: #000;
-  display: inline-block;
-  color: #fff;
-  text-transform: uppercase;
 }
