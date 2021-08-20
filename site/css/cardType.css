@@ -208,14 +208,12 @@ body {
 .cardType03 .card-wrap .card a {
   display: grid;
   grid-template-columns: 285px 895px;
+  gap: 19px;
   margin-left: 10px;
-  column-gap: 19px;
 }
 
 .cardType03 .card-wrap .card img {
   border-radius: 10px;
-  grid-row-start: 1;
-  grid-row-end: 5;
 }
 
 .cardType03 .card-wrap .card .contents {
@@ -263,6 +261,8 @@ body {
 }
 
 .cardType03 .card-wrap .card .card-date {
+  position: absolute;
+  bottom: 0;
   font-size: 14px;
   font-weight: bold;
   line-height: 1.4;
