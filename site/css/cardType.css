@@ -158,37 +158,37 @@ body {
   background-color: #000;
 }
 
+/* cardType03 */
 
 .cardType03 {
-  padding: 100px;
-  font-family: "NanumSquare";
+  font-family: 'NanumSquare';
+  padding: 100px 0;
   position: relative;
 }
 
-.cardType03 h2 {
+.cardType03 h2{
   font-size: 50px;
   font-weight: 800;
   margin-bottom: 4px;
 }
 
-.cardType03 p {
+.cardType03 p{
   font-size: 18px;
   font-weight: 400;
   line-height: 1.28;
   margin-bottom: 50px;
 }
 
-.cardType03 .popular {
+.cardType03 .popular{
+  position: absolute;
+  right: 0;  top: 180px;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.28;
-  position: absolute;
-  right: 0;
-  top: 180px;
 }
 
-.cardType03 .card-wrap .card {
-  margin-bottom: 20px;
+.cardType03 .card-wrap .card{
+  margin-bottom: 28px;
 }
 
 .cardType03 .card-wrap .card .card-img{
@@ -200,55 +200,55 @@ body {
 .cardType03 .card-wrap .card .right{
   padding-left: 305px;
 }
-
-.cardType03 .card-wrap .card .card-cate {
+.cardType03 .card-wrap .card .card-cate{
   font-size: 14px;
   font-weight: 800;
-  background-color: #ff5151;
   padding: 4px 14px 3px 15px;
-  border-radius: 20px;
   color: #fff;
+  border-radius: 20px;
   margin-bottom: 10px;
   display: inline-block;
-
+  text-transform: uppercase;
 }
 
-.cardType03 .card-wrap .card .card-cate.html {
-  background-color: #ff5151;
+.cardType03 .card-wrap .card .card-cate.red {
+  background: #ff5151;
 }
-
-.cardType03 .card-wrap .card .card-cate.css {
-  background-color: #5465ff;
+.cardType03 .card-wrap .card .card-cate.blue {
+  background: #5465ff;
 }
-
-.cardType03 .card-wrap .card .card-cate.javascript {
-  background-color: #ff4646;
+.cardType03 .card-wrap .card .card-cate.green {
+  background: #11c865;
 }
-
-.cardType03 .card-wrap .card .card-cate.jquery {
-  background-color: #11c865;
-}
-
-.cardType03 .card-wrap .card .card-tit {
+.cardType03 .card-wrap .card .card-tit{
   display: block;
   font-size: 26px;
   font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-
-.cardType03 .card-wrap .card .card-desc {
-  font-size: 15px;
+.cardType03 .card-wrap .card .card-desc{
+  font-size: 16px;
+  font-weight: 300;
   line-height: 1.53;
   color: #555;
-  font-weight: 300;
-  margin-top: 10px;
+  /* margin-top: 10px; */
+  /* 3줄로 맞춰줌 */
+  display: block; 
+  display: -webkit-box;
+  overflow: hidden;
+  max-height: 4.59em; /* 인터넷 익스플로러 호환 */
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis; 
 }
-
-.cardType03 .card-wrap .card .card-date {
-  display: block;
+.cardType03 .card-wrap .card .card-date{
   color: #555;
   font-size: 14px;
   font-weight: bold;
   line-height: 1.4;
+  display: block;
   text-decoration: underline;
   margin-top: 20px;
 }

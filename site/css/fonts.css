@@ -149,17 +149,6 @@
 }
 
 @font-face {
-    font-family: 'NanumSquare';
-    src: url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
-}
-
-@import url(//fonts.googleapis.com/earlyaccess/nanumgothiccoding.css);
-
-.nanumgothiccoding * {
-    font-family: 'Nanum Gothic Coding', monospace;
-}
-
-@font-face {
     font-family: 'NanumSquareRound';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
     font-weight: normal;
