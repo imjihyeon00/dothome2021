@@ -8,9 +8,10 @@ body {
   background-color: #fff;
 }
 
-
+/* imgType01 */
 .imgType01 {
   font-family: 'GmarketSans';
+  font-size: 14px;
   font-weight: 500;
   padding: 100px 0;
 }
@@ -23,15 +24,18 @@ body {
 
 .imgType01 .img-wrap {
   display: flex;
-    gap: 20px;
+  gap: 20px;
 }
-.imgType01 .img-wrap .img{
+
+.imgType01 .img-wrap .img {
   position: relative;
   width: 590px;
   height: 385px;
 }
-.imgType01 .img-wrap .img img{}
-.imgType01 .img-wrap .img .img-list{
+
+.imgType01 .img-wrap .img img {}
+
+.imgType01 .img-wrap .img .img-list {
   position: absolute;
   bottom: 0;
   background-color: rgba(255, 255, 255, 0.6);
@@ -39,16 +43,75 @@ body {
   margin: 30px;
   border-radius: 5px;
 }
-.imgType01 .img-wrap .img .img-list .img-tit{
+
+.imgType01 .img-wrap .img .img-list .img-tit {
   font-size: 30px;
   margin-bottom: 8px;
 }
-.imgType01 .img-wrap .img .img-list .img-desc{
-  font-size: 14px;
+
+.imgType01 .img-wrap .img .img-list .img-desc {
   line-height: 1.4;
   margin-bottom: 15px;
 }
-.imgType01 .img-wrap .img .img-list .img-link{
-  font-size: 14px;
+
+.imgType01 .img-wrap .img .img-list .img-link {
   text-decoration: underline;
+}
+
+
+/* imgType02 */
+.imgType02 {
+  font-family: 'GmarketSans';
+  font-size: 14px;
+  font-weight: 500;
+  padding: 100px 0;
+}
+
+.imgType02 h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 45px;
+}
+
+.imgType02 .img-wrap {
+  display: flex;
+  gap: 20px;
+}
+
+.imgType02 .img-wrap .img {
+  width: 387px;
+  height: 387px;
+  position: relative;
+}
+
+.imgType02 .img-wrap .img img {}
+
+.imgType02 .img-wrap .img .img-list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.imgType02 .img-wrap .img .img-tit {
+  background-color: rgba(255, 255, 255, 0.6);
+  font-size: 30px;
+  padding: 3px 15px 0 15px;
+  font-weight: 500;
+  display: block;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+
+.imgType02 .img-wrap .img .img-link {
+  display: none;
+}
+
+.imgType02 .img-wrap .img:hover .img-link {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 6px 15px 3px 15px;
+  border-radius: 10px;
 }
