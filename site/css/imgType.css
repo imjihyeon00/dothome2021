@@ -1,0 +1,54 @@
+body {
+  background-color: #f3f3f3;
+}
+
+.imgType {
+  margin: 150px 0;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+
+.imgType01 {
+  font-family: 'GmarketSans';
+  font-weight: 500;
+  padding: 100px 0;
+}
+
+.imgType01 h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 45px;
+}
+
+.imgType01 .img-wrap {
+  display: flex;
+    gap: 20px;
+}
+.imgType01 .img-wrap .img{
+  position: relative;
+  width: 590px;
+  height: 385px;
+}
+.imgType01 .img-wrap .img img{}
+.imgType01 .img-wrap .img .img-list{
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 15px;
+  margin: 30px;
+  border-radius: 5px;
+}
+.imgType01 .img-wrap .img .img-list .img-tit{
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+.imgType01 .img-wrap .img .img-list .img-desc{
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+.imgType01 .img-wrap .img .img-list .img-link{
+  font-size: 14px;
+  text-decoration: underline;
+}
