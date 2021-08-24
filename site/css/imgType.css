@@ -132,35 +132,38 @@ body {
 
 .imgType03 .img-wrap {
   display: grid;
-  grid-template-columns: repeat(4,285px);
+  grid-template-columns: repeat(4, 285px);
   grid-template-rows: 285px;
   gap: 20px;
 }
 
-.imgType03 .img-wrap .img:first-child{
+.imgType03 .img-wrap .img:first-child {
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 3;
 }
-.imgType03 .img-wrap .img{
+
+.imgType03 .img-wrap .img a {
   position: relative;
 }
-.imgType03 .img-wrap .img img{}
 
 
 .imgType03 .img-wrap .img .img-contents {
   position: absolute;
-  bottom: 20px; left: 20px;
+  bottom: 20px;
+  left: 20px;
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 5px;
   padding: 15px;
 }
+
 .imgType03 .img-wrap .img .img-contents .img-tit {
   font-size: 30px;
   font-weight: 500;
   line-height: 1;
 }
+
 .imgType03 .img-wrap .img .img-contents .img-desc {
   line-height: 1.4;
   margin-top: 5px;
