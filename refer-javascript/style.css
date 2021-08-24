@@ -41,12 +41,6 @@ hr {
   border-bottom-width: 1px;
 }
 
-img {
-  vertical-align: top;
-  border-radius: 5px;
-  margin: 5px;
-}
-
 ul {
   list-style: none;
 }
@@ -296,6 +290,27 @@ a {
   border-radius: 30px;
   padding: 0 20px;
   margin-left: 5px;
+}
+
+.btn {
+  padding: 20px;
+  border: 1px solid #f2f2f2;
+  border-top: 0;
+}
+
+.btn a {
+  border: 1px solid #e6e6e6;
+  padding: 7px 25px;
+  display: inline-block;
+  border-radius: 40px;
+  margin: 4px 0;
+  color: #222;
+  transition: all 0.2s;
+}
+
+.btn a:hover {
+  background-color: #000;
+  color: #fff;
 }
 
 @media (max-width:1200px) {
