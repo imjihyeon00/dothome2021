@@ -198,58 +198,58 @@
           <td rowspan="6" class="center">Dimensions</td>
           <td>.width()</td>
           <td>-</td>
-          <td>-</td>
+          <td>선택한 요소의 넓이를 가져오거나 설정</td>
         </tr>
         <tr>
           <td>.innerWidth()</td>
           <td>-</td>
-          <td>-</td>
+          <td>선택한 요소의 넓이(패딩포함, 보더/마진 불포함)를 가져오거나 설정</td>
         </tr>
         <tr>
           <td>.outerWidth()</td>
           <td>-</td>
-          <td>-</td>
+          <td>선택한 요소의 넓이(보더/패딩/마진 포함)를 가져오거나 설정</td>
         </tr>
         <tr>
           <td>.height()</td>
           <td>-</td>
-          <td>-</td>
+          <td>선택한 요소의 높이를 가져오거나 설정</td>
         </tr>
         <tr>
           <td>.innerHeight()</td>
           <td>-</td>
-          <td>-</td>
+          <td>선택한 요소의 높이(패딩포함, 보더/마진 불포함)를 가져오거나 설정</td>
         </tr>
         <tr>
           <td>.outerHeight()</td>
           <td>-</td>
-          <td>-</td>
+          <td>선택한 요소의 높이(보더/패딩/마진 포함)를 가져오거나 설정-</td>
         </tr>
         <tr>
           <td rowspan="5" class="center">offset</td>
           <td>.offset()</td>
           <td>-</td>
-          <td>-</td>
+          <td>요소의 좌표 값(문서를 기준)을 가져오거나 설정</td>
         </tr>
         <tr>
           <td>.offsetParent()</td>
           <td>-</td>
-          <td>-</td>
+          <td>요소의 좌표 값(부모 위치를 기준)을 가져오거나 설정</td>
         </tr>
         <tr>
           <td>.postion()</td>
           <td>-</td>
-          <td>-</td>
+          <td>요소의 좌표 값(기준점 기준)을 가져오거나 설정</td>
         </tr>
         <tr>
           <td>.scrollLeft()</td>
           <td>-</td>
-          <td>-</td>
+          <td>요소의 가로 스크롤 값을 가져오거나 설정</td>
         </tr>
         <tr>
           <td>.scrollTop()</td>
           <td>-</td>
-          <td>-</td>
+          <td>요소의 세로 스크롤 값을 가져오거나 설정</td>
         </tr>
         <tr>
           <td rowspan="2" class="center">Data</td>
@@ -572,6 +572,67 @@
     });
   </script>
   <!-- !sample05 -->
+
+
+  <!-- sample06 -->
+  <style>
+    .ex6 {
+      min-height: 300px;
+      position: relative;
+    }
+
+    .ex6 .circle {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      padding: 10px;
+      margin: 20px;
+      border: 10px solid #fbc2eb;
+      background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    }
+  </style>
+  <div id="sample06" class="sample">
+    <h2>06. 속성 메소드 : offset() / offsetParent() / position()<span class="dot"></span></h2>
+    <div class="view ex6">
+      <span class="circle circle6"></span>
+      <p class="text text6">여기는 텍스트 영역입니다.</p>
+    </div>
+    <div class="btn">
+      <a href="#c" class="btn6-1">클릭하면 원의 x축 위치 값(offset)을 구합니다</a>
+      <a href="#c" class="btn6-2">클릭하면 원의 y축 위치 값(offset)을 구합니다</a>
+      <a href="#c" class="btn6-3">클릭하면 원의 x축 위치 값(position)을 구합니다</a>
+      <a href="#c" class="btn6-4">클릭하면 원의 y축 위치 값(position)을 구합니다</a>
+    </div>
+    <div class="code">
+      <pre class="line-numbers"><code class="language-js">{
+}
+</code></pre>
+    </div>
+  </div>
+  <hr>
+  <script>
+    $('.btn6-1').click(function () {
+      $('.text6').text(`이 원의 x축 값은 ${$('.circle6').offset().left}px 입니다.`)
+    });
+
+    $('.btn6-2').click(function () {
+      $('.text6').text(`이 원의 y축 값은 ${$('.circle6').offset().top}px 입니다.`)
+    });
+
+    $('.btn6-3').click(function () {
+      $('.text6').text(`이 원의 x축 값은 ${$('.circle6').position().left}px 입니다.`)
+    });
+
+    $('.btn6-4').click(function () {
+      $('.text6').text(`이 원의 y축 값은 ${$('.circle6').position().top}px 입니다.`)
+    });
+  </script>
+  <!-- !sample06 -->
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
