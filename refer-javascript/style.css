@@ -236,6 +236,11 @@ a {
   border-style: solid;
 }
 
+.menu li.active a {
+  background: #0e43f1;
+  color: #fff;
+}
+
 .view {
   padding: 20px;
   overflow: auto;
