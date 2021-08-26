@@ -465,12 +465,6 @@
         { a: 500, b: 600, c: "javascript3" },
     ];
 
-    // document.write(obj[0].a);
-    // document.write(obj[1].a);
-    // document.write(obj[2].a);
-
-    //obj.map(function(){});
-    //obj.map((el) => {});
     obj.map(el => {
         document.write(el.a);
         document.write(el.b);
@@ -860,7 +854,7 @@
       //num.map(function(){});
       num.map((el) => {
         // document.write(el + " &nbsp;");
-        console.log(el);
+        // console.log(el);
         document.querySelector("#sample10 .result-view .result").innerHTML += `${el} `;
       });
 
@@ -917,7 +911,7 @@
     //sample12
     //12. 객체: 데이터 불러오기 : 기본
     {
-      document.write("*** 12. 객체: 데이터 불러오기 : 기본 ***<br>");
+      // document.write("*** 12. 객체: 데이터 불러오기 : 기본 ***<br>");
 
       const obj = {
         a: 100,
@@ -925,21 +919,24 @@
         c: "javascript"
       };
 
-      document.write(obj.a, "<br>");
-      document.write(obj.b, "<br>");
-      document.write(obj.c, "<br>");
-      document.write(obj['a'], "<br>");
-      document.write(obj['b'], "<br>");
-      document.write(obj['c'], "<br>");
+      // document.write(obj.a, "<br>");
+      // document.write(obj.b, "<br>");
+      // document.write(obj.c, "<br>");
+      // document.write(obj['a'], "<br>");
+      // document.write(obj['b'], "<br>");
+      // document.write(obj['c'], "<br>");
+      document.querySelector("#sample12 .result-view .result").innerHTML = `${obj.a} ${obj.b} ${obj.c} <br>${obj['a']} ${obj['b']} ${obj['c']} `;
 
-      document.write("<br>");
-
+      // document.write("<br>");
+      document.querySelector("#sample12 .result-view h2").addEventListener("click", function () {
+        document.querySelector("#sample12 .result-view .result").classList.toggle("look");
+      });
     }
 
     //sample13
     //13. 객체: 데이터 불러오기 : Object
     {
-      document.write("*** 13. 객체: 데이터 불러오기 : Object ***<br>");
+      // document.write("*** 13. 객체: 데이터 불러오기 : Object ***<br>");
 
       const obj = {
         a: 100,
@@ -953,14 +950,19 @@
       document.write(Object.keys(obj), "<br>");
       document.write(Object.values(obj), "<br>");
       document.write(Object.entries(obj), "<br>");
+      document.querySelector("#sample13 .result-view .result").innerHTML = `${Object.keys(obj)} <br>${Object.values(obj)} <br>${Object.entries(obj)} `;
 
-      document.write("<br>")
+
+      // document.write("<br>")
+      document.querySelector("#sample13 .result-view h2").addEventListener("click", function () {
+        document.querySelector("#sample13 .result-view .result").classList.toggle("look");
+      });
     }
 
     //sample14
     //14. 객체: 데이터 불러오기 : 변수
     {
-      document.write("*** 14. 객체: 데이터 불러오기 : 변수 ***<br>");
+      // document.write("*** 14. 객체: 데이터 불러오기 : 변수 ***<br>");
 
       const obj = {
         a: 100,
@@ -972,18 +974,23 @@
       const name2 = obj.b;
       const name3 = obj.c;
 
-      document.write(name1, "<br>");
-      document.write(name2, "<br>");
-      document.write(name3, "<br>");
+      // document.write(name1, "<br>");
+      // document.write(name2, "<br>");
+      // document.write(name3, "<br>");
+      document.querySelector("#sample14 .result-view .result").innerHTML = `${name1} ${name2} ${name3} `;
 
-      document.write("<br>")
+
+      // document.write("<br>")
+      document.querySelector("#sample14 .result-view h2").addEventListener("click", function () {
+        document.querySelector("#sample14 .result-view .result").classList.toggle("look");
+      });
     }
 
 
     //sample15
     //15. 객체 : 데이터 불러오기 : for in문
     {
-      document.write("*** 15. 객체: 데이터 불러오기 : for in문 ***<br>");
+      // document.write("*** 15. 객체: 데이터 불러오기 : for in문 ***<br>");
 
       const obj = {
         a: 100,
@@ -993,15 +1000,19 @@
 
       for (let key in obj) {
         document.write(obj[key], "<br>");
+        document.querySelector("#sample15 .result-view .result").innerHTML += `${obj[key]} `;
       }
 
-      document.write("<br>")
+      // document.write("<br>")
+      document.querySelector("#sample15 .result-view h2").addEventListener("click", function () {
+        document.querySelector("#sample15 .result-view .result").classList.toggle("look");
+      });
     }
 
     //sample16
     //16. 객체 : 데이터 불러오기 : map() : 배열 속에 객체가 있는 경우
     {
-      document.write("*** 16. 객체 : 데이터 불러오기 : map() ***<br>");
+      // document.write("*** 16. 객체 : 데이터 불러오기 : map() ***<br>");
 
       const obj = [
         { a: 100, b: 200, c: "javascript1" },
@@ -1018,19 +1029,23 @@
       //obj.map(function(){});
       //obj.map((el) => {});
       obj.map(el => {
-        document.write(el.a, "&nbsp;");
-        document.write(el.b, "&nbsp;");
-        document.write(el.c, "&nbsp;");
-        document.write("<br>");
+        // document.write(el.a, "&nbsp;");
+        // document.write(el.b, "&nbsp;");
+        // document.write(el.c, "&nbsp;");
+        // document.write("<br>");
+        document.querySelector("#sample16 .result-view .result").innerHTML += `${el.a} ${el.b} ${el.c} <br>`;
       });
 
-      document.write("<br>");
+      // document.write("<br>");
+      document.querySelector("#sample16 .result-view h2").addEventListener("click", function () {
+        document.querySelector("#sample16 .result-view .result").classList.toggle("look");
+      });
     }
 
     //sample17
     //17. 객체: 데이터 불러오기 : hasOwnProperty() : 데이터 유무 혹인
     {
-      document.write("*** 17. 객체: 데이터 불러오기 : hasOwnProperty() ***<br>");
+      // document.write("*** 17. 객체: 데이터 불러오기 : hasOwnProperty() ***<br>");
 
       const obj = {
         a: 100,
@@ -1038,27 +1053,32 @@
         c: "javascript"
       };
 
-      document.write(obj.hasOwnProperty('a'), "&nbsp;");
-      document.write(obj.hasOwnProperty('b'), "&nbsp;");
-      document.write(obj.hasOwnProperty('c'), "&nbsp;");
-      document.write(obj.hasOwnProperty('100'), "&nbsp;");
+      // document.write(obj.hasOwnProperty('a'), "&nbsp;");
+      // document.write(obj.hasOwnProperty('b'), "&nbsp;");
+      // document.write(obj.hasOwnProperty('c'), "&nbsp;");
+      // document.write(obj.hasOwnProperty('100'), "&nbsp;");
 
-      document.write("<br>");
+      document.querySelector("#sample17 .result-view .result").innerHTML += `${obj.hasOwnProperty('a')} ${obj.hasOwnProperty('b')} ${obj.hasOwnProperty('c')} ${obj.hasOwnProperty('100')} <br>`;
+
+      // document.write("<br>");
 
       //이렇게도 사용 할 수 있다.
-      document.write('a' in obj, "&nbsp;");
-      document.write('b' in obj, "&nbsp;");
-      document.write('c' in obj, "&nbsp;");
-      document.write('100' in obj, "&nbsp;");
+      // document.write('a' in obj, "&nbsp;");
+      // document.write('b' in obj, "&nbsp;");
+      // document.write('c' in obj, "&nbsp;");
+      // document.write('100' in obj, "&nbsp;");
+      document.querySelector("#sample17 .result-view .result").innerHTML += `${'a' in obj} ${'b' in obj} ${'c' in obj} ${'100' in obj} `;
 
-      document.write("<br><br>");
-
+      // document.write("<br><br>");
+      document.querySelector("#sample17 .result-view h2").addEventListener("click", function () {
+        document.querySelector("#sample17 .result-view .result").classList.toggle("look");
+      });
     }
 
     //smaple18
     //18. 객체: 데이터 불러오기 : 펼침 연산자 - 복사
     {
-      document.write("*** 18. 객체: 데이터 불러오기 : 펼침 연산자 - 복사 ***<br>");
+      // document.write("*** 18. 객체: 데이터 불러오기 : 펼침 연산자 - 복사 ***<br>");
 
       const obj = {
         a: 100,
@@ -1068,17 +1088,22 @@
 
       const spread = { ...obj };
 
-      document.write(spread.a, "<br>");
-      document.write(spread.b, "<br>");
-      document.write(spread.c, "<br>");
+      // document.write(spread.a, "<br>");
+      // document.write(spread.b, "<br>");
+      // document.write(spread.c, "<br>");
+      document.querySelector("#sample18 .result-view .result").innerHTML += `${spread.a} ${spread.b} ${spread.c} `;
 
-      document.write("<br>");
+
+      // document.write("<br>");
+      document.querySelector("#sample18 .result-view h2").addEventListener("click", function () {
+        document.querySelector("#sample18 .result-view .result").classList.toggle("look");
+      });
     }
 
     //smaple19
     //19. 객체: 데이터 불러오기 : 펼침 연산자 - 추가
     {
-      document.write("*** 19. 객체: 데이터 불러오기 : 펼침 연산자 - 추가 ***<br>");
+      // document.write("*** 19. 객체: 데이터 불러오기 : 펼침 연산자 - 추가 ***<br>");
 
       const obj = {
         a: 100,
@@ -1088,18 +1113,23 @@
 
       const spread = { ...obj, d: "jquery" };
 
-      document.write(spread.a, "<br>");
-      document.write(spread.b, "<br>");
-      document.write(spread.c, "<br>");
-      document.write(spread.d, "<br>");
+      // document.write(spread.a, "<br>");
+      // document.write(spread.b, "<br>");
+      // document.write(spread.c, "<br>");
+      // document.write(spread.d, "<br>");
+      document.querySelector("#sample19 .result-view .result").innerHTML += `${spread.a} ${spread.b} ${spread.c} ${spread.d} `;
 
-      document.write("<br>");
+
+      // document.write("<br>");
+      document.querySelector("#sample19 .result-view h2").addEventListener("click", function () {
+        document.querySelector("#sample19 .result-view .result").classList.toggle("look");
+      });
     }
 
     //smaple20
     //20. 객체: 데이터 불러오기 : 펼침 연산자 - 결합
     {
-      document.write("*** 20. 객체: 데이터 불러오기 : 펼침 연산자 - 결합 ***<br>");
+      // document.write("*** 20. 객체: 데이터 불러오기 : 펼침 연산자 - 결합 ***<br>");
 
       const objA = {
         a: 100,
@@ -1113,18 +1143,22 @@
 
       const spread = { ...objA, ...objB };
 
-      document.write(spread.a, "<br>");
-      document.write(spread.b, "<br>");
-      document.write(spread.c, "<br>");
-      document.write(spread.d, "<br>");
+      // document.write(spread.a, "<br>");
+      // document.write(spread.b, "<br>");
+      // document.write(spread.c, "<br>");
+      // document.write(spread.d, "<br>");
+      document.querySelector("#sample20 .result-view .result").innerHTML += `${spread.a} ${spread.b} ${spread.c} ${spread.d} `;
 
-      document.write("<br>");
+      // document.write("<br>");
+      document.querySelector("#sample20 .result-view h2").addEventListener("click", function () {
+        document.querySelector("#sample20 .result-view .result").classList.toggle("look");
+      });
     }
 
     //sample21
     //21. 객체: 데이터 불러오기 : 비구조화 할당
     {
-      document.write("*** 21. 객체: 데이터 불러오기 : 비구조화 할당 ***<br>");
+      // document.write("*** 21. 객체: 데이터 불러오기 : 비구조화 할당 ***<br>");
 
       const obj = {
         a: 100,
@@ -1139,13 +1173,18 @@
       document.write(b, "<br>");
       document.write(c, "<br>");
 
-      document.write("<br>");
+      document.querySelector("#sample21 .result-view .result").innerHTML += `${a} ${b} ${c} `;
+
+      // document.write("<br>");
+      document.querySelector("#sample21 .result-view h2").addEventListener("click", function () {
+        document.querySelector("#sample21 .result-view .result").classList.toggle("look");
+      });
     }
 
     //sample22
     //22. 객체: 데이터 불러오기 : 비구조화 할당 : 별도 이름 저장
     {
-      document.write("*** 22. 객체: 데이터 불러오기 : 비구조화 할당 : 별도 이름 저장 ***<br>");
+      // document.write("*** 22. 객체: 데이터 불러오기 : 비구조화 할당 : 별도 이름 저장 ***<br>");
 
       const obj = {
         a: 100,
@@ -1155,11 +1194,16 @@
 
       const { a: name1, b: name2, c: name3 } = obj;
 
-      document.write(name1, "<br>");
-      document.write(name2, "<br>");
-      document.write(name3, "<br>");
+      // document.write(name1, "<br>");
+      // document.write(name2, "<br>");
+      // document.write(name3, "<br>");
 
-      document.write("<br>");
+      document.querySelector("#sample22 .result-view .result").innerHTML += `${name1} ${name2} ${name3} `;
+
+      // document.write("<br>");
+      document.querySelector("#sample22 .result-view h2").addEventListener("click", function () {
+        document.querySelector("#sample22 .result-view .result").classList.toggle("look");
+      });
     }
 
   </script>
