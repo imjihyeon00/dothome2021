@@ -71,7 +71,7 @@ a {
 }
 
 .sample {
-  border: 1px solid #E6E6E6;
+  /* border: 1px solid #E6E6E6; */
   border-radius: 5px;
 }
 
@@ -116,6 +116,31 @@ a {
   right: -15px;
   top: 0;
 }
+
+.sample .result-view {
+  margin-top: 5px;
+}
+.sample .result-view h2{
+  background-color: #F2F2F2;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 5px 5px 0 0;
+}
+.sample .result-view h2:hover{
+  cursor: pointer;
+}
+.sample .result-view .result{
+  display: none;
+  border-radius: 0 0 5px 5px;
+  color: #fff;
+  background-color: #272822;
+  padding: 10px;
+}
+
+.sample .result-view .result.look{
+  display: block;
+}
+
 
 .sample .ex {
   padding: 20px;
