@@ -874,14 +874,10 @@ func(5);
     //01. 선언적 함수
     {
       function func() {
-        // document.write("*** 01. 선언적 함수 ***<br>");
-        // document.write("01. 함수가 실행되었습니다.<br><br>");
         document.querySelector("#sample01 .result-view .result").innerHTML = "함수가 실행되었습니다.";
       }
 
       func(); //함수 호출
-
-      // document.write("<br>");
       document.querySelector("#sample01 .result-view h2").addEventListener("click", function () {
         document.querySelector("#sample01 .result-view .result").classList.toggle("look");
       });
@@ -891,8 +887,6 @@ func(5);
     //02. 익명함수
     {
       const func = function () {
-        // document.write("*** 02. 익명 함수 ***<br>");
-        // document.write("02. 함수가 실행되었습니다.<br><br>");
         document.querySelector("#sample02 .result-view .result").innerHTML = "함수가 실행되었습니다.";
       };
 
@@ -906,15 +900,12 @@ func(5);
     //03.매개변수 함수
     {
       function func(str) {
-        // document.write("*** 03. 매개변수 함수 ***<br>");
-        // document.write(str);
         document.querySelector("#sample03 .result-view .result").innerHTML = str;
       }
 
       func("함수가 실행되었습니다.<br>");
 
       function func2(str1, str2) {
-        // document.write(str1, str2);
         document.querySelector("#sample03 .result-view .result").innerHTML += str1 + str2;
       }
 
@@ -933,8 +924,6 @@ func(5);
         return str;
       }
 
-      // document.write("*** 04. 리턴값 함수 ***<br>");
-      // document.write(func());
       document.querySelector("#sample04 .result-view .result").innerHTML = func();
 
       document.querySelector("#sample04 .result-view h2").addEventListener("click", function () {
@@ -945,19 +934,10 @@ func(5);
     //sample5
     //05. 화살표 함수 : 선언적 함수
     {
-      // function func(){
-      //   document.write("*** 05. 화살표 함수 ***<br>");
-      //   document.write("함수가 실행되었습니다.");
-      // }
-      // func();
-
       func = () => {
-        // document.write("*** 05. 화살표 함수 : 선언적 함수 ***<br>");
-        // document.write("함수가 실행되었습니다.<br>");
         document.querySelector("#sample05 .result-view .result").innerHTML = "함수가 실행되었습니다.";
       }
       func();
-      // document.write("<br>");
       document.querySelector("#sample05 .result-view h2").addEventListener("click", function () {
         document.querySelector("#sample05 .result-view .result").classList.toggle("look");
       });
@@ -966,15 +946,7 @@ func(5);
     //sample06
     //06. 화살표 함수 : 익명 함수
     {
-      // const func = function(){
-      //   document.write("*** 06. 화살표 함수 : 익명함수 ***<br>");
-      //   document.write("함수가 실행되었습니다.<br>");
-      // }
-      // func;
-
       const func = () => {
-        // document.write("*** 06. 화살표 함수 : 익명함수 ***<br>");
-        // document.write("함수가 실행되었습니다.<br><br>");
         document.querySelector("#sample06 .result-view .result").innerHTML = "함수가 실행되었습니다.";
 
       }
@@ -987,19 +959,10 @@ func(5);
     //sample07
     //07.화살표 함수 : 리턴값 함수
     {
-      // function func() {
-      //   const str = "함수가 실행되었습니다.<br>";
-      //   return str;
-      // }
-      // document.write(func());
-
       func = () => {
         const str = "함수가 실행되었습니다.";
         return str;
       }
-      // document.write("*** 07. 화살표 함수 : 리턴값 함수 ***<br>");
-      // document.write(func());
-      // document.write("<br>");
       document.querySelector("#sample07 .result-view .result").innerHTML = func();
 
       document.querySelector("#sample07 .result-view h2").addEventListener("click", function () {
@@ -1013,10 +976,6 @@ func(5);
       const func = (str) => {
         return str;
       }
-
-      // document.write("*** 08. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 ***<br>");
-      // document.write(func("함수가 실행되었습니다."));
-      // document.write("<br><br>");
       document.querySelector("#sample08 .result-view .result").innerHTML = func("함수가 실행되었습니다.");
 
       document.querySelector("#sample08 .result-view h2").addEventListener("click", function () {
@@ -1028,13 +987,9 @@ func(5);
     //09. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략
     //매개변수가 하나라면 괄호 생략 가능
     {
-      // document.write("*** 09. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략 ***<br>");
-
       const func = str => {
         return str;
       }
-      // document.write(func("함수가 실행되었습니다."));
-      // document.write("<br><br>");
       document.querySelector("#sample09 .result-view .result").innerHTML = func("함수가 실행되었습니다.");
 
       document.querySelector("#sample09 .result-view h2").addEventListener("click", function () {
@@ -1045,12 +1000,8 @@ func(5);
     //sample10
     //10. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략
     {
-      // document.write("*** 10. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략 ***<br>");
-
       const func = str => str;
 
-      // document.write(func("함수가 실행되었습니다."));
-      // document.write("<br><br>");
       document.querySelector("#sample10 .result-view .result").innerHTML = func("함수가 실행되었습니다.");
 
       document.querySelector("#sample10 .result-view h2").addEventListener("click", function () {
@@ -1061,12 +1012,8 @@ func(5);
     //sample11
     //11. 화살표 함수 : 선언적함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴생략
     {
-      // document.write("*** 11. 화살표 함수 : 선언적함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴생략 ***<br>");
-
       func = str => str;
 
-      // document.write(func("함수가 실행되었습니다."));
-      // document.write("<br><br>");
       document.querySelector("#sample11 .result-view .result").innerHTML = func("함수가 실행되었습니다.");
 
       document.querySelector("#sample11 .result-view h2").addEventListener("click", function () {
@@ -1077,10 +1024,8 @@ func(5);
     //sample12
     //12. 내부 함수 : 함수의 충돌을 방지하기 위해서
     {
-      // document.write("*** 12. 내부 함수 ***<br>");
       function funC() {
         function funA() {
-          // document.write("함수 A가 실행되었습니다.<br>");
           document.querySelector("#sample12 .result-view .result").innerHTML += "함수 A가 실행되었습니다.<br>";
         }
         funA();
@@ -1091,8 +1036,6 @@ func(5);
         funB();
       }
       funC();
-      // document.write("<br>");
-
       document.querySelector("#sample12 .result-view h2").addEventListener("click", function () {
         document.querySelector("#sample12 .result-view .result").classList.toggle("look");
       });
@@ -1101,17 +1044,9 @@ func(5);
     //sample13
     //13. 즉시실행 함수 : 함수의 충돌을 방지하기 위해서
     {
-      // document.write("*** 13. 즉시실행 함수 ***<br>");
-      // function func(){
-      //   document.write("함수가 실행되었습니다.<br>");
-      // }
-      // func();
-
       (function () {
-        // document.write("함수가 실행되었습니다.<br>");
         document.querySelector("#sample13 .result-view .result").innerHTML += "함수가 실행되었습니다.";
       })();
-      // document.write("<br>");
       document.querySelector("#sample13 .result-view h2").addEventListener("click", function () {
         document.querySelector("#sample13 .result-view .result").classList.toggle("look");
       });
@@ -1120,21 +1055,12 @@ func(5);
     //sampel14
     //14. 파라미터 함수
     {
-      // document.write("*** 14. 파라미터 함수 ***<br>");
-      // function func (str){
-      //   if(str == null){
-      //     str = '함수가 실행되었습니다.<br><br>';
-      //     document.write(str);
-      //   }
-      // }
-      // func();
       function func(str = "함수가 실행되었습니다.") {
         // document.write(str);
         document.querySelector("#sample14 .result-view .result").innerHTML += str;
       }
       func();
 
-      // document.write("<br><br>");
       document.querySelector("#sample14 .result-view h2").addEventListener("click", function () {
         document.querySelector("#sample14 .result-view .result").classList.toggle("look");
       });
@@ -1143,13 +1069,7 @@ func(5);
     //sample15
     //15. 아규먼트 함수
     {
-      // document.write("*** 15. 아규먼트 함수 ***<br>");
-
       function func(strA, strB) {
-        // document.write(strA, '<br>');
-        // document.write(strB, '<br>');
-        // document.write(arguments[0], "<br>");
-        // document.write(arguments[1], "<br><br>");
         document.querySelector("#sample15 .result-view .result").innerHTML = `${arguments[0]} ${arguments[1]}`;
       }
 
@@ -1162,24 +1082,15 @@ func(5);
     //sample16
     //16. 재귀 함수 : 함수 정의문 내에서 자기 자신을 또 다시 호출하는 함수
     {
-      // document.write("*** 16. 재귀 함수 ***<br>");
-      // function fucn(){
-      //   document.write('함수가 실행되었습니다.<br>');
-      //   func();
-      // }
-
       function func(num) {
         if (num <= 1) {
-          // document.write('함수가 실행되었습니다.<br>');
           document.querySelector("#sample16 .result-view .result").innerHTML += "함수가 실행되었습니다.<br>";
         } else {
-          // document.write('함수가 실행되었습니다.<br>');
           document.querySelector("#sample16 .result-view .result").innerHTML += "함수가 실행되었습니다.<br>";
           func(num - 1);
         }
       }
       func(5);
-      // document.write('<br>');
       document.querySelector("#sample16 .result-view h2").addEventListener("click", function () {
         document.querySelector("#sample16 .result-view .result").classList.toggle("look");
       });
@@ -1189,20 +1100,15 @@ func(5);
     //17. 콜백 함수
     //첫번째 함수가 실행되고 난 뒤 두번째 함수를 다시 호출하는 함수
     {
-      // document.write("*** 17. 콜백 함수 ***<br>");
       function funA() {
-        // document.write("함수 A가 실행되었습니다.<br>");
         document.querySelector("#sample17 .result-view .result").innerHTML += "함수 A가 실행되었습니다.<br>";
       }
       function funB(str) {
-        // document.write("함수 B가 실행되었습니다.<br>");
         document.querySelector("#sample17 .result-view .result").innerHTML += "함수 B가 실행되었습니다.<br>";
         str();
-        //funA()
       }
 
       funB(funA);
-      // document.write('<br>');
       document.querySelector("#sample17 .result-view h2").addEventListener("click", function () {
         document.querySelector("#sample17 .result-view .result").classList.toggle("look");
       });
@@ -1210,9 +1116,7 @@ func(5);
 
     //18. 콜백함수 : 반복문
     {
-      // document.write("*** 18. 콜백 함수 : 반복문 ***<br>");
       function func() {
-        // document.write("함수가 실행되었습니다.<br>");
         document.querySelector("#sample18 .result-view .result").innerHTML += "함수가 실행되었습니다.<br>";
       }
       function callback(str) {
@@ -1231,17 +1135,12 @@ func(5);
     //동기(순차적) : 동시에 일어나는 것
     //비동기(비순차적) : 동시에 일어나지 않는 것
     {
-      //01. 
-      // document.write("*** 19. 콜백 함수 : 동기 / 비동기 ***<br>");
-
       function funA() {
-        // document.write("funA가 실행되었습니다.");
         console.log("funA가 실행되었습니다.");
         document.querySelector("#sample19 .result-view .result").innerHTML += "funA가 실행되었습니다.<br>";
       }
 
       function funB() {
-        // document.write("funB가 실행되었습니다.");
         console.log("funB가 실행되었습니다.");
         document.querySelector("#sample19 .result-view .result").innerHTML += "funB가 실행되었습니다.<br>";
       }
@@ -1251,11 +1150,6 @@ func(5);
 
       //02
       function funC() {
-
-        //
-        // setTimeout(function(){
-        //   console.log("funC가 실행되었습니다.");
-        // },1000);
         setTimeout(() => {
           console.log("funC가 실행되었습니다.");
           document.querySelector("#sample19 .result-view .result").innerHTML += "funC가 실행되었습니다.<br>";
@@ -1283,7 +1177,6 @@ func(5);
       }
       funE(funF);
 
-      // document.write('<br><br>');
       document.querySelector("#sample19 .result-view h2").addEventListener("click", function () {
         document.querySelector("#sample19 .result-view .result").classList.toggle("look");
       });
@@ -1292,15 +1185,12 @@ func(5);
     //sample21
     //21. 함수 유형 : 함수와 매개변수를 이용한 형태
     {
-      // document.write("*** 21. 함수 유형 : 함수와 매개변수를 이용한 형태 ***<br>");
       function func(num, name, job) {
-        // document.write(num + '. 내 이름은 ' + name + '이며, 직업은 ' + job + '입니다.<br>');
         document.querySelector("#sample21 .result-view .result").innerHTML += `${num}. 내 이름은 ${name}이며, 직업은 ${job}입니다.<br>`;
       }
 
       func('1', '웹쓰', '웹 퍼블리셔');
       func('2', '웹스토리보이', '프론트앤드 개발자');
-      // document.write('<br><br>');
       document.querySelector("#sample21 .result-view h2").addEventListener("click", function () {
         document.querySelector("#sample21 .result-view .result").classList.toggle("look");
       });
@@ -1310,7 +1200,6 @@ func(5);
     {
       // document.write("*** 22. 함수 유형 : 함수와 변수를 이용한 형태 ***<br>");
       function func(num, name, job) {
-        // document.write(num + '. 내 이름은 ' + name + '이며, 직업은 ' + job + '입니다.<br>');
         document.querySelector("#sample22 .result-view .result").innerHTML += `${num}. 내 이름은 ${name}이며, 직업은 ${job}입니다.<br>`;
       }
 
@@ -1325,7 +1214,6 @@ func(5);
 
       func(youNum, youName, youJob);
       func(youNum2, youName2, youJob2);
-      // document.write('<br><br>');
       document.querySelector("#sample22 .result-view h2").addEventListener("click", function () {
         document.querySelector("#sample22 .result-view .result").classList.toggle("look");
       });
@@ -1333,9 +1221,7 @@ func(5);
 
     //23. 함수 유형 : 함수와 배열을 이용한 형태
     {
-      // document.write("*** 23. 함수 유형 : 함수와 배열을 이용한 형태 ***<br>");
       function func(num, name, job) {
-        // document.write(num + '. 내 이름은 ' + name + '이며, 직업은 ' + job + '입니다.<br>');
         document.querySelector("#sample23 .result-view .result").innerHTML += `${num}. 내 이름은 ${name}이며, 직업은 ${job}입니다.<br>`;
       }
 
@@ -1355,7 +1241,6 @@ func(5);
       func(info[0].num, info[0].name, info[0].job);
       func(info[1].num, info[1].name, info[1].job);
 
-      // document.write('<br><br>');
       document.querySelector("#sample23 .result-view h2").addEventListener("click", function () {
         document.querySelector("#sample23 .result-view .result").classList.toggle("look");
       });
@@ -1363,9 +1248,7 @@ func(5);
 
     //24. 함수 유형 : 함수와 객체를 이용한 형태
     {
-      // document.write("*** 24. 함수 유형 : 함수와 객체를 이용한 형태 ***<br>");
       function func(num, name, job) {
-        // document.write(num + '. 내 이름은 ' + name + '이며, 직업은 ' + job + '입니다.<br>');
         document.querySelector("#sample24 .result-view .result").innerHTML += `${num}. 내 이름은 ${name}이며, 직업은 ${job}입니다.<br>`;
       }
 
@@ -1381,7 +1264,6 @@ func(5);
       func(info.num, info.name, info.job);
       func(info.num2, info.name2, info.job2);
 
-      // document.write('<br><br>');
       document.querySelector("#sample24 .result-view h2").addEventListener("click", function () {
         document.querySelector("#sample24 .result-view .result").classList.toggle("look");
       });
@@ -1389,8 +1271,6 @@ func(5);
 
     //25. 함수 유형 : 함수와 객체(함수)를 이용한 형태
     {
-      // document.write("*** 25. 함수 유형 : 함수와 객체(함수)를 이용한 형태 ***<br>");
-
       const info = {
         num: 1,
         name: '웹쓰',
@@ -1399,18 +1279,15 @@ func(5);
         name2: '웹스토리보이',
         job2: '프론트앤드 개발자',
         result1: function () {
-          // document.write(info.num + '. 내 이름은 ' + info.name + '이며, 직업은 ' + info.job + '입니다.<br>');
           document.querySelector("#sample25 .result-view .result").innerHTML += `${info.num}. 내 이름은 ${info.name}이며, 직업은 ${info.job}입니다.<br>`;
         },
         result2: function () {
-          // document.write(info.num2 + '. 내 이름은 ' + info.name2 + '이며, 직업은 ' + info.job2 + '입니다.<br>');
           document.querySelector("#sample25 .result-view .result").innerHTML += `${info.num2}. 내 이름은 ${info.name2}이며, 직업은 ${info.job2}입니다.<br>`;
         }
       };
 
       info.result1();
       info.result2();
-      // document.write('<br><br>');
       document.querySelector("#sample25 .result-view h2").addEventListener("click", function () {
         document.querySelector("#sample25 .result-view .result").classList.toggle("look");
       });
@@ -1418,15 +1295,12 @@ func(5);
 
     //26. 함수 유형 : 객체 생성자 함수
     {
-      // document.write("*** 26. 함수 유형 : 객체 생성자 함수 ***<br>");
-
       function func(num, name, job) {
         this.num = num;
         this.name = name;
         this.job = job;
 
         this.result = function () {
-          // document.write(this.num + '. 내 이름은 ' + this.name + '이며, 직업은 ' + this.job + '입니다.<br>'); 
           document.querySelector("#sample26 .result-view .result").innerHTML += `${this.num}. 내 이름은 ${this.name}이며, 직업은 ${this.job}입니다.<br>`;
         }
       }
@@ -1436,7 +1310,6 @@ func(5);
 
       info1.result();
       info2.result();
-      // document.write('<br><br>');
       document.querySelector("#sample26 .result-view h2").addEventListener("click", function () {
         document.querySelector("#sample26 .result-view .result").classList.toggle("look");
       });
@@ -1444,8 +1317,6 @@ func(5);
 
     //27. 함수 유형 : 프로토타입 함수
     {
-      // document.write("*** 27. 함수 유형 : 프로토타입 함수 ***<br>");
-
       function func(num, name, job) {
         this.num = num;
         this.name = name;
@@ -1453,7 +1324,6 @@ func(5);
       }
 
       func.prototype.result = function () {
-        // document.write(this.num + '. 내 이름은 ' + this.name + '이며, 직업은 ' + this.job + '입니다.<br>');
         document.querySelector("#sample27 .result-view .result").innerHTML += `${this.num}. 내 이름은 ${this.name}이며, 직업은 ${this.job}입니다.<br>`;
       }
 
@@ -1470,8 +1340,6 @@ func(5);
 
     //28. 함수 유형 : 객체 리터럴 함수
     {
-      // document.write("*** 28. 함수 유형 : 객체 리터럴 함수 ***<br>");
-
       function func(num, name, job) {
         this.num = num;
         this.name = name;
@@ -1480,11 +1348,9 @@ func(5);
 
       func.prototype = {
         result1: function () {
-          // document.write(this.num + '. 내 이름은 ' + this.name + '이며, 직업은 ' + this.job + '입니다.<br>');
           document.querySelector("#sample28 .result-view .result").innerHTML += `${this.num}. 내 이름은 ${this.name}이며, 직업은 ${this.job}입니다.<br>`;
         },
         result2: function () {
-          // document.write(this.num + '. 내 이름은 ' + this.name + '이며, 직업은 ' + this.job + '입니다.<br>');
           document.querySelector("#sample28 .result-view .result").innerHTML += `${this.num}. 내 이름은 ${this.name}이며, 직업은 ${this.job}입니다.<br>`;
         }
       }
@@ -1494,7 +1360,6 @@ func(5);
 
       info1.result1();
       info2.result2();
-      // document.write('<br><br>');
       document.querySelector("#sample28 .result-view h2").addEventListener("click", function () {
         document.querySelector("#sample28 .result-view .result").classList.toggle("look");
       });
@@ -1502,8 +1367,6 @@ func(5);
 
     //29. 함수 유형 : 클래스
     {
-      // document.write("*** 29. 함수 유형 : 클래스 ***<br>");
-
       class study {
         //생성자
         constructor(num, name, job) {
@@ -1514,7 +1377,6 @@ func(5);
 
         //함수(function 함수명이 아닌 함수명 만으로 선언된다)
         result() {
-          // document.write(this.num + '. 내 이름은 ' + this.name + '이며, 직업은 ' + this.job + '입니다.<br>');
           document.querySelector("#sample29 .result-view .result").innerHTML += `${this.num}. 내 이름은 ${this.name}이며, 직업은 ${this.job}입니다.<br>`;
         }
       }
@@ -1523,7 +1385,6 @@ func(5);
 
       info1.result();
       info2.result();
-      // document.write('<br><br>');
       document.querySelector("#sample29 .result-view h2").addEventListener("click", function () {
         document.querySelector("#sample29 .result-view .result").classList.toggle("look");
       });

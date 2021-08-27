@@ -52,15 +52,15 @@
   <hr>
   <div class="list">
     <ol>
-      <li><a href="#sample1">변수 : 데이터 저장</a></li>
-      <li><a href="#sample2">변수 : 데이터 저장 + 데이터 변경</a></li>
-      <li><a href="#sample3">변수 : 데이터 저장 + 데이터 변경 + 데이터 추가</a></li>
-      <li><a href="#sample4">상수 : 데이터 저장(변하지 않음)</a></li>
-      <li><a href="#sample5">배열 : 데이터 저장(여러개 저장) : 표현 방법1</a></li>
-      <li><a href="#sample6">배열 : 데이터 저장(여러개 저장) : 표현 방법2</a></li>
-      <li><a href="#sample7">배열 : 데이터 저장(여러개 저장) : 표현 방법3</a></li>
-      <li><a href="#sample8">배열 : 데이터 저장(여러개 저장) : 표현 방법4</a></li>
-      <li><a href="#sample9">객체 : 데이터 저장(키와 값) : 표현 방법1 : 배열 스타일</a></li>
+      <li><a href="#sample01">변수 : 데이터 저장</a></li>
+      <li><a href="#sample02">변수 : 데이터 저장 + 데이터 변경</a></li>
+      <li><a href="#sample03">변수 : 데이터 저장 + 데이터 변경 + 데이터 추가</a></li>
+      <li><a href="#sample04">상수 : 데이터 저장(변하지 않음)</a></li>
+      <li><a href="#sample05">배열 : 데이터 저장(여러개 저장) : 표현 방법1</a></li>
+      <li><a href="#sample06">배열 : 데이터 저장(여러개 저장) : 표현 방법2</a></li>
+      <li><a href="#sample07">배열 : 데이터 저장(여러개 저장) : 표현 방법3</a></li>
+      <li><a href="#sample08">배열 : 데이터 저장(여러개 저장) : 표현 방법4</a></li>
+      <li><a href="#sample09">객체 : 데이터 저장(키와 값) : 표현 방법1 : 배열 스타일</a></li>
       <li><a href="#sample10">객체 : 데이터 저장(키와 값) : 표현 방법2 : 객체 스타일</a></li>
       <li><a href="#sample11">객체 : 데이터 저장(키와 값) : 표현 방법3 : 키워드 생략</a></li>
       <li><a href="#sample12">객체 : 데이터 저장(키와 값) : 표현 방법4</a></li>
@@ -594,10 +594,6 @@
       var z = "javascript"; //변수 z에 문자 javascript를 저장
       //var x = 300;          //오류 없이 출력됨
 
-      //document.write("*** 01. 변수 ***<br>"); //도큐먼트에 출력
-      // document.write(x, "<br>");
-      // document.write(y, "<br>");
-      // document.write(z, "<br><br>");
       document.querySelector("#sample01 .result-view .result").innerHTML = `${x} ${y} ${z}`;
       document.querySelector("#sample01 .result-view h2").addEventListener("click", function () {
         document.querySelector("#sample01 .result-view .result").classList.toggle("look");
@@ -615,10 +611,6 @@
       y = 400;
       z = "jquery";
 
-      // document.write("*** 02. 변수 ***<br>"); //도큐먼트에 출력
-      // document.write(x, "<br>");
-      // document.write(y, "<br>");
-      // document.write(z, "<br><br>");
       document.querySelector("#sample02 .result-view .result").innerHTML = `${x} ${y} ${z}`;
       document.querySelector("#sample02 .result-view h2").addEventListener("click", function () {
         document.querySelector("#sample02 .result-view .result").classList.toggle("look");
@@ -636,10 +628,6 @@
       y += 400; //y=y+400
       z += "jquery"; //z=z+"jquery"
 
-      // document.write("*** 03. 변수 ***<br>");
-      // document.write(x, "<br>");
-      // document.write(y, "<br>");
-      // document.write(z, "<br><br>");
       document.querySelector("#sample03 .result-view .result").innerHTML = `${x} ${y} ${z}`;
       document.querySelector("#sample03 .result-view h2").addEventListener("click", function () {
         document.querySelector("#sample03 .result-view .result").classList.toggle("look");
@@ -657,10 +645,6 @@
       // z = "jquery";
       //Uncaught TypeError: Assignment to constant variable.
 
-      // document.write("*** 04. 상수 ***<br>");
-      // document.write(x, "<br>");
-      // document.write(y, "<br>");
-      // document.write(z, "<br><br>");
       document.querySelector("#sample04 .result-view .result").innerHTML = `${x} ${y} ${z}`;
       document.querySelector("#sample04 .result-view h2").addEventListener("click", function () {
         document.querySelector("#sample04 .result-view .result").classList.toggle("look");
@@ -676,10 +660,6 @@
       arr[1] = 200; //두번째 배열 저장소에 숫자 200을 저장
       arr[2] = "javascript"; //세번째 배열 저장소에 문자열 javascript를 저장
 
-      // document.write("*** 05. 배열 ***<br>");
-      // document.write(arr[0], "<br>");
-      // document.write(arr[1], "<br>");
-      // document.write(arr[2], "<br><br>");
       document.querySelector("#sample05 .result-view .result").innerHTML = `${arr[0]} ${arr[1]} ${arr[2]}`;
       document.querySelector("#sample05 .result-view h2").addEventListener("click", function () {
         document.querySelector("#sample05 .result-view .result").classList.toggle("look");
@@ -691,10 +671,6 @@
     {
       const arr = new Array(100, 200, "javascript");
 
-      // document.write("*** 06. 배열 ***<br>");
-      // document.write(arr[0], "<br>");
-      // document.write(arr[1], "<br>");
-      // document.write(arr[2], "<br><br>");
       document.querySelector("#sample06 .result-view .result").innerHTML = `${arr[0]} ${arr[1]} ${arr[2]}`;
       document.querySelector("#sample06 .result-view h2").addEventListener("click", function () {
         document.querySelector("#sample06 .result-view .result").classList.toggle("look");
@@ -709,10 +685,6 @@
       arr[1] = 200;
       arr[2] = "javascript";
 
-      // document.write("*** 07. 배열 ***<br>");
-      // document.write(arr[0], "<br>");
-      // document.write(arr[1], "<br>");
-      // document.write(arr[2], "<br><br>");
       document.querySelector("#sample07 .result-view .result").innerHTML = `${arr[0]} ${arr[1]} ${arr[2]}`;
       document.querySelector("#sample07 .result-view h2").addEventListener("click", function () {
         document.querySelector("#sample07 .result-view .result").classList.toggle("look");
@@ -724,10 +696,6 @@
     {
       const arr = [100, 200, "javascript"]; //배열 선언
 
-      // document.write("*** 08. 배열 ***<br>");
-      // document.write(arr[0], "<br>");
-      // document.write(arr[1], "<br>");
-      // document.write(arr[2], "<br><br>");
       document.querySelector("#sample08 .result-view .result").innerHTML = `${arr[0]} ${arr[1]} ${arr[2]}`;
       document.querySelector("#sample08 .result-view h2").addEventListener("click", function () {
         document.querySelector("#sample08 .result-view .result").classList.toggle("look");
@@ -743,10 +711,6 @@
       obj[1] = 200;
       obj[2] = "javascript";
 
-      // document.write("*** 09. 객체 ***<br>");
-      // document.write(obj[0], "<br>");
-      // document.write(obj[1], "<br>");
-      // document.write(obj[2], "<br><br>");
       document.querySelector("#sample09 .result-view .result").innerHTML = `${obj[0]} ${obj[1]} ${obj[2]}`;
       document.querySelector("#sample09 .result-view h2").addEventListener("click", function () {
         document.querySelector("#sample09 .result-view .result").classList.toggle("look");
@@ -761,10 +725,6 @@
       obj.b = 200;
       obj.c = "javascript";
 
-      // document.write("*** 10. 객체 ***<br>");
-      // document.write(obj.a, "<br>");
-      // document.write(obj.b, "<br>");
-      // document.write(obj.c, "<br><br>");
       document.querySelector("#sample10 .result-view .result").innerHTML = `${obj.a} ${obj.b} ${obj.c}`;
       document.querySelector("#sample10 .result-view h2").addEventListener("click", function () {
         document.querySelector("#sample10 .result-view .result").classList.toggle("look");
@@ -779,10 +739,6 @@
       obj.b = 200;
       obj.c = "javascript";
 
-      // document.write("*** 11. 객체 ***<br>");
-      // document.write(obj.a, "<br>");
-      // document.write(obj.b, "<br>");
-      // document.write(obj.c, "<br><br>");
       document.querySelector("#sample11 .result-view .result").innerHTML = `${obj.a} ${obj.b} ${obj.c}`;
       document.querySelector("#sample11 .result-view h2").addEventListener("click", function () {
         document.querySelector("#sample11 .result-view .result").classList.toggle("look");
@@ -798,10 +754,6 @@
         c: "javascript"
       };
 
-      // document.write("*** 12. 객체 ***<br>");
-      // document.write(obj.a, "<br>");
-      // document.write(obj.b, "<br>");
-      // document.write(obj.c, "<br><br>");
       document.querySelector("#sample12 .result-view .result").innerHTML = `${obj.a} ${obj.b} ${obj.c}`;
       document.querySelector("#sample12 .result-view h2").addEventListener("click", function () {
         document.querySelector("#sample12 .result-view .result").classList.toggle("look");
@@ -820,10 +772,6 @@
       }
       ];
 
-      // document.write("*** 13. 객체 ***<br>");
-      // document.write(obj[0].a, "<br>");
-      // document.write(obj[0].b, "<br>");
-      // document.write(obj[1].c, "<br><br>");
       document.querySelector("#sample13 .result-view .result").innerHTML = `${obj[0].a} ${obj[0].b} ${obj[1].c}`;
       document.querySelector("#sample13 .result-view h2").addEventListener("click", function () {
         document.querySelector("#sample13 .result-view .result").classList.toggle("look");
@@ -839,12 +787,6 @@
         c: "javascript"
       };
 
-      // document.write("*** 14. 객체 ***<br>");
-      // document.write(obj.a, "<br>");
-      // document.write(obj.b, "<br>");
-      // document.write(obj.b[0], "<br>");
-      // document.write(obj.b[1], "<br>");
-      // document.write(obj.c, "<br><br>");
       document.querySelector("#sample14 .result-view .result").innerHTML = `${obj.a} ${obj.b} ${obj.b[0]} ${obj.b[1]} ${obj.c}`;
       document.querySelector("#sample14 .result-view h2").addEventListener("click", function () {
         document.querySelector("#sample14 .result-view .result").classList.toggle("look");
@@ -864,10 +806,6 @@
         c
       };
 
-      // document.write("*** 15. 객체 ***<br>");
-      // document.write(obj.a, "<br>");
-      // document.write(obj.b, "<br>");
-      // document.write(obj.c, "<br><br>");
       document.querySelector("#sample15 .result-view .result").innerHTML = `${obj.a} ${obj.b} ${obj.c}`;
       document.querySelector("#sample15 .result-view h2").addEventListener("click", function () {
         document.querySelector("#sample15 .result-view .result").classList.toggle("look");
@@ -883,30 +821,16 @@
         b: [200, 300],
         c: "javascript",
         d: function () {
-          // document.write("자바스크립트가 실행 되었습니다.<br>");
           document.querySelector("#sample16 .result-view .result").innerHTML += "자바스크립트가 실행 되었습니다.<br>";
         },
         e: function () {
-          // document.write(obj.c + "가 실행 되었습니다.<br>");
           document.querySelector("#sample16 .result-view .result").innerHTML += obj.c + "가 실행 되었습니다.<br>";
 
         },
         f: function () {
-          // document.write(this.c + "가 실행 되었습니다.<br>");
           document.querySelector("#sample16 .result-view .result").innerHTML += this.c + "가 실행 되었습니다.<br>";
         }
       }
-
-      // document.write("*** 16. 객체 ***<br>");
-      // document.write(obj.a, "<br>");
-      // document.write(obj.b, "<br>");
-      // document.write(obj.b[0], "<br>");
-      // document.write(obj.b[1], "<br>");
-      // document.write(obj.c, "<br>");
-      // obj.d();
-      // obj.e();
-      // obj.f();
-      // document.write("<br>");
 
       document.querySelector("#sample16 .result-view .result").innerHTML = `${obj.a} ${obj.b} ${obj.b[0]} ${obj.b[1]} ${obj.c}` + "<br>";
       obj.d();
@@ -919,8 +843,6 @@
 
     //sample17
     {
-      // document.write("*** 17. 변수의 종류 ***<br>");
-
       let x = 100; //변수 설정 : 전역 변수
       let y = 200;
       let z = "javascript"
@@ -934,22 +856,11 @@
         a = 400; //전역 변수 a의 값 변경
         y = 500; //func()안의 지역변수 y의 값 변경
 
-        // document.write("함수안<br>");
-        // document.write(x, "<br>");
-        // document.write(y, "<br>");
-        // document.write(z, "<br>");
-        // document.write(a, "<br>");
         document.querySelector("#sample17 .result-view .result").innerHTML += `함수 안<br>
         ${x} ${y} ${z} ${a}<br>`;
       }
 
       func();
-      // document.write("<br>");
-      // document.write("함수밖<br>");
-      // document.write(x, "<br>");
-      // document.write(y, "<br>");
-      // document.write(z, "<br>");
-      // document.write(a, "<br>");
       document.querySelector("#sample17 .result-view .result").innerHTML += `함수 밖<br>
         ${x} ${y} ${z} ${a}`;
 
@@ -964,24 +875,16 @@
       let x = 100;
       let y = "100";
 
-      // document.write("*** 18. 변수의 변환 ***<br>");
-      // document.write("x: " + x + " : " + typeof (x), "<br>");
-      // document.write("y: " + y + " : " + typeof (y), "<br><br>");
-      // document.querySelector("#sample18 .result-view .result").innerHTML = `*** 18. 변수의 변환 *** <br>`;
       document.querySelector("#sample18 .result-view .result").innerHTML += `x: ${x} : ${typeof (x)} <br>`;
       document.querySelector("#sample18 .result-view .result").innerHTML += `x: ${y} : ${typeof (y)} <br>`;
 
       x = "" + x; //숫자를 문자열로 형 변환
-      // document.write("x: " + x + " : " + typeof (x), "<br>");
       y = Number(y); //내장 객체를 이용한 형 변환
-      // document.write("y: " + y + " : " + typeof (y), "<br><br>");
       document.querySelector("#sample18 .result-view .result").innerHTML += `x: ${x} : ${typeof (x)} <br>`;
       document.querySelector("#sample18 .result-view .result").innerHTML += `x: ${y} : ${typeof (y)} <br>`;
 
       x = Number(x);
-      // document.write("x: " + x + " : " + typeof (x), "<br>");
       y = String(y);
-      // document.write("y: " + y + " : " + typeof (y), "<br><br>");
       document.querySelector("#sample18 .result-view .result").innerHTML += `x: ${x} : ${typeof (x)} <br>`;
       document.querySelector("#sample18 .result-view .result").innerHTML += `x: ${y} : ${typeof (y)} <br>`;
 
@@ -996,7 +899,6 @@
     //       배열(object), 객체(object), 불린(boolen(true,false)),
     //       특수값(null, undefind), 심볼(symbol)
     {
-      // document.write("*** 18. 변수의 유형 ***<br>");
       let num1 = 100;
       let str = "javascript";
       let func = function () { };
@@ -1010,16 +912,6 @@
       let nul; // 아무런 값이 없을 때
       let und = undefined; //값이 정의 되어 있지 않을 때
       let sym = Symbol();
-
-      // document.write("num1: " + typeof (num1), "<br>");
-      // document.write("str: " + typeof (str), "<br>");
-      // document.write("func: " + typeof (func), "<br>");
-      // document.write("arr: " + typeof (arr), "<br>");
-      // document.write("obj: " + typeof (obj), "<br>");
-      // document.write("bool: " + typeof (bool), "<br>");
-      // document.write("nul: " + typeof (nul), "<br>");
-      // document.write("und: " + typeof (und), "<br>");
-      // document.write("sym: " + typeof (sym), "<br>");
 
       document.querySelector("#sample19 .result-view .result").innerHTML =
         "num1: " + typeof (num1) + "<br>" +

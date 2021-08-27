@@ -297,7 +297,6 @@
     //sample01
     //01. for문을 이용해서 화면에 1~100까치 출력
     {
-      // document.write("*** 01. 1부터 100까지 출력 ***<br>");
       for (let i = 1; i <= 100; i++) {
         document.querySelector("#sample01 .result-view .result").innerHTML += `${i} `;
       }
@@ -308,13 +307,6 @@
     //sample02
     //02. for문을 이용해서 1~100까지 짝수만 출력
     {
-      // document.write("*** 02. 1부터 100까지 출력 : 짝수만 ***<br>");
-      // for (let i = 1; i <= 100; i++) {
-      //   if (i % 2 == 0) {
-      //     document.write(i, " &nbsp;");
-      //   }
-      // }
-      // document.write("<br><br>");
       for (let i = 2; i <= 100; i += 2) {
         document.querySelector("#sample02 .result-view .result").innerHTML += `${i} `;
       }
@@ -326,7 +318,6 @@
     //sample03
     //03. for문을 이용해서 화면에 1~100까지 5의 배수만 출력
     {
-      // document.write("*** 03. 1부터 100까지 출력 : 5의 배수 ***<br>");
       for (let i = 1; i <= 100; i++) {
         if (i % 5 == 0) {
           document.querySelector("#sample03 .result-view .result").innerHTML += `${i} `;
@@ -340,13 +331,10 @@
     //sample04
     //04. for문을 이용해서 화면에 1~100까지 출력(짝수는 빨간색, 홀수는 파란색)
     {
-      // document.write("*** 04. 1부터 100까지 출력 : 짝수는 빨간색, 홀수는 파란색 ***<br>");
       for (let i = 1; i <= 100; i++) {
         if (i % 2 == 0) {
-          // document.write("<span style='color:red'>" + i + " </span>");
           document.querySelector("#sample04 .result-view .result").innerHTML += "<span style='color:red'>" + i + " </span>";
         } else {
-          // document.write("<span style='color:blue'>" + i + " </span>");
           document.querySelector("#sample04 .result-view .result").innerHTML += "<span style='color:blue'>" + i + " </span>";
         }
       }
@@ -359,7 +347,6 @@
     //05. 1부터 100까지의 합 출력하기
     {
       let sum = 0;
-      // document.write("*** 05. 1부터 100까지의 합 출력하기 ***<br>");
       for (let i = 1; i <= 100; i++) {
         sum += i;
       }
@@ -375,21 +362,9 @@
     //sample
     //구구단 만들기
     {
-      // document.write("*** 100. 구구단 만들기 ***<br>");
-      // 2 * 1 = 2
-      // 2 * 2 = 4
-      // 2 * 3 = 6
-      // 2 * 4 = 8
-      // 2 * 5 = 10
-      // 2 * 6 = 12
-      // 2 * 7 = 14
-      // 2 * 8 = 16
-      // 2 * 9 = 18
-
       for (var i = 2; i <= 9; i++) {
         for (var j = 1; j <= 9; j++) {
           var sum = i * j;
-          document.write(i + " * " + j + " = " + sum, "<br>");
           document.querySelector("#sample06 .result-view .result").innerHTML += `${i} * ${j} = ${sum}<br>`;
         }
       }
@@ -402,8 +377,6 @@
     //sampel
     //테이블 만들기1
     {
-      document.write("*** 101. 테이블 만들기 ***<br>");
-
       let num = 1;
       let table = "<table>";
       for (let i = 1; i <= 10; i++) {
@@ -416,15 +389,16 @@
       }
       table += "</table>";
 
-      document.write(table, "<br>");
+      document.querySelector("#sample07 .result-view .result").innerHTML += table;
+      document.querySelector("#sample07 .result-view h2").addEventListener("click", function () {
+        document.querySelector("#sample07 .result-view .result").classList.toggle("look");
+      });
     }
 
     //숙제: 100~1까지 역순 테이블 만들기
     //sampel101
     //테이블 만들기2
     {
-      document.write("*** 102. 리버스 테이블 만들기 ***<br>");
-
       let num = 100;
       let table = "<table>";
       for (let i = 1; i <= 10; i++) {
@@ -437,15 +411,16 @@
       }
       table += "</table>";
 
-      document.write(table, "<br>");
+      document.querySelector("#sample08 .result-view .result").innerHTML += table;
+      document.querySelector("#sample08 .result-view h2").addEventListener("click", function () {
+        document.querySelector("#sample08 .result-view .result").classList.toggle("look");
+      });
     }
 
     //숙제: 짝수만 나오는 테이블 만들기
     //sample
     //테이블 만들기3 : 짝수만
     {
-      document.write("*** 103. 짝수만 나오는 테이블 만들기 ***<br>");
-
       let num = 2;
       let table = "<table>";
       for (let i = 1; i <= 10; i++) {
@@ -458,7 +433,10 @@
       }
       table += "</table>";
 
-      document.write(table, "<br>");
+      document.querySelector("#sample09 .result-view .result").innerHTML += table;
+      document.querySelector("#sample09 .result-view h2").addEventListener("click", function () {
+        document.querySelector("#sample09 .result-view .result").classList.toggle("look");
+      });
     }
   </script>
 </body>
