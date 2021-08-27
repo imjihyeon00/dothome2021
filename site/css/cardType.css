@@ -166,41 +166,43 @@ body {
   position: relative;
 }
 
-.cardType03 h2{
+.cardType03 h2 {
   font-size: 50px;
   font-weight: 800;
   margin-bottom: 4px;
 }
 
-.cardType03 p{
+.cardType03 p {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.28;
   margin-bottom: 50px;
 }
 
-.cardType03 .popular{
+.cardType03 .popular {
   position: absolute;
-  right: 0;  top: 180px;
+  right: 0;
+  top: 180px;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.28;
 }
 
-.cardType03 .card-wrap .card{
+.cardType03 .card-wrap .card {
   margin-bottom: 28px;
 }
 
-.cardType03 .card-wrap .card .card-img{
+.cardType03 .card-wrap .card .card-img {
   width: 285px;
   height: 185px;
   position: absolute;
 }
 
-.cardType03 .card-wrap .card .right{
+.cardType03 .card-wrap .card .right {
   padding-left: 305px;
 }
-.cardType03 .card-wrap .card .card-cate{
+
+.cardType03 .card-wrap .card .card-cate {
   font-size: 14px;
   font-weight: 800;
   padding: 4px 14px 3px 15px;
@@ -214,13 +216,16 @@ body {
 .cardType03 .card-wrap .card .card-cate.red {
   background: #ff5151;
 }
+
 .cardType03 .card-wrap .card .card-cate.blue {
   background: #5465ff;
 }
+
 .cardType03 .card-wrap .card .card-cate.green {
   background: #11c865;
 }
-.cardType03 .card-wrap .card .card-tit{
+
+.cardType03 .card-wrap .card .card-tit {
   display: block;
   font-size: 26px;
   font-weight: bold;
@@ -228,22 +233,25 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.cardType03 .card-wrap .card .card-desc{
+
+.cardType03 .card-wrap .card .card-desc {
   font-size: 16px;
   font-weight: 300;
   line-height: 1.53;
   color: #555;
   /* margin-top: 10px; */
   /* 3줄로 맞춰줌 */
-  display: block; 
+  display: block;
   display: -webkit-box;
   overflow: hidden;
-  max-height: 4.59em; /* 인터넷 익스플로러 호환 */
+  max-height: 4.59em;
+  /* 인터넷 익스플로러 호환 */
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  text-overflow: ellipsis; 
+  text-overflow: ellipsis;
 }
-.cardType03 .card-wrap .card .card-date{
+
+.cardType03 .card-wrap .card .card-date {
   color: #555;
   font-size: 14px;
   font-weight: bold;
@@ -251,4 +259,44 @@ body {
   display: block;
   text-decoration: underline;
   margin-top: 20px;
+}
+
+
+/* cardType04 */
+.cardType04 {
+  font-family: 'NanumSquare';
+  padding: 100px 0;
+}
+
+.cardType04 h2 {
+  font-size: 55px;
+  font-weight: 800;
+  line-height: 1.3;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.cardType04 .card-wrap {
+  display: flex;
+  gap: 20px;
+}
+.cardType04 .card-wrap .card{
+  position: relative;
+}
+
+.cardType04 .card-wrap .card .card-desc{
+  position: absolute;
+  left: 45px; top: 55px;
+}
+.cardType04 .card-wrap .card .card-desc em{
+  display: block;
+  font-size: 15px;
+  font-weight: 800;
+  color: #A8ABAD;
+  margin-bottom: 15px;
+}
+.cardType04 .card-wrap .card .card-desc strong{
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 1.4;
 }
