@@ -531,3 +531,9 @@ a {
   border-radius: 5px;
   font-style: normal;
 }
+
+@media (max-width: 800px) {
+  .view2>div span {
+    padding: 13px;
+  }
+}

@@ -93,6 +93,35 @@
       border-radius: 5px;
       vertical-align: top;
     }
+
+    @media (max-width: 800px) {
+      .ex1 {
+        flex-wrap: wrap;
+        justify-content: start;
+      }
+
+      .ex1>div {
+        width: 32%;
+      }
+
+      .ex2 {
+        flex-wrap: wrap;
+        justify-content: start;
+      }
+
+      .ex2>div {
+        width: 32%;
+      }
+
+      .ex3 {
+        flex-wrap: wrap;
+        justify-content: start;
+      }
+
+      .ex3>div {
+        width: 32%;
+      }
+    }
   </style>
 </head>
 
@@ -285,7 +314,7 @@
   <script>
     //리셋버튼을 클릭하면 1,4번째 클래스 추가
     document.querySelector(".btn3-0").addEventListener("click", () => {
-      document.querySelector(".ex3 > div:nth-child(3)").classList.add('active');
+      document.querySelector(".ex3 > div:nth-child(2)").classList.add('active');
       document.querySelector(".ex3 > div:nth-child(4)").classList.add('active');
     });
 
@@ -320,6 +349,12 @@
       border: 5px solid #fbc2eb;
       box-sizing: content-box;
       background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    }
+
+    @media (max-width: 800px) {
+      .ex4 {
+        min-height: 400px;
+      }
     }
   </style>
   <div id="sample04" class="sample">
