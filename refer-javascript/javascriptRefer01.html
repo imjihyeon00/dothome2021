@@ -98,7 +98,7 @@
 </code></pre>
     </div>
     <div class="result-view">
-      <h2>결과보기</h2>
+      <strong>결과보기</strong>
       <div class="result"></div>
     </div>
   </div>
@@ -123,7 +123,7 @@
 </code></pre>
     </div>
     <div class="result-view">
-      <h2>결과보기</h2>
+      <strong>결과보기</strong>
       <div class="result"></div>
     </div>
   </div>
@@ -148,7 +148,7 @@
 </code></pre>
     </div>
     <div class="result-view">
-      <h2>결과보기</h2>
+      <strong>결과보기</strong>
       <div class="result"></div>
     </div>
   </div>
@@ -174,7 +174,7 @@
 </code></pre>
     </div>
     <div class="result-view">
-      <h2>결과보기</h2>
+      <strong>결과보기</strong>
       <div class="result"></div>
     </div>
   </div>
@@ -197,7 +197,7 @@
 </code></pre>
     </div>
     <div class="result-view">
-      <h2>결과보기</h2>
+      <strong>결과보기</strong>
       <div class="result"></div>
     </div>
   </div>
@@ -217,7 +217,7 @@
 </code></pre>
     </div>
     <div class="result-view">
-      <h2>결과보기</h2>
+      <strong>결과보기</strong>
       <div class="result"></div>
     </div>
   </div>
@@ -240,7 +240,7 @@
 </code></pre>
     </div>
     <div class="result-view">
-      <h2>결과보기</h2>
+      <strong>결과보기</strong>
       <div class="result"></div>
     </div>
   </div>
@@ -260,7 +260,7 @@
 </code></pre>
     </div>
     <div class="result-view">
-      <h2>결과보기</h2>
+      <strong>결과보기</strong>
       <div class="result"></div>
     </div>
   </div>
@@ -283,7 +283,7 @@
 </code></pre>
     </div>
     <div class="result-view">
-      <h2>결과보기</h2>
+      <strong>결과보기</strong>
       <div class="result"></div>
     </div>
   </div>
@@ -306,7 +306,7 @@
 </code></pre>
     </div>
     <div class="result-view">
-      <h2>결과보기</h2>
+      <strong>결과보기</strong>
       <div class="result"></div>
     </div>
   </div>
@@ -329,7 +329,7 @@
 </code></pre>
     </div>
     <div class="result-view">
-      <h2>결과보기</h2>
+      <strong>결과보기</strong>
       <div class="result"></div>
     </div>
   </div>
@@ -349,7 +349,7 @@
 </code></pre>
     </div>
     <div class="result-view">
-      <h2>결과보기</h2>
+      <strong>결과보기</strong>
       <div class="result"></div>
     </div>
   </div>
@@ -372,7 +372,7 @@
 </code></pre>
     </div>
     <div class="result-view">
-      <h2>결과보기</h2>
+      <strong>결과보기</strong>
       <div class="result"></div>
     </div>
   </div>
@@ -398,7 +398,7 @@
 </code></pre>
     </div>
     <div class="result-view">
-      <h2>결과보기</h2>
+      <strong>결과보기</strong>
       <div class="result"></div>
     </div>
   </div>
@@ -422,7 +422,7 @@
 </code></pre>
     </div>
     <div class="result-view">
-      <h2>결과보기</h2>
+      <strong>결과보기</strong>
       <div class="result"></div>
     </div>
   </div>
@@ -460,7 +460,7 @@
 </code></pre>
     </div>
     <div class="result-view">
-      <h2>결과보기</h2>
+      <strong>결과보기</strong>
       <div class="result"></div>
     </div>
   </div>
@@ -503,7 +503,7 @@
 </code></pre>
     </div>
     <div class="result-view">
-      <h2>결과보기</h2>
+      <strong>결과보기</strong>
       <div class="result"></div>
     </div>
   </div>
@@ -534,7 +534,7 @@
 </code></pre>
     </div>
     <div class="result-view">
-      <h2>결과보기</h2>
+      <strong>결과보기</strong>
       <div class="result"></div>
     </div>
   </div>
@@ -572,7 +572,7 @@
 </code></pre>
     </div>
     <div class="result-view">
-      <h2>결과보기</h2>
+      <strong>결과보기</strong>
       <div class="result"></div>
     </div>
   </div>
@@ -595,8 +595,8 @@
       //var x = 300;          //오류 없이 출력됨
 
       document.querySelector("#sample01 .result-view .result").innerHTML = `${x} ${y} ${z}`;
-      document.querySelector("#sample01 .result-view h2").addEventListener("click", function () {
-        document.querySelector("#sample01 .result-view .result").classList.toggle("look");
+      document.querySelector("#sample01 .result-view strong").addEventListener("click", function () {
+        document.querySelector("#sample01 .result-view").classList.toggle("look");
       });
 
     }
@@ -612,8 +612,8 @@
       z = "jquery";
 
       document.querySelector("#sample02 .result-view .result").innerHTML = `${x} ${y} ${z}`;
-      document.querySelector("#sample02 .result-view h2").addEventListener("click", function () {
-        document.querySelector("#sample02 .result-view .result").classList.toggle("look");
+      document.querySelector("#sample02 .result-view strong").addEventListener("click", function () {
+        document.querySelector("#sample02 .result-view").classList.toggle("look");
       });
 
     }
@@ -629,8 +629,8 @@
       z += "jquery"; //z=z+"jquery"
 
       document.querySelector("#sample03 .result-view .result").innerHTML = `${x} ${y} ${z}`;
-      document.querySelector("#sample03 .result-view h2").addEventListener("click", function () {
-        document.querySelector("#sample03 .result-view .result").classList.toggle("look");
+      document.querySelector("#sample03 .result-view strong").addEventListener("click", function () {
+        document.querySelector("#sample03 .result-view").classList.toggle("look");
       });
     }
 
@@ -646,8 +646,8 @@
       //Uncaught TypeError: Assignment to constant variable.
 
       document.querySelector("#sample04 .result-view .result").innerHTML = `${x} ${y} ${z}`;
-      document.querySelector("#sample04 .result-view h2").addEventListener("click", function () {
-        document.querySelector("#sample04 .result-view .result").classList.toggle("look");
+      document.querySelector("#sample04 .result-view strong").addEventListener("click", function () {
+        document.querySelector("#sample04 .result-view").classList.toggle("look");
       });
     }
 
@@ -661,8 +661,8 @@
       arr[2] = "javascript"; //세번째 배열 저장소에 문자열 javascript를 저장
 
       document.querySelector("#sample05 .result-view .result").innerHTML = `${arr[0]} ${arr[1]} ${arr[2]}`;
-      document.querySelector("#sample05 .result-view h2").addEventListener("click", function () {
-        document.querySelector("#sample05 .result-view .result").classList.toggle("look");
+      document.querySelector("#sample05 .result-view strong").addEventListener("click", function () {
+        document.querySelector("#sample05 .result-view").classList.toggle("look");
       });
     }
 
@@ -672,8 +672,8 @@
       const arr = new Array(100, 200, "javascript");
 
       document.querySelector("#sample06 .result-view .result").innerHTML = `${arr[0]} ${arr[1]} ${arr[2]}`;
-      document.querySelector("#sample06 .result-view h2").addEventListener("click", function () {
-        document.querySelector("#sample06 .result-view .result").classList.toggle("look");
+      document.querySelector("#sample06 .result-view strong").addEventListener("click", function () {
+        document.querySelector("#sample06 .result-view").classList.toggle("look");
       });
     }
 
@@ -686,8 +686,8 @@
       arr[2] = "javascript";
 
       document.querySelector("#sample07 .result-view .result").innerHTML = `${arr[0]} ${arr[1]} ${arr[2]}`;
-      document.querySelector("#sample07 .result-view h2").addEventListener("click", function () {
-        document.querySelector("#sample07 .result-view .result").classList.toggle("look");
+      document.querySelector("#sample07 .result-view strong").addEventListener("click", function () {
+        document.querySelector("#sample07 .result-view").classList.toggle("look");
       });
     }
 
@@ -697,8 +697,8 @@
       const arr = [100, 200, "javascript"]; //배열 선언
 
       document.querySelector("#sample08 .result-view .result").innerHTML = `${arr[0]} ${arr[1]} ${arr[2]}`;
-      document.querySelector("#sample08 .result-view h2").addEventListener("click", function () {
-        document.querySelector("#sample08 .result-view .result").classList.toggle("look");
+      document.querySelector("#sample08 .result-view strong").addEventListener("click", function () {
+        document.querySelector("#sample08 .result-view").classList.toggle("look");
       });
     }
 
@@ -712,8 +712,8 @@
       obj[2] = "javascript";
 
       document.querySelector("#sample09 .result-view .result").innerHTML = `${obj[0]} ${obj[1]} ${obj[2]}`;
-      document.querySelector("#sample09 .result-view h2").addEventListener("click", function () {
-        document.querySelector("#sample09 .result-view .result").classList.toggle("look");
+      document.querySelector("#sample09 .result-view strong").addEventListener("click", function () {
+        document.querySelector("#sample09 .result-view").classList.toggle("look");
       });
     }
 
@@ -726,8 +726,8 @@
       obj.c = "javascript";
 
       document.querySelector("#sample10 .result-view .result").innerHTML = `${obj.a} ${obj.b} ${obj.c}`;
-      document.querySelector("#sample10 .result-view h2").addEventListener("click", function () {
-        document.querySelector("#sample10 .result-view .result").classList.toggle("look");
+      document.querySelector("#sample10 .result-view strong").addEventListener("click", function () {
+        document.querySelector("#sample10 .result-view").classList.toggle("look");
       });
     }
 
@@ -740,8 +740,8 @@
       obj.c = "javascript";
 
       document.querySelector("#sample11 .result-view .result").innerHTML = `${obj.a} ${obj.b} ${obj.c}`;
-      document.querySelector("#sample11 .result-view h2").addEventListener("click", function () {
-        document.querySelector("#sample11 .result-view .result").classList.toggle("look");
+      document.querySelector("#sample11 .result-view strong").addEventListener("click", function () {
+        document.querySelector("#sample11 .result-view").classList.toggle("look");
       });
     }
 
@@ -755,8 +755,8 @@
       };
 
       document.querySelector("#sample12 .result-view .result").innerHTML = `${obj.a} ${obj.b} ${obj.c}`;
-      document.querySelector("#sample12 .result-view h2").addEventListener("click", function () {
-        document.querySelector("#sample12 .result-view .result").classList.toggle("look");
+      document.querySelector("#sample12 .result-view strong").addEventListener("click", function () {
+        document.querySelector("#sample12 .result-view").classList.toggle("look");
       });
     }
 
@@ -773,8 +773,8 @@
       ];
 
       document.querySelector("#sample13 .result-view .result").innerHTML = `${obj[0].a} ${obj[0].b} ${obj[1].c}`;
-      document.querySelector("#sample13 .result-view h2").addEventListener("click", function () {
-        document.querySelector("#sample13 .result-view .result").classList.toggle("look");
+      document.querySelector("#sample13 .result-view strong").addEventListener("click", function () {
+        document.querySelector("#sample13 .result-view").classList.toggle("look");
       });
     }
 
@@ -788,8 +788,8 @@
       };
 
       document.querySelector("#sample14 .result-view .result").innerHTML = `${obj.a} ${obj.b} ${obj.b[0]} ${obj.b[1]} ${obj.c}`;
-      document.querySelector("#sample14 .result-view h2").addEventListener("click", function () {
-        document.querySelector("#sample14 .result-view .result").classList.toggle("look");
+      document.querySelector("#sample14 .result-view strong").addEventListener("click", function () {
+        document.querySelector("#sample14 .result-view").classList.toggle("look");
       });
     }
 
@@ -807,8 +807,8 @@
       };
 
       document.querySelector("#sample15 .result-view .result").innerHTML = `${obj.a} ${obj.b} ${obj.c}`;
-      document.querySelector("#sample15 .result-view h2").addEventListener("click", function () {
-        document.querySelector("#sample15 .result-view .result").classList.toggle("look");
+      document.querySelector("#sample15 .result-view strong").addEventListener("click", function () {
+        document.querySelector("#sample15 .result-view").classList.toggle("look");
       });
     }
 
@@ -836,8 +836,8 @@
       obj.d();
       obj.e();
       obj.f();
-      document.querySelector("#sample16 .result-view h2").addEventListener("click", function () {
-        document.querySelector("#sample16 .result-view .result").classList.toggle("look");
+      document.querySelector("#sample16 .result-view strong").addEventListener("click", function () {
+        document.querySelector("#sample16 .result-view").classList.toggle("look");
       });
     }
 
@@ -864,8 +864,8 @@
       document.querySelector("#sample17 .result-view .result").innerHTML += `함수 밖<br>
         ${x} ${y} ${z} ${a}`;
 
-      document.querySelector("#sample17 .result-view h2").addEventListener("click", function () {
-        document.querySelector("#sample17 .result-view .result").classList.toggle("look");
+      document.querySelector("#sample17 .result-view strong").addEventListener("click", function () {
+        document.querySelector("#sample17 .result-view").classList.toggle("look");
       });
     }
 
@@ -888,8 +888,8 @@
       document.querySelector("#sample18 .result-view .result").innerHTML += `x: ${x} : ${typeof (x)} <br>`;
       document.querySelector("#sample18 .result-view .result").innerHTML += `x: ${y} : ${typeof (y)} <br>`;
 
-      document.querySelector("#sample18 .result-view h2").addEventListener("click", function () {
-        document.querySelector("#sample18 .result-view .result").classList.toggle("look");
+      document.querySelector("#sample18 .result-view strong").addEventListener("click", function () {
+        document.querySelector("#sample18 .result-view").classList.toggle("look");
       });
     }
 
@@ -923,8 +923,8 @@
         "nul: " + typeof (nul) + "<br>" +
         "und: " + typeof (und) + "<br>" +
         "sym: " + typeof (sym) + "<br>";
-      document.querySelector("#sample19 .result-view h2").addEventListener("click", function () {
-        document.querySelector("#sample19 .result-view .result").classList.toggle("look");
+      document.querySelector("#sample19 .result-view strong").addEventListener("click", function () {
+        document.querySelector("#sample19 .result-view").classList.toggle("look");
       });
     }
   </script>

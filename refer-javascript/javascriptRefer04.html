@@ -68,6 +68,10 @@
       <li><a href="#sample13">for in문</a></li>
       <li><a href="#sample14">break문</a></li>
       <li><a href="#sample15">continue문</a></li>
+      <li><a href="#sample100">setInterval()</a></li>
+      <li><a href="#sample100">clearInterval()</a></li>
+      <li><a href="#sample200">setTimeout()</a></li>
+      <li><a href="#sample200">clearTimeout()</a></li>
     </ol>
   </div>
   <hr>
@@ -88,7 +92,7 @@
 </code></pre>
     </div>
     <div class="result-view">
-      <h2>결과보기</h2>
+      <strong>결과보기</strong>
       <div class="result"></div>
     </div>
   </div>
@@ -119,7 +123,7 @@
 </code></pre>
     </div>
     <div class="result-view">
-      <h2>결과보기</h2>
+      <strong>결과보기</strong>
       <div class="result"></div>
     </div>
   </div>
@@ -147,7 +151,7 @@
 </code></pre>
     </div>
     <div class="result-view">
-      <h2>결과보기</h2>
+      <strong>결과보기</strong>
       <div class="result"></div>
     </div>
   </div>
@@ -183,7 +187,7 @@
 </code></pre>
     </div>
     <div class="result-view">
-      <h2>결과보기</h2>
+      <strong>결과보기</strong>
       <div class="result"></div>
     </div>
   </div>
@@ -208,7 +212,7 @@
 </code></pre>
     </div>
     <div class="result-view">
-      <h2>결과보기</h2>
+      <strong>결과보기</strong>
       <div class="result"></div>
     </div>
   </div>
@@ -231,7 +235,7 @@
 </code></pre>
     </div>
     <div class="result-view">
-      <h2>결과보기</h2>
+      <strong>결과보기</strong>
       <div class="result"></div>
     </div>
   </div>
@@ -254,7 +258,7 @@
 </code></pre>
     </div>
     <div class="result-view">
-      <h2>결과보기</h2>
+      <strong>결과보기</strong>
       <div class="result"></div>
     </div>
   </div>
@@ -278,7 +282,7 @@
 </code></pre>
     </div>
     <div class="result-view">
-      <h2>결과보기</h2>
+      <strong>결과보기</strong>
       <div class="result"></div>
     </div>
   </div>
@@ -301,7 +305,7 @@
 </code></pre>
     </div>
     <div class="result-view">
-      <h2>결과보기</h2>
+      <strong>결과보기</strong>
       <div class="result"></div>
     </div>
   </div>
@@ -325,7 +329,7 @@
 </code></pre>
     </div>
     <div class="result-view">
-      <h2>결과보기</h2>
+      <strong>결과보기</strong>
       <div class="result"></div>
     </div>
   </div>
@@ -357,7 +361,7 @@
 </code></pre>
     </div>
     <div class="result-view">
-      <h2>결과보기</h2>
+      <strong>결과보기</strong>
       <div class="result"></div>
     </div>
   </div>
@@ -380,7 +384,7 @@
 </code></pre>
     </div>
     <div class="result-view">
-      <h2>결과보기</h2>
+      <strong>결과보기</strong>
       <div class="result"></div>
     </div>
   </div>
@@ -417,7 +421,7 @@
 </code></pre>
     </div>
     <div class="result-view">
-      <h2>결과보기</h2>
+      <strong>결과보기</strong>
       <div class="result"></div>
     </div>
   </div>
@@ -450,7 +454,7 @@
 </code></pre>
     </div>
     <div class="result-view">
-      <h2>결과보기</h2>
+      <strong>결과보기</strong>
       <div class="result"></div>
     </div>
   </div>
@@ -479,7 +483,7 @@
 </code></pre>
     </div>
     <div class="result-view">
-      <h2>결과보기</h2>
+      <strong>결과보기</strong>
       <div class="result"></div>
     </div>
   </div>
@@ -502,8 +506,8 @@
         document.querySelector("#sample1 .result-view .result").innerHTML = "조건문이 실행되었습니다.(false)";
       }
 
-      document.querySelector("#sample1 .result-view h2").addEventListener("click", function () {
-        document.querySelector("#sample1 .result-view .result").classList.toggle("look");
+      document.querySelector("#sample1 .result-view strong").addEventListener("click", function () {
+        document.querySelector("#sample1 .result-view").classList.toggle("look");
       });
     }
 
@@ -523,8 +527,8 @@
       } else {
         document.querySelector("#sample2 .result-view .result").innerHTML = "조건문이 실행되었습니다.(num == XX)";
       }
-      document.querySelector("#sample2 .result-view h2").addEventListener("click", function () {
-        document.querySelector("#sample2 .result-view .result").classList.toggle("look");
+      document.querySelector("#sample2 .result-view strong").addEventListener("click", function () {
+        document.querySelector("#sample2 .result-view").classList.toggle("look");
       });
     }
 
@@ -541,8 +545,8 @@
       } else {
         document.querySelector("#sample3 .result-view .result").innerHTML += "조건문이 실행되었습니다.(3)<br>";
       }
-      document.querySelector("#sample3 .result-view h2").addEventListener("click", function () {
-        document.querySelector("#sample3 .result-view .result").classList.toggle("look");
+      document.querySelector("#sample3 .result-view strong").addEventListener("click", function () {
+        document.querySelector("#sample3 .result-view").classList.toggle("look");
       });
     }
 
@@ -568,8 +572,8 @@
           document.querySelector("#sample4 .result-view .result").innerHTML += "조건문이 실행되었습니다.(num == 값이 없음)<br>";
           break;
       }
-      document.querySelector("#sample4 .result-view h2").addEventListener("click", function () {
-        document.querySelector("#sample4 .result-view .result").classList.toggle("look");
+      document.querySelector("#sample4 .result-view strong").addEventListener("click", function () {
+        document.querySelector("#sample4 .result-view").classList.toggle("look");
       });
     }
 
@@ -580,8 +584,8 @@
 
       (num == 100) ? document.querySelector("#sample5 .result-view .result").innerHTML += "true<br>" : document.querySelector("#sample5 .result-view .result").innerHTML += "false<br>";
 
-      document.querySelector("#sample5 .result-view h2").addEventListener("click", function () {
-        document.querySelector("#sample5 .result-view .result").classList.toggle("look");
+      document.querySelector("#sample5 .result-view strong").addEventListener("click", function () {
+        document.querySelector("#sample5 .result-view").classList.toggle("look");
       });
     }
 
@@ -596,8 +600,8 @@
       else
         document.querySelector("#sample6 .result-view .result").innerHTML += "false<br>";
 
-      document.querySelector("#sample6 .result-view h2").addEventListener("click", function () {
-        document.querySelector("#sample6 .result-view .result").classList.toggle("look");
+      document.querySelector("#sample6 .result-view strong").addEventListener("click", function () {
+        document.querySelector("#sample6 .result-view").classList.toggle("look");
       });
     }
 
@@ -610,8 +614,8 @@
         document.querySelector("#sample7 .result-view .result").innerHTML += num + ". 반복문이 실행되었습니다. <br>";
         num++;
       }
-      document.querySelector("#sample7 .result-view h2").addEventListener("click", function () {
-        document.querySelector("#sample7 .result-view .result").classList.toggle("look");
+      document.querySelector("#sample7 .result-view strong").addEventListener("click", function () {
+        document.querySelector("#sample7 .result-view").classList.toggle("look");
       });
     }
 
@@ -624,8 +628,8 @@
         document.querySelector("#sample8 .result-view .result").innerHTML += "반복문이 실행되었습니다. <br>";
         num++;
       } while (num <= 10);
-      document.querySelector("#sample8 .result-view h2").addEventListener("click", function () {
-        document.querySelector("#sample8 .result-view .result").classList.toggle("look");
+      document.querySelector("#sample8 .result-view strong").addEventListener("click", function () {
+        document.querySelector("#sample8 .result-view").classList.toggle("look");
       });
     }
 
@@ -635,8 +639,8 @@
       for (let i = 1; i <= 10; i++) {
         document.querySelector("#sample9 .result-view .result").innerHTML += i + ".반복문이 실행되었습니다. <br>";
       }
-      document.querySelector("#sample9 .result-view h2").addEventListener("click", function () {
-        document.querySelector("#sample9 .result-view .result").classList.toggle("look");
+      document.querySelector("#sample9 .result-view strong").addEventListener("click", function () {
+        document.querySelector("#sample9 .result-view").classList.toggle("look");
       });
     }
 
@@ -649,8 +653,8 @@
           document.querySelector("#sample10 .result-view .result").innerHTML += j + ".반복문(제이)이 실행되었습니다. <br>";
         }
       }
-      document.querySelector("#sample10 .result-view h2").addEventListener("click", function () {
-        document.querySelector("#sample10 .result-view .result").classList.toggle("look");
+      document.querySelector("#sample10 .result-view strong").addEventListener("click", function () {
+        document.querySelector("#sample10 .result-view").classList.toggle("look");
       });
     }
 
@@ -663,8 +667,8 @@
         document.querySelector("#sample11 .result-view .result").innerHTML += `${element} ${index} ${array} <br>`;
       });
 
-      document.querySelector("#sample11 .result-view h2").addEventListener("click", function () {
-        document.querySelector("#sample11 .result-view .result").classList.toggle("look");
+      document.querySelector("#sample11 .result-view strong").addEventListener("click", function () {
+        document.querySelector("#sample11 .result-view").classList.toggle("look");
       });
     }
 
@@ -676,8 +680,8 @@
       for (let i of num) {
         document.querySelector("#sample12 .result-view .result").innerHTML += i + ". 반복문이 실행되었습니다.<br>";
       }
-      document.querySelector("#sample12 .result-view h2").addEventListener("click", function () {
-        document.querySelector("#sample12 .result-view .result").classList.toggle("look");
+      document.querySelector("#sample12 .result-view strong").addEventListener("click", function () {
+        document.querySelector("#sample12 .result-view").classList.toggle("look");
       });
     }
 
@@ -704,8 +708,8 @@
       for (let key in obj) {
         document.querySelector("#sample13 .result-view .result").innerHTML += `${key} : ${obj[key]} `;
       }
-      document.querySelector("#sample13 .result-view h2").addEventListener("click", function () {
-        document.querySelector("#sample13 .result-view .result").classList.toggle("look");
+      document.querySelector("#sample13 .result-view strong").addEventListener("click", function () {
+        document.querySelector("#sample13 .result-view").classList.toggle("look");
       });
     }
 
@@ -729,8 +733,8 @@
           break;
         }
       }
-      document.querySelector("#sample14 .result-view h2").addEventListener("click", function () {
-        document.querySelector("#sample14 .result-view .result").classList.toggle("look");
+      document.querySelector("#sample14 .result-view strong").addEventListener("click", function () {
+        document.querySelector("#sample14 .result-view").classList.toggle("look");
       });
     }
 
@@ -748,8 +752,8 @@
         }
         document.querySelector("#sample15 .result-view .result").innerHTML += `${num} `;
       }
-      document.querySelector("#sample15 .result-view h2").addEventListener("click", function () {
-        document.querySelector("#sample15 .result-view .result").classList.toggle("look");
+      document.querySelector("#sample15 .result-view strong").addEventListener("click", function () {
+        document.querySelector("#sample15 .result-view").classList.toggle("look");
       });
     }
   </script>
