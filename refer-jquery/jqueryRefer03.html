@@ -13,6 +13,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://raw.githubusercontent.com/furf/jquery-ui-touch-punch/master/jquery.ui.touch-punch.js"></script>
 
   <link rel="stylesheet" href="style.css">
   <style>
@@ -109,7 +110,7 @@
       .ex1>div,
       .ex2>div,
       .ex3>div {
-        width: 31%;
+        width: 30%;
         margin: 5px;
       }
     }
@@ -599,9 +600,10 @@
       width: 100px;
       border-radius: 50%;
       padding: 10px;
-      margin: 20px;
-      border: 10px solid #fbc2eb;
+      margin: 10px;
+      border: 5px solid #fbc2eb;
       background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+      box-sizing: content-box;
     }
   </style>
   <div id="sample05" class="sample">
@@ -636,7 +638,7 @@
   <hr>
   <script>
     $('.btn5-0').click(function () {
-      $('.circle5').width("60").height("60");
+      $('.circle5').width("100").height("100");
     });
     $('.btn5-1').click(function () {
       $('.circle5').width("300");
@@ -668,9 +670,10 @@
       width: 100px;
       border-radius: 50%;
       padding: 10px;
-      margin: 20px;
-      border: 10px solid #fbc2eb;
+      margin: 10px;
+      border: 5px solid #fbc2eb;
       background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+      box-sizing: content-box;
     }
   </style>
   <div id="sample06" class="sample">
@@ -745,8 +748,9 @@
       width: 100px;
       border-radius: 50%;
       padding: 10px;
-      border: 10px solid #fbc2eb;
+      border: 5px solid #fbc2eb;
       background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+      box-sizing: content-box;
     }
   </style>
   <div id="sample07" class="sample">
