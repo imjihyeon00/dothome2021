@@ -222,6 +222,7 @@ a {
 
 .mt20 {
   margin-top: 20px;
+  margin-left: 3px;
 }
 
 .list {
@@ -363,6 +364,7 @@ a {
 @media (max-width: 800px) {
   body {
     font-size: 13px;
+    padding: 5%;
   }
 
   h1 {
