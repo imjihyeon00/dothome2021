@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/themes/prism-okaidia.min.css"
     integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -683,11 +684,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
   <script>
     //정답보기
-    document.querySelectorAll(".result h3").forEach(el => {
-      el.addEventListener("click", function (e) {
-        e.preventDefault();
-        this.parentNode.classList.toggle("show");
-      });
+    // document.querySelectorAll(".result h3").forEach(el => {
+    //   el.addEventListener("click", function (e) {
+    //     e.preventDefault();
+    //     this.parentNode.classList.toggle("show");
+    //   });
+    // });
+    $(".result h3").click(function (e) {
+      e.preventDefault();
+      $(this).parents().toggleClass("show");
     });
 
     //sample1
@@ -698,9 +703,12 @@
       var z = "javascript"; //변수 z에 문자 javascript를 저장
       //var x = 300;          //오류 없이 출력됨
 
-      document.querySelector(".result1-1").innerHTML = `${x}`;
-      document.querySelector(".result1-2").innerHTML = `${y}`;
-      document.querySelector(".result1-3").innerHTML = `${z}`;
+      // document.querySelector(".result1-1").innerHTML = `${x}`;
+      // document.querySelector(".result1-2").innerHTML = `${y}`;
+      // document.querySelector(".result1-3").innerHTML = `${z}`;
+      $(".result1-1").html(x);
+      $(".result1-2").html(y);
+      $(".result1-3").html(z);
     }
 
     //samplet2
@@ -713,9 +721,12 @@
       y = 400;
       z = "jquery";
 
-      document.querySelector(".result2-1").innerHTML = `${x}`;
-      document.querySelector(".result2-2").innerHTML = `${y}`;
-      document.querySelector(".result2-3").innerHTML = `${z}`;
+      // document.querySelector(".result2-1").innerHTML = `${x}`;
+      // document.querySelector(".result2-2").innerHTML = `${y}`;
+      // document.querySelector(".result2-3").innerHTML = `${z}`;
+      $(".result2-1").html(x);
+      $(".result2-2").html(y);
+      $(".result2-3").html(z);
     }
 
     //samplet3
@@ -728,9 +739,12 @@
       y += 400; //y=y+400
       z += "jquery"; //z=z+"jquery"
 
-      document.querySelector(".result3-1").innerHTML = `${x}`;
-      document.querySelector(".result3-2").innerHTML = `${y}`;
-      document.querySelector(".result3-3").innerHTML = `${z}`;
+      // document.querySelector(".result3-1").innerHTML = `${x}`;
+      // document.querySelector(".result3-2").innerHTML = `${y}`;
+      // document.querySelector(".result3-3").innerHTML = `${z}`;
+      $(".result3-1").html(x);
+      $(".result3-2").html(y);
+      $(".result3-3").html(z);
     }
 
     //sample4
@@ -744,9 +758,12 @@
       // z = "jquery";
       //Uncaught TypeError: Assignment to constant variable.
 
-      document.querySelector(".result4-1").innerHTML = `${x}`;
-      document.querySelector(".result4-2").innerHTML = `${y}`;
-      document.querySelector(".result4-3").innerHTML = `${z}`;
+      // document.querySelector(".result4-1").innerHTML = `${x}`;
+      // document.querySelector(".result4-2").innerHTML = `${y}`;
+      // document.querySelector(".result4-3").innerHTML = `${z}`;
+      $(".result4-1").html(x);
+      $(".result4-2").html(y);
+      $(".result4-3").html(z);
     }
 
     //sample5
@@ -758,9 +775,12 @@
       arr[1] = 200; //두번째 배열 저장소에 숫자 200을 저장
       arr[2] = "javascript"; //세번째 배열 저장소에 문자열 javascript를 저장
 
-      document.querySelector(".result5-1").innerHTML = `${arr[0]}`;
-      document.querySelector(".result5-2").innerHTML = `${arr[1]}`;
-      document.querySelector(".result5-3").innerHTML = `${arr[2]}`;
+      // document.querySelector(".result5-1").innerHTML = `${arr[0]}`;
+      // document.querySelector(".result5-2").innerHTML = `${arr[1]}`;
+      // document.querySelector(".result5-3").innerHTML = `${arr[2]}`;
+      $(".result5-1").html(arr[0]);
+      $(".result5-2").html(arr[1]);
+      $(".result5-3").html(arr[2]);
     }
 
     //sample6
@@ -768,9 +788,12 @@
     {
       const arr = new Array(100, 200, "javascript");
 
-      document.querySelector(".result6-1").innerHTML = `${arr[0]}`;
-      document.querySelector(".result6-2").innerHTML = `${arr[1]}`;
-      document.querySelector(".result6-3").innerHTML = `${arr[2]}`;
+      // document.querySelector(".result6-1").innerHTML = `${arr[0]}`;
+      // document.querySelector(".result6-2").innerHTML = `${arr[1]}`;
+      // document.querySelector(".result6-3").innerHTML = `${arr[2]}`;
+      $(".result6-1").html(arr[0]);
+      $(".result6-2").html(arr[1]);
+      $(".result6-3").html(arr[2]);
     }
 
     //sample7
@@ -781,9 +804,12 @@
       arr[1] = 200;
       arr[2] = "javascript";
 
-      document.querySelector(".result7-1").innerHTML = `${arr[0]}`;
-      document.querySelector(".result7-2").innerHTML = `${arr[1]}`;
-      document.querySelector(".result7-3").innerHTML = `${arr[2]}`;
+      // document.querySelector(".result7-1").innerHTML = `${arr[0]}`;
+      // document.querySelector(".result7-2").innerHTML = `${arr[1]}`;
+      // document.querySelector(".result7-3").innerHTML = `${arr[2]}`;
+      $(".result7-1").html(arr[0]);
+      $(".result7-2").html(arr[1]);
+      $(".result7-3").html(arr[2]);
     }
 
     //sample8
@@ -791,9 +817,12 @@
     {
       const arr = [100, 200, "javascript"]; //배열 선언
 
-      document.querySelector(".result8-1").innerHTML = `${arr[0]}`;
-      document.querySelector(".result8-2").innerHTML = `${arr[1]}`;
-      document.querySelector(".result8-3").innerHTML = `${arr[2]}`;
+      // document.querySelector(".result8-1").innerHTML = `${arr[0]}`;
+      // document.querySelector(".result8-2").innerHTML = `${arr[1]}`;
+      // document.querySelector(".result8-3").innerHTML = `${arr[2]}`;
+      $(".result8-1").html(arr[0]);
+      $(".result8-2").html(arr[1]);
+      $(".result8-3").html(arr[2]);
     }
 
     //sample9
@@ -805,9 +834,12 @@
       obj[1] = 200;
       obj[2] = "javascript";
 
-      document.querySelector(".result9-1").innerHTML = `${obj[0]}`;
-      document.querySelector(".result9-2").innerHTML = `${obj[1]}`;
-      document.querySelector(".result9-3").innerHTML = `${obj[2]}`;
+      // document.querySelector(".result9-1").innerHTML = `${obj[0]}`;
+      // document.querySelector(".result9-2").innerHTML = `${obj[1]}`;
+      // document.querySelector(".result9-3").innerHTML = `${obj[2]}`;
+      $(".result9-1").html(obj[0]);
+      $(".result9-2").html(obj[1]);
+      $(".result9-3").html(obj[2]);
     }
 
     //sample10
@@ -818,9 +850,12 @@
       obj.b = 200;
       obj.c = "javascript";
 
-      document.querySelector(".result10-1").innerHTML = `${obj.a}`;
-      document.querySelector(".result10-2").innerHTML = `${obj.b}`;
-      document.querySelector(".result10-3").innerHTML = `${obj.c}`;
+      // document.querySelector(".result10-1").innerHTML = `${obj.a}`;
+      // document.querySelector(".result10-2").innerHTML = `${obj.b}`;
+      // document.querySelector(".result10-3").innerHTML = `${obj.c}`;
+      $(".result10-1").html(obj.a);
+      $(".result10-2").html(obj.b);
+      $(".result10-3").html(obj.c);
     }
 
     //sample11
@@ -831,9 +866,12 @@
       obj.b = 200;
       obj.c = "javascript";
 
-      document.querySelector(".result11-1").innerHTML = `${obj.a}`;
-      document.querySelector(".result11-2").innerHTML = `${obj.b}`;
-      document.querySelector(".result11-3").innerHTML = `${obj.c}`;
+      // document.querySelector(".result11-1").innerHTML = `${obj.a}`;
+      // document.querySelector(".result11-2").innerHTML = `${obj.b}`;
+      // document.querySelector(".result11-3").innerHTML = `${obj.c}`;
+      $(".result11-1").html(obj.a);
+      $(".result11-2").html(obj.b);
+      $(".result11-3").html(obj.c);
     }
 
     //sample12
@@ -845,9 +883,12 @@
         c: "javascript"
       };
 
-      document.querySelector(".result12-1").innerHTML = `${obj.a}`;
-      document.querySelector(".result12-2").innerHTML = `${obj.b}`;
-      document.querySelector(".result12-3").innerHTML = `${obj.c}`;
+      // document.querySelector(".result12-1").innerHTML = `${obj.a}`;
+      // document.querySelector(".result12-2").innerHTML = `${obj.b}`;
+      // document.querySelector(".result12-3").innerHTML = `${obj.c}`;
+      $(".result12-1").html(obj.a);
+      $(".result12-2").html(obj.b);
+      $(".result12-3").html(obj.c);
     }
 
     //sample13
@@ -862,9 +903,12 @@
       }
       ];
 
-      document.querySelector(".result13-1").innerHTML = `${obj[0].a}`;
-      document.querySelector(".result13-2").innerHTML = `${obj[0].b}`;
-      document.querySelector(".result13-3").innerHTML = `${obj[1].c}`;
+      // document.querySelector(".result13-1").innerHTML = `${obj[0].a}`;
+      // document.querySelector(".result13-2").innerHTML = `${obj[0].b}`;
+      // document.querySelector(".result13-3").innerHTML = `${obj[1].c}`;
+      $(".result13-1").html(obj[0].a);
+      $(".result13-2").html(obj[0].b);
+      $(".result13-3").html(obj[1].c);
     }
 
     //sample14
@@ -876,11 +920,16 @@
         c: "javascript"
       };
 
-      document.querySelector(".result14-1").innerHTML = `${obj.a}`;
-      document.querySelector(".result14-2").innerHTML = `${obj.b}`;
-      document.querySelector(".result14-3").innerHTML = `${obj.b[0]}`;
-      document.querySelector(".result14-4").innerHTML = `${obj.b[1]}`;
-      document.querySelector(".result14-5").innerHTML = `${obj.c}`;
+      // document.querySelector(".result14-1").innerHTML = `${obj.a}`;
+      // document.querySelector(".result14-2").innerHTML = `${obj.b}`;
+      // document.querySelector(".result14-3").innerHTML = `${obj.b[0]}`;
+      // document.querySelector(".result14-4").innerHTML = `${obj.b[1]}`;
+      // document.querySelector(".result14-5").innerHTML = `${obj.c}`;
+      $(".result14-1").html(obj.a);
+      $(".result14-2").html(obj.b);
+      $(".result14-3").html(obj.b[0]);
+      $(".result14-4").html(obj.b[1]);
+      $(".result14-5").html(obj.c);
     }
 
     //sample15
@@ -896,9 +945,12 @@
         c
       };
 
-      document.querySelector(".result15-1").innerHTML = `${obj.a}`;
-      document.querySelector(".result15-2").innerHTML = `${obj.b}`;
-      document.querySelector(".result15-3").innerHTML = `${obj.c}`;
+      // document.querySelector(".result15-1").innerHTML = `${obj.a}`;
+      // document.querySelector(".result15-2").innerHTML = `${obj.b}`;
+      // document.querySelector(".result15-3").innerHTML = `${obj.c}`;
+      $(".result15-1").html(obj.a);
+      $(".result15-2").html(obj.b);
+      $(".result15-3").html(obj.c);
     }
 
     //sample16
@@ -910,22 +962,29 @@
         b: [200, 300],
         c: "javascript",
         d: function () {
-          document.querySelector(".result16-6").innerHTML = "자바스크립트가 실행 되었습니다.<br>";
+          // document.querySelector(".result16-6").innerHTML = "자바스크립트가 실행 되었습니다.<br>";
+          $(".result16-6").html("자바스크립트가 실행 되었습니다.<br>");
         },
         e: function () {
-          document.querySelector(".result16-7").innerHTML = obj.c + "가 실행 되었습니다.<br>";
+          // document.querySelector(".result16-7").innerHTML = obj.c + "가 실행 되었습니다.<br>";
+          $(".result16-7").html(obj.c + "가 실행 되었습니다.<br>");
 
         },
         f: function () {
-          document.querySelector(".result16-8").innerHTML = this.c + "가 실행 되었습니다.<br>";
+          $(".result16-8").html(this.c + "가 실행 되었습니다.<br>");
         }
       }
 
-      document.querySelector(".result16-1").innerHTML = `${obj.a}`;
-      document.querySelector(".result16-2").innerHTML = `${obj.b}`;
-      document.querySelector(".result16-3").innerHTML = `${obj.b[0]}`;
-      document.querySelector(".result16-4").innerHTML = `${obj.b[1]}`;
-      document.querySelector(".result16-5").innerHTML = `${obj.c}`;
+      // document.querySelector(".result16-1").innerHTML = `${obj.a}`;
+      // document.querySelector(".result16-2").innerHTML = `${obj.b}`;
+      // document.querySelector(".result16-3").innerHTML = `${obj.b[0]}`;
+      // document.querySelector(".result16-4").innerHTML = `${obj.b[1]}`;
+      // document.querySelector(".result16-5").innerHTML = `${obj.c}`;
+      $(".result16-1").html(obj.a);
+      $(".result16-2").html(obj.b);
+      $(".result16-3").html(obj.b[0]);
+      $(".result16-4").html(obj.b[1]);
+      $(".result16-5").html(obj.c);
       obj.d();
       obj.e();
       obj.f();
@@ -946,17 +1005,25 @@
         a = 400; //전역 변수 a의 값 변경
         y = 500; //func()안의 지역변수 y의 값 변경
 
-        document.querySelector(".result17-1").innerHTML = x;
-        document.querySelector(".result17-2").innerHTML = y;
-        document.querySelector(".result17-3").innerHTML = z;
-        document.querySelector(".result17-4").innerHTML = a;
+        // document.querySelector(".result17-1").innerHTML = x;
+        // document.querySelector(".result17-2").innerHTML = y;
+        // document.querySelector(".result17-3").innerHTML = z;
+        // document.querySelector(".result17-4").innerHTML = a;
+        $(".result17-1").html(x);
+        $(".result17-2").html(y);
+        $(".result17-3").html(z);
+        $(".result17-4").html(a);
       }
 
       func();
-      document.querySelector(".result17-5").innerHTML = x;
-      document.querySelector(".result17-6").innerHTML = y;
-      document.querySelector(".result17-7").innerHTML = z;
-      document.querySelector(".result17-8").innerHTML = a;
+      // document.querySelector(".result17-5").innerHTML = x;
+      // document.querySelector(".result17-6").innerHTML = y;
+      // document.querySelector(".result17-7").innerHTML = z;
+      // document.querySelector(".result17-8").innerHTML = a;
+      $(".result17-5").html(x);
+      $(".result17-6").html(y);
+      $(".result17-7").html(z);
+      $(".result17-8").html(a);
     }
 
     //sample18
@@ -965,18 +1032,24 @@
       let x = 100;
       let y = "100";
 
-      document.querySelector(".result18-1").innerHTML = `x: ${x} : ${typeof (x)} <br>`;
-      document.querySelector(".result18-2").innerHTML = `y: ${y} : ${typeof (y)} <br>`;
+      // document.querySelector(".result18-1").innerHTML = `x: ${x} : ${typeof (x)} <br>`;
+      // document.querySelector(".result18-2").innerHTML = `y: ${y} : ${typeof (y)} <br>`;
+      $(".result18-1").html(`x: ${x} : ${typeof (x)} <br>`);
+      $(".result18-2").html(`y: ${y} : ${typeof (y)} <br>`);
 
       x = "" + x; //숫자를 문자열로 형 변환
       y = Number(y); //내장 객체를 이용한 형 변환
-      document.querySelector(".result18-3").innerHTML = `x: ${x} : ${typeof (x)} <br>`;
-      document.querySelector(".result18-4").innerHTML = `y: ${y} : ${typeof (y)} <br>`;
+      // document.querySelector(".result18-3").innerHTML = `x: ${x} : ${typeof (x)} <br>`;
+      // document.querySelector(".result18-4").innerHTML = `y: ${y} : ${typeof (y)} <br>`;
+      $(".result18-3").html(`x: ${x} : ${typeof (x)} <br>`);
+      $(".result18-4").html(`y: ${y} : ${typeof (y)} <br>`);
 
       x = Number(x);
       y = String(y);
-      document.querySelector(".result18-5").innerHTML = `x: ${x} : ${typeof (x)} <br>`;
-      document.querySelector(".result18-6").innerHTML = `y: ${y} : ${typeof (y)} <br>`;
+      // document.querySelector(".result18-5").innerHTML = `x: ${x} : ${typeof (x)} <br>`;
+      // document.querySelector(".result18-6").innerHTML = `y: ${y} : ${typeof (y)} <br>`;
+      $(".result18-5").html(`x: ${x} : ${typeof (x)} <br>`);
+      $(".result18-6").html(`y: ${y} : ${typeof (y)} <br>`);
     }
 
     //sample19
@@ -999,15 +1072,24 @@
       let und = undefined; //값이 정의 되어 있지 않을 때
       let sym = Symbol();
 
-      document.querySelector(".result19-1").innerHTML = "num1: " + typeof (num1);
-      document.querySelector(".result19-2").innerHTML = "str: " + typeof (str);
-      document.querySelector(".result19-3").innerHTML = "func: " + typeof (func);
-      document.querySelector(".result19-4").innerHTML = "arr: " + typeof (arr);
-      document.querySelector(".result19-5").innerHTML = "obj: " + typeof (obj);
-      document.querySelector(".result19-6").innerHTML = "bool: " + typeof (bool);
-      document.querySelector(".result19-7").innerHTML = "nul: " + typeof (nul);
-      document.querySelector(".result19-8").innerHTML = "und: " + typeof (und);
-      document.querySelector(".result19-9").innerHTML = "sym: " + typeof (sym);
+      // document.querySelector(".result19-1").innerHTML = "num1: " + typeof (num1);
+      // document.querySelector(".result19-2").innerHTML = "str: " + typeof (str);
+      // document.querySelector(".result19-3").innerHTML = "func: " + typeof (func);
+      // document.querySelector(".result19-4").innerHTML = "arr: " + typeof (arr);
+      // document.querySelector(".result19-5").innerHTML = "obj: " + typeof (obj);
+      // document.querySelector(".result19-6").innerHTML = "bool: " + typeof (bool);
+      // document.querySelector(".result19-7").innerHTML = "nul: " + typeof (nul);
+      // document.querySelector(".result19-8").innerHTML = "und: " + typeof (und);
+      // document.querySelector(".result19-9").innerHTML = "sym: " + typeof (sym);
+      $(".result19-1").html("num1: " + typeof (num1));
+      $(".result19-2").html("str: " + typeof (str));
+      $(".result19-3").html("func: " + typeof (func));
+      $(".result19-4").html("arr: " + typeof (arr));
+      $(".result19-5").html("obj: " + typeof (obj));
+      $(".result19-6").html("bool: " + typeof (bool));
+      $(".result19-7").html("nul: " + typeof (nul));
+      $(".result19-8").html("und: " + typeof (und));
+      $(".result19-9").html("sym: " + typeof (sym));
     }
   </script>
 </body>
