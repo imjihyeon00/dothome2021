@@ -520,8 +520,6 @@
       <h3><a href="#">결과보기</a></h3>
       <div>
         <span class="result16-1"></span>
-        <span class="result16-2"></span>
-        <span class="result16-3"></span>
       </div>
     </div>
   </div>
@@ -947,9 +945,7 @@
       ];
 
       obj.map(el => {
-        document.querySelector(".result16-1").innerHTML = el.a;
-        document.querySelector(".result16-2").innerHTML = el.b;
-        document.querySelector(".result16-3").innerHTML = el.c;
+        document.querySelector(".result16-1").innerHTML += el.a + " " + el.b + " " + el.c + "<br>";
       });
     }
 
@@ -962,13 +958,15 @@
         c: "javascript"
       };
 
-      document.querySelector("#sample17 .result-view .result").innerHTML += `${obj.hasOwnProperty('a')} ${obj.hasOwnProperty('b')} ${obj.hasOwnProperty('c')} ${obj.hasOwnProperty('100')} <br>`;
+      document.querySelector(".result17-1").innerHTML = obj.hasOwnProperty('a');
+      document.querySelector(".result17-2").innerHTML = obj.hasOwnProperty('b');
+      document.querySelector(".result17-3").innerHTML = obj.hasOwnProperty('c');
+      document.querySelector(".result17-4").innerHTML = obj.hasOwnProperty('100');
 
-      document.querySelector("#sample17 .result-view .result").innerHTML += `${'a' in obj} ${'b' in obj} ${'c' in obj} ${'100' in obj} `;
-
-      document.querySelector("#sample17 .result-view strong").addEventListener("click", function () {
-        document.querySelector("#sample17 .result-view").classList.toggle("look");
-      });
+      document.querySelector(".result17-5").innerHTML = `${'a' in obj}`;
+      document.querySelector(".result17-6").innerHTML = `${'b' in obj}`;
+      document.querySelector(".result17-7").innerHTML = `${'c' in obj}`;
+      document.querySelector(".result17-8").innerHTML = `${'100' in obj}`;
     }
 
     //smaple18
@@ -982,11 +980,9 @@
 
       const spread = { ...obj };
 
-      document.querySelector("#sample18 .result-view .result").innerHTML += `${spread.a} ${spread.b} ${spread.c} `;
-
-      document.querySelector("#sample18 .result-view strong").addEventListener("click", function () {
-        document.querySelector("#sample18 .result-view").classList.toggle("look");
-      });
+      document.querySelector(".result18-1").innerHTML = spread.a;
+      document.querySelector(".result18-2").innerHTML = spread.b;
+      document.querySelector(".result18-3").innerHTML = spread.c;
     }
 
     //smaple19
@@ -1000,11 +996,10 @@
 
       const spread = { ...obj, d: "jquery" };
 
-      document.querySelector("#sample19 .result-view .result").innerHTML += `${spread.a} ${spread.b} ${spread.c} ${spread.d} `;
-
-      document.querySelector("#sample19 .result-view strong").addEventListener("click", function () {
-        document.querySelector("#sample19 .result-view").classList.toggle("look");
-      });
+      document.querySelector(".result19-1").innerHTML = spread.a;
+      document.querySelector(".result19-2").innerHTML = spread.b;
+      document.querySelector(".result19-3").innerHTML = spread.c;
+      document.querySelector(".result19-4").innerHTML = spread.d;
     }
 
     //smaple20
@@ -1022,11 +1017,10 @@
 
       const spread = { ...objA, ...objB };
 
-      document.querySelector("#sample20 .result-view .result").innerHTML += `${spread.a} ${spread.b} ${spread.c} ${spread.d} `;
-
-      document.querySelector("#sample20 .result-view strong").addEventListener("click", function () {
-        document.querySelector("#sample20 .result-view").classList.toggle("look");
-      });
+      document.querySelector(".result20-1").innerHTML = spread.a;
+      document.querySelector(".result20-2").innerHTML = spread.b;
+      document.querySelector(".result20-3").innerHTML = spread.c;
+      document.querySelector(".result20-4").innerHTML = spread.d;
     }
 
     //sample21
@@ -1041,11 +1035,9 @@
       //객체의 내용을 분해해서 저장하는 방법
       const { a, b, c } = obj;
 
-      document.querySelector("#sample21 .result-view .result").innerHTML += `${a} ${b} ${c} `;
-
-      document.querySelector("#sample21 .result-view strong").addEventListener("click", function () {
-        document.querySelector("#sample21 .result-view").classList.toggle("look");
-      });
+      document.querySelector(".result21-1").innerHTML = a;
+      document.querySelector(".result21-2").innerHTML = b;
+      document.querySelector(".result21-3").innerHTML = c;
     }
 
     //sample22
@@ -1059,11 +1051,9 @@
 
       const { a: name1, b: name2, c: name3 } = obj;
 
-      document.querySelector("#sample22 .result-view .result").innerHTML += `${name1} ${name2} ${name3} `;
-
-      document.querySelector("#sample22 .result-view strong").addEventListener("click", function () {
-        document.querySelector("#sample22 .result-view").classList.toggle("look");
-      });
+      document.querySelector(".result22-1").innerHTML = name1;
+      document.querySelector(".result22-2").innerHTML = name2;
+      document.querySelector(".result22-3").innerHTML = name3;
     }
 
   </script>
