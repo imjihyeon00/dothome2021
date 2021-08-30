@@ -336,6 +336,7 @@
       <h3><a href="#">결과보기</a></h3>
       <div>
         <span class="result10-1"></span>
+        <span class="result10-2"></span>
       </div>
     </div>
   </div>
@@ -515,9 +516,13 @@
 }
 </code></pre>
     </div>
-    <div class="result-view">
-      <strong>결과보기</strong>
-      <div class="result"></div>
+    <div class="result result16">
+      <h3><a href="#">결과보기</a></h3>
+      <div>
+        <span class="result16-1"></span>
+        <span class="result16-2"></span>
+        <span class="result16-3"></span>
+      </div>
     </div>
   </div>
   <hr>
@@ -549,9 +554,18 @@
 }
 </code></pre>
     </div>
-    <div class="result-view">
-      <strong>결과보기</strong>
-      <div class="result"></div>
+    <div class="result result17">
+      <h3><a href="#">결과보기</a></h3>
+      <div>
+        <span class="result17-1"></span>
+        <span class="result17-2"></span>
+        <span class="result17-3"></span>
+        <span class="result17-4"></span>
+        <span class="result17-5"></span>
+        <span class="result17-6"></span>
+        <span class="result17-7"></span>
+        <span class="result17-8"></span>
+      </div>
     </div>
   </div>
   <hr>
@@ -577,9 +591,13 @@
 }
 </code></pre>
     </div>
-    <div class="result-view">
-      <strong>결과보기</strong>
-      <div class="result"></div>
+    <div class="result result18">
+      <h3><a href="#">결과보기</a></h3>
+      <div>
+        <span class="result18-1"></span>
+        <span class="result18-2"></span>
+        <span class="result18-3"></span>
+      </div>
     </div>
   </div>
   <hr>
@@ -606,9 +624,14 @@
 }
 </code></pre>
     </div>
-    <div class="result-view">
-      <strong>결과보기</strong>
-      <div class="result"></div>
+    <div class="result result19">
+      <h3><a href="#">결과보기</a></h3>
+      <div>
+        <span class="result19-1"></span>
+        <span class="result19-2"></span>
+        <span class="result19-3"></span>
+        <span class="result19-4"></span>
+      </div>
     </div>
   </div>
   <hr>
@@ -639,9 +662,14 @@
 }
 </code></pre>
     </div>
-    <div class="result-view">
-      <strong>결과보기</strong>
-      <div class="result"></div>
+    <div class="result result20">
+      <h3><a href="#">결과보기</a></h3>
+      <div>
+        <span class="result20-1"></span>
+        <span class="result20-2"></span>
+        <span class="result20-3"></span>
+        <span class="result20-4"></span>
+      </div>
     </div>
   </div>
   <hr>
@@ -668,9 +696,13 @@
 }
 </code></pre>
     </div>
-    <div class="result-view">
-      <strong>결과보기</strong>
-      <div class="result"></div>
+    <div class="result result21">
+      <h3><a href="#">결과보기</a></h3>
+      <div>
+        <span class="result21-1"></span>
+        <span class="result21-2"></span>
+        <span class="result21-3"></span>
+      </div>
     </div>
   </div>
   <hr>
@@ -696,9 +728,13 @@
 }
 </code></pre>
     </div>
-    <div class="result-view">
-      <strong>결과보기</strong>
-      <div class="result"></div>
+    <div class="result result22">
+      <h3><a href="#">결과보기</a></h3>
+      <div>
+        <span class="result22-1"></span>
+        <span class="result22-2"></span>
+        <span class="result22-3"></span>
+      </div>
     </div>
   </div>
   <hr>
@@ -709,6 +745,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
   <script>
+    //정답보기
+    document.querySelectorAll(".result h3").forEach(el => {
+      el.addEventListener("click", function (e) {
+        e.preventDefault();
+        this.parentNode.classList.toggle("show");
+      });
+    });
+
     //sample01
     //01. 변수 : 데이터 불러오기
     {
@@ -716,10 +760,9 @@
         y = 200,
         z = "javascript";
 
-      document.querySelector("#sample01 .result-view .result").innerHTML = `${x} ${y} ${z}`;
-      document.querySelector("#sample01 .result-view strong").addEventListener("click", function () {
-        document.querySelector("#sample01 .result-view").classList.toggle("look");
-      });
+      document.querySelector(".result1-1").innerHTML = `${x}`;
+      document.querySelector(".result1-2").innerHTML = `${y}`;
+      document.querySelector(".result1-3").innerHTML = `${z}`;
     }
 
     //sample02
@@ -729,10 +772,9 @@
         y = 200,
         z = "javascript";
 
-      document.querySelector("#sample02 .result-view .result").innerHTML = `${x} ${y} ${z}`;
-      document.querySelector("#sample02 .result-view strong").addEventListener("click", function () {
-        document.querySelector("#sample02 .result-view").classList.toggle("look");
-      });
+      document.querySelector(".result2-1").innerHTML = `${x}`;
+      document.querySelector(".result2-2").innerHTML = `${y}`;
+      document.querySelector(".result2-3").innerHTML = `${z}`;
     }
 
     //sample03
@@ -740,21 +782,20 @@
     {
       const arr = [100, 200, "javascript"];
 
-      document.querySelector("#sample03 .result-view .result").innerHTML = `${arr[0]} ${arr[1]} ${arr[2]}`;
-      document.querySelector("#sample03 .result-view strong").addEventListener("click", function () {
-        document.querySelector("#sample03 .result-view").classList.toggle("look");
-      });
+      document.querySelector(".result3-1").innerHTML = `${arr[0]}`;
+      document.querySelector(".result3-2").innerHTML = `${arr[1]}`;
+      document.querySelector(".result3-3").innerHTML = `${arr[2]}`;
     }
 
     //sample04
     //04. 배열 : 데이터 불러오기 : 2차 배열
     {
       const arr = [100, 200, ["javascript", "jquery"]];
-
-      document.querySelector("#sample04 .result-view .result").innerHTML = `${arr[0]} ${arr[1]} ${arr[2][0]} ${arr[2][1]} ${arr[2]}`;
-      document.querySelector("#sample04 .result-view strong").addEventListener("click", function () {
-        document.querySelector("#sample04 .result-view").classList.toggle("look");
-      });
+      document.querySelector(".result4-1").innerHTML = arr[0];
+      document.querySelector(".result4-2").innerHTML = arr[1];
+      document.querySelector(".result4-3").innerHTML = arr[2];
+      document.querySelector(".result4-4").innerHTML = arr[2][0];
+      document.querySelector(".result4-5").innerHTML = arr[2][1];
     }
 
     //sample05
@@ -762,10 +803,7 @@
     {
       const arr = [100, 200, "javascript"];
 
-      document.querySelector("#sample05 .result-view .result").innerHTML = `${arr.length}`;
-      document.querySelector("#sample05 .result-view strong").addEventListener("click", function () {
-        document.querySelector("#sample05 .result-view").classList.toggle("look");
-      });
+      document.querySelector(".result5-1").innerHTML = `${arr.length}`;
     }
 
     //sample06
@@ -774,11 +812,8 @@
       const arr = [100, 200, 300, 400, 500];
 
       for (let i = 0; i < arr.length; i++) {
-        document.querySelector("#sample06 .result-view .result").innerHTML += `${arr[i]} `;
+        document.querySelector(".result6-1").innerHTML += `${arr[i]} `;
       }
-      document.querySelector("#sample06 .result-view strong").addEventListener("click", function () {
-        document.querySelector("#sample06 .result-view").classList.toggle("look");
-      });
     }
     //sampel07
     //07. 배열 : 데이터 불러오기 : forEach()
@@ -789,12 +824,8 @@
       // num.forEach(function(){});  //es5
       // num.forEach(()=>{});        //es6
       num.forEach((element, index, array) => {
-        document.querySelector("#sample07 .result-view .result").innerHTML += `${element} ${index} ${array} <br>`;
+        document.querySelector(".result7-1").innerHTML += `${element} ${index} ${array} <br>`;
       });
-      document.querySelector("#sample07 .result-view strong").addEventListener("click", function () {
-        document.querySelector("#sample07 .result-view").classList.toggle("look");
-      });
-
     }
 
     //sample08
@@ -803,11 +834,8 @@
       const num = [100, 200, 300, 400, 500];
 
       for (let i of num) {
-        document.querySelector("#sample08 .result-view .result").innerHTML += `${i} `;
+        document.querySelector(".result8-1").innerHTML += `${i} `;
       }
-      document.querySelector("#sample08 .result-view strong").addEventListener("click", function () {
-        document.querySelector("#sample08 .result-view").classList.toggle("look");
-      });
     }
 
     //sample09
@@ -816,15 +844,11 @@
       const num = [100, 200, 300, 400, 500];
 
       for (let i in num) {
-        document.querySelector("#sample09 .result-view .result").innerHTML += `${i} `;
+        document.querySelector(".result9-1").innerHTML += `${i} `;
       }
-      document.querySelector("#sample09 .result-view .result").innerHTML += "<br>";
       for (let i in num) {
-        document.querySelector("#sample09 .result-view .result").innerHTML += `${num[i]} `;
+        document.querySelector(".result9-2").innerHTML += `${num[i]} `;
       }
-      document.querySelector("#sample09 .result-view strong").addEventListener("click", function () {
-        document.querySelector("#sample09 .result-view").classList.toggle("look");
-      });
     }
 
     //sample10
@@ -835,18 +859,11 @@
 
       //num.map(function(){});
       num.map((el) => {
-
-        document.querySelector("#sample10 .result-view .result").innerHTML += `${el} `;
+        document.querySelector(".result10-1").innerHTML += `${el} `;
       });
-
-      document.querySelector("#sample10 .result-view .result").innerHTML += "<br><br>";
 
       num.map((element, index, array) => {
-        document.querySelector("#sample10 .result-view .result").innerHTML += `${element} ${index} ${array} <br>`;
-
-      });
-      document.querySelector("#sample10 .result-view strong").addEventListener("click", function () {
-        document.querySelector("#sample10 .result-view").classList.toggle("look");
+        document.querySelector(".result10-2").innerHTML += `${element} ${index} ${array} `;
       });
     }
 
@@ -855,15 +872,7 @@
     {
       const arr = [100, 200, 300, 400, 500];
 
-      document.querySelector("#sample11 .result-view .result").innerHTML = `${arr[0]} ${arr[1]} ${arr[2]} ${arr[3]} ${arr[4]} <br>`;
-
-      document.querySelector("#sample11 .result-view .result").innerHTML += `${arr} <br>`;
-
-      document.querySelector("#sample11 .result-view .result").innerHTML += [...arr];
-
-      document.querySelector("#sample11 .result-view strong").addEventListener("click", function () {
-        document.querySelector("#sample11 .result-view").classList.toggle("look");
-      });
+      document.querySelector(".result11-1").innerHTML = [...arr];
     }
 
     //sample12
@@ -874,11 +883,12 @@
         b: 200,
         c: "javascript"
       };
-      document.querySelector("#sample12 .result-view .result").innerHTML = `${obj.a} ${obj.b} ${obj.c} <br>${obj['a']} ${obj['b']} ${obj['c']} `;
-
-      document.querySelector("#sample12 .result-view strong").addEventListener("click", function () {
-        document.querySelector("#sample12 .result-view").classList.toggle("look");
-      });
+      document.querySelector(".result12-1").innerHTML = obj.a;
+      document.querySelector(".result12-2").innerHTML = obj.b;
+      document.querySelector(".result12-3").innerHTML = obj.c;
+      document.querySelector(".result12-4").innerHTML = obj['a'];
+      document.querySelector(".result12-5").innerHTML = obj['b'];
+      document.querySelector(".result12-6").innerHTML = obj['c'];
     }
 
     //sample13
@@ -890,11 +900,9 @@
         c: "javascript"
       };
 
-      document.querySelector("#sample13 .result-view .result").innerHTML = `${Object.keys(obj)} <br>${Object.values(obj)} <br>${Object.entries(obj)} `;
-
-      document.querySelector("#sample13 .result-view strong").addEventListener("click", function () {
-        document.querySelector("#sample13 .result-view").classList.toggle("look");
-      });
+      document.querySelector(".result13-1").innerHTML = Object.keys(obj);
+      document.querySelector(".result13-2").innerHTML = Object.values(obj);
+      document.querySelector(".result13-3").innerHTML = Object.entries(obj);
     }
 
     //sample14
@@ -909,11 +917,9 @@
       const name1 = obj.a;
       const name2 = obj.b;
       const name3 = obj.c;
-      document.querySelector("#sample14 .result-view .result").innerHTML = `${name1} ${name2} ${name3} `;
-
-      document.querySelector("#sample14 .result-view strong").addEventListener("click", function () {
-        document.querySelector("#sample14 .result-view").classList.toggle("look");
-      });
+      document.querySelector(".result14-1").innerHTML = name1;
+      document.querySelector(".result14-2").innerHTML = name2;
+      document.querySelector(".result14-3").innerHTML = name3;
     }
 
 
@@ -927,12 +933,8 @@
       };
 
       for (let key in obj) {
-        document.querySelector("#sample15 .result-view .result").innerHTML += `${obj[key]} `;
+        document.querySelector(".result15-1").innerHTML += `${obj[key]} `;
       }
-
-      document.querySelector("#sample15 .result-view strong").addEventListener("click", function () {
-        document.querySelector("#sample15 .result-view").classList.toggle("look");
-      });
     }
 
     //sample16
@@ -945,11 +947,9 @@
       ];
 
       obj.map(el => {
-        document.querySelector("#sample16 .result-view .result").innerHTML += `${el.a} ${el.b} ${el.c} <br>`;
-      });
-
-      document.querySelector("#sample16 .result-view strong").addEventListener("click", function () {
-        document.querySelector("#sample16 .result-view").classList.toggle("look");
+        document.querySelector(".result16-1").innerHTML = el.a;
+        document.querySelector(".result16-2").innerHTML = el.b;
+        document.querySelector(".result16-3").innerHTML = el.c;
       });
     }
 
