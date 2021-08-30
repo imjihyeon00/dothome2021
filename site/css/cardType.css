@@ -280,25 +280,169 @@ body {
   display: flex;
   gap: 20px;
 }
-.cardType04 .card-wrap .card{
+
+.cardType04 .card-wrap .card {
   position: relative;
 }
 
-.cardType04 .card-wrap .card .card-desc{
+.cardType04 .card-wrap .card .card-desc {
   position: absolute;
-  left: 45px; top: 55px;
+  left: 45px;
+  top: 55px;
   width: 280px;
 }
-.cardType04 .card-wrap .card .card-desc em{
+
+.cardType04 .card-wrap .card .card-desc em {
   display: block;
   font-size: 15px;
   font-weight: 800;
   color: #A8ABAD;
   margin-bottom: 15px;
 }
-.cardType04 .card-wrap .card .card-desc strong{
+
+.cardType04 .card-wrap .card .card-desc strong {
   font-size: 25px;
   font-weight: 800;
   line-height: 1.4;
   word-break: keep-all;
+}
+
+
+/* cardType05 */
+.cardType05 {
+  font-family: 'NanumSquare';
+  padding: 100px 0;
+}
+
+.cardType05 .ai_devices {
+  width: 204px;
+  height: 50px;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+.cardType05 p {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.cardType05 .card-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.cardType05 .card-wrap .card {
+  width: 374px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.cardType05 .card-wrap .card .card-img {
+  height: 361px;
+}
+
+.cardType05 .card-wrap .card .card-info {
+  padding: 40px;
+  text-align: left;
+}
+
+.cardType05 .card-wrap .card .card-info .card-title {
+  width: 294px;
+  height: 22px;
+  margin-bottom: 10px;
+}
+
+.cardType05 .card-wrap .card .card-info .card-title .card-name {
+  height: 22px;
+  display: inline-block;
+}
+
+.cardType05 .card-wrap .card .card-info .card-title .card-name.lamp {
+  background-position: -286px -4px;
+  background-repeat: no-repeat;
+  width: 143px;
+  height: 22px;
+}
+
+.cardType05 .card-wrap .card .card-info .card-title .card-name.clock {
+  background-position: -286px -59px;
+  background-repeat: no-repeat;
+  width: 136px;
+  height: 17px;
+}
+
+.cardType05 .card-wrap .card .card-info .card-title .card-name.friends {
+  background-position: -4px -231px;
+  background-repeat: no-repeat;
+  width: 153px;
+  height: 17px;
+}
+
+.cardType05 .card-wrap .card .card-info .card-title .card-name.wave {
+  background-position: -286px -34px;
+  background-repeat: no-repeat;
+  width: 139px;
+  height: 17px;
+}
+
+.cardType05 .card-wrap .card .card-info .card-title .card-name.mini {
+  background-position: -4px -129px;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 17px;
+}
+
+.cardType05 .card-wrap .card .card-info .card-title .card-name.doraemon {
+  background-position: -4px -102px;
+  background-repeat: no-repeat;
+  width: 201px;
+  height: 19px;
+}
+
+.cardType05 .card-wrap .card .card-info .card-title .tag {
+  display: inline-block;
+  background-color: #FA615B;
+  border-radius: 50px;
+  color: #fff;
+  padding: 0 7px;
+  margin-left: 4px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 700;
+  vertical-align: top;
+}
+
+.cardType05 .card-wrap .card .card-info .card-desc {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.8;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.cardType05 .card-wrap .card .card-info .card-buy {
+  display: inline-block;
+  margin-right: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  color: #fff;
+  background-color: #05d686;
+  padding: 8px 17px;
+}
+
+.cardType05 .card-wrap .card .card-info .card-more-info {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.6);
+  border: 1px solid #e3e3e3;
+  padding: 8px 17px;
 }
