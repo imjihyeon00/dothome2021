@@ -69,6 +69,7 @@ figcaption {
   padding: 0;
 }
 
+/* .bg */
 .bg {
   position: relative;
   height: 100vh;
@@ -127,6 +128,7 @@ figcaption {
   background-image: url(../img/bg10@2.jpg);
 }
 
+/* #main */
 #main {
   width: 100%;
   height: 100vh;
@@ -164,6 +166,7 @@ figcaption {
   background-image: linear-gradient(to bottom, #cc4f74 0%, #ffdc14 100%);
 }
 
+/* #contents */
 #contents h1 {
   font-family: "Six Caps", sans-serif;
   position: absolute;
@@ -180,6 +183,7 @@ figcaption {
   -webkit-background-clip: text;
 }
 
+/* #nav */
 #nav {
   position: absolute;
   left: 50%;
@@ -213,6 +217,7 @@ figcaption {
   color: #6c4a70;
 }
 
+/* info */
 .info {
   color: #fff;
   font-family: "NEXONLv1Gothic";
@@ -269,12 +274,155 @@ figcaption {
   border-radius: 50px;
   box-shadow: 0 0 0 #fff inset;
   transition: all 0.4s;
+  cursor: pointer;
 }
 .info button:hover {
   box-shadow: 0 -50px 0 #fff inset;
   color: #000;
 }
 
+/* modal */
+#modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  transform: scale(0);
+}
+#modal .modal-bg {
+  background: rgba(0, 0, 0, 0.4);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#modal .modal-bg .modal-cont {
+  background: #fff;
+  padding: 3vw;
+  max-width: 50vw;
+}
+#modal .modal-bg .modal-cont h2 {
+  font-weight: 400;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+#modal .modal-bg .modal-cont p {
+  font-weight: 300;
+  line-height: 1.6;
+}
+#modal .modal-bg .modal-cont button {
+  border: 1px solid #000;
+  background: #000;
+  border-radius: 20px;
+  color: #fff;
+  padding: 5px 10px;
+  float: right;
+  cursor: pointer;
+}
+
+#modal.show {
+  -webkit-animation: unfoldIn 1s ease forwards;
+          animation: unfoldIn 1s ease forwards;
+}
+
+@-webkit-keyframes unfoldIn {
+  0% {
+    transform: scaley(0.005) scalex(0);
+  }
+  50% {
+    transform: scaley(0.005) scalex(1);
+  }
+  100% {
+    transform: scaley(1) scalex(1);
+  }
+}
+
+@keyframes unfoldIn {
+  0% {
+    transform: scaley(0.005) scalex(0);
+  }
+  50% {
+    transform: scaley(0.005) scalex(1);
+  }
+  100% {
+    transform: scaley(1) scalex(1);
+  }
+}
+#modal.hide {
+  -webkit-animation: unfoldOut 1s ease forwards;
+          animation: unfoldOut 1s ease forwards;
+}
+
+@-webkit-keyframes unfoldOut {
+  0% {
+    transform: scaley(1) scalex(1);
+  }
+  50% {
+    transform: scaley(0.005) scalex(1);
+  }
+  100% {
+    transform: scaley(0.005) scalex(0);
+  }
+}
+
+@keyframes unfoldOut {
+  0% {
+    transform: scaley(1) scalex(1);
+  }
+  50% {
+    transform: scaley(0.005) scalex(1);
+  }
+  100% {
+    transform: scaley(0.005) scalex(0);
+  }
+}
+#modal.show .modal-bg .modal-cont {
+  transform: scale(0);
+  -webkit-animation: zoomIn 0.5s 0.8s ease forwards;
+          animation: zoomIn 0.5s 0.8s ease forwards;
+}
+
+#modal.hide .modal-bg .modal-cont {
+  transform: scale(0);
+  -webkit-animation: zoomOut 0.5s ease forwards;
+          animation: zoomOut 0.5s ease forwards;
+}
+
+@-webkit-keyframes zoomIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes zoomOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes zoomOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
 @media (max-width: 800px) {
   #nav {
     min-width: 237px;

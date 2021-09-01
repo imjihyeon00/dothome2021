@@ -8,6 +8,8 @@
   <title>Menu Effect</title>
 
   <link rel="stylesheet" href="../assets/css/style.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body class="bg bg1">
@@ -32,6 +34,48 @@
     <button>소스보기</button>
   </div>
   <!-- //info -->
+
+  <!-- modal -->
+  <div id="modal">
+    <div class="modal-bg">
+      <div class="modal-cont">
+        <h2>레이어 팝업</h2>
+        <p>비즈컴퍼니 제품을 구매하고 사용한 분들의 사용후기들과 제품출시에 대한 앞으로의 방향에 대해 안내합니다. 비즈컴퍼니 제품을 구매하고 사용한 분들의 사용후기들과 제품출시에 대한 앞으로의 방향에 대해
+          안내합니다.</p>
+        <button>닫기</button>
+      </div>
+    </div>
+  </div>
+  <!-- //modal -->
+
+
+  <script>
+    //jquery.ver
+    // $(".info button").click(function () {
+    //   $("#modal").removeClass().addClass("show");
+    // });
+
+    // $("#modal button").click(function () {
+    //   $("#modal").addClass("hide");
+    // });
+
+    //js.ver
+    const infoBtn = document.querySelector(".info button");
+    const modal = document.querySelector("#modal");
+    const modalBtn = document.querySelector("#modal button");
+
+    infoBtn.addEventListener("click", function () {
+      modal.classList.remove("show", "hide");
+      modal.classList.add("show");
+    });
+
+    modalBtn.addEventListener("click", function () {
+      modal.classList.remove("show", "hide");
+      modal.classList.add("hide");
+    });
+
+
+  </script>
 </body>
 
 </html>
