@@ -434,14 +434,14 @@ $gradient5: linear-gradient(to bottom, #f6d365 0%, #fda085 100%);
 }
 
 
-
+// 반응형
 @include mobile {
   #nav {
     
 
     ul {
       display: flex;
-      gap:8px;
+      
       li {
         a {
           // width: 65px;
@@ -452,7 +452,7 @@ $gradient5: linear-gradient(to bottom, #f6d365 0%, #fda085 100%);
           font-size: 12px;
           width: 65px;
           height: 30px;
-          line-height: 2.5;
+          line-height: 30px;
         }
       }
     }
