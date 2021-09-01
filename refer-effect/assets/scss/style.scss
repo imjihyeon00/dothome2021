@@ -318,6 +318,8 @@ $gradient5: linear-gradient(to bottom, #f6d365 0%, #fda085 100%);
 
 @include mobile {
   #nav {
+    min-width: 237px;
+    text-align: center;
     ul {
       li {
         a {

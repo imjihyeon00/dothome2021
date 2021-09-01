@@ -276,6 +276,10 @@ figcaption {
 }
 
 @media (max-width: 800px) {
+  #nav {
+    min-width: 237px;
+    text-align: center;
+  }
   #nav ul li a {
     width: 65px;
     height: 30px;
