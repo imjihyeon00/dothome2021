@@ -69,11 +69,62 @@ figcaption {
   padding: 0;
 }
 
-.bg1 {
+.bg {
+  position: relative;
   height: 100vh;
-  background-image: url(../img/bg01@2.jpg);
   background-size: cover;
   background-position: center center;
+  background-repeat: no-repeat;
+}
+.bg::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+.bg1 {
+  background-image: url(../img/bg01@2.jpg);
+}
+
+.bg2 {
+  background-image: url(../img/bg02@2.jpg);
+}
+
+.bg3 {
+  background-image: url(../img/bg03@2.jpg);
+}
+
+.bg4 {
+  background-image: url(../img/bg04@2.jpg);
+}
+
+.bg5 {
+  background-image: url(../img/bg05@2.jpg);
+}
+
+.bg6 {
+  background-image: url(../img/bg06@2.jpg);
+}
+
+.bg7 {
+  background-image: url(../img/bg07@2.jpg);
+}
+
+.bg8 {
+  background-image: url(../img/bg08@2.jpg);
+}
+
+.bg9 {
+  background-image: url(../img/bg09@2.jpg);
+}
+
+.bg10 {
+  background-image: url(../img/bg10@2.jpg);
 }
 
 #main {
@@ -162,11 +213,74 @@ figcaption {
   color: #6c4a70;
 }
 
+.info {
+  color: #fff;
+  font-family: "NEXONLv1Gothic";
+  padding: 20px;
+}
+.info.right {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+.info.bottom {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+.info h1 {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.6;
+  border-bottom: 1px dashed #fff;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.info p {
+  font-size: 16px;
+  font-weight: 300;
+}
+.info li {
+  list-style: none;
+  display: inline;
+}
+.info li a {
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  border: 1px dashed #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.info li.active a {
+  background: #fff;
+  color: #000;
+}
+.info button {
+  background: transparent;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+  color: #fff;
+  border-radius: 50px;
+  box-shadow: 0 0 0 #fff inset;
+  transition: all 0.4s;
+}
+.info button:hover {
+  box-shadow: 0 -50px 0 #fff inset;
+  color: #000;
+}
+
 @media (max-width: 800px) {
   #nav ul li a {
-    width: 80px;
+    width: 68px;
     height: 30px;
     font-size: 12px;
     line-height: 30px;
+    margin-bottom: 10px;
   }
 }
