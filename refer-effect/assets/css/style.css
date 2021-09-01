@@ -164,11 +164,14 @@ figcaption {
 
 @media (max-width: 800px) {
   #nav {
-    left: 10%;
+    left: 0;
     bottom: 30px;
     transform: none;
   }
-  #nav li a {
+  #nav ul {
+    margin: 0 5px;
+  }
+  #nav ul li a {
     width: 80px;
     height: 30px;
     font-size: 12px;
