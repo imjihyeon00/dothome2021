@@ -473,7 +473,7 @@ figcaption {
 }
 .code-view .view-cont {
   height: auto;
-  max-height: 50vh;
+  max-height: 70vh;
   overflow-y: scroll;
 }
 .code-view .view-cont > div {
@@ -519,5 +519,6 @@ figcaption {
   }
   .code-view .view-cont {
     font-size: 10px;
+    height: 50vh;
   }
 }
