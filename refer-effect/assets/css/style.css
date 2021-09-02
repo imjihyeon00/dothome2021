@@ -519,6 +519,6 @@ figcaption {
   }
   .code-view .view-cont {
     font-size: 10px;
-    height: 50vh;
+    max-height: 50vh;
   }
 }
