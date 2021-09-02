@@ -93,27 +93,24 @@
         </div>
         <div>
           <h2>Syntax</h2>
-          <p>Sass is a stylesheet language that’s compiled to CSS. It allows you to use variables, nested rules, mixins,
-            functions, and more, all with a fully CSS-compatible syntax. Sass helps keep large stylesheets
-            well-organized and makes it easy to share design within and across projects.</p>
+          <p>Sass supports two different syntaxes. Each one can load the other, so it's up to you and your team which
+            one to choose.</p>
         </div>
         <div>
           <h2>Parsing a Stylesheet</h2>
-          <p>Sass is a stylesheet language that’s compiled to CSS. It allows you to use variables, nested rules, mixins,
-            functions, and more, all with a fully CSS-compatible syntax. Sass helps keep large stylesheets
-            well-organized and makes it easy to share design within and across projects.</p>
+          <p>A Sass stylesheet is parsed from a sequence of Unicode code points. It's parsed directly, without first
+            being converted to a token stream.</p>
         </div>
         <div>
-          <h2>Variables</h2>
-          <p>Sass is a stylesheet language that’s compiled to CSS. It allows you to use variables, nested rules, mixins,
-            functions, and more, all with a fully CSS-compatible syntax. Sass helps keep large stylesheets
-            well-organized and makes it easy to share design within and across projects.</p>
+          <h2>Structure of a Stylesheet</h2>
+          <p>Just like CSS, most Sass stylesheets are mainly made up of style rules that contain property declarations.
+            But Sass stylesheets have many more features that can exist alongside these.</p>
         </div>
         <div>
-          <h2>Flow Control Rules</h2>
-          <p>Sass is a stylesheet language that’s compiled to CSS. It allows you to use variables, nested rules, mixins,
-            functions, and more, all with a fully CSS-compatible syntax. Sass helps keep large stylesheets
-            well-organized and makes it easy to share design within and across projects.</p>
+          <h2>Comments</h2>
+          <p>The way Sass comments work differs substantially between SCSS and the indented syntax. Both syntaxes
+            support two types of comments: comments defined using /* */ that are (usually) compiled to CSS, and comments
+            defined using // that are not.</p>
         </div>
       </div>
     </div>
@@ -171,49 +168,46 @@
           <div class="view-cont">
             <div class="html">
               <pre><code class="language-html">&lt;main&gt;
-    &lt;div id="tab-menu"&gt;
-        &lt;div class="tab-btn"&gt;
-            &lt;ul&gt;
-                &lt;li class="active"&gt;&lt;a href="#"&gt;Tab1&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#"&gt;Tab2&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#"&gt;Tab3&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#"&gt;Tab4&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#"&gt;Tab5&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
+&lt;div id="tab-menu"&gt;
+    &lt;div class="tab-btn"&gt;
+        &lt;ul&gt;
+            &lt;li class="active"&gt;&lt;a href="#"&gt;Tab1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Tab2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Tab3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Tab4&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Tab5&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-cont"&gt;
+        &lt;div&gt;
+            &lt;h2&gt;Documentation&lt;/h2&gt;
+            &lt;p&gt;Sass is a stylesheet language that’s compiled to CSS. It allows you to use variables, nested rules, mixins,
+              functions, and more, all with a fully CSS-compatible syntax. Sass helps keep large stylesheets
+              well-organized and makes it easy to share design within and across projects.&lt;/p&gt;
         &lt;/div&gt;
-        &lt;div class="tab-cont"&gt;
-            &lt;div&gt;
-                &lt;h2&gt;Documentation&lt;/h2&gt;
-                &lt;p&gt;Sass is a stylesheet language that’s compiled to CSS. It allows you to use variables, nested rules, mixins,
-                  functions, and more, all with a fully CSS-compatible syntax. Sass helps keep large stylesheets
-                  well-organized and makes it easy to share design within and across projects.&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;div&gt;
-                &lt;h2&gt;Syntax&lt;/h2&gt;
-                &lt;p&gt;Sass is a stylesheet language that’s compiled to CSS. It allows you to use variables, nested rules, mixins,
-                  functions, and more, all with a fully CSS-compatible syntax. Sass helps keep large stylesheets
-                  well-organized and makes it easy to share design within and across projects.&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;div&gt;
-                &lt;h2&gt;Parsing a Stylesheet&lt;/h2&gt;
-                &lt;p&gt;Sass is a stylesheet language that’s compiled to CSS. It allows you to use variables, nested rules, mixins,
-                  functions, and more, all with a fully CSS-compatible syntax. Sass helps keep large stylesheets
-                  well-organized and makes it easy to share design within and across projects.&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;div&gt;
-                &lt;h2&gt;Variables&lt;/h2&gt;
-                &lt;p&gt;Sass is a stylesheet language that’s compiled to CSS. It allows you to use variables, nested rules, mixins,
-                  functions, and more, all with a fully CSS-compatible syntax. Sass helps keep large stylesheets
-                  well-organized and makes it easy to share design within and across projects.&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;div&gt;
-                &lt;h2&gt;Flow Control Rules&lt;/h2&gt;
-                &lt;p&gt;Sass is a stylesheet language that’s compiled to CSS. It allows you to use variables, nested rules, mixins,
-                  functions, and more, all with a fully CSS-compatible syntax. Sass helps keep large stylesheets
-                  well-organized and makes it easy to share design within and across projects.&lt;/p&gt;
-            &lt;/div&gt;
+        &lt;div&gt;
+            &lt;h2&gt;Syntax&lt;/h2&gt;
+            &lt;p&gt;Sass supports two different syntaxes. Each one can load the other, so it's up to you and your team which
+            one to choose&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;h2&gt;Parsing a Stylesheet&lt;/h2&gt;
+            &lt;p&gt;Just like CSS, most Sass stylesheets are mainly made up of style rules that contain property declarations.
+            But Sass stylesheets have many more features that can exist alongside these.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;h2&gt;Structure of a Stylesheet&lt;/h2&gt;
+            &lt;p&gt;Just like CSS, most Sass stylesheets are mainly made up of style rules that contain property declarations.
+              But Sass stylesheets have many more features that can exist alongside these.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;h2&gt;Comments&lt;/h2&gt;
+            &lt;p&gt;The way Sass comments work differs substantially between SCSS and the indented syntax. Both syntaxes
+            support two types of comments: comments defined using /* */ that are (usually) compiled to CSS, and comments
+            defined using // that are not.&lt;/p&gt;
         &lt;/div&gt;
     &lt;/div&gt;
+&lt;/div&gt;
 &lt;/main&gt;
 </code></pre>
             </div>

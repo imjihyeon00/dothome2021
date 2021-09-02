@@ -87,7 +87,7 @@
         </ul>
       </div>
       <div class="tab-cont">
-        <div class="active">
+        <div>
           <h2>Documentation</h2>
           <p>Sass is a stylesheet language that’s compiled to CSS. It allows you to use variables, nested rules, mixins,
             functions, and more, all with a fully CSS-compatible syntax. Sass helps keep large stylesheets
@@ -95,27 +95,24 @@
         </div>
         <div>
           <h2>Syntax</h2>
-          <p>Sass is a stylesheet language that’s compiled to CSS. It allows you to use variables, nested rules, mixins,
-            functions, and more, all with a fully CSS-compatible syntax. Sass helps keep large stylesheets
-            well-organized and makes it easy to share design within and across projects.</p>
+          <p>Sass supports two different syntaxes. Each one can load the other, so it's up to you and your team which
+            one to choose.</p>
         </div>
         <div>
           <h2>Parsing a Stylesheet</h2>
-          <p>Sass is a stylesheet language that’s compiled to CSS. It allows you to use variables, nested rules, mixins,
-            functions, and more, all with a fully CSS-compatible syntax. Sass helps keep large stylesheets
-            well-organized and makes it easy to share design within and across projects.</p>
+          <p>A Sass stylesheet is parsed from a sequence of Unicode code points. It's parsed directly, without first
+            being converted to a token stream.</p>
         </div>
         <div>
-          <h2>Variables</h2>
-          <p>Sass is a stylesheet language that’s compiled to CSS. It allows you to use variables, nested rules, mixins,
-            functions, and more, all with a fully CSS-compatible syntax. Sass helps keep large stylesheets
-            well-organized and makes it easy to share design within and across projects.</p>
+          <h2>Structure of a Stylesheet</h2>
+          <p>Just like CSS, most Sass stylesheets are mainly made up of style rules that contain property declarations.
+            But Sass stylesheets have many more features that can exist alongside these.</p>
         </div>
         <div>
-          <h2>Flow Control Rules</h2>
-          <p>Sass is a stylesheet language that’s compiled to CSS. It allows you to use variables, nested rules, mixins,
-            functions, and more, all with a fully CSS-compatible syntax. Sass helps keep large stylesheets
-            well-organized and makes it easy to share design within and across projects.</p>
+          <h2>Comments</h2>
+          <p>The way Sass comments work differs substantially between SCSS and the indented syntax. Both syntaxes
+            support two types of comments: comments defined using /* */ that are (usually) compiled to CSS, and comments
+            defined using // that are not.</p>
         </div>
       </div>
     </div>
@@ -192,27 +189,24 @@
             &lt;/div&gt;
             &lt;div&gt;
                 &lt;h2&gt;Syntax&lt;/h2&gt;
-                &lt;p&gt;Sass is a stylesheet language that’s compiled to CSS. It allows you to use variables, nested rules, mixins,
-                  functions, and more, all with a fully CSS-compatible syntax. Sass helps keep large stylesheets
-                  well-organized and makes it easy to share design within and across projects.&lt;/p&gt;
+                &lt;p&gt;Sass supports two different syntaxes. Each one can load the other, so it's up to you and your team which
+                one to choose&lt;/p&gt;
             &lt;/div&gt;
             &lt;div&gt;
                 &lt;h2&gt;Parsing a Stylesheet&lt;/h2&gt;
-                &lt;p&gt;Sass is a stylesheet language that’s compiled to CSS. It allows you to use variables, nested rules, mixins,
-                  functions, and more, all with a fully CSS-compatible syntax. Sass helps keep large stylesheets
-                  well-organized and makes it easy to share design within and across projects.&lt;/p&gt;
+                &lt;p&gt;Just like CSS, most Sass stylesheets are mainly made up of style rules that contain property declarations.
+                But Sass stylesheets have many more features that can exist alongside these.&lt;/p&gt;
             &lt;/div&gt;
             &lt;div&gt;
-                &lt;h2&gt;Variables&lt;/h2&gt;
-                &lt;p&gt;Sass is a stylesheet language that’s compiled to CSS. It allows you to use variables, nested rules, mixins,
-                  functions, and more, all with a fully CSS-compatible syntax. Sass helps keep large stylesheets
-                  well-organized and makes it easy to share design within and across projects.&lt;/p&gt;
+                &lt;h2&gt;Structure of a Stylesheet&lt;/h2&gt;
+                &lt;p&gt;Just like CSS, most Sass stylesheets are mainly made up of style rules that contain property declarations.
+                  But Sass stylesheets have many more features that can exist alongside these.&lt;/p&gt;
             &lt;/div&gt;
             &lt;div&gt;
-                &lt;h2&gt;Flow Control Rules&lt;/h2&gt;
-                &lt;p&gt;Sass is a stylesheet language that’s compiled to CSS. It allows you to use variables, nested rules, mixins,
-                  functions, and more, all with a fully CSS-compatible syntax. Sass helps keep large stylesheets
-                  well-organized and makes it easy to share design within and across projects.&lt;/p&gt;
+                &lt;h2&gt;Comments&lt;/h2&gt;
+                &lt;p&gt;The way Sass comments work differs substantially between SCSS and the indented syntax. Both syntaxes
+                support two types of comments: comments defined using /* */ that are (usually) compiled to CSS, and comments
+                defined using // that are not.&lt;/p&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
@@ -279,17 +273,16 @@
 </code></pre>
             </div>
             <div class="javascript">
-              <pre><code class="language-js">const tabBtn = document.querySelectorAll(".tab-btn ul li");
-const tabCont = document.querySelectorAll(".tab-cont &gt; div");
+              <pre><code class="language-js">const viewBtn = $(".view-title ul li");
+const viewCont = $(".view-cont > div");
 
-tabBtn.forEach((btn, index) =&gt; {
-    btn.addEventListener("click", function () {
-        tabBtn.forEach(el =&gt; el.classList.remove("active"));
-        btn.classList.add("active");
+viewBtn.click(function(){
+    viewBtn.removeClass("active");
+    $(this).addClass("active");
 
-        tabCont.forEach(el =&gt; el.style.display = "none");
-        tabCont[index].style.display = "block";
-    });
+    let index = $(this).index();
+    viewCont.css("display","none");
+    viewCont.eq(index).css("display","block");
 });
 </code></pre>
             </div>

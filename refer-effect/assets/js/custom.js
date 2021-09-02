@@ -7,30 +7,30 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 //Code tab menu
 //js
-// const viewBtn = document.querySelectorAll(".view-title ul li");
-// const viewCont = document.querySelectorAll(".view-cont > div");
+const viewBtn = document.querySelectorAll(".view-title ul li");
+const viewCont = document.querySelectorAll(".view-cont > div");
 
-// viewBtn.forEach((btn, index) => {
-//   btn.addEventListener("click", function () {
-//     viewBtn.forEach(el => el.classList.remove("active"));
-//     btn.classList.add("active");
+viewBtn.forEach((btn, index) => {
+  btn.addEventListener("click", function () {
+    viewBtn.forEach(el => el.classList.remove("active"));
+    btn.classList.add("active");
 
-//     viewCont.forEach(el => el.style.display = "none");
-//     viewCont[index].style.display = "block";
-//   });
-// });
-//jquery
-const viewBtn = $(".view-title ul li");
-const viewCont = $(".view-cont > div");
-
-viewBtn.click(function(){
-  viewBtn.removeClass("active");
-  $(this).addClass("active");
-
-  let index = $(this).index();
-  viewCont.css("display","none");
-  viewCont.eq(index).css("display","block");
+    viewCont.forEach(el => el.style.display = "none");
+    viewCont[index].style.display = "block";
+  });
 });
+//jquery
+// const viewBtn = $(".view-title ul li");
+// const viewCont = $(".view-cont > div");
+
+// viewBtn.click(function(){
+//   viewBtn.removeClass("active");
+//   $(this).addClass("active");
+
+//   let index = $(this).index();
+//   viewCont.css("display","none");
+//   viewCont.eq(index).css("display","block");
+// });
 
 //modal
 const infoBtn = document.querySelector(".info button");
