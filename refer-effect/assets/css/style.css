@@ -484,6 +484,19 @@ figcaption {
 }
 
 @media (max-width: 800px) {
+  .info h1 {
+    font-size: 14px;
+  }
+  .info p {
+    font-size: 10px;
+  }
+  .info li a {
+    width: 16px;
+    height: 16px;
+    font-size: 8px;
+    line-height: 16px;
+  }
+
   #nav ul {
     display: flex;
   }
@@ -494,14 +507,17 @@ figcaption {
     line-height: 30px;
   }
 
+  .code-view {
+    width: 70vw;
+  }
   .code-view .view-header .dot span {
     width: 10px;
     height: 10px;
   }
   .code-view .view-title {
-    font-size: 14px;
+    font-size: 10px;
   }
   .code-view .view-cont {
-    font-size: 14px;
+    font-size: 10px;
   }
 }
