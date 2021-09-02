@@ -11,7 +11,8 @@ const viewBtn = document.querySelectorAll(".view-title ul li");
 const viewCont = document.querySelectorAll(".view-cont > div");
 
 viewBtn.forEach((btn, index) => {
-  btn.addEventListener("click", function () {
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
     viewBtn.forEach(el => el.classList.remove("active"));
     btn.classList.add("active");
 
