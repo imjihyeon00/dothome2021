@@ -521,5 +521,6 @@ figcaption {
     background-color: #f8f8f8;
     font-size: 10px;
     max-height: 50vh;
+    border-radius: 10px;
   }
 }
