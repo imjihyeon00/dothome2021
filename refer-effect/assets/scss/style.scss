@@ -129,7 +129,7 @@ $gradient5: linear-gradient(to bottom, #f6d365 0%, #fda085 100%);
     @include content;
     width: 100%;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.2);
     z-index: -1;
   }
 }
@@ -249,15 +249,17 @@ $gradient5: linear-gradient(to bottom, #f6d365 0%, #fda085 100%);
   color: #fff;
   font-family: $font-NEXON1;
   padding: 20px;
+  position: absolute;
+  left: 0;  top: 0;
 
   &.right {
-    position: absolute;
+    left: auto;
     right: 0px;
-    top: 0px;
   }
 
   &.bottom {
-    position: absolute;
+    top: auto;
+    left: auto;
     right: 0px;
     bottom: 0px;
   }
@@ -339,10 +341,6 @@ $gradient5: linear-gradient(to bottom, #f6d365 0%, #fda085 100%);
     justify-content: center;
 
     .modal-cont {
-      background: #fff;
-      padding: 3vw;
-      max-width: 50vw;
-
       h2 {
         font-weight: 400;
         font-size: 40px;
@@ -362,6 +360,7 @@ $gradient5: linear-gradient(to bottom, #f6d365 0%, #fda085 100%);
         padding: 5px 10px;
         float: right;
         cursor: pointer;
+        margin-top: 10px;
       }
     }
   }
@@ -433,28 +432,111 @@ $gradient5: linear-gradient(to bottom, #f6d365 0%, #fda085 100%);
   }
 }
 
+//code View
+.code-view {
+  width: 60vw;
+  border: 1px solid #f2f2f2;
+  border-radius: 10px;
+  background: #fff;
+  overflow: hidden;
+
+  .view-header {
+    border-bottom: 1px solid #f2f2f2;
+
+    .dot {
+      padding: 12px 10px 10px 15px;
+
+      span {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        margin: 0 2px;
+      }
+
+      span:nth-child(1) {
+        background-color: #f56565;
+      }
+
+      span:nth-child(2) {
+        background-color: #f6e05e;
+      }
+
+      span:nth-child(3) {
+        background-color: #48bb78;
+      }
+    }
+  }
+
+  .view-title {
+    font-family: $font-NEXON2;
+    border: 1px solid #f2f2f2;
+    padding: 0 11px;
+
+    li {
+      display: inline;
+      list-style: none;
+
+      a {
+        text-decoration: none;
+        color: #ccc;
+        padding: 10px 10px 12px;
+        display: inline-block;
+        margin: 0 5px;
+      }
+
+      &.active a {
+        border-top: 2px solid #667EEA;
+        color: #4a5568;
+      }
+    }
+  }
+
+  .view-cont {
+    height: auto;
+    max-height: 70vh;
+    overflow-y: scroll;
+    > div {
+      display: none;
+      &:first-child{
+        display: block;
+      }
+    }
+  }
+}
+
+
 
 // 반응형
 @include mobile {
   #nav {
-    
-
     ul {
       display: flex;
-      
+
       li {
         a {
-          // width: 65px;
-          // height: 30px;
-          // font-size: 12px;
-          // line-height: 30px;
-          // margin-bottom: 10px;
           font-size: 12px;
           width: 65px;
           height: 30px;
           line-height: 30px;
         }
       }
+    }
+  }
+
+  .code-view {
+    .view-header {
+      .dot{
+        span {
+          width: 10px; height: 10px;
+        }
+      }
+    }
+    .view-title {
+      font-size: 14px;
+    }
+    .view-cont {
+      font-size: 14px;
     }
   }
 }
