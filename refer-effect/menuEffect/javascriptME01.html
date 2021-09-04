@@ -317,6 +317,10 @@ tabBtn.forEach((btn, index) =&gt; {
   <script src="../assets/js/custom.js"></script>
   <script src="../assets/js/highlight.min.js"></script>
   <script>
+    //window.onload : 브라우저가 로딩 된 후
+    window.onload = function () {
+      agentCheck(); //호환성 체크
+    }
     const tabBtn = document.querySelectorAll(".tab-btn ul li");
     const tabCont = document.querySelectorAll(".tab-cont > div");
 
