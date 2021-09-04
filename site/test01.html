@@ -164,12 +164,24 @@
               </div>
             </div>
 
-
           </div>
           <div class="swiper-pagination"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
         </div>
+        <div class="swiper-prevBtn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" stroke="#fff" aria-hidden="true" width="40"
+            height="40">
+            <path d="M17 23.485L8.513 15 17 6.514" stroke-width="2" fill="none" fill-rule="evenodd"
+              stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </div>
+        <div class="swiper-nextBtn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" stroke="#fff" aria-hidden="true" width="40"
+            height="40">
+            <path d="M17 23.485L8.513 15 17 6.514" stroke-width="2" fill="none" fill-rule="evenodd"
+              stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </div>
+
 
       </div>
     </section>
@@ -280,7 +292,13 @@
     <div class="footerCont">
       <a class="footerLogin" href="#">로그인</a>
       <div class="footerCopy">NAVER Copyright © NAVER Corp. All Rights Reserved.</div>
-      <a href="naverLink">NAVER</a>
+      <a class="naverLink" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 74 16" aria-hidden="true" width="74" height="16">
+          <path
+            d="M21.897 1l-5.464 14h4.644l.66-1.853h5.237l.66 1.853h4.643L26.814 1h-4.917zm2.459 4.411l1.557 4.373h-3.115l1.558-4.373zM47.165 1v14H58.16v-3.431h-6.556V9.682h6.35V6.319h-6.35V4.43h6.419V1zm-6.078 0l-3.278 9.205L34.53 1h-4.643l5.463 14h4.917L45.73 1zM10.492 1v7.493L5.302 1H1v14h4.507V7.507L10.697 15h4.302V1zm56.545 6.52h-2.39V4.568h2.39c.81 0 1.468.661 1.468 1.476s-.657 1.476-1.468 1.476zm3.034 2.677l.422-.178c1.62-.68 2.443-2.154 2.443-4.024 0-1.769-.642-3.077-1.908-3.889C69.851 1.351 68.325 1 66.226 1h-5.882v14h4.371v-3.912h1.57L68.95 15h4.644l-3.522-4.803z">
+          </path>
+        </svg>
+      </a>
     </div>
   </footer>
 
@@ -323,8 +341,8 @@
       //   disableOnInteraction: false,
       // },
       navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-nextBtn",
+        prevEl: ".swiper-prevBtn",
       },
     });
   </script>
