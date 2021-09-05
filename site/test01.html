@@ -57,7 +57,27 @@
         <a href="#">인플루언서로 로그인</a>
       </div>
     </div>
-
+    <div class="subMenu">
+      <div class="subMenu1">
+        <ul>
+          <li><a href="#">인플루언서로 성장</a></li>
+          <li><a href="#">인플루언서 홈</a></li>
+          <li><a href="#">검색 참여</a></li>
+        </ul>
+      </div>
+      <div class="subMenu2"></div>
+      <div class="subMenu3">
+        <ul>
+          <li><a href="#">크리에이터 워크숍</a></li>
+          <li><a href="#">슈퍼애드</a></li>
+          <li><a href="#">엑스퍼트 컨설팅</a></li>
+          <li><a href="#">멤버십 혜택</a></li>
+          <li><a href="#">어워드</a></li>
+        </ul>
+      </div>
+      <div class="subMenu4"></div>
+      <div class="subMenu5"></div>
+    </div>
   </header>
   <!-- //header -->
 
@@ -308,6 +328,9 @@
   <script>
     const header = document.querySelector("header");
     const headerOffsetTop = header.offsetTop;
+    const menu = document.querySelectorAll(".menu ul li a");
+
+    //scroll Event script
     window.addEventListener("scroll", e => {
       let hScroll = document.documentElement.scrollTop;
 
@@ -325,7 +348,19 @@
       }
     });
 
+    //subMenu script
+    menu.forEach((el, idx) => {
+      el.addEventListener("mouseover", function () {
+        document.querySelectorAll(".subMenu>div").forEach(el => el.style.display = "none");
+        document.querySelector(".subMenu" + (idx + 1)).style.display = "block";
+      });
+    });
+    header.addEventListener("mouseleave", function () {
+      document.querySelectorAll(".subMenu>div").forEach(el => el.style.display = "none");
+    });
 
+
+    // swiper script
     var swiper = new Swiper(".swiper", {
       slidesPerView: 1,
       spaceBetween: 30,

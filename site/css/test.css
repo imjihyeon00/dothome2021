@@ -4,12 +4,15 @@ body {
   font-family: "nanumsquare", sans-serif;
 }
 
+header {
+  transition: all 0.2s;
+}
+
 header .headerWrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 30px;
-
 }
 
 header .logo img {
@@ -17,13 +20,30 @@ header .logo img {
   height: 30px;
 }
 
-header .menu ul {}
+header .subMenu {
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: all 0.2s;
+}
 
+header .subMenu>div {
+  display: none;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+header .subMenu ul li,
 header .menu ul li {
   display: inline-block;
   margin: 0 11px;
   padding: 15px;
-  position: relative;
+}
+
+header .subMenu ul li a {
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  transition: all 0.2s;
 }
 
 header .menu ul li a {
@@ -33,17 +53,11 @@ header .menu ul li a {
   line-height: 20px;
 }
 
+header .subMenu ul li a:hover,
 header .menu ul li a:hover {
   color: #19cf60;
   font-weight: 800;
 }
-
-header .subMenu {
-  display: block;
-
-}
-
-header .join {}
 
 header .join a {
   color: #fff;
@@ -151,7 +165,8 @@ header .join a {
 .section3 .sectionWrap .content {
   position: relative;
 }
-.section3 .sectionWrap .content:hover img{
+
+.section3 .sectionWrap .content:hover img {
   transform: scale(1.1);
 }
 
@@ -253,7 +268,7 @@ header .join a {
   border-radius: 15px;
 }
 
-.article2 .section4 .contents:hover img{
+.article2 .section4 .contents:hover img {
   transform: scale(1.1);
 }
 
