@@ -2,6 +2,63 @@
 
 
 //webfont
+/* 에스코어드림 */
+@font-face {
+  font-family: 'S-CoreDream';
+  font-weight: 100;
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-1Thin.woff') format('woff');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'S-CoreDream';
+  font-weight: 200;
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-2ExtraLight.woff') format('woff');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'S-CoreDream';
+  font-weight: 300;
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'S-CoreDream';
+  font-weight: 400;
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'S-CoreDream';
+  font-weight: 500;
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'S-CoreDream';
+  font-weight: 600;
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'S-CoreDream';
+  font-weight: 700;
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-7ExtraBold.woff') format('woff');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'S-CoreDream';
+  font-weight: 800;
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff');
+  font-style: normal;
+}
+
 @font-face {
   font-family: 'NEXONLv1Gothic';
   font-weight: 300;
@@ -83,6 +140,7 @@ figcaption {
 $font-Six: 'Six Caps';
 $font-NEXON1: 'NEXONLv1Gothic';
 $font-NEXON2: 'NEXONLv2Gothic';
+$font-sCoreDREAM: 'S-CoreDream';
 $gradientMain: linear-gradient(to bottom, #11e8bb 0%, #8200c9 100%);
 $gradient1: linear-gradient(to bottom, #84fab0 0%, #8fd3f4 100%);
 $gradient2: linear-gradient(to bottom, #30cfd0 0%, #330867 100%);
@@ -154,7 +212,6 @@ $gradient5: linear-gradient(to bottom, #f6d365 0%, #fda085 100%);
     }
   }
 }
-
 
 /* #main */
 #main {
@@ -281,6 +338,10 @@ $gradient5: linear-gradient(to bottom, #f6d365 0%, #fda085 100%);
     border-bottom: 1px dashed #fff;
     display: inline-block;
     margin-bottom: 10px;
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
   }
 
   p {
@@ -577,5 +638,240 @@ $gradient5: linear-gradient(to bottom, #f6d365 0%, #fda085 100%);
       max-height: 50vh;
       border-radius: 10px;
     }
+  }
+}
+
+
+
+//parallax
+.parallax {
+  background: #222;
+  color: #fff;
+  font-family: $font-sCoreDREAM;
+
+  .source {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+
+    button {
+      background: transparent;
+      border: 1px solid #fff;
+      padding: 5px 10px;
+      color: #fff;
+      border-radius: 50px;
+      box-shadow: 0 0 0 #fff inset;
+      transition: all 0.4s;
+      cursor: pointer;
+
+      &:hover {
+        box-shadow: 0 -50px 0 #fff inset;
+        color: #000;
+      }
+    }
+  }
+}
+
+.paraScroll {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 12px;
+  padding: 0 20px;
+}
+
+.paraInfo2 {
+  position: fixed;
+  left: 20px;
+  bottom: 70px;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-size: 12px;
+  border-radius: 10px;
+  line-height: 1.8;
+  padding: 20px;
+  z-index: 1000;
+
+  li {
+    list-style: none;
+  }
+}
+
+.paraNav {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 15px 20px;
+  border-radius: 50px;
+
+  li {
+    display: inline-block;
+    list-style: none;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      display: inline-block;
+      padding: 5px;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      line-height: 30px;
+    }
+
+    &.active a {
+      background: #fff;
+      color: #000;
+      border-radius: 50%;
+    }
+  }
+}
+
+.paraInfo {
+  padding: 20px;
+
+  h1 {
+    display: inline-block;
+    font-size: 20px;
+    border-bottom: 1px dashed #fff;
+    margin-bottom: 8px;
+    font-weight: 400;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+}
+
+.paraCont {
+  width: 100%;
+  overflow: hidden;
+
+  .content-item {
+    width: 1000px;
+    max-width: 70vw;
+    // background: rgba(255,255,255,0.3);
+    margin: 30vw 0;
+    padding-top: 10vw;
+    text-align: right;
+    position: relative;
+
+    .num {
+      font-family: 'Lato';
+      font-weight: 100;
+      font-size: 25vw;
+      opacity: 0.07;
+      position: absolute;
+      right: -5vw;
+      top: -10vw;
+    }
+
+    .title {
+      padding-bottom: 10px;
+      font-weight: 500;
+    }
+
+    .img-Wrap {
+      width: 100%;
+      padding-bottom: 56%;
+      background: #000;
+      position: relative;
+
+      .img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        filter: saturate(0%);
+        transition: all 0.8s;
+
+        &:hover {
+          filter: saturate(100%);
+        }
+      }
+    }
+
+    .desc {
+      font-size: 6vw;
+      line-height: 1.4;
+      margin-top: -6vw;
+      margin-right: -3vw;
+      position: relative;
+      z-index: 100;
+      word-break: keep-all;
+    }
+
+    &:nth-child(even) {
+      margin-left: auto;
+      text-align: left;
+
+      .num {
+        right: auto;
+        left: -5vw;
+      }
+
+      .desc {
+        margin-right: auto;
+        margin-left: -3vw;
+      }
+    }
+  }
+}
+
+@for $i from 1 through 10 {
+  .content-item {
+    &:nth-child(#{$i}) {
+      .img {
+        @if $i < 10 {
+          background: url(../img/bg0#{$i}.jpg);
+        }
+
+        @else if $i>=10 {
+          background: url(../img/bg#{$i}.jpg);
+        }
+      }
+    }
+  }
+}
+
+// 반응형
+@include mobile {
+  .paraInfo {
+    h1 {
+      font-size: 13px;
+    }
+    p {
+      font-size: 11px;
+    }
+  }
+  .paraNav {
+    padding: 10px 15px;
+    li {
+      a {
+        font-size: 10px;
+        width: 10px;
+        height: 10px;
+        line-height: 10px;
+      }
+    }
+    
   }
 }

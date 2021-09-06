@@ -88,7 +88,7 @@ viewBtn.forEach((btn, index) => {
 // });
 
 //modal
-const infoBtn = document.querySelector(".info button");
+const infoBtn = document.querySelector(".info button") || document.querySelector(".source button");
 const modal = document.querySelector("#modal");
 const modalBtn = document.querySelector("#modal button");
 
