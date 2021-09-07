@@ -338,6 +338,7 @@ $gradient5: linear-gradient(to bottom, #f6d365 0%, #fda085 100%);
     border-bottom: 1px dashed #fff;
     display: inline-block;
     margin-bottom: 10px;
+
     a {
       color: #fff;
       text-decoration: none;
@@ -852,18 +853,73 @@ $gradient5: linear-gradient(to bottom, #f6d365 0%, #fda085 100%);
   }
 }
 
+.paraFooter {
+  padding: 200px 0;
+
+  h1 {
+    font-size: 8vw;
+    line-height: 1.2;
+    padding: 10vw 8vw 0 8vw;
+    text-transform: uppercase;
+    margin-bottom: 3vw;
+  }
+
+  em {
+    display: block;
+    font-family: ‘Lato’;
+    font-weight: 100;
+    padding-left: 18vw;
+  }
+
+  .footerInfo {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    padding: 15px 20px;
+    margin-bottom: 2px;
+    h2 {
+      padding-right: 20px;
+    }
+
+    li {
+      display: inline;
+      list-style: none;
+      a {
+        color: #fff;
+        border: 1px dashed #fff;
+        width: 30px; height: 30px;
+        display: inline-block;
+        border-radius: 50%;
+        line-height: 30px;
+        text-decoration: none;
+      }
+      &.active a {
+        background: #fff;
+        color: #000;
+      }
+    }
+  }
+
+}
+
 // 반응형
 @include mobile {
   .paraInfo {
     h1 {
       font-size: 13px;
     }
+
     p {
       font-size: 11px;
     }
   }
+
   .paraNav {
     padding: 10px 15px;
+
     li {
       a {
         font-size: 10px;
@@ -872,6 +928,6 @@ $gradient5: linear-gradient(to bottom, #f6d365 0%, #fda085 100%);
         line-height: 10px;
       }
     }
-    
+
   }
 }
