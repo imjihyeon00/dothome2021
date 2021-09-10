@@ -32,7 +32,8 @@ button,
 figure,
 figcaption {
   margin: 0;
-  padding: 0
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* 폰트 초기화 */
@@ -71,6 +72,31 @@ em {
 
 img {
   width: 100%;
+}
+
+/* 제목 초기화 */
+h1,h2,h3,h4,h5,h6 {
+  font-weight: normal;
+}
+
+/* list style 유형 */
+ul.list li,
+ol.list li,
+dl.list li {
+  position: relative;
+  padding-left: 10px;
+}
+
+ul.list li::before,
+ol.list li::before,
+dl.list li::before {
+  content:'';
+  width: 3px;
+  height: 3px;
+  background: #000;
+  position: absolute;
+  left: 0;
+  top: 7px;
 }
 
 /* 이미지 표현 방법 */
