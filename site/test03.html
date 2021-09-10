@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>네이버 클로바</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css">
+
+  <!-- swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+  <!-- 나눔스퀘어 웹 폰트 -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+
+  <style>
+    /* 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제공할 때 */
+    .ir_so {
+      overflow: hidden;
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      clip: rect(0, 0, 0, 0);
+    }
+
+    body {
+      font-family: 'NanumSquare';
+    }
+
+    /* header */
+    #header {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      min-width: 1240px;
+      height: 86px;
+      text-align: center;
+      z-index: 100;
+      box-sizing: border-box;
+      background-color: #fff;
+      border-bottom: 1px solid rgba(0, 0, 0, .05);
+    }
+
+    #header .wrap {
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    #header .wrap #logo {}
+
+    #header .wrap #logo a {
+      background-position: -4px -62px;
+      background-repeat: no-repeat;
+      width: 145px;
+      height: 22px;
+      display: block;
+      background-size: 335px 311px;
+      background-image: linear-gradient(transparent, transparent), url(https://static-clova.pstatic.net/static/d15c0af/img/sprite/sp_svg_icon.svg);
+    }
+
+    #header .menu {}
+
+    #header .menu ul {}
+
+    #header .menu ul li {
+      display: inline-block;
+    }
+
+    #header .menu ul li a {
+      display: block;
+      height: 86px;
+      padding: 34px 36px;
+      color: rgba(0, 0, 0, .6);
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 16px;
+      box-sizing: border-box;
+    }
+
+    #header .menu ul li:hover a {
+      vertical-align: top;
+      text-decoration: underline;
+      color: #000;
+    }
+
+    #header .btn-area {}
+
+    #header .btn-area a {
+      display: inline-block;
+      padding: 8px 13px;
+      border: 1px solid rgba(0, 0, 0, .4);
+      border-radius: 3px;
+      box-sizing: border-box;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 14px;
+      color: rgba(0, 0, 0, .8);
+      text-align: center;
+      transition: all .3s ease;
+    }
+
+    #header .btn-area a+a {
+      margin-left: 8px;
+    }
+
+    #header .btn-area a:hover {
+      border-color: #05d685;
+      background-color: #05d685;
+      color: #fff;
+    }
+
+    /* main */
+    #main {}
+
+    #main .wrap {
+      padding: 86px 0;
+    }
+
+    /* banner */
+    #main .banner {
+      position: relative;
+      width: 100%;
+      height: 390px;
+    }
+
+    #main .banner .img {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      pointer-events: none;
+      background-size: cover;
+      background-position: 50% 50%;
+    }
+
+    #main .banner .img1 {
+      background-image: url(https://static-clova.pstatic.net/static/d15c0af/img/bridge/bridge_banner_01.png);
+      animation: change_banner 10s ease-in-out 0s infinite;
+    }
+
+    #main .banner .img2 {
+      background-image: url(https://static-clova.pstatic.net/static/d15c0af/img/bridge/bridge_banner_02.png);
+      animation: change_banner 10s ease-in-out 5s infinite;
+    }
+
+
+    /* section */
+    #main .section {
+      margin-top: 149px;
+      text-align: center;
+    }
+
+    #main .section .title {
+      display: block;
+      background-repeat: no-repeat;
+      margin: 0 auto;
+    }
+
+    #main .section1 .title {
+      background-image: linear-gradient(transparent, transparent), url(https://static-clova.pstatic.net/static/d15c0af/img/sprite/sp_svg_product_bridge.svg);
+      background-size: 433px 277px;
+      background-position: -4px -44px;
+      width: 204px;
+      height: 50px;
+    }
+
+    #main .section .title-desc {
+      margin-top: 8px;
+      font-size: 16px;
+      line-height: 26px;
+    }
+
+    #main .section .item-list {
+      width: 1203px;
+      margin: 44px auto 0;
+      padding-left: 27px;
+    }
+
+    #main .section .item-list::after {
+      display: block;
+      clear: both;
+      content: '';
+    }
+
+    #main .item-list .item {
+      float: left;
+      margin: 36px 27px 0 0;
+      border: 1px solid #eee;
+      border-radius: 5px;
+    }
+
+    #main .item-list .item img {
+      width: 372px;
+      height: 361px;
+    }
+
+
+
+
+    @keyframes change_banner {
+      0% {
+        opacity: 0;
+        pointer-events: none
+      }
+
+      20% {
+        opacity: 1;
+        pointer-events: initial
+      }
+
+      50% {
+        opacity: 1
+      }
+
+      80% {
+        opacity: 0;
+        pointer-events: none
+      }
+
+      100% {
+        opacity: 0
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header id="header">
+    <div class="wrap">
+      <h1 id="logo"><a href="test03.html"><span class="ir_so">naver clova</span></a></h1>
+      <div class="menu">
+        <ul>
+          <li><a href="#">기술 · 솔루션</a></li>
+          <li><a href="#">제품</a></li>
+          <li><a href="#">플랫폼</a></li>
+          <li><a href="#">파트너</a></li>
+          <li><a href="#">리서치</a></li>
+        </ul>
+      </div>
+      <div class="btn-area">
+        <a href="#">Biz Start</a>
+        <a href="#">비즈니스 문의</a>
+      </div>
+    </div>
+  </header>
+  <!-- header -->
+  <main id="main">
+    <div class="wrap">
+      <section class="banner">
+        <h2 class="ir_so">배너 이미지</h2>
+        <a href="#">
+          <div class="img img1"></div>
+        </a>
+        <a href="#">
+          <div class="img img2"></div>
+        </a>
+      </section>
+      <section class="section section1">
+        <h2 class="title"><span class="ir_so">AI Devices</span></h2>
+        <p class="title-desc">AI 기술이 집약된 제품으로 편리한 일상을 만나보세요.</p>
+
+        <ul class="item-list">
+          <li class="item">
+            <img src="https://static-clova.pstatic.net/static/d15c0af/img/bridge/img_clova_lamp.png" alt="">
+            <div class="info">
+              <div class="name">
+                <span class="ir_so">CLOVA Lamp</span>
+              </div>
+              <p class="desc"></p>
+              <a href="#" class="btn green">구매하기</a>
+              <a href="#" class="btn">알아보기</a>
+            </div>
+          </li>
+          <li class="item">
+            <img src="https://static-clova.pstatic.net/static/d15c0af/img/bridge/img_clova_lamp.png" alt="">
+            <div class="info">
+              <div class="name">
+                <span class="ir_so">CLOVA Lamp</span>
+              </div>
+              <p class="desc"></p>
+              <a href="#" class="btn green">구매하기</a>
+              <a href="#" class="btn">알아보기</a>
+            </div>
+          </li>
+          <li class="item">
+            <img src="https://static-clova.pstatic.net/static/d15c0af/img/bridge/img_clova_lamp.png" alt="">
+            <div class="info">
+              <div class="name">
+                <span class="ir_so">CLOVA Lamp</span>
+              </div>
+              <p class="desc"></p>
+              <a href="#" class="btn green">구매하기</a>
+              <a href="#" class="btn">알아보기</a>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="section section2"></section>
+      <article></article>
+    </div>
+  </main>
+  <!-- main -->
+  <footer id="footer">
+
+  </footer>
+  <!-- footer -->
+</body>
+
+</html>
