@@ -160,15 +160,119 @@
                     </div>
                     <div class="view-cont">
                         <div class="html">
-                            <pre><code class="language-html">
+                            <pre><code class="language-html">&lt;main&gt;
+    &lt;div class="cursor"&gt;&lt;/div&gt;
+    &lt;article class="mouseCont"&gt;
+        &lt;p&gt;&lt;span class="style1"&gt;Better&lt;/span&gt; the last &lt;span class="style2"&gt;smile&lt;/span&gt; than the first &lt;span
+                class="style3"&gt;laughter&lt;/span&gt;&lt;/p&gt;
+        &lt;h2&gt;&lt;span class="style1"&gt;처음의&lt;/span&gt; 큰 &lt;span class="style2"&gt;웃음&lt;/span&gt;보다 마지막의 &lt;span class="style3"&gt;미소&lt;/span&gt;가
+            더 좋다&lt;/h2&gt;
+    &lt;/article&gt;
+&lt;/main&gt;
 </code></pre>
                         </div>
                         <div class="css">
-                            <pre><code class="language-css">
+                            <pre><code class="language-css">.mouseCont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'S-CoreDream';
+    cursor: none;
+}
+
+.mouseCont p {
+    font-size: 2.5vw;
+    line-height: 2.3;
+    font-weight: 200;
+}
+
+.mouseCont h2 {
+    font-size: 3vw;
+    font-weight: 500;
+}
+
+.mouseCont span {
+    font-style: normal;
+    border-bottom: 0.2vw dashed #fff;
+}
+
+.cursor {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* 아무것도 못하게 해줌 */
+    user-select: none;
+    pointer-events: none;
+    transition: background-color .2s,
+        border-color .2s,
+        border-radius .2s,
+        transform .6s;
+}
+
+.cursor.style1 {
+    background-color: rgba(255, 144, 144, 0.4);
+    border-color: #ff8f8f;
+    transform: rotateY(720deg) scale(2);
+}
+
+.cursor.style2 {
+    background-color: rgba(86, 74, 255, 0.4);
+    border-color: #5e32ff;
+    border-radius: 20px;
+    transform: rotate3d(0, 1, 1, 720deg) scale(1.6);
+}
+
+.cursor.style3 {
+    background-color: rgba(198, 74, 255, 0.4);
+    border-color: #a332ff;
+    border-radius: 20px;
+    transform: rotate3d(1, 0, 0.5, 360deg) scale(2);
+}
 </code></pre>
                         </div>
                         <div class="javascript">
-                            <pre><code class="language-js">
+                            <pre><code class="language-js">$(window).mousemove(function (e) {
+    //브라우저 기준
+    $('.clientX').text(e.clientX + 'px');
+    $('.clientY').text(e.clientY + 'px');
+    //요소(여긴 요소가 없어서 브라우저와 동일한 값 출력) 기준
+    $('.offsetX').text(e.offsetX + 'px');
+    $('.offsetY').text(e.offsetY + 'px');
+    //페이지 기준
+    $('.pageX').text(e.pageX + 'px');
+    $('.pageY').text(e.pageY + 'px');
+    //디바이스 기준
+    $('.screenX').text(e.screenX + 'px');
+    $('.screenY').text(e.screenY + 'px');
+});
+
+//마우스 움직이기
+$(window).mousemove(function (e) {
+    //원의 중앙에 커서가 오게 하기위해서 -25해줌 (원의 크기 50px)
+    $('.cursor').css({
+        left: e.clientX - 25,
+        top: e.clientY - 25
+    });
+});
+$('.mouseCont span').hover(
+    function (e) {
+        $('.cursor').addClass($(this).attr('class'));
+    },
+    function (e) {
+        $('.cursor').removeClass($(this).attr('class'));
+    }
+);
 </code></pre>
                         </div>
                     </div>
@@ -208,63 +312,10 @@
                 left: e.clientX - 25,
                 top: e.clientY - 25
             });
-            // $('.mouseCont em').mouseover(function () {
-            //     $('.cursor').addClass('active');
-            // });
-            // $('.mouseCont em').mouseout(function () {
-            //     $('.cursor').removeClass('active');
-            // });
-
-            // $('.mouseCont em').mouseenter(function () {
-            //     $('.cursor').addClass('active');
-            // });
-            // $('.mouseCont em').mouseleave(function () {
-            //     $('.cursor').removeClass('active');
-            // });
-
-            //.hover(들어갈때 함수, 나올때 함수)
-            // $('.mouseCont .style1').hover(
-            //     function () {
-            //         $('.cursor').addClass('style1');
-            //     },
-            //     function () {
-            //         $('.cursor').removeClass('style1');
-            //     }
-            // );
-
-            // $('.mouseCont .style2').hover(
-            //     function () {
-            //         $('.cursor').addClass('style2');
-            //     },
-            //     function () {
-            //         $('.cursor').removeClass('style2');
-            //     }
-            // );
-
-            // $('.mouseCont .style3').hover(
-            //     function () {
-            //         $('.cursor').addClass('style3');
-            //     },
-            //     function () {
-            //         $('.cursor').removeClass('style3');
-            //     }
-            // );
         });
-        // $('.mouseCont span').each((idx,item) => {
-        //     let i = idx + 1;
-
-        //     $('.mouseCont .style'+i).hover(
-        //         function(){
-        //             $('.cursor').addClass(style);
-        //         },
-        //         function(){
-        //             $('.cursor').removeClass(style);
-        //         }
-        //     );
-        // });
         $('.mouseCont span').hover(function (e) {
-                $('.cursor').addClass($(this).attr('class'));
-            },
+            $('.cursor').addClass($(this).attr('class'));
+        },
             function (e) {
                 $('.cursor').removeClass($(this).attr('class'));
             }
