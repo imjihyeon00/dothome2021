@@ -11,10 +11,6 @@
   <link rel="stylesheet" href="../assets/css/highlight.css">
 
   <style>
-    body {
-      cursor: none;
-    }
-
     .mouseCont {
       display: flex;
       align-items: center;
@@ -177,11 +173,10 @@
             <div class="html">
               <pre><code class="language-html">&lt;main&gt;
     &lt;div class="cursor"&gt;&lt;/div&gt;
+    &lt;div class="cursor-follower"&gt;&lt;/div&gt;
     &lt;article class="mouseCont"&gt;
-        &lt;p&gt;&lt;span class="style1"&gt;Better&lt;/span&gt; the last &lt;span class="style2"&gt;smile&lt;/span&gt; than the first &lt;span
-                class="style3"&gt;laughter&lt;/span&gt;&lt;/p&gt;
-        &lt;h2&gt;&lt;span class="style1"&gt;처음의&lt;/span&gt; 큰 &lt;span class="style2"&gt;웃음&lt;/span&gt;보다 마지막의 &lt;span class="style3"&gt;미소&lt;/span&gt;가
-            더 좋다&lt;/h2&gt;
+        &lt;p&gt;Don't give up easily even if you &lt;em&gt;failed&lt;/em&gt;&lt;/p&gt;
+        &lt;h2&gt;당신이 실패해도 쉽게 &lt;em&gt;포기&lt;/em&gt;하지 마세요&lt;/h2&gt;
     &lt;/article&gt;
 &lt;/main&gt;
 </code></pre>
@@ -211,83 +206,99 @@
     font-weight: 500;
 }
 
-.mouseCont span {
+.mouseCont em {
     font-style: normal;
-    border-bottom: 0.2vw dashed #fff;
+    border-bottom: 0.2vw dashed orange;
+    color: orange;
 }
 
 .cursor {
     position: absolute;
     left: 0;
     top: 0;
-    width: 50px;
-    height: 50px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
-    border: 3px solid #fff;
     z-index: 9999;
     background-color: rgba(255, 255, 255, 0.1);
     /* 아무것도 못하게 해줌 */
     user-select: none;
     pointer-events: none;
-    transition: background-color .2s,
-        border-color .2s,
-        border-radius .2s,
-        transform .6s;
+    transition: transform .3s, opacity .2s;
 }
 
-.cursor.style1 {
-    background-color: rgba(255, 144, 144, 0.4);
-    border-color: #ff8f8f;
-    transform: rotateY(720deg) scale(2);
+.cursor.active {
+    opacity: .5;
+    transform: scale(0);
 }
 
-.cursor.style2 {
-    background-color: rgba(86, 74, 255, 0.4);
-    border-color: #5e32ff;
-    border-radius: 20px;
-    transform: rotate3d(0, 1, 1, 720deg) scale(1.6);
+.cursor.active2 {
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
-.cursor.style3 {
-    background-color: rgba(198, 74, 255, 0.4);
-    border-color: #a332ff;
-    border-radius: 20px;
-    transform: rotate3d(1, 0, 0.5, 360deg) scale(2);
+.cursor-follower {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    z-index: 9998;
+    background: rgba(255, 255, 255, 0.3);
+    user-select: none;
+    pointer-events: none;
+    transition: transform .6s ease-in-out, opacity .2s ease-in-out;
+}
+
+.cursor-follower.active {
+    opacity: .7;
+    transform: scale(5);
+    background: rgba(255, 166, 0, 0.5);
+}
+
+.cursor-follower.active2 {
+    opacity: .7;
+    transform: scale(5);
+    background: rgba(255, 30, 0, 0.5);
 }
 </code></pre>
             </div>
             <div class="javascript">
-              <pre><code class="language-js">$(window).mousemove(function (e) {
-    //브라우저 기준
-    $('.clientX').text(e.clientX + 'px');
-    $('.clientY').text(e.clientY + 'px');
-    //요소(여긴 요소가 없어서 브라우저와 동일한 값 출력) 기준
-    $('.offsetX').text(e.offsetX + 'px');
-    $('.offsetY').text(e.offsetY + 'px');
-    //페이지 기준
-    $('.pageX').text(e.pageX + 'px');
-    $('.pageY').text(e.pageY + 'px');
-    //디바이스 기준
-    $('.screenX').text(e.screenX + 'px');
-    $('.screenY').text(e.screenY + 'px');
+              <pre><code class="language-js">const cursor = document.querySelector('.cursor');
+const follower = document.querySelector('.cursor-follower');
+
+//움직임 효과
+document.addEventListener('mousemove', (e) => {
+    //gsap
+    gsap.to(cursor, { duration: 0.3, left: e.pageX - 5, top: e.pageY - 5 });
+    gsap.to(follower, { duration: 0.8, left: e.pageX - 15, top: e.pageY - 15 });
+
+    //출력용
+    document.querySelector('.pageX').innerText = e.pageX;
+    document.querySelector('.pageY').innerText = e.pageY;
 });
 
-//마우스 움직이기
-$(window).mousemove(function (e) {
-    //원의 중앙에 커서가 오게 하기위해서 -25해줌 (원의 크기 50px)
-    $('.cursor').css({
-        left: e.clientX - 25,
-        top: e.clientY - 25
+document.querySelectorAll('.mouseCont em').forEach(em => {
+    em.addEventListener('mouseenter', () => {
+        cursor.classList.add('active');
+        follower.classList.add('active');
+    });
+    em.addEventListener('mouseleave', () => {
+        cursor.classList.remove('active');
+        follower.classList.remove('active');
     });
 });
-$('.mouseCont span').hover(
-    function (e) {
-        $('.cursor').addClass($(this).attr('class'));
-    },
-    function (e) {
-        $('.cursor').removeClass($(this).attr('class'));
-    }
-);
+
+document.querySelectorAll('.info').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+        cursor.classList.add('active2');
+        follower.classList.add('active2');
+    });
+    el.addEventListener('mouseleave', () => {
+        cursor.classList.remove('active2');
+        follower.classList.remove('active2');
+    });
+});
 </code></pre>
             </div>
           </div>
