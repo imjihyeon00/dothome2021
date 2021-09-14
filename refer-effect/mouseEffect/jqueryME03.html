@@ -291,7 +291,7 @@ $('.mouseCont span').hover(
   <script>
     const width = $('.cursor').width() / 2;
     const height = $('.cursor').height() / 2;
-    let text;
+    let text = 'difference';
 
     //마우스 움직임
     $(window).mousemove(function (e) {
@@ -306,6 +306,7 @@ $('.mouseCont span').hover(
       },
       function () {
         $('.cursor').removeClass('active');
+        $('.cursor').css('mix-blend-mode', 'normal');
       }
     );
 
