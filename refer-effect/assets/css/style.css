@@ -148,6 +148,9 @@ figcaption {
 .bg.purple::before {
   background-color: rgba(48, 16, 51, 0.8);
 }
+.bg.blue::before {
+  background-color: rgba(15, 6, 63, 0.5);
+}
 
 .bg1 {
   background-image: url(../img/bg01@2.jpg);
