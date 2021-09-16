@@ -617,7 +617,7 @@ $(window).scroll(function () {
     //info
     $('.paraScroll span').text(parseInt(scrollTop));
 
-    for (let i = 1; i <= $('.content-item').length; i++) {
+    for (let i = 1; i &lt;= $('.content-item').length; i++) {
         $('.offset' + i).text(parseInt($('#section' + i).offset().top) + 'px');
     }
 });
