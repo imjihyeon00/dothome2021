@@ -664,16 +664,22 @@ $(window).scroll(function () {
         window.addEventListener('scroll', e => {
             let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset; //구버전
 
-            document.querySelectorAll('content-item').forEach((el, idx) => {
-                if(scrollTop >= el.offsetTop - 2 ){
+            if (scrollTop > 10) {
+                document.querySelector('.paraNav').classList.add('show');
+            } else {
+                document.querySelector('.paraNav').classList.remove('show');
+            }
+
+            document.querySelectorAll('.content-item').forEach(function (item, idx) {
+                if (scrollTop >= item.offsetTop - 2) {
                     document.querySelectorAll('.paraNav ul li').forEach((li, liIdx) => {
                         document.querySelectorAll('.paraNav ul li').forEach(el => el.classList.remove('active'));
-          document.querySelector('.paraNav ul li:nth-child(' + (idx + 1) + ')').classList.add('active');
                     });
+                    document.querySelector('.paraNav ul li:nth-child(' + (idx + 1) + ')').classList.add('active');
                 }
             });
 
-            document.querySelector('.paraScroll span').innerText = scrollTop;
+            document.querySelector('.paraScroll span').innerText = parseInt(scrollTop);
         });
         // $(window).scroll(function () {
         //     let scrollTop = $(this).scrollTop();
