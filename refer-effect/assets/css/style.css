@@ -154,6 +154,9 @@ figcaption {
 .bg.black::before {
   background-color: rgba(0, 0, 0, 0.6);
 }
+.bg.brown::before {
+  background-color: rgba(50, 37, 11, 0.8);
+}
 
 .bg1 {
   background-image: url(../img/bg01@2.jpg);
@@ -201,6 +204,10 @@ figcaption {
 
 .bg12 {
   background-image: url(../img/bg12@2.jpg);
+}
+
+.bg13 {
+  background-image: url(../img/bg13@2.jpg);
 }
 
 /* #main */
