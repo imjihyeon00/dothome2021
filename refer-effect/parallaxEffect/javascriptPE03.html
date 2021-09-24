@@ -14,8 +14,7 @@
 
     <style>
         .paraNav {
-            /* top: -200px; */
-            top: 20px;
+            top: -200px;
             transition: top .5s ease;
         }
 
@@ -639,37 +638,33 @@ $(window).scroll(function () {
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
-        document.querySelectorAll('.paraNav ul li a').forEach((li, idx) => {
-            li.addEventListener('click', e => {
+        document.querySelectorAll(".paraNav ul li a").forEach((element) => {
+            element.addEventListener("click", (e) => {
                 e.preventDefault();
-                document.querySelector(li.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+                document.querySelector(element.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth"
                 })
-            });
-        });
+            })
+        })
 
-        window.addEventListener('scroll', e => {
-            let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset; 
-
-            //숨김버튼
-            if (scrollTop > 10) {
-                document.querySelector('.paraNav').classList.add('show');
+        window.addEventListener("scroll", function(){
+            let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset;
+            document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
+            //숨김메뉴
+            if( scrollTop > 10 ){
+                document.querySelector(".paraNav").classList.add("show");
             } else {
-                document.querySelector('.paraNav').classList.remove('show');
+                document.querySelector(".paraNav").classList.remove("show");
             }
-
             //버튼용
-            document.querySelectorAll('.content-item').forEach(function (item, idx) {
-                if (scrollTop >= item.offsetTop - 2) {
-                    document.querySelectorAll('.paraNav ul li').forEach((li, liIdx) => {
-                        document.querySelectorAll('.paraNav ul li').forEach(el => el.classList.remove('active'));
-                    });
-                    document.querySelector('.paraNav ul li:nth-child(' + (idx + 1) + ')').classList.add('active');
+            document.querySelectorAll(".content-item").forEach((item, index) => {
+                if( scrollTop >= item.offsetTop - 2 ){
+                    document.querySelectorAll(".paraNav ul li").forEach(li => {
+                        li.classList.remove("active");
+                    })
+                    document.querySelector(".paraNav ul li:nth-child("+(index+1)+")").classList.add("active");
                 }
-            });
-
-            //출력용
-            document.querySelector('.paraScroll span').innerText = parseInt(scrollTop);
+            })
         });
     </script>
 </body>
