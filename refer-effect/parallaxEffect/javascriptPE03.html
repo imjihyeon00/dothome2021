@@ -649,14 +649,16 @@ $(window).scroll(function () {
         });
 
         window.addEventListener('scroll', e => {
-            let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset; //구버전
+            let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset; 
 
+            //숨김버튼
             if (scrollTop > 10) {
                 document.querySelector('.paraNav').classList.add('show');
             } else {
                 document.querySelector('.paraNav').classList.remove('show');
             }
 
+            //버튼용
             document.querySelectorAll('.content-item').forEach(function (item, idx) {
                 if (scrollTop >= item.offsetTop - 2) {
                     document.querySelectorAll('.paraNav ul li').forEach((li, liIdx) => {
@@ -666,6 +668,7 @@ $(window).scroll(function () {
                 }
             });
 
+            //출력용
             document.querySelector('.paraScroll span').innerText = parseInt(scrollTop);
         });
     </script>
