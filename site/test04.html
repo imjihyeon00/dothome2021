@@ -254,6 +254,7 @@
         #main section:nth-child(odd) {
             background-color: #ecedf1;
         }
+
         #main section:nth-child(even) {
             background-color: #fff;
         }
@@ -261,6 +262,7 @@
         #main section:nth-child(even) .textarea {
             padding-left: 5%;
         }
+
         .textarea {
             display: table-cell;
             vertical-align: middle;
@@ -326,14 +328,15 @@
             background-size: 100%;
         }
 
-        .textarea .btn .pcBtn{
+        .textarea .btn .pcBtn {
             display: inline-block;
             background: url(https://whale.naver.com/_resource/img/whywhale/icon_pc.png) no-repeat bottom center;
             background-size: 100%;
             width: 118px;
             height: 76px;
         }
-        .textarea .btn .mBtn{
+
+        .textarea .btn .mBtn {
             display: inline-block;
             background: url(https://whale.naver.com/_resource/img/whywhale/icon_m.png) no-repeat bottom center;
             background-size: 100%;
@@ -364,8 +367,8 @@
         #content7 .container {
             height: auto;
         }
-        
-        #content7 img{
+
+        #content7 img {
             display: inline-block;
             margin-bottom: 3%;
             max-width: 560px;
@@ -378,15 +381,77 @@
             text-align: center;
             background-color: #f9f9f9;
         }
+
+        #footer .container {
+            position: relative;
+            vertical-align: middle;
+            height: auto;
+        }
+
         #footer h2 {
             display: inline-block;
             margin: 0 0 20px;
             max-width: 141px;
         }
+
         #footer h2 a {}
+
         #footer h2 a img {
             display: block;
             width: 100%;
+        }
+
+        #footer ul li {
+            display: inline-block;
+            position: relative;
+            margin: 10px 20px 0;
+            text-align: center;
+        }
+
+        #footer li a {
+            font-size: 16px;
+            font-weight: 400;
+            color: #c0c0c0;
+        }
+
+        #footer li a::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: -21px;
+            width: 1px;
+            height: 18px;
+            background: #dadada;
+        }
+
+        #footer p {
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            text-align: center;
+            border: 1px solid #c0c0c0;
+            border-radius: 5px;
+        }
+
+        #footer p a {
+            padding: 0 15px 0 45px;
+            height: 43px;
+            color: #c0c0c0;
+            font-size: 16px;
+            line-height: 43px;
+        }
+
+        #footer p a::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: calc(50% - 10px);
+            left: calc(50% - 55px);
+            width: 20px;
+            height: 20px;
+            background: url(https://whale.naver.com/_resource/img/main/beta.svg) no-repeat;
         }
     </style>
 </head>
@@ -546,7 +611,8 @@
 
         <section id="content7">
             <div class="container">
-                <img src="	https://whale.naver.com/_resource/img/gif/whywewhale.gif" alt="why we whale" class="downsec_gif">
+                <img src="	https://whale.naver.com/_resource/img/gif/whywewhale.gif" alt="why we whale"
+                    class="downsec_gif">
                 <div class="download-btn">
                     <a href="#">다운로드</a>
                 </div>
@@ -555,7 +621,19 @@
     </main>
     <!-- //main -->
     <footer id="footer">
-        <h2><a href="#"><img src="	https://whale.naver.com/_resource/img/main/logo_whale_gray.svg" alt="whale logo" class="block"></a></h2>
+        <div class="container">
+            <h2><a href="#"><img src="	https://whale.naver.com/_resource/img/main/logo_whale_gray.svg"
+                        alt="whale logo"></a></h2>
+            <ul>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보 처리방침</a></li>
+                <li><a href="#">Naver Whale 개인정보 보호를 위한 백서</a></li>
+                <li><a href="#">제휴 제안</a></li>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">© NAVER Corp.</a></li>
+            </ul>
+            <p><a href="#">베타 다운로드</a></p>
+        </div>
     </footer>
     <!-- footer -->
 </body>
