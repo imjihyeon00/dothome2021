@@ -25,6 +25,10 @@
             height: 670px;
         }
 
+        .content-br {
+            display: none;
+        }
+
         #header {
             position: fixed;
             z-index: 90;
@@ -51,13 +55,11 @@
         }
 
         .logo a {
-            background: url(https://whale.naver.com/_resource/img/main/logo_whale.svg);
-            background-repeat: no-repeat;
+            background: url(https://whale.naver.com/_resource/img/main/logo_whale.svg) no-repeat center;
             text-align: center;
             line-height: 40px;
             text-indent: -9999em;
             display: block;
-            width: 200px;
             height: 40px;
         }
 
@@ -97,6 +99,53 @@
 
         .menu li a:hover {
             color: #05c3a7;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: relative;
+        }
+
+        .mobile-menu .btn {
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60px;
+            height: 60px;
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+            z-index: 100;
+        }
+
+        .mobile-menu .btn span {
+            display: block;
+            position: relative;
+            top: 50%;
+            margin: 0 auto;
+            width: 28px;
+            height: 2px;
+            background-color: #333;
+        }
+
+        .mobile-menu .btn span::before {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: -9.09090909px;
+            width: 28px;
+            height: 2px;
+            background-color: #333;
+        }
+
+        .mobile-menu .btn span::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 9.09090909px;
+            width: 28px;
+            height: 2px;
+            background-color: #333;
         }
 
         .download {
@@ -288,7 +337,7 @@
             clear: both;
             width: 70px;
             height: 70px;
-            background-size: 100%;
+            background-size: 100% !important;
         }
 
         .textarea p {
@@ -326,6 +375,11 @@
             height: 20px;
             background: url(https://whale.naver.com/_resource/img/whywhale/icon_function_detailgo.png) no-repeat top center;
             background-size: 100%;
+        }
+
+        .textarea .btn {
+            width: 100%;
+            margin-top: 30px;
         }
 
         .textarea .btn .pcBtn {
@@ -453,6 +507,244 @@
             height: 20px;
             background: url(https://whale.naver.com/_resource/img/main/beta.svg) no-repeat;
         }
+
+        /* 모바일 */
+        @media (max-width: 800px) {
+            .content-br {
+                display: block;
+            }
+
+            #header {
+                height: 60px;
+            }
+
+            .container {
+                width: 90%;
+            }
+
+            .logo {
+                top: 10px;
+                left: 4%;
+                width: 140px;
+            }
+
+            .menu-wrap,
+            .download {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            #main {
+                margin-top: 60px;
+            }
+
+            .tab-contents {
+                max-width: 330px;
+                height: 50px;
+                line-height: 50px;
+            }
+
+            .tab1 .tab-content {
+                background-size: 14px auto;
+                background-position: top 17px left;
+            }
+
+            .tab2 .tab-content {
+                background-size: 14px auto;
+                background-position: bottom 17px left;
+            }
+
+            .tab3 .tab-content {
+                background-size: 14px auto;
+                background-position: bottom 17px left;
+            }
+
+            .tab-content {
+                font-size: 12px;
+                padding: 15px 20px;
+            }
+
+            #content1 {
+                background: url(https://whale.naver.com/_resource/img/whywhale/top_tasking_bg_m.jpg) no-repeat top right calc(50% - 35%);
+            }
+
+            #content1 .container {
+                margin: 0 auto;
+                width: 100%;
+                padding-top: 0;
+            }
+
+            #content1 .toptxArea {
+                display: block;
+                padding: 0 5%;
+                height: 100%;
+                background: url(https://whale.naver.com/_resource/img/whywhale/top_object_tasking.png) no-repeat bottom right;
+                background-size: 80%;
+            }
+
+            #content1 h3 {
+                font-size: 40px;
+                padding-top: 80px;
+            }
+
+            #content1 p {
+                font-size: 18px;
+                padding: 20px 0 50px;
+            }
+
+            .download-btn a {
+                width: 200px;
+                font-size: 24px;
+                border-radius: 32px;
+                height: 64px;
+                line-height: 64px;
+            }
+
+            .download-btn a::after {
+                height: 64px;
+            }
+
+
+            #main section:nth-child(odd) {}
+
+            #main section:nth-child(even) {
+                position: relative;
+                padding-top: 80px;
+            }
+
+            #main section:nth-child(odd) .textarea {
+                padding-top: 80px;
+                height: auto;
+            }
+
+            #main section:nth-child(even) .textarea {
+                padding-left: 0;
+            }
+
+            #main section:nth-child(even) .imgarea {
+                position: absolute;
+                top: 45%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 75%;
+            }
+
+            .textarea {
+                display: block;
+                width: 100%;
+            }
+
+            .textarea h3 {
+                height: 50px;
+                line-height: 50px;
+                padding-left: 60px;
+                font-size: 32px;
+            }
+
+            .textarea h3::before {
+                width: 50px;
+                height: 50px;
+            }
+
+            .textarea p {
+                font-size: 18px;
+                color: #333130;
+                margin: 25px 0 40px;
+            }
+
+            .textarea ul {}
+
+            .textarea li {
+                margin-bottom: 12px;
+                padding-left: 22px;
+            }
+
+            .textarea li a {
+                line-height: 18px;
+                font-size: 16px;
+            }
+
+            .textarea li a::before {
+                width: 16px;
+                height: 16px;
+            }
+
+            .textarea .btn .pcBtn {
+                width: 90px;
+                height: 40px;
+            }
+
+            .textarea .btn .mBtn {
+                width: 90px;
+                height: 40px;
+            }
+
+            .imgarea {
+                padding-bottom: 80px;
+                display: block;
+                width: 82.8%;
+                text-align: center;
+                margin: 10% auto 0;
+            }
+
+            .imgarea img {}
+
+            #content7 {}
+
+            #content7 .container {}
+
+            #content7 img {
+                max-width: 300px;
+            }
+
+
+            #footer {
+                padding: 40px 0;
+            }
+
+            #footer .container {}
+
+            #footer h2 {
+                max-width: 120px;
+            }
+
+            #footer h2 a {}
+
+            #footer h2 a img {}
+
+            #footer ul li {}
+
+            #footer li a {
+                font-size: 12px;
+                padding: 0 10px;
+            }
+
+            #footer li a::after {}
+
+            #footer p {
+                position: relative;
+                top: inherit;
+                right: inherit;
+                margin: 30px 0 0;
+            }
+
+            #footer p a {
+                padding: 0 15px 0 35px;
+                height: 38px;
+                font-size: 14px;
+                line-height: 38px;
+            }
+
+            #footer p a::before {
+                top: calc(50% - 8px);
+                left: calc(50% - 47px);
+                width: 16px;
+                height: 16px;
+            }
+        }
     </style>
 </head>
 
@@ -479,6 +771,11 @@
                     </ul>
                 </div> -->
             </nav>
+            <div class="mobile-menu">
+                <p class="btn">
+                    <span></span>
+                </p>
+            </div>
             <a href="#" class="download">다운로드</a>
         </div>
     </header>
@@ -502,10 +799,12 @@
         <!-- //tab -->
         <seciton id="content1">
             <div class="container">
-                <h3>하고 싶은 일들, 해야 할 일들 <br>네이버 웨일로 한 번에!</h3>
-                <p>네이버 웨일의 다양한 기능을 만나보세요!</p>
-                <div class="download-btn">
-                    <a href="#">다운로드</a>
+                <div class="toptxArea">
+                    <h3>하고 싶은 일들, <br class="content-br">해야 할 일들 <br>네이버 웨일로 한 번에!</h3>
+                    <p>네이버 웨일의 다양한 기능을 만나보세요!</p>
+                    <div class="download-btn">
+                        <a href="#">다운로드</a>
+                    </div>
                 </div>
             </div>
         </seciton>
