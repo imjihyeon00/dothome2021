@@ -30,6 +30,8 @@ input,
 select,
 button, 
 figure,
+main,
+section,
 figcaption{
   margin: 0;
   padding: 0
@@ -72,3 +74,6 @@ em {
 img {
   width: 100%;
 }
+
+/* 버튼 초기화 */
+button {border: 0;}
