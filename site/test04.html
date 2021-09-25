@@ -71,11 +71,12 @@
 
         .menu {
             padding: 0;
-            margin: 0;
+            margin: 0 auto;
             font: inherit;
             border: 0;
             -webkit-font-smoothing: antialiased;
             box-sizing: inherit;
+            width: 80%;
         }
 
         .menu ul {
@@ -95,6 +96,7 @@
             font-size: 18px;
             font-weight: 800;
             line-height: 90px;
+            letter-spacing: -0.9px;
         }
 
         .menu li a:hover {
@@ -382,7 +384,27 @@
             margin-top: 30px;
         }
 
-        .textarea .btn .pcBtn {
+        .textarea .btn2 {
+            display: inline-block;
+            padding-top: 20px;
+            position: relative;
+            width: 118px;
+            height: 76px;
+            margin-top: 30px;
+        }
+
+        .textarea .btn2 .tx {
+            position: absolute;
+            line-height: 1em;
+            font-size: 16px;
+            color: #919191;
+            top: 0;
+            left: 0;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .textarea .pcBtn {
             display: inline-block;
             background: url(https://whale.naver.com/_resource/img/whywhale/icon_pc.png) no-repeat bottom center;
             background-size: 100%;
@@ -390,12 +412,19 @@
             height: 76px;
         }
 
-        .textarea .btn .mBtn {
+        .textarea .mBtn {
             display: inline-block;
             background: url(https://whale.naver.com/_resource/img/whywhale/icon_m.png) no-repeat bottom center;
             background-size: 100%;
             width: 118px;
             height: 76px;
+        }
+
+        .textarea .btn2 .pcBtn,
+        .textarea .btn2 .mBtn {
+            position: absolute;
+            left: 0;
+            top: 0;
         }
 
         .imgarea {
@@ -655,8 +684,6 @@
                 margin: 25px 0 40px;
             }
 
-            .textarea ul {}
-
             .textarea li {
                 margin-bottom: 12px;
                 padding-left: 22px;
@@ -672,12 +699,25 @@
                 height: 16px;
             }
 
-            .textarea .btn .pcBtn {
+            .textarea .btn2 {
+                display: inline-block;
+                padding-top: 20px;
+                position: relative;
+                width: 90px;
+                height: 56px;
+            }
+
+            .textarea .btn2 .tx {
+                font-size: 12px;
+                top: -18px;
+            }
+
+            .textarea .pcBtn {
                 width: 90px;
                 height: 40px;
             }
 
-            .textarea .btn .mBtn {
+            .textarea .mBtn {
                 width: 90px;
                 height: 40px;
             }
@@ -880,8 +920,15 @@
                         <li><a href="#">듀얼 탭의 자세한 기능이 궁금하다면?</a></li>
                         <li><a href="#">한글 문서, 웨일에서 어떻게 볼 수 있나요?</a></li>
                     </ul>
-                    <div class="btn">
+                    <div class="btn2">
+                        <span class="tx">듀얼 탭</span>
                         <span class="pcBtn"></span>
+                    </div>
+                    <div class="btn2">
+                        <span class="tx">한글뷰어</span>
+                        <span class="pcBtn"></span>
+                    </div>
+                    <div class="btn2">
                         <span class="mBtn"></span>
                     </div>
                 </div>
