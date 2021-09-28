@@ -210,20 +210,192 @@
                         <ul>
                             <li class="active"><a href="#">HTML</a></li>
                             <li><a href="#">CSS</a></li>
-                            <li><a href="#">Javascript</a></li>
+                            <li><a href="#">jQuery</a></li>
                         </ul>
                     </div>
                     <div class="view-cont">
                         <div class="html">
-                            <pre><code class="language-html">
+                            <pre><code class="language-html">&lt;main&gt;
+    &lt;div class="paraScroll"&gt;scrollTop() : &lt;span&gt;0&lt;/span&gt;px&lt;/div&gt;
+
+    &lt;!--//scroll--&gt;
+    &lt;div class="paraNav"&gt;
+        &lt;ul&gt;
+            &lt;li class="active"&gt;&lt;a href="#section1"&gt;s1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section2"&gt;s2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section3"&gt;s3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section4"&gt;s4&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section5"&gt;s5&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section6"&gt;s6&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section7"&gt;s7&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section8"&gt;s8&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section9"&gt;s9&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;!-- //nav --&gt;
+
+    &lt;div class="paraCont"&gt;
+
+        &lt;section id="section1" class="content-item"&gt;
+            &lt;span class="num"&gt;01&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section1&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;Don't dwell on the past&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- section1 --&gt;
+
+        &lt;section id="section2" class="content-item"&gt;
+            &lt;span class="num"&gt;02&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section2&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;Pain past is pleasure&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- section2 --&gt;
+
+        &lt;section id="section3" class="content-item"&gt;
+            &lt;span class="num"&gt;03&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section3&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;Don't give up easily even if you failed&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- section3 --&gt;
+
+        &lt;section id="section4" class="content-item"&gt;
+            &lt;span class="num"&gt;04&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section4&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;Love what you do&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- section4 --&gt;
+
+        &lt;section id="section5" class="content-item"&gt;
+            &lt;span class="num"&gt;05&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section5&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;This too shall pass away&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- section5 --&gt;
+
+        &lt;section id="section6" class="content-item"&gt;
+            &lt;span class="num"&gt;06&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section6&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;If not now, then when?&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- section6 --&gt;
+
+        &lt;section id="section7" class="content-item"&gt;
+            &lt;span class="num"&gt;07&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section7&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;Don't dwell on the past&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- section7 --&gt;
+
+        &lt;section id="section8" class="content-item"&gt;
+            &lt;span class="num"&gt;08&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section8&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;Don't dwell on the past&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- section8 --&gt;
+
+        &lt;section id="section9" class="content-item"&gt;
+            &lt;span class="num"&gt;09&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section9&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;Don't dwell on the past&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- section9 --&gt;
+
+    &lt;/div&gt;
+    &lt;!-- //contents --&gt;
+&lt;/main&gt;
 </code></pre>
                         </div>
                         <div class="css">
-                            <pre><code class="language-css">
+                            <pre><code class="language-css">.paraNav {
+    top: 20px;
+    transition: top .5s ease;
+}
+
+.paraNav.hide {
+    top: -200px;
+}
+
+.paraNav li a {
+    width: auto;
+    padding: 5px 20px;
+}
+
+.paraNav li.active a {
+    border-radius: 30px;
+}
 </code></pre>
                         </div>
                         <div class="javascript">
-                            <pre><code class="language-js">
+                            <pre><code class="language-js">$('.paraNav ul li').click(function (e) {
+    e.preventDefault();
+    let target = $(this);
+    let index = target.index();
+    let section = $('.content-item').eq(index);
+    let offset = section.offset().top;
+
+    $('html, body').animate({
+        scrollTop: offset
+    }, 800);
+});
+
+let nowScrollTop;
+let lastScrollTop = 0;
+$(window).scroll(function () {
+    nowScrollTop = true;
+
+    setInterval(() => {
+        if (nowScrollTop) {
+            nowScrollTop = false;
+            hasScroll();
+        }
+    }, 1000);
+
+});
+
+function hasScroll() {
+    let scrollTop = $(this).scrollTop();
+    if (scrollTop > lastScrollTop) {
+        $('.paraNav').addClass('hide');
+    } else {
+        $('.paraNav').removeClass('hide');
+    }
+
+    lastScrollTop = scrollTop;
+
+    $('.paraScroll span').text(parseInt(scrollTop));
+
+    $('.content-item').each(function (i) {
+        if (scrollTop >= $(this).offset().top - 2) {
+            $('.paraNav ul li').eq(i).addClass('active').siblings().removeClass('active');
+        }
+    });
+}
 </code></pre>
                         </div>
                     </div>
@@ -253,23 +425,6 @@
             }, 800);
         });
 
-        //lastScrollTop에 1초 전의 스크롤 값을 넣어 줘서 현재의 스크롤값과 비교하여 
-        //스크롤이 오르내리는걸 감지
-        // $(window).scroll(function(e){
-        //     let scrollTop = $(this).scrollTop();
-        //     let lastScrollTop = 0;
-
-        //     if(scrollTop > lastScrollTop){
-        //         $('.paraNav').addClass('hide');
-        //     } else {
-        //         $('.paraNav').removeClass('hide');
-        //     }
-
-        //     lastScrollTop = scrollTop;
-
-        //     console.log('scrolltop : ' + scrollTop);
-        //     console.log('lastScrollTop : ' + lastScrollTop);
-        // });
         let nowScrollTop;
         let lastScrollTop = 0;
         $(window).scroll(function () {
