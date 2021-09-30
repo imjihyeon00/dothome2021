@@ -195,6 +195,7 @@
             font-size: 34px;
             text-shadow: 1px 1px 1px #000;
         }
+
         .question_title_num::after {
             content: '.';
         }
@@ -231,6 +232,11 @@
             font-size: 22px;
             text-shadow: 1px 1px 1px #fff;
             /* display: none; */
+        }
+
+        .question_answer_ex {
+            padding: 20px;
+            line-height: 1.4;
         }
 
         .card {
@@ -661,6 +667,7 @@
         .question_answer_selects label span:hover {
             background-color: #d6ecb6;
         }
+
         .question_answer_selects label span::before {
             content: '';
             width: 30px;
@@ -678,13 +685,15 @@
             position: absolute;
             left: -9999px;
         }
-        .question_answer_selects input:checked + span {
+
+        .question_answer_selects input:checked+span {
             background-color: rgb(201, 223, 169);
         }
 
-        .question_answer_selects input:checked + span::before {
+        .question_answer_selects input:checked+span::before {
             box-shadow: inset 0 0 0 10px #a5e151;
         }
+
         @media (max-width: 1200px) {
             nav {
                 position: absolute;
@@ -779,26 +788,31 @@
                 </div>
                 <div class="question_answer_selects">
                     <label for="select1">
-                        <input type="radio" name="select" id="select1" value="1"><span></span>
+                        <input type="radio" class="select" name="select" id="select1" value="1"><span
+                            class="choice"></span>
                     </label>
                     <label for="select2">
-                        <input type="radio" name="select" id="select2" value="2"><span></span>
+                        <input type="radio" class="select" name="select" id="select2" value="2"><span
+                            class="choice"></span>
                     </label>
                     <label for="select3">
-                        <input type="radio" name="select" id="select3" value="3"><span></span>
+                        <input type="radio" class="select" name="select" id="select3" value="3"><span
+                            class="choice"></span>
                     </label>
                     <label for="select4">
-                        <input type="radio" name="select" id="select4" value="4"><span></span>
+                        <input type="radio" class="select" name="select" id="select4" value="4"><span
+                            class="choice"></span>
                     </label>
                 </div>
                 <button class="question_answer_confirm">정답 확인하기</button>
                 <div class="question_answer_view"></div>
+                <div class="question_answer_ex"></div>
             </div>
         </div>
     </div>
 
     <script>
-        //퀴즈
+        //선택자
         const quizWrap = document.querySelector('.quizWrap');
         const questionQquiz = document.querySelector('.question_quiz');
         const questionTitle = document.querySelector('.question_title');
@@ -808,33 +822,65 @@
         const questionAnswer = document.querySelector('.question_answer');
         const questionAnswerImg = document.querySelector('.question_answer_img');
         const questionAnswerSelects = document.querySelector('.question_answer_selects');
+        const questionAnswerSelect = questionAnswerSelects.querySelectorAll('.select');
+        const questionAnswerChoice = questionAnswerSelects.querySelectorAll('.choice');
         const questionAnswerConfirm = document.querySelector('.question_answer_confirm');
         const questionAnswerView = document.querySelector('.question_answer_view');
+        const questionAnswerEx = document.querySelector('.question_answer_ex');
 
         //문제 정보
-        const quizInfo = [
-            {
-                quizNum : 1,
-                quizAsk : "다음 중 디자인의 기본 요소들로 옳은 것은?",
-                quizChoice : ["선, 색체, 공간, 수량", "점, 선, 면, 질감", "시간, 수량, 구조, 공간", "면, 구조, 공간, 수량"],
-                quizAnswer : 2,
-                quizEx : "디자인의 기본 요소는 점, 선, 면, 질감으로 이루어져 있습니다."
-            },
-        ];
+        const quizInfo = [{
+            quizNum: 1,
+            quizAsk: "다음 중 디자인의 기본 요소들로 옳은 것은?",
+            quizChoice: ["선, 색체, 공간, 수량", "점, 선, 면, 질감", "시간, 수량, 구조, 공간", "면, 구조, 공간, 수량"],
+            quizAnswer: 2,
+            quizEx: "디자인의 기본 요소는 점, 선, 면, 질감으로 이루어져 있습니다."
+        }, ];
 
         //문제 출력
-        function updateQuiz(){
+        function updateQuiz() {
             questionTitleNum.innerHTML = quizInfo[0].quizNum;
             questionTitleAsk.innerHTML = quizInfo[0].quizAsk;
+            questionAnswerView.innerHTML = quizInfo[0].quizAnswer;
+            questionAnswerEx.innerHTML = quizInfo[0].quizEx;
+            for (let i = 0; i < 4; i++) {
+                questionAnswerChoice[i].innerHTML = quizInfo[0].quizChoice[i];
+            }
+
+            //정답/설명 숨기기
+            questionAnswerView.style.display = 'none';
+            questionAnswerEx.style.display = 'none';
         }
         updateQuiz();
 
+
+
         //정답 확인
-        function answerQuiz(){
-
+        function answerQuiz() {
+            for (let i = 0; i < questionAnswerSelect.length; i++) {
+                if (questionAnswerSelect[i].checked === true) {
+                    if (questionAnswerSelect[i].value == quizInfo[0].quizAnswer) {
+                        // alert('정답입니다.');
+                        questionAnswerConfirm.style.display = "none";
+                        questionAnswerView.style.display = 'block';
+                        questionAnswerView.innerHTML = '정답입니다.';
+                    } else {
+                        // alert('틀렸습니다.');
+                        questionAnswerConfirm.style.display = "none";
+                        questionAnswerView.style.display = 'block';
+                        questionAnswerView.innerHTML = '틀렸습니다. 정답은 ' + quizInfo[0].quizAnswer + '번 입니다.';
+                        questionAnswerEx.style.display = 'block';
+                    }
+                } else {
+                    questionAnswerConfirm.innerHTML = "정답을 체크해 주세요";
+                    setTimeout(() => {
+                        questionAnswerConfirm.innerHTML = "정답 확인하기";
+                    }, 1000);
+                }
+            }
         }
-        answerQuiz();
 
+        questionAnswerConfirm.addEventListener('click', answerQuiz);
 
         //메뉴
         document.querySelector('.ham').addEventListener('click', () => {
