@@ -361,7 +361,43 @@
 </code></pre>
             </div>
             <div class="javascript">
-              <pre><code class="language-js">
+              <pre><code class="language-js">const scrollMenu = function () {
+    document.querySelectorAll('.paraNav ul li a').forEach((li, idx) => {
+        li.addEventListener('click', e => {
+            e.preventDefault();
+            document.querySelector(li.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+}
+const scrollProgress = function () {
+    let scrollTop = window.pageYOffset || document.documentElement.offsetTop || window.scrollY;
+
+    document.querySelectorAll('.content-item').forEach(item => {
+        let offset1 = (scrollTop - item.offsetTop) * 0.1;
+        let offset2 = (scrollTop - item.offsetTop) * 0.2;
+
+        item.querySelector('.img').style.transform = "translateX(" + offset1 + "px)";
+        item.querySelector('.desc').style.transform = "translateX(" + -offset2 + "px)";
+    });
+
+    //메뉴
+    document.querySelectorAll('.content-item').forEach((item, idx) => {
+        if (scrollTop > item.offsetTop - 2) {
+            document.querySelectorAll('.paraNav ul li').forEach(li => {
+                li.classList.remove('active');
+            });
+            document.querySelector('.paraNav ul li:nth-child(' + (idx + 1) + ')').classList.add('active');
+        }
+    });
+
+    //출력
+    document.querySelector('.paraScroll span').innerText = parseInt(scrollTop);
+}
+
+window.addEventListener('scroll', scrollProgress);
+scrollMenu();
 </code></pre>
             </div>
           </div>

@@ -1,88 +1,116 @@
-<!DOCTYPE html>
-<html lang="ko">
+&lt;!-- main --&gt;
+&lt;main&gt;
+    &lt;div class="paraScroll"&gt;scrollTop() : &lt;span&gt;0&lt;/span&gt;px&lt;/div&gt;
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body {
-            background-color: #fce4ec;
-        }
+    &lt;!--//scroll--&gt;
+    &lt;div class="paraNav"&gt;
+        &lt;ul&gt;
+            &lt;li class="active"&gt;&lt;a href="#section1"&gt;s1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section2"&gt;s2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section3"&gt;s3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section4"&gt;s4&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section5"&gt;s5&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section6"&gt;s6&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section7"&gt;s7&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section8"&gt;s8&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section9"&gt;s9&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;!-- //nav --&gt;
 
-        .wrap {
-            width: 1200px;
-            height: 100vh;
-            margin: 0 auto;
-            color: #fff;
-            font-size: 30px;
-            text-align: center;
-        }
+    &lt;div class="paraCont"&gt;
 
-        header {
-            height: 10%;
-            background-color: #880e4f;
-        }
+        &lt;section id="section1" class="content-item"&gt;
+            &lt;span class="num"&gt;01&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section1&lt;/h2&gt;
+            &lt;figure class="img-Wrap reveal"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc reveal" data-delay="500"&gt;&lt;span&gt;Don't dwell on the past&lt;/span&gt;&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- section1 --&gt;
 
-        nav {
-            height: 10%;
-            background-color: #ad1457;
-        }
+         &lt;section id="section2" class="content-item"&gt;
+            &lt;span class="num"&gt;02&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section2&lt;/h2&gt;
+            &lt;figure class="img-Wrap reveal reveal-RTL"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc reveal reveal-RTL" data-delay="1000"&gt;&lt;span&gt;Pain past is pleasure&lt;/span&gt;&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- section2 --&gt;
 
-        main {
-            height: 70%;
-            background-color: #e91e63;
-        }
+        &lt;section id="section3" class="content-item"&gt;
+            &lt;span class="num"&gt;03&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section3&lt;/h2&gt;
+            &lt;figure class="img-Wrap reveal reveal-TTB"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc reveal reveal-TTB" data-delay="1000"&gt;&lt;span&gt;Don't give up easily even if you failed&lt;/span&gt;&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- section3 --&gt;
 
-        aside {
-            width: 30%;
-            height: 100%;
-            background-color: #ec407a;
-            float: left;
-        }
+        &lt;section id="section4" class="content-item"&gt;
+            &lt;span class="num"&gt;04&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section4&lt;/h2&gt;
+            &lt;figure class="img-Wrap reveal reveal-BTT"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc reveal reveal-BTT" data-delay="800"&gt;&lt;span&gt;Love what you do&lt;/span&gt;&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- section4 --&gt;
 
-        section {
-            width: 70%;
-            height: 50%;
-            background-color: #f06292;
-            float: left;
-            text-align: center;
-        }
-        
-        section:last-child{
-            background-color: #f48fb1;
-        }
+        &lt;section id="section5" class="content-item"&gt;
+            &lt;span class="num"&gt;05&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section5&lt;/h2&gt;
+            &lt;figure class="img-Wrap reveal reveal-two"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc reveal reveal-two" data-delay="500"&gt;&lt;span&gt;This too shall pass away&lt;/span&gt;&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- section5 --&gt;
 
-        article {
-            width: 320px;
-            padding: 150px 26px;
-            margin: 17px;
-            background-color: #f06292;
-            display: inline-block;
-        }
+        &lt;section id="section6" class="content-item"&gt;
+            &lt;span class="num"&gt;06&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section6&lt;/h2&gt;
+            &lt;figure class="img-Wrap reveal reveal-two reveal-RTL"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc reveal reveal-two reveal-RTL"&gt;&lt;span&gt;If not now, then when?&lt;/span&gt;&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- section6 --&gt;
 
-        footer {
-            height: 10%;
-            background-color: #ad1457;
-        }
-    </style>
-</head>
+        &lt;section id="section7" class="content-item"&gt;
+            &lt;span class="num"&gt;07&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section7&lt;/h2&gt;
+            &lt;figure class="img-Wrap reveal reveal-two reveal-TTB"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc reveal reveal-two reveal-TTB"&gt;&lt;span&gt;Don't dwell on the past&lt;/span&gt;&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- section7 --&gt;
 
-<body>
-    <div class="wrap">
-        <header>HEADER</header>
-        <nav>NAV</nav>
-        <main>
-            <aside>SIDE</aside>
-            <section>CONTNET1</section>
-            <section>
-                <article>cont1</article>
-                <article>cont2</article>
-            </section>
-        </main>
-        <footer>FOOTER</footer>
-    </div>
-</body>
+        &lt;section id="section8" class="content-item"&gt;
+            &lt;span class="num"&gt;08&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section8&lt;/h2&gt;
+            &lt;figure class="img-Wrap reveal reveal-two reveal-BTT"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc reveal reveal-two reveal-BTT"&gt;&lt;span&gt;Don't dwell on the past&lt;/span&gt;&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- section8 --&gt;
 
-</html>
+        &lt;section id="section9" class="content-item"&gt;
+            &lt;span class="num"&gt;09&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section9&lt;/h2&gt;
+            &lt;figure class="img-Wrap reveal"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc reveal"&gt;&lt;span&gt;Don't dwell on the past&lt;/span&gt;&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- section9 --&gt;
+
+    &lt;/div&gt;
+    &lt;!-- //contents --&gt;
+&lt;/main&gt;
+&lt;!-- //main --&gt;
