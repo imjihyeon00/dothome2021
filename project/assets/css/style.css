@@ -605,6 +605,7 @@
     height: 70px;
     line-height: 70px;
     position: relative;
+    cursor: pointer;
 }
 #accordion h3::after {
     content: '';
