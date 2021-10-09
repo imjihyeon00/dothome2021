@@ -455,8 +455,7 @@
 
         const scrollReveal = function () {
             const reveal = document.querySelectorAll('.reveal');
-            let scrollTop = (window.pageYOffset || document.documentElement.scrollTop || window
-                .scrollY) + window.innerHeight;
+            let scrollTop = (window.pageYOffset || document.documentElement.scrollTop || window.scrollY) + window.innerHeight;
 
             reveal.forEach(el => {
                 let offsetTop = el.offsetTop + el.parentElement.offsetTop;
@@ -472,8 +471,8 @@
                     }
                 }
             });
-            
-            
+
+
             //메뉴
             document.querySelectorAll('.content-item').forEach((item, idx) => {
                 if (scrollTop >= item.offsetTop) {
