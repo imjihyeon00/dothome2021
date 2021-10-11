@@ -27,6 +27,20 @@
                     <li><a href="../notice/notice.html">공지사항</a></li>
                 </ul>
             </nav>
+            <div class="m_menu">
+                <span></span>
+            </div>
+            <div class="m_menuList">
+                <ul>
+                    <li><a href="../pages/index.html">홈으로</a></li>
+                    <li><a href="#">문제풀기</a></li>
+                    <li><a href="#">기출문제</a></li>
+                    <li><a href="../review/review.html">시험후기</a></li>
+                    <li><a href="../notice/qna.html">Q&A</a></li>
+                    <li><a href="../notice/notice.html">공지사항</a></li>
+                </ul>
+            </div>
+
             <div class="member">
                 <ul>
                     <li><a href="../login/login.html">로그인</a></li>
@@ -48,13 +62,16 @@
                 <div class="quiz">
                     <h1>기출문제</h1>
                     <p>2020년 이후의 모의고사 문제들을 풀어 볼 수 있습니다.</p>
-                    <select name="selectYear" id="selectYear" class="selectYear" title="기출연도를 선택해주세요.">
-                        <option disabled selected>기출연도를 선택해주세요.</option>
-                        <option value="2020_1">2020년 1회</option>
-                        <option value="2020_2">2020년 2회</option>
-                        <option value="2020_3">2020년 3회</option>
-                    </select>
-                    <a href="#" class="quiz_btn">문제풀기</a>
+                    <form action="#" method="post" name="memberJoin">
+                        <label for="selectYear" class="ir_so">기출 연도 선택</label>
+                        <select name="selectYear" id="selectYear" class="selectYear">
+                            <option disabled selected>기출연도를 선택해주세요.</option>
+                            <option value="2020_1">2020년 1회</option>
+                            <option value="2020_2">2020년 2회</option>
+                            <option value="2020_3">2020년 3회</option>
+                        </select>
+                        <button type="submit" class="quiz_btn">문제풀기</button>
+                    </form>
                 </div>
             </div>
         </article>
@@ -122,6 +139,9 @@
         </div>
     </footer>
     <!-- //footer -->
+
+    <!-- js -->
+    <script src="../assets/js/common.js"></script>
 </body>
 
 </html>
