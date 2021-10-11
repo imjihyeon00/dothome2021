@@ -282,8 +282,7 @@ figcaption {
   font-family: "NEXONLv1Gothic";
   color: #fff;
   text-decoration: none;
-  width: 100px;
-  height: 40px;
+  width: 70px;
   line-height: 40px;
   display: inline-block;
   border: 1px solid #fff;
@@ -297,6 +296,10 @@ figcaption {
 #nav li a:hover {
   box-shadow: inset 0 -100px 0 #fff;
   color: #6c4a70;
+}
+#nav.num ul li a {
+  width: 4vw;
+  font-size: 1em;
 }
 
 /* info */
@@ -605,9 +608,12 @@ figcaption {
   }
   #nav ul li a {
     font-size: 12px;
-    width: 65px;
-    height: 30px;
     line-height: 30px;
+  }
+  #nav.num ul li a {
+    font-size: 1vw;
+    padding: 0 13px;
+    width: auto;
   }
 
   .code-view {
