@@ -17,11 +17,13 @@
             height: 100vh;
             overflow: hidden;
         }
+
         .moveWrap {
             width: 100%;
             height: 100vh;
             overflow: hidden;
         }
+
         .moveImage {
             position: absolute;
             left: 50%;
@@ -50,11 +52,12 @@
             z-index: -1;
             opacity: .9;
         }
-        
+
         .moveImage .mImg img {
             width: 100%;
             border-radius: 5px;
         }
+
         .moveImage .mText {
             position: absolute;
             left: 50%;
@@ -116,6 +119,9 @@
             <li><a href="javascriptME03.html">3</a></li>
             <li class="active"><a href="javascriptME04.html">4</a></li>
             <li><a href="javascriptME05.html">5</a></li>
+            <li><a href="javascriptME06.html">6</a></li>
+            <li><a href="javascriptME07.html">7</a></li>
+            <li><a href="javascriptME08.html">8</a></li>
         </ul>
         <ul>
             <li><a href="jqueryME01.html">1</a></li>
@@ -123,6 +129,9 @@
             <li><a href="jqueryME03.html">3</a></li>
             <li><a href="jqueryME04.html">4</a></li>
             <li><a href="jqueryME05.html">5</a></li>
+            <li><a href="jqueryME06.html">6</a></li>
+            <li><a href="jqueryME07.html">7</a></li>
+            <li><a href="jqueryME08.html">8</a></li>
         </ul>
     </div>
 
@@ -190,7 +199,7 @@
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
-        function mouseMove(e){
+        function mouseMove(e) {
             let pageX = 0,
                 pageY = 0,
                 standardX = 0,
@@ -224,10 +233,10 @@
 
             //이미지 움직임
             const move = document.querySelector('.moveImage');
-            move.style.transform = 'translate(-50%, -50%) perspective(600px) rotateX('+ softY+'deg) rotateY('+ -softX+'deg)';
+            move.style.transform = 'translate(-50%, -50%) perspective(600px) rotateX(' + softY + 'deg) rotateY(' + -softX + 'deg)';
 
             //커서
-            gsap.to(".cursor", {duration: .3, left: pageX, top:pageY});
+            gsap.to(".cursor", { duration: .3, left: pageX, top: pageY });
 
             //출력
             document.querySelector('.pageX').textContent = pageX;
@@ -240,7 +249,7 @@
             document.querySelector('.angleY').textContent = parseInt(angleY);
         }
 
-        document.addEventListener('mousemove',mouseMove);
+        document.addEventListener('mousemove', mouseMove);
 
     </script>
 </body>

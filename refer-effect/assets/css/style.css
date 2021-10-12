@@ -154,6 +154,9 @@ figcaption {
 .bg.black::before {
   background-color: rgba(0, 0, 0, 0.6);
 }
+.bg.black2::before {
+  background-color: rgba(0, 0, 0, 0.8);
+}
 .bg.brown::before {
   background-color: rgba(50, 37, 11, 0.8);
 }

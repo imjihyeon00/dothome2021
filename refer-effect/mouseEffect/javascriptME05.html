@@ -11,11 +11,12 @@
     <link rel="stylesheet" href="../assets/css/highlight.css">
 
     <style>
-        .moveWrap{
+        .moveWrap {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 100%; height: 100vh;
+            width: 100%;
+            height: 100vh;
         }
 
         .moveImage {
@@ -102,6 +103,9 @@
             <li><a href="javascriptME03.html">3</a></li>
             <li><a href="javascriptME04.html">4</a></li>
             <li class="active"><a href="javascriptME05.html">5</a></li>
+            <li><a href="javascriptME06.html">6</a></li>
+            <li><a href="javascriptME07.html">7</a></li>
+            <li><a href="javascriptME08.html">8</a></li>
         </ul>
         <ul>
             <li><a href="jqueryME01.html">1</a></li>
@@ -109,6 +113,9 @@
             <li><a href="jqueryME03.html">3</a></li>
             <li><a href="jqueryME04.html">4</a></li>
             <li><a href="jqueryME05.html">5</a></li>
+            <li><a href="jqueryME06.html">6</a></li>
+            <li><a href="jqueryME07.html">7</a></li>
+            <li><a href="jqueryME08.html">8</a></li>
         </ul>
     </div>
 
@@ -265,9 +272,9 @@ moveImage.addEventListener('mousemove', mouseMove);
     <script>
         let moveImage = document.querySelector('.moveImage');
 
-        function mouseMove(e){
+        function mouseMove(e) {
             //커서
-            gsap.to('.cursor',{duration: .2, left: e.pageX - 10, top: e.pageY - 10});
+            gsap.to('.cursor', { duration: .2, left: e.pageX - 10, top: e.pageY - 10 });
 
             //1. 좌표값을 가운데로 정렬
             let pageX = e.pageX;
@@ -277,12 +284,12 @@ moveImage.addEventListener('mousemove', mouseMove);
             let standardY = window.innerHeight / 2 - pageY;
 
             //2. img x축 -> 마우스 값/20, y축 -> 마우스 값/20
-            let x = standardX/20;
-            let y = standardY/20;
+            let x = standardX / 20;
+            let y = standardY / 20;
 
             let img = document.querySelector('.moveImage img');
 
-            img.style.transform = 'translate('+ x +'px,' + y +'px)';
+            img.style.transform = 'translate(' + x + 'px,' + y + 'px)';
 
             //출력
             document.querySelector('.pageX').textContent = pageX;
