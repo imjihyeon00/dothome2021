@@ -106,6 +106,28 @@
         .slider-btn .next {
             right: 0;
         }
+
+        .slider-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 20px;
+        }
+
+        .slider-dot .dot {
+            width: 20px;
+            height: 20px;
+            background: rgba(0, 0, 0, .4);
+            display: inline-block;
+            border-radius: 50%;
+            transition: all .3s;
+            text-indent: -99999px;
+            margin: 3px;
+        }
+
+        .slider-dot .dot.active {
+            background: rgba(255, 255, 255, 0.9);
+        }
     </style>
 
 </head>
@@ -127,12 +149,19 @@
                 <a href="#" class="prev">prev</a>
                 <a href="#" class="next">next</a>
             </div>
+            <div class="slider-dot">
+                <a href="#" class="dot active">1</a>
+                <a href="#" class="dot">2</a>
+                <a href="#" class="dot">3</a>
+                <a href="#" class="dot">4</a>
+                <a href="#" class="dot">5</a>
+            </div>
         </div>
     </main>
     <!-- //contents -->
     <!-- info -->
     <div class="info">
-        <h1><a href="#">Slider Effect05 - Javascript</a></h1>
+        <h1><a href="#">Slider Effect06 - jQuery</a></h1>
         <p>이미지 슬라이드 - 버튼 추가</p>
     </div>
     <div class="info right">
@@ -141,7 +170,7 @@
             <li><a href="javascriptSE02.html">2</a></li>
             <li><a href="javascriptSE03.html">3</a></li>
             <li><a href="javascriptSE04.html">4</a></li>
-            <li class="active"><a href="javascriptSE05.html">5</a></li>
+            <li><a href="javascriptSE05.html">5</a></li>
             <li><a href="javascriptSE06.html">6</a></li>
         </ul>
         <ul>
@@ -150,7 +179,7 @@
             <li><a href="jquerySE03.html">3</a></li>
             <li><a href="jquerySE04.html">4</a></li>
             <li><a href="jquerySE05.html">5</a></li>
-            <li><a href="jquerySE06.html">6</a></li>
+            <li class="active"><a href="jquerySE06.html">6</a></li>
         </ul>
     </div>
 
@@ -296,48 +325,45 @@ setInterval(function () {
 
 
     <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
-        const sliderWrap = document.querySelector(".slider-wrap");
-        const sliderImg = sliderWrap.querySelector(".slider-img");
-        const sliderInner = sliderImg.querySelector(".slider-inner");
-        const slider = sliderInner.querySelectorAll(".slider");
-        const sliderBtn = sliderWrap.querySelector(".slider-btn");
-        const sliderBtnPrev = sliderBtn.querySelector(".prev");
-        const sliderBtnNext = sliderBtn.querySelector(".next");
+        const sliderWrap = $(".slider-wrap");
+        const sliderImg = $(".slider-img");
+        const sliderInner = $(".slider-inner");
+        const slider = $(".slider");
+        const sliderBtn = $(".slider-btn");
 
+        let sliderWidth = slider.width();
         let sliderCount = slider.length;
-        let sliderWidth = sliderInner.querySelector(".slider").offsetWidth;
-        let currentIndex = 0;
 
-        function gotoSlider(num){
-            sliderInner.style.transition = "all 300ms";
-            sliderInner.style.transform = "translateX("+ -sliderWidth * num +"px)";
-            // currentIndex = num;
-        }
+        sliderInner.css({marginLeft: -sliderWidth});
+        $('.slider:last-child').prependTo(sliderInner);
+
 
         function movePrev(){
-            currentIndex > 0 ? currentIndex-- : currentIndex = sliderCount-1;
-            gotoSlider(currentIndex);
-
-            // let prevIndex = (currentIndex-1) % sliderCount;
-            // if(currentIndex == 0){
-            //     prevIndex = sliderCount-1;
-            // }
-            // gotoSlider(prevIndex);
-            
+            sliderInner.animate({left: sliderWidth}, 400, function(){
+                $('.slider:last-child').prependTo(sliderInner);
+                sliderInner.css('left','');
+            });
         }
         function moveNext(){
-            currentIndex < sliderCount-1 ? currentIndex++ : currentIndex = 0;
-            gotoSlider(currentIndex);
-
-            // let nextIndex = (currentIndex + 1) % sliderCount;
-            // gotoSlider(nextIndex);
+            sliderInner.animate({left: -sliderWidth}, 400, function(){
+                $('.slider:first-child').appendTo(sliderInner);
+                sliderInner.css('left','');
+            });
         }
 
-        sliderBtnPrev.addEventListener("click", movePrev);
-        sliderBtnNext.addEventListener("click", moveNext);
+        sliderBtn.find(".prev").click(function(){
+            movePrev();
+        });
+        sliderBtn.find(".next").click(function(){
+            moveNext();
+        });
+
+
     </script>
 </body>
 
