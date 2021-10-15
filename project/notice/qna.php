@@ -1,3 +1,7 @@
+<?php
+  include "../connect/connect.php";
+  include "../connect/session.php";
+?>
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -16,38 +20,9 @@
 
 <body>
     <header id="header">
-        <div class="container">
-            <nav class="menu">
-                <ul>
-                    <li><a href="../pages/index.html">홈으로</a></li>
-                    <li><a href="#">문제풀기</a></li>
-                    <li><a href="#">기출문제</a></li>
-                    <li><a href="../review/review.html">시험후기</a></li>
-                    <li><a href="../notice/qna.html">Q&A</a></li>
-                    <li><a href="../notice/notice.html">공지사항</a></li>
-                </ul>
-            </nav>
-            <div class="m_menu">
-                <span></span>
-            </div>
-            <div class="m_menuList">
-                <ul>
-                    <li><a href="../pages/index.html">홈으로</a></li>
-                    <li><a href="#">문제풀기</a></li>
-                    <li><a href="#">기출문제</a></li>
-                    <li><a href="../review/review.html">시험후기</a></li>
-                    <li><a href="../notice/qna.html">Q&A</a></li>
-                    <li><a href="../notice/notice.html">공지사항</a></li>
-                </ul>
-            </div>
-
-            <div class="member">
-                <ul>
-                    <li><a href="../login/login.html">로그인</a></li>
-                    <li><a href="../login/join.html">회원가입</a></li>
-                </ul>
-            </div>
-        </div>
+        <?php
+            include "../include/header.php";
+        ?>
     </header>
     <!-- //header -->
 
@@ -163,7 +138,7 @@
 
                 <div class="mail_tell">
                     <h4>기타사항을 메일로 문의 주시면 1~2일 내로 답변 드립니다.</h4>
-                    <form action="#" name="mailWrite" method="post" class="mail_form">
+                    <form action="qnaMail.php" name="mailWrite" method="post" class="mail_form" >
                         <fieldset>
                             <legend class="ir_so">메일 문의 영역</legend>
                             <div>
@@ -186,10 +161,9 @@
     <!-- //main -->
 
     <footer id="footer">
-        <div class="container">
-            <p>모든 문제들의 저작권은 원저작권자에게 있습니다. 본 사이트는 웹상에 공개되어 있는 문제만 모아서 보여드립니다.</p>
-            <p>IT, 컴퓨터공학, 보안 등 기술 용어 전문 위키 <a href="https://itwiki.kr/">https://itwiki.kr/</a></p>
-        </div>
+        <?php
+          include "../include/footer.php";
+        ?>
     </footer>
     <!-- //footer -->
 

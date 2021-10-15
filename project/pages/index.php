@@ -1,3 +1,8 @@
+<?php
+  include "../connect/connect.php";
+  include "../connect/session.php";
+?>
+
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -16,38 +21,9 @@
 
 <body>
     <header id="header">
-        <div class="container">
-            <nav class="menu">
-                <ul>
-                    <li><a href="../pages/index.html">홈으로</a></li>
-                    <li><a href="#">문제풀기</a></li>
-                    <li><a href="#">기출문제</a></li>
-                    <li><a href="../review/review.html">시험후기</a></li>
-                    <li><a href="../notice/qna.html">Q&A</a></li>
-                    <li><a href="../notice/notice.html">공지사항</a></li>
-                </ul>
-            </nav>
-            <div class="m_menu">
-                <span></span>
-            </div>
-            <div class="m_menuList">
-                <ul>
-                    <li><a href="../pages/index.html">홈으로</a></li>
-                    <li><a href="#">문제풀기</a></li>
-                    <li><a href="#">기출문제</a></li>
-                    <li><a href="../review/review.html">시험후기</a></li>
-                    <li><a href="../notice/qna.html">Q&A</a></li>
-                    <li><a href="../notice/notice.html">공지사항</a></li>
-                </ul>
-            </div>
-
-            <div class="member">
-                <ul>
-                    <li><a href="../login/login.html">로그인</a></li>
-                    <li><a href="../login/join.html">회원가입</a></li>
-                </ul>
-            </div>
-        </div>
+        <?php
+            include "../include/header.php";
+        ?>
     </header>
     <!-- //header -->
 
@@ -85,7 +61,13 @@
                     <h1>여러 문제들을 <br>여러 사람들과 <br>함께 공부할 수 있는 공간</h1>
                     <p>정신머리 사이트는 정보처리기사에 관련된 교육자료들을 수백개의 링크를 클릭하지 않고,<br>
                         언제 어디서나 내게 필요한 부분만 골라 공부하고 사람들과 소통할 수 있는 웹 사이트 입니다.</p>
-                    <a href="../login/join.html">회원가입</a>
+                    <?php 
+                        if(!isset($_SESSION['myMemberID'])){
+                    ?>
+                            <a href="../login/join.php">회원가입</a>
+                    <?php
+                        }
+                    ?>
                 </div>
             </div>
         </section>
@@ -110,21 +92,39 @@
                     <img src="../assets/img/ddayimg.jpg" alt="이미지">
                     <div class="dday_container">
                         <h1>시험 D-DAY</h1>
-                        <p>※ 0000년 0회 필기시험까지 x일 남았습니다.</p>
+                        <p>※<span class="year">0000</span>년 <span class="round">0</span>회 필기시험까지 <span class="day">0</span>일 남았습니다.</p>
                         <div class="dday">
-                            D - Day<br>00
+                            D - Day<br><span class="day">00</span>
                         </div>
                     </div>
                 </div>
                 <div class="review_board">
                     <h1>시험 후기</h1>
-                    <a href="../review/reviewWrite.html" class="review_btn">후기 남기기</a>
+                    <a href="../review/reviewWrite.php" class="review_btn">후기 남기기</a>
                     <ul class="review">
+                      <?php
+                        $sql = "SELECT b.myBoardID, b.boardTitle, b.regTime ";
+                        $sql .= "FROM myBoard b ";
+                        $sql .= "ORDER BY myBoardID DESC LIMIT 5";
+  
+                        $result = $connect -> query($sql);
+
+                        if($result){
+                          $count = $result -> num_rows;
+                          
+                          if($count > 0){
+                            for($i = 1; $i <= $count; $i++){
+                              $info = $result -> fetch_array(MYSQLI_ASSOC);
+                              echo "<li><a href='../review/reviewView.php?boardID=".$info['myBoardID']."'>".$info['boardTitle']."<span>".date('Y.m.d', $info['regTime'])."</span></a></li>";
+                            }
+                          }
+                        }
+                      ?>
+                        <!-- <li><a href="#">오늘 시험치고 왔습니다.<span>2021.10.04</span></a></li>
                         <li><a href="#">오늘 시험치고 왔습니다.<span>2021.10.04</span></a></li>
                         <li><a href="#">오늘 시험치고 왔습니다.<span>2021.10.04</span></a></li>
                         <li><a href="#">오늘 시험치고 왔습니다.<span>2021.10.04</span></a></li>
-                        <li><a href="#">오늘 시험치고 왔습니다.<span>2021.10.04</span></a></li>
-                        <li><a href="#">오늘 시험치고 왔습니다.<span>2021.10.04</span></a></li>
+                        <li><a href="#">오늘 시험치고 왔습니다.<span>2021.10.04</span></a></li> -->
                     </ul>
                 </div>
             </div>
@@ -133,15 +133,64 @@
     <!-- //main -->
 
     <footer id="footer">
-        <div class="container">
-            <p>모든 문제들의 저작권은 원저작권자에게 있습니다. 본 사이트는 웹상에 공개되어 있는 문제만 모아서 보여드립니다.</p>
-            <p>IT, 컴퓨터공학, 보안 등 기술 용어 전문 위키 <a href="https://itwiki.kr/">https://itwiki.kr/</a></p>
-        </div>
+        <?php
+          include "../include/footer.php";
+        ?>
     </footer>
     <!-- //footer -->
 
     <!-- js -->
+    <script src="../assets/js/jquery.min_1.12.4.js"></script>
     <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/dday.js"></script>
+    <script>
+      function ddayTime(){
+        const second = 1000,
+              minute = second * 60,
+              hour = minute * 60,
+              days = hour * 24;
+
+        const year = $(".dday_container .year");
+        const round = $(".dday_container .round");
+        const day = $(".dday_container .day");
+        
+        let test;
+        let testYear;
+        let testRound;
+        
+        const today = new Date().getTime();
+
+        let datas = [];
+        datas = dday;
+        
+
+        for(let data of datas){
+          const testDay = new Date(data.date +','+ data.year + " 00:00:00").getTime();
+
+          if(today <= testDay){
+            test = testDay;
+            testYear = data.year;
+            testRound = data.round;
+          } else {
+            test = 0;
+          }
+        }
+
+        if(test != 0){
+          //d-day가 있는 경우
+          year.text(testYear);
+          round.text(testRound);
+
+          let distance = test - today;
+          day.text(Math.floor(distance / (days)));
+        } else if(test == 0){
+          //이후 일정 미정
+          $(".dday_container p").text("※일정을 준비중입니다.");
+        }
+      }
+
+      ddayTime();
+    </script>
 </body>
 
 </html>
