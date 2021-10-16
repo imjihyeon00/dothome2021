@@ -172,6 +172,8 @@
             <li><a href="javascriptSE04.html">4</a></li>
             <li><a href="javascriptSE05.html">5</a></li>
             <li><a href="javascriptSE06.html">6</a></li>
+            <li><a href="javascriptSE07.html">7</a></li>
+            <li><a href="javascriptSE08.html">8</a></li>
         </ul>
         <ul>
             <li><a href="jquerySE01.html">1</a></li>
@@ -180,6 +182,8 @@
             <li><a href="jquerySE04.html">4</a></li>
             <li><a href="jquerySE05.html">5</a></li>
             <li class="active"><a href="jquerySE06.html">6</a></li>
+            <li><a href="jquerySE07.html">7</a></li>
+            <li><a href="jquerySE08.html">8</a></li>
         </ul>
     </div>
 
@@ -340,29 +344,29 @@ setInterval(function () {
         let sliderTotalWidth = sliderWidth * sliderCount;
         let currentIndex = 0;
         let dotIndex = '';
-        
+
         //이미지 가로값 세팅
-        sliderInner.css({width: sliderTotalWidth});
-        slider.css({width : sliderWidth});
+        sliderInner.css({ width: sliderTotalWidth });
+        slider.css({ width: sliderWidth });
 
         //닷 버튼 생성
         //이미지 갯수만큼 닷 메뉴 생성
-        slider.each(function(index){
-            dotIndex += "<a href='#' class='dot'>"+index+"</a>";
+        slider.each(function (index) {
+            dotIndex += "<a href='#' class='dot'>" + index + "</a>";
         });
         sliderDot.html(dotIndex);
         sliderDot.find('a').eq(0).addClass('active');
 
 
         //이미지 움직이기
-        function gotoSlider(num){
-            sliderInner.animate({left: -sliderWidth * num},500,"easeInQuart");
+        function gotoSlider(num) {
+            sliderInner.animate({ left: -sliderWidth * num }, 500, "easeInQuart");
             currentIndex = num;
             sliderDot.find('a').removeClass('active').eq(currentIndex).addClass('active');
         }
-        
+
         //닷 버튼 클릭하기
-        sliderDot.on("click","a",function(e){
+        sliderDot.on("click", "a", function (e) {
             e.preventDefault();
 
             gotoSlider($(this).index());
@@ -371,24 +375,24 @@ setInterval(function () {
         //버튼클릭하기
         // sliderBtn.click(function(){});
         //on 장점 : 여러개의 이벤트를 같이 설정 할 수 있음
-        sliderBtn.on("click", "a" ,function(e){
+        sliderBtn.on("click", "a", function (e) {
             e.preventDefault();
 
             let prevIndex = (currentIndex - 1) % sliderCount;
             let nextIndex = (currentIndex + 1) % sliderCount;
-            if(currentIndex == 0){
+            if (currentIndex == 0) {
                 prevIndex = sliderCount - 1;
             }
 
             //왼쪽버튼 클릭
-            if($(this).hasClass("prev")){
+            if ($(this).hasClass("prev")) {
                 gotoSlider(prevIndex);
             } else {
                 // 오른쪽 버튼 클릭
                 gotoSlider(nextIndex);
             }
         });
-        
+
     </script>
 </body>
 

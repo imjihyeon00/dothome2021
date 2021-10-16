@@ -314,29 +314,25 @@ setInterval(function () {
         let sliderWidth = slider.width();
         let sliderCount = slider.length;
 
-        sliderInner.css({marginLeft: -sliderWidth});
+        sliderInner.css({ marginLeft: -sliderWidth });
         $('.slider:last-child').prependTo(sliderInner);
 
 
-        function movePrev(){
-            sliderInner.animate({left: sliderWidth}, 400, function(){
+        function movePrev() {
+            sliderInner.animate({ left: sliderWidth }, 400, function () {
                 $('.slider:last-child').prependTo(sliderInner);
-                sliderInner.css('left','');
+                sliderInner.css('left', '');
             });
         }
-        function moveNext(){
-            sliderInner.animate({left: -sliderWidth}, 400, function(){
+        function moveNext() {
+            sliderInner.animate({ left: -sliderWidth }, 400, function () {
                 $('.slider:first-child').appendTo(sliderInner);
-                sliderInner.css('left','');
+                sliderInner.css('left', '');
             });
         }
 
-        sliderBtn.find(".prev").click(function(){
-            movePrev();
-        });
-        sliderBtn.find(".next").click(function(){
-            moveNext();
-        });
+        sliderBtn.find(".prev").click(movePrev);
+        sliderBtn.find(".next").click(moveNext);
 
 
     </script>

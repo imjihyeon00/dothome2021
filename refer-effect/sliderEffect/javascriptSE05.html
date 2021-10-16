@@ -143,6 +143,8 @@
             <li><a href="javascriptSE04.html">4</a></li>
             <li class="active"><a href="javascriptSE05.html">5</a></li>
             <li><a href="javascriptSE06.html">6</a></li>
+            <li><a href="javascriptSE07.html">7</a></li>
+            <li><a href="javascriptSE08.html">8</a></li>
         </ul>
         <ul>
             <li><a href="jquerySE01.html">1</a></li>
@@ -151,6 +153,8 @@
             <li><a href="jquerySE04.html">4</a></li>
             <li><a href="jquerySE05.html">5</a></li>
             <li><a href="jquerySE06.html">6</a></li>
+            <li><a href="jquerySE07.html">7</a></li>
+            <li><a href="jquerySE08.html">8</a></li>
         </ul>
     </div>
 
@@ -311,14 +315,14 @@ setInterval(function () {
         let sliderWidth = sliderInner.querySelector(".slider").offsetWidth;
         let currentIndex = 0;
 
-        function gotoSlider(num){
+        function gotoSlider(num) {
             sliderInner.style.transition = "all 300ms";
-            sliderInner.style.transform = "translateX("+ -sliderWidth * num +"px)";
+            sliderInner.style.transform = "translateX(" + -sliderWidth * num + "px)";
             // currentIndex = num;
         }
 
-        function movePrev(){
-            currentIndex > 0 ? currentIndex-- : currentIndex = sliderCount-1;
+        function movePrev() {
+            currentIndex > 0 ? currentIndex-- : currentIndex = sliderCount - 1;
             gotoSlider(currentIndex);
 
             // let prevIndex = (currentIndex-1) % sliderCount;
@@ -326,10 +330,10 @@ setInterval(function () {
             //     prevIndex = sliderCount-1;
             // }
             // gotoSlider(prevIndex);
-            
+
         }
-        function moveNext(){
-            currentIndex < sliderCount-1 ? currentIndex++ : currentIndex = 0;
+        function moveNext() {
+            currentIndex < sliderCount - 1 ? currentIndex++ : currentIndex = 0;
             gotoSlider(currentIndex);
 
             // let nextIndex = (currentIndex + 1) % sliderCount;
