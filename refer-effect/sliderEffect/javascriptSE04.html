@@ -167,18 +167,27 @@
           <div class="view-cont">
             <div class="html">
               <pre><code class="language-html">&lt;main&gt;
-      &lt;div class="slider-wrap"&gt;
-          &lt;div class="slider-img"&gt;
-              &lt;div class="slider-inner"&gt;
-                  &lt;div class="slider" data-name="이미지1"&gt;&lt;img src="../assets/img/bg04.jpg" alt="이미지1"&gt;&lt;/div&gt;
-                  &lt;div class="slider" data-name="이미지2"&gt;&lt;img src="../assets/img/bg05.jpg" alt="이미지2"&gt;&lt;/div&gt;
-                  &lt;div class="slider" data-name="이미지3"&gt;&lt;img src="../assets/img/bg06.jpg" alt="이미지3"&gt;&lt;/div&gt;
-                  &lt;div class="slider" data-name="이미지4"&gt;&lt;img src="../assets/img/bg07.jpg" alt="이미지4"&gt;&lt;/div&gt;
-                  &lt;div class="slider" data-name="이미지5"&gt;&lt;img src="../assets/img/bg08.jpg" alt="이미지5"&gt;&lt;/div&gt;
-              &lt;/div&gt;
-          &lt;/div&gt;
-      &lt;/div&gt;
-  &lt;/main&gt;
+    &lt;div class="slider-wrap"&gt;
+        &lt;div class="slider-img slider-img1"&gt;
+            &lt;div class="slider-inner slider-inner1"&gt;
+                &lt;div&gt; class="slider slider1" data-name="이미지1"&gt;&lt;img src="../assets/img/bg11.jpg" alt="이미지1"&gt;&lt;/div&gt;
+                &lt;div&gt; class="slider slider1" data-name="이미지2"&gt;&lt;img src="../assets/img/bg10.jpg" alt="이미지2"&gt;&lt;/div&gt;
+                &lt;div&gt; class="slider slider1" data-name="이미지3"&gt;&lt;img src="../assets/img/bg13.jpg" alt="이미지3"&gt;&lt;/div&gt;
+                &lt;div&gt; class="slider slider1" data-name="이미지4"&gt;&lt;img src="../assets/img/bg09.jpg" alt="이미지4"&gt;&lt;/div&gt;
+                &lt;div&gt; class="slider slider1" data-name="이미지5"&gt;&lt;img src="../assets/img/bg05.jpg" alt="이미지5"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="slider-img slider-img2"&gt;
+            &lt;div class="slider-inner slider-inner2"&gt;
+                &lt;div&gt; class="slider slider2" data-name="이미지1"&gt;&lt;img src="../assets/img/bg11.jpg" alt="이미지1"&gt;&lt;/div&gt;
+                &lt;div&gt; class="slider slider2" data-name="이미지2"&gt;&lt;img src="../assets/img/bg10.jpg" alt="이미지2"&gt;&lt;/div&gt;
+                &lt;div&gt; class="slider slider2" data-name="이미지3"&gt;&lt;img src="../assets/img/bg13.jpg" alt="이미지3"&gt;&lt;/div&gt;
+                &lt;div&gt; class="slider slider2" data-name="이미지4"&gt;&lt;img src="../assets/img/bg09.jpg" alt="이미지4"&gt;&lt;/div&gt;
+                &lt;div&gt; class="slider slider2" data-name="이미지5"&gt;&lt;img src="../assets/img/bg05.jpg" alt="이미지5"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
   </code></pre>
             </div>
             <div class="css">
@@ -253,21 +262,49 @@
   </code></pre>
             </div>
             <div class="javascript">
-              <pre><code class="language-js">const sliderWrap = $('.slider-wrap');
-const sliderImg = $('.slider-img');
-const sliderInner = $('.slider-inner');
-const slider = $('.slider');
+              <pre><code class="language-js">const sliderImg1 = document.querySelector('.slider-img1');
+const sliderInner1 = document.querySelector('.slider-inner1');
+const slider1 = document.querySelector('.slider1');
 
-let currentIndex = 0;
-let sliderCount = slider.length;
-let sliderWidth = slider.width();
-let sliderDuration = 600;
+let currentIndex1 = 0;
+let sliderHeight1 = slider1.offsetHeight;
 
-setInterval(function () {
-    //3초에 한번씩 왼쪽으로 800px을 이동 시켜야 함
-    (currentIndex &lt; sliderCount - 1) ? currentIndex++ : currentIndex = 0;
-    let sliderPosition = currentIndex * -sliderWidth;
-    sliderInner.animate({ left: sliderPosition }, sliderDuration, "easeOutExpo");
+sliderInner1.style.transition = "all 0.3s";
+sliderInner1.style.top = '0';
+setInterval(() => {
+    currentIndex1 &lt; 4 ? currentIndex1++ : currentIndex1 = 0;
+
+    let sliderPosition = currentIndex1 * -sliderHeight1 + "px";
+    sliderInner1.style.transition = "all 0.3s";
+    sliderInner1.style.top = sliderPosition;
+}, 3000);
+
+
+//슬라이드 2번
+const sliderImg2 = document.querySelector('.slider-img2');
+const sliderInner2 = document.querySelector('.slider-inner2');
+const slider2 = document.querySelectorAll('.slider2');
+
+let currentIndex2 = 0;
+let sliderHeight2 = document.querySelector('.slider2').offsetHeight;
+let sliderCount = slider2.length;
+
+let sliderClone = sliderInner2.firstElementChild.cloneNode(true);
+sliderInner2.appendChild(sliderClone);
+
+setInterval(() => {
+    currentIndex2++;
+    sliderInner2.style.transition = "all 0.3s";
+    sliderInner2.style.transform = 'translatey(' + -sliderHeight2 * currentIndex2 + 'px)';
+
+    if (currentIndex2 == sliderCount) {
+        setTimeout(() => {
+            sliderInner2.style.transition = "0s";
+            sliderInner2.style.transform = 'translatey(0)';
+        }, 300);
+        currentIndex2 = 0;
+    }
+
 }, 3000);
   </code></pre>
             </div>

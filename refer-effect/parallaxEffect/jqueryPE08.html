@@ -662,24 +662,41 @@
 </code></pre>
             </div>
             <div class="javascript">
-              <pre><code class="language-js">//   $(window).scroll(function(){
-//         let scrollTop = $(this).scrollTop();
+              <pre><code class="language-js">$('.paraNav ul li').click(function (e) {
+    e.preventDefault();
+    let target = $(this);
+    let index = target.index();
+    let section = $('.content-item').eq(index);
+    let offset = section.offset().top;
 
-//         $('.reveal').each(function(){
-//                 if(scrollTop + $(window).height() >= $(this).offset().top){
-//                     $(this).addClass('show');
-//                 }
-//         });
-//   });
-$(window).scroll(function(){
+    //화면 이동
+    $('html, body').animate({
+        scrollTop: offset
+    }, 600);
+});
+
+$(window).scroll(function () {
     let scrollTop = $(this).scrollTop();
-    $('.reveal').each(function(){
-        if(scrollTop + $(window).height() >= $(this).offset().top){
-            $(this).delay($(this).data('delay')).queue(function(){
+    $('.reveal').each(function () {
+        if (scrollTop + $(window).height() >= $(this).offset().top) {
+            $(this).delay($(this).data('delay')).queue(function () {
                 $(this).addClass('show');
             });
         }
     });
+
+    $('.content-item').each(function (idx, el) {
+        if (scrollTop >= $(this).offset().top) {
+            $(this).addClass('show');
+            $('.paraNav ul li').eq(idx).addClass('active')
+              .siblings().removeClass('active');
+        } else {
+            $(this).removeClass('show');
+        }
+    });
+
+    //출력
+    $('.paraScroll span').text(parseInt(scrollTop));
 });
 </code></pre>
             </div>

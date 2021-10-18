@@ -243,22 +243,33 @@
   </code></pre>
             </div>
             <div class="javascript">
-              <pre><code class="language-js">const sliderWrap = $('.slider-wrap');
-const sliderImg = $('.slider-img');
-const sliderInner = $('.slider-inner');
-const slider = $('.slider');
+              <pre><code class="language-js">const sliderWrap = document.querySelector('.slider-wrap');
+const sliderImg = document.querySelector('.slider-img');
+const sliderInner = document.querySelector('.slider-inner');
+const slider = document.querySelectorAll('.slider');
 
 let currentIndex = 0;
+let sliderWidth = document.querySelector('.slider').offsetWidth;
 let sliderCount = slider.length;
-let sliderWidth = slider.width();
-let sliderDuration = 600;
+//sliderInner의 첫번째 자식노드를 복사한다
+let sliderClone = sliderInner.firstElementChild.cloneNode(true);
 
-setInterval(function () {
-    //3초에 한번씩 왼쪽으로 800px을 이동 시켜야 함
-    (currentIndex &lt; sliderCount - 1) ? currentIndex++ : currentIndex = 0;
-    let sliderPosition = currentIndex * -sliderWidth;
-    sliderInner.animate({ left: sliderPosition }, sliderDuration, "easeOutExpo");
-}, 3000);
+//jquery의 appendTo와 동일
+sliderInner.appendChild(sliderClone);
+
+setInterval(() => {
+    currentIndex++;
+    sliderInner.style.transition = "all 0.3s";
+    sliderInner.style.transform = 'translate(' + -sliderWidth * currentIndex + 'px)';
+
+    if (currentIndex == sliderCount) {
+        setTimeout(() => {
+            sliderInner.style.transition = "0s";
+            sliderInner.style.transform = 'translatex(0)';
+        }, 300);
+        currentIndex = 0;
+    }
+}, 2000);
   </code></pre>
             </div>
           </div>
