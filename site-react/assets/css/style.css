@@ -983,8 +983,8 @@ table {
   top: 18%;
   width: 224px;
   height: 224px;
-  -webkit-animation: img-left 0.8s forwards cubic-bezier(0, 0, 0.13, 0.75);
-          animation: img-left 0.8s forwards cubic-bezier(0, 0, 0.13, 0.75);
+  transform: translateX(200px);
+  opacity: 0;
 }
 #mainCont2 .main__img img:nth-child(2) {
   position: absolute;
@@ -992,8 +992,8 @@ table {
   bottom: 13%;
   width: 247px;
   height: 387px;
-  -webkit-animation: img-right 0.8s forwards cubic-bezier(0, 0, 0.13, 0.75);
-          animation: img-right 0.8s forwards cubic-bezier(0, 0, 0.13, 0.75);
+  transform: translateX(-100px);
+  opacity: 0;
 }
 #mainCont2 .main__cont {
   position: relative;
