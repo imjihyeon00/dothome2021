@@ -1115,15 +1115,20 @@ table {
 .aboutCont img {
   width: 100%;
 }
-.aboutCont h3 {
+.aboutCont .aboutTxt h3 {
   padding-bottom: 35px;
   font-size: 1.1vw;
 }
-.aboutCont p {
+.aboutCont .aboutTxt p {
   font-size: 1.1vw;
+  text-align: justify;
 }
 .aboutCont.about1 img {
   margin-bottom: 60px;
+}
+.aboutCont.about1 .aboutTxt {
+  width: 70%;
+  text-align: justify;
 }
 .aboutCont.about2 {
   overflow: hidden;
@@ -1162,11 +1167,11 @@ table {
   .aboutCont img {
     width: 100%;
   }
-  .aboutCont h3 {
+  .aboutCont .aboutTxt h3 {
     padding-bottom: 35px;
     font-size: 1.5vw;
   }
-  .aboutCont p {
+  .aboutCont .aboutTxt p {
     font-size: 1.5vw;
   }
 }
@@ -1187,11 +1192,11 @@ table {
   .aboutCont img {
     width: 100%;
   }
-  .aboutCont h3 {
+  .aboutCont .aboutTxt h3 {
     padding-bottom: 35px;
     font-size: 2.8vw;
   }
-  .aboutCont p {
+  .aboutCont .aboutTxt p {
     font-size: 2.8vw;
   }
   .aboutCont.about1 img {

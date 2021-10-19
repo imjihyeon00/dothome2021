@@ -185,17 +185,24 @@
     img {
         width: 100%;
     }
-    h3 {
-        padding-bottom: 35px;
-        font-size: 1.1vw;
-    }
-    p {
-        font-size: 1.1vw;
+    .aboutTxt {
+        h3 {
+            padding-bottom: 35px;
+            font-size: 1.1vw;
+        }
+        p {
+            font-size: 1.1vw;
+            text-align: justify;
+        }
     }
 
     &.about1 {
          img {
              margin-bottom: 60px;
+         }
+         .aboutTxt {
+            width: 70%;
+            text-align: justify;
          }
 
     }
@@ -235,12 +242,14 @@
         img {
             width: 100%;
         }
-        h3 {
-            padding-bottom: 35px;
-            font-size: 1.5vw;
-        }
-        p {
-            font-size: 1.5vw;
+        .aboutTxt{
+            h3 {
+                padding-bottom: 35px;
+                font-size: 1.5vw;
+            }
+            p {
+                font-size: 1.5vw;
+            }
         }
     }
 }
@@ -258,12 +267,14 @@
         img {
             width: 100%;
         }
-        h3 {
-            padding-bottom: 35px;
-            font-size: 2.8vw;
-        }
-        p {
-            font-size: 2.8vw;
+        .aboutTxt{
+            h3 {
+                padding-bottom: 35px;
+                font-size: 2.8vw;
+            }
+            p {
+                font-size: 2.8vw;
+            }
         }
     
         &.about1 {
