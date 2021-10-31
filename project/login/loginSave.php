@@ -36,28 +36,26 @@
       exit;
     }
 
-    $sql = "SELECT myMemberID, youEmail, youNickname, youPass FROM myMember WHERE youEmail = '$youEmail' AND youPass = '$youPass'";
+    // $sql = "SELECT myMemberID, youEmail, youNickname, youPass FROM myMember WHERE youEmail = '$youEmail' AND youPass = '$youPass'";
+    $sql = "SELECT myMemberID, youEmail, youNickname, youPass FROM myMember WHERE youEmail = '$youEmail'";
 
     $result = $connect -> query($sql);
 
     if($result){
       $count = $result -> num_rows;
+      $memberInfo = $result -> fetch_array(MYSQLI_ASSOC);
 
       if($count == 0){
-        msg("이메일 또는 비밀번호가 틀렸습니다.");
+        msg("존재하지 않는 email입니다.");
         exit;
-      } else {
-        //로그인 성공
-        $memberInfo = $result -> fetch_array(MYSQLI_ASSOC);
+      } else if(password_verify($youPass, $memberInfo['youPass'])){
         $_SESSION['myMemberID'] = $memberInfo['myMemberID'];
         $_SESSION['youEmail'] = $memberInfo['youEmail'];
         $_SESSION['youNickname'] = $memberInfo['youNickname'];
 
-        // echo "<pre>";
-        // var_dump($memberInfo);
-        // echo"</pre>";
-
         Header("Location: ../pages/index.php");
+      } else {
+        msg("비밀번호를 다시 확인해주세요.");
       }
     } else {
       msg("에러발생 - 관리자에게 문의하세요.");

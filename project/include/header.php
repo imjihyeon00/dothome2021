@@ -26,7 +26,7 @@
   <div class="member">
     <ul>
       <?php if (isset($_SESSION['myMemberID'])) { ?>
-        <li class="login"><a href="../userpages/userpages.php?<?=$_SESSION['myMemberID']?>"><?= $_SESSION['youNickname'] ?>님 환영합니다.</a></li>
+        <li class="login"><a href="../userpages/userpages.php?memberID=<?=$_SESSION['myMemberID']?>"><?= $_SESSION['youNickname'] ?>님 환영합니다.</a></li>
         <li><a href="../login/logout.php">로그아웃</a></li>
       <?php } else { ?>
         <li><a href="../login/login.php">로그인</a></li>

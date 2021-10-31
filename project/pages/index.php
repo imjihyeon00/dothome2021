@@ -33,18 +33,18 @@
                 <div class="random_quiz">
                     <h1>랜덤문제</h1>
                     <p>유저들이 만든 다양한 문제들을 랜덤으로 풀어 볼 수 있습니다.</p>
-                    <a href="#" class="quiz_btn">문제풀기</a>
+                    <a href="../question/questionWrite.php" class="quiz_btn">문제만들기</a>
                 </div>
                 <div class="quiz">
                     <h1>기출문제</h1>
                     <p>2020년 이후의 모의고사 문제들을 풀어 볼 수 있습니다.</p>
-                    <form action="#" method="post" name="memberJoin">
+                    <form action="../question/previous_question.php" method="get" name="memberJoin" onsubmit="return quizLink();">
                         <label for="selectYear" class="ir_so">기출 연도 선택</label>
                         <select name="selectYear" id="selectYear" class="selectYear">
-                            <option disabled selected>기출연도를 선택해주세요.</option>
+                            <!-- <option disabled selected>기출연도를 선택해주세요.</option>
                             <option value="2020_1">2020년 1회</option>
                             <option value="2020_2">2020년 2회</option>
-                            <option value="2020_3">2020년 3회</option>
+                            <option value="2020_3">2020년 3회</option> -->
                         </select>
                         <button type="submit" class="quiz_btn">문제풀기</button>
                     </form>
@@ -144,6 +144,30 @@
     <script src="../assets/js/common.js"></script>
     <script src="../assets/js/dday.js"></script>
     <script>
+      //기출문제 이동 전 확인
+      function quizLink(){
+        if($("#selectYear option:selected").val() == null || $("#selectYear option:selected").val() == ""){
+          alert("풀고 싶은 기출연도를 선택해주세요.");
+          return false;
+        }
+      }
+
+      //기출문제 부분 출력
+      function init() {
+        //json 문제출력
+        $.getJSON('../assets/json/previous_questions.json', function (data) {
+          //기출 회차를 셀렉트박스에 출력
+          let subject = [];
+          subject.push("<option disabled selected value=''>기출연도를 선택해주세요.</option>");
+          $.each(data.data, function (i, d) {
+            subject.push(`<option value="${i}">${d.title}</option>`);
+          });
+
+          $("#selectYear").html(subject);
+        });
+      }
+
+      //day 함수
       function ddayTime(){
         const second = 1000,
               minute = second * 60,
@@ -189,6 +213,7 @@
         }
       }
 
+      init();
       ddayTime();
     </script>
 </body>

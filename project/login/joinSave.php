@@ -9,6 +9,7 @@
 <body>
 <?php 
   include "../connect/connect.php";
+  include "../include/password.php";
 
   $youEmail = $_POST['youEmail'];
   $youNickname = $_POST['youNickname'];
@@ -54,7 +55,7 @@
 
 
   //비밀번호 암호화
-  //$youPass = sha1($youPass);
+  $youPass = password_hash($youPass, PASSWORD_DEFAULT);
 
   //이름 검사
   $check_name = preg_match("/^[가-힣]{1,}$/", $youName);
