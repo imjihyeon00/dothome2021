@@ -201,7 +201,9 @@ include "../connect/session.php";
   <!-- //contents -->
 
   <footer id="footer">
-    footer
+    <?php
+        include "../include/footer.php";
+    ?>
   </footer>
   <!-- //footer -->
 </body>

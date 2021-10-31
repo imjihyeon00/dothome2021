@@ -6,7 +6,7 @@
     <li><a href="#">회원가입</a></li>
     <li><a href="#">로그인</a></li>
     <li><a href="../board/board.php">게시판</a></li>
-    <li><a href="#">블로그</a></li>
+    <li><a href="../contact/contact.php">문의하기</a></li>
   </ul>
 </nav>
 <div class="member">

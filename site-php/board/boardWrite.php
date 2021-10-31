@@ -63,7 +63,9 @@ include "../connect/sessionCheck.php";
   <!-- //contents -->
 
   <footer id="footer">
-    footer
+    <?php
+        include "../include/footer.php";
+    ?>
   </footer>
   <!-- //footer -->
 </body>
