@@ -992,3 +992,43 @@
     border-radius: 20px;
     background-color: #000;
   }
+
+
+  /* contact */
+.contact {
+    padding: 50px 0 100px;
+}
+.contact label {
+    width: 100%;
+    display: block;
+    padding-bottom: 10px;
+}
+.contact .title-text {
+    width: 100%;
+    display: block;
+    border: 1px solid #eee;
+    padding: 13px;
+    margin-bottom: 20px;
+    resize: none;
+}
+.contact .board-btn {
+    float: right;
+    background: #000;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 30px;
+}
+.contact textarea {
+    width: 100%;
+    border: 1px solid #eee;
+    padding: 13px;
+    margin-bottom: 30px;
+    resize: none;
+}
+.contact .btn {
+    background: #000;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 30px;
+    float: right;
+}
