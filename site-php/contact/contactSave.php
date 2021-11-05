@@ -18,7 +18,7 @@
     $mail->SMTPAuth = true;
     $mail->CharSet = 'UTF-8'; 
     $mail->Username = 'jisuhyn94';
-    $mail->Password = 'dlawltn9495';
+    $mail->Password = '';
     $mail->setFrom('jisuhyn94@naver.com', 'PHP Class');
     $mail->addReplyTo($contactFrom, '안녕하세요!');
     $mail->addAddress('imjihyeon00@gmail.com', 'John Doe');
