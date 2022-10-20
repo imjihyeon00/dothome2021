@@ -1,0 +1,312 @@
+// #mainCont
+// #aboutCont
+// #referCont
+// #scriptCont
+// #prtCont
+
+// #mainCont
+#mainCont {
+    background-color: #000;
+    height: 100vh;
+    color: #fff;
+    font-family: $font-main;
+    font-size: 9vw;
+    line-height: 0.91;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    br {
+        display: none;
+    }
+}
+
+#mainCont2 {
+    background-color: #000;
+    height: 100vh;
+    color: #fff;
+    font-family: $font-logo;
+    font-size: 9vw;
+    line-height: 1;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+
+    .main__img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        img {
+            transition: all .3s;
+
+            &:nth-child(1) {
+                position: absolute;
+                right: 10%;
+                top: 18%;
+                width: 224px;
+                height: 224px;
+                transform: translateX(200px);
+                opacity: 0;
+                // animation: img-left .8s forwards cubic-bezier(0, 0, 0.13, 0.75);
+            }
+
+            &:nth-child(2) {
+                position: absolute;
+                left: 5%;
+                bottom: 13%;
+                width: 247px;
+                height: 387px;
+                transform: translateX(-100px);
+                opacity: 0;
+                // animation: img-right .8s forwards cubic-bezier(0, 0, 0.13, 0.75);
+
+            }
+        }
+    }
+
+    .main__cont {
+        position: relative;
+        z-index: 1;
+        width: 65%;
+
+        div {
+            &:nth-child(1) {
+                text-align: left;
+            }
+
+            &:nth-child(2) {
+                text-align: right;
+            }
+
+            &:nth-child(3) {
+                text-align: left;
+                margin-left: 80px;
+            }
+        }
+
+    }
+}
+
+@media (max-width : 1100px) {
+    #mainCont2 {
+        .main__img {
+            img {
+                &:nth-child(2) {
+                    left: 3%;
+                    bottom: 18%;
+                    width: 220px;
+                    height: 320px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width : 800px) {
+    #mainCont {
+        font-size: 15vw;
+
+        br {
+            display: block;
+        }
+    }
+
+    #mainCont2 {
+        font-size: 11.5vw;
+
+        .main__img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+
+            img {
+                &:nth-child(1) {
+                    right: 0%;
+                    top: 19%;
+                    width: 192px;
+                    height: 192px;
+                }
+
+                &:nth-child(2) {
+                    left: 0%;
+                    bottom: 9%;
+                    width: 200px;
+                    height: 276px;
+                }
+            }
+        }
+
+        .main__cont {
+            div {
+                &:nth-child(2) {
+                    text-align: left;
+                }
+
+                &:nth-child(3) {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+
+@keyframes img-left {
+    0% { opacity: 0; transform: translateX(200px);}
+    100% { opacity: 1; transform: translateX(0);}
+}
+@keyframes img-right {
+    0% { opacity: 0; transform: translateX(-100px);}
+    100% { opacity: 1; transform: translateX(0);}
+}
+
+
+// #aboutCont
+#aboutMain .container {
+    width: 75vw;
+    margin: 0 auto;
+}
+.aboutTitle {
+    font-family: $font-main;
+    font-size: 7vw;
+    line-height: 1;
+    color: #030406;
+    text-transform: uppercase;
+    padding: 260px 0;
+}
+
+.aboutCont {
+    font-family: $font-kor1;
+    margin-bottom: 370px;
+    img {
+        width: 100%;
+    }
+    .aboutTxt {
+        h3 {
+            padding-bottom: 35px;
+            font-size: 1.1vw;
+        }
+        p {
+            font-size: 1.1vw;
+            text-align: justify;
+        }
+    }
+
+    &.about1 {
+         img {
+             margin-bottom: 60px;
+         }
+         .aboutTxt {
+            width: 70%;
+            text-align: justify;
+         }
+
+    }
+    &.about2 {
+        overflow: hidden;
+        img {
+            float: left;
+            width: 70%;
+        }
+        .aboutTxt {
+            float: left;
+            width: 27%;
+            margin-left: 3%;
+        }
+    }
+    &.about3 {
+        overflow: hidden;
+        img {
+            float: right;
+            width: 57%;
+            margin-left: 3%;
+        }
+        .aboutTxt {
+            float: left;
+            width: 40%;
+        }
+    }
+}
+
+
+@media (max-width: 1100px) {
+    #aboutMain .container {width: 80vw;}
+
+    .aboutCont {
+        font-family: $font-kor1;
+        margin-bottom: 350px;
+        img {
+            width: 100%;
+        }
+        .aboutTxt{
+            h3 {
+                padding-bottom: 35px;
+                font-size: 1.5vw;
+            }
+            p {
+                font-size: 1.5vw;
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    #aboutMain .container {width: 95%;}
+    .aboutTitle {
+        font-size: 11vw;
+        padding: 200px 0;
+    }
+
+    .aboutCont {
+        font-family: $font-kor1;
+        margin-bottom: 370px;
+        img {
+            width: 100%;
+        }
+        .aboutTxt{
+            h3 {
+                padding-bottom: 35px;
+                font-size: 2.8vw;
+            }
+            p {
+                font-size: 2.8vw;
+            }
+        }
+    
+        &.about1 {
+             img {
+                 margin-bottom: 40px;
+             }
+        }
+        &.about2 {
+            overflow: hidden;
+            img {
+                font: none;
+                width: 100%;
+                margin-bottom: 40px;
+            }
+            .aboutTxt {
+                float: none;
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+        &.about3 {
+            overflow: hidden;
+            img {
+                float: none;
+                width: 100%;
+                margin-left: 0;
+                margin-bottom: 40px;
+            }
+            .aboutTxt {
+                float: none;
+                width: 100%;
+            }
+        }
+    }
+}

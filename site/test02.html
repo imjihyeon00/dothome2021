@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>네이버 인플루언서 센터</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css">
+
+  <!-- swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+  <!-- 나눔스퀘어 웹 폰트 -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+
+  <style>
+    body {
+      font-family: nanumsquare, sans-serif;
+    }
+
+    button {
+      overflow: visible;
+      border: none;
+      border-radius: 0;
+      background: none;
+    }
+
+    /* header */
+    #header {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+    }
+
+    #header #header-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100px;
+      background: #fff;
+    }
+
+    #header #logo {
+      margin-left: 40px;
+    }
+
+    #header #logo img {
+      width: 30px;
+      height: 30px;
+    }
+
+    #header #nav ul li {
+      display: inline-block;
+    }
+
+    #header #nav ul li:nth-child(3) a {
+      font-weight: 800;
+      color: #19cf60;
+    }
+
+    #header #nav ul li:hover a {
+      font-weight: 800;
+      color: #19cf60;
+    }
+
+    #header #nav li a {
+      margin: 0 5px;
+      padding: 15px;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 20px;
+      color: rgba(0, 0, 0, .6);
+    }
+
+    #header #member {
+      margin-right: 40px;
+    }
+
+    #header #member a {
+      display: inline-block;
+      padding: 0 20px;
+      border: 1px solid rgba(0, 0, 0, .3);
+      border-radius: 20px;
+      font-size: 14px;
+      line-height: 36px;
+      color: #000;
+    }
+
+    #header #subMenu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 61px;
+      border-top: 1px solid rgba(0, 0, 0, .1);
+      box-shadow: 0 3px 5px 0 rgb(0 0 0 / 5%);
+      background: hsla(0, 0%, 100%, .95);
+    }
+
+    #header #subMenu li {
+      display: inline-block;
+    }
+
+    #header #subMenu ul li:hover a {
+      font-weight: 800;
+      color: #19cf60;
+    }
+
+    #header #subMenu li a {
+      margin: 0 5px;
+      padding: 15px;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 20px;
+      color: rgba(0, 0, 0, .6);
+    }
+
+    /* main */
+    #main {
+      padding-top: 100px;
+    }
+
+    /* section1 */
+    #main #section1 {
+      padding: 134px 0 114px;
+      background: url('img/membership_cover_p@3x.jpg') no-repeat;
+      background-size: cover;
+      text-align: center;
+      word-break: keep-all;
+    }
+
+    #main #section1 h2 {
+      display: inline-block;
+      border-bottom: 4px solid hsla(0, 0%, 100%, .2);
+      color: hsla(0, 0%, 100%, .8);
+      margin-bottom: 35px;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 34px;
+    }
+
+    #main #section1 strong {
+      display: block;
+      font-size: 50px;
+      font-weight: 700;
+      line-height: 70px;
+      color: #fff;
+    }
+
+    #main #section1 p {
+      margin-top: 18px;
+      font-size: 22px;
+      line-height: 36px;
+      letter-spacing: -.18px;
+      color: hsla(0, 0%, 100%, .8);
+    }
+
+    /* section2, 3 */
+    .section {
+      background-color: rgb(240, 250, 247);
+      padding: 110px 0;
+    }
+
+    #section3 {
+      background-color: #fff;
+    }
+
+    #section4 {
+      background-color: rgb(240, 247, 250);
+    }
+
+    .section .wrap {
+      display: flex;
+      margin: 0 auto;
+      width: 1024px;
+      justify-content: space-between;
+    }
+
+    .section .wrap .contents h2 {
+      font-size: 42px;
+      line-height: 53px;
+      font-weight: 700;
+      color: #222;
+    }
+
+    .section .wrap .contents p {
+      margin-top: 17px;
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: 500;
+      color: rgba(38, 38, 46, .7);
+    }
+
+    .section .wrap .contents .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 40px;
+      width: 322px;
+      height: 62px;
+      border-radius: 31px;
+      background: #0cd796;
+      box-shadow: 0 10px 30px 0 rgb(40 221 111 / 30%);
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    #section4 .wrap .contents .btn {
+      width: 222px;
+      float: left;
+    }
+
+    #section4 .wrap .contents .btn:last-child {
+      box-shadow: rgb(88 181 243 / 30%) 0px 10px 30px 0px;
+      background: rgb(75, 130, 247);
+      margin-left: 15px;
+    }
+
+    .section .wrap img {
+      width: 500px;
+    }
+
+    .section .desc {
+      background: #fff;
+      border-radius: 15px;
+      margin: 60px auto 0;
+      padding: 44px 51px;
+      width: 1024px;
+      box-sizing: border-box;
+      box-shadow: 0 8px 10px 0 rgb(113 171 142 / 5%);
+      border: 1px solid #e6f2ec;
+    }
+
+    .section .desc .content {
+      margin-bottom: 20px;
+    }
+
+    .section .desc .content:last-child {
+      margin-bottom: 0;
+    }
+
+    .section .desc .content>strong {
+      margin-right: 30px;
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 700;
+      color: #12ca8f;
+      float: left;
+    }
+
+    .section .desc p {
+      overflow: hidden;
+      font-size: 18px;
+      line-height: 28px;
+      font-weight: 500;
+      letter-spacing: -.3px;
+      color: rgba(38, 38, 46, .7);
+    }
+
+    .section .desc p strong {
+      font-weight: bold;
+    }
+
+    /* footer */
+    footer {
+      background-color: #000;
+      text-align: center;
+    }
+
+    #footer .topbtn {
+      width: 100%;
+      height: 54px;
+      background: #000;
+      border-bottom: 1px solid #414141;
+    }
+
+    #footer .topbtn a {
+      display: block;
+      width: 100%;
+      background: #000;
+      font-size: 15px;
+      line-height: 54px;
+      font-weight: 700;
+      color: #666;
+      text-transform: uppercase;
+    }
+
+    #footer .footerCont {
+      padding-bottom: 50px;
+    }
+
+    #footer .footerCont .footerLogin {
+      margin: 30px 0;
+      width: 75px;
+      border-radius: 4px;
+      background: #323232;
+      font-size: 13px;
+      color: #999;
+      line-height: 30px;
+      display: inline-block;
+      text-align: center;
+    }
+
+    #footer .footerCont .footerCopy {
+      font-size: 13px;
+      line-height: 18px;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    #footer .footerCont .naverLink {
+      display: block;
+      fill: #363636;
+    }
+  </style>
+</head>
+
+<body>
+  <header id="header">
+    <div id="header-wrap">
+      <div id="logo">
+        <img src="img/logo.gif" alt="인플루언서 센터 로고">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194 30" fill="#000" aria-hidden="true" width="194">
+          <path
+            d="M8.134 0v6.417L3.139 0H0v12.14h3.33V5.48l5.185 6.66h2.949V0zm9.924 0L12.89 12.226h3.537l.868-2.167h4.682l.885 2.167h3.607L21.301 0h-3.243zm1.596 3.989l1.352 3.45h-2.722l1.37-3.45zM34.219.086l-2.757 7.683L28.705.086h-3.764l4.925 12.227h3.122L37.913.086zm4.87 0v12.14h9.851V9.365h-6.521V7.44h5.827V4.787h-5.827V2.948h6.434V.086zm17.15 5.828c1.144 0 1.804-.555 1.804-1.44V4.44c0-.954-.694-1.44-1.822-1.44H54.02v2.914h2.22zM50.655.087h5.74c1.855 0 3.14.485 3.954 1.318.711.693 1.075 1.63 1.075 2.826v.035c0 1.856-.988 3.087-2.497 3.729l2.896 4.231h-3.884L55.493 8.55h-1.475v3.676h-3.363V.086zM0 29.757h3.382v-12.14H0zm5.6-12.139h3.139l4.995 6.416v-6.416h3.33v12.139h-2.948L8.93 23.098v6.659H5.6zm13.612 0h9.711v2.948h-6.347v2.063h5.74v2.793h-5.74v4.335h-3.364zm11.235 0h3.365v9.191h5.878v2.948h-9.243zm10.178 6.815v-6.815h3.417v6.746c0 1.751.884 2.584 2.236 2.584 1.354 0 2.238-.798 2.238-2.497v-6.833h3.417v6.729c0 3.919-2.238 5.636-5.69 5.636-3.45 0-5.618-1.752-5.618-5.55m13.299-6.815h9.764v2.861h-6.435v1.838h5.828v2.654h-5.828v1.925h6.522v2.861h-9.851zm11.565 0h3.139l4.994 6.416v-6.416h3.33v12.139h-2.948l-5.185-6.659v6.659h-3.33zm13.195 6.104v-.035c0-3.537 2.723-6.312 6.4-6.312 2.48 0 4.075 1.04 5.15 2.532l-2.532 1.96c-.694-.868-1.491-1.423-2.654-1.423-1.7 0-2.896 1.44-2.896 3.209v.034c0 1.821 1.197 3.244 2.896 3.244 1.266 0 2.012-.59 2.74-1.474l2.533 1.803C89.176 28.838 87.633 30 84.944 30c-3.468 0-6.26-2.653-6.26-6.278m13.073-6.104h9.764v2.861h-6.434v1.838h5.827v2.654h-5.827v1.925h6.521v2.861h-9.851zm17.15 5.827c1.144 0 1.803-.555 1.803-1.44v-.034c0-.954-.694-1.44-1.82-1.44h-2.203v2.914h2.22zm-5.585-5.827h5.74c1.856 0 3.14.485 3.955 1.317.71.694 1.075 1.63 1.075 2.827v.035c0 1.856-.989 3.087-2.497 3.729l2.896 4.231h-3.884l-2.446-3.676h-1.475v3.676h-3.364v-12.14zm16.854 6.104v-.035c0-3.537 2.722-6.312 6.399-6.312 2.48 0 4.075 1.04 5.15 2.532l-2.532 1.96c-.694-.868-1.491-1.423-2.653-1.423-1.7 0-2.896 1.44-2.896 3.209v.034c0 1.821 1.196 3.244 2.896 3.244 1.266 0 2.012-.59 2.74-1.474l2.532 1.803c-1.145 1.578-2.688 2.74-5.376 2.74-3.468 0-6.26-2.653-6.26-6.278m13.073-6.104h9.764v2.861h-6.434v1.838h5.827v2.654h-5.827v1.925h6.521v2.861h-9.851zm11.565 0h3.139l4.995 6.416v-6.416h3.33v12.139h-2.949l-5.185-6.659v6.659h-3.33zm16.576 2.948h-3.642v-2.949h10.649v2.949h-3.642v9.191h-3.365zm8.479-2.948h9.763v2.861h-6.433v1.838h5.826v2.654h-5.826v1.925h6.52v2.861h-9.85zm17.149 5.827c1.144 0 1.803-.555 1.803-1.44v-.034c0-.954-.693-1.44-1.82-1.44h-2.203v2.914h2.22zm-5.585-5.827h5.741c1.855 0 3.139.485 3.954 1.317.71.694 1.075 1.63 1.075 2.827v.035c0 1.856-.988 3.087-2.497 3.729l2.896 4.231h-3.884l-2.446-3.676h-1.474v3.676h-3.365v-12.14z">
+          </path>
+        </svg>
+      </div>
+      <!-- //logo -->
+      <nav id="nav">
+        <ul>
+          <li><a href="#">인플루언서 안내</a></li>
+          <li><a href="#">광고 수익 혜택</a></li>
+          <li class="active"><a href="#">성장 지원 프로그램</a></li>
+          <li><a href="#">브랜드커넥트</a></li>
+          <li><a href="#">공지</a></li>
+        </ul>
+      </nav>
+      <!-- //nav -->
+      <div id="member">
+        <a href="#">인플루언서 로그인</a>
+      </div>
+    </div>
+    <div id="subMenu">
+      <ul>
+        <li><a href="#">크리에이터 워크숍</a></li>
+        <li><a href="#">슈퍼애드</a></li>
+        <li><a href="#">엑스퍼트 컨설팅</a></li>
+        <li><a href="#">멤버십 혜택</a></li>
+        <li><a href="#">어워드</a></li>
+      </ul>
+    </div>
+  </header>
+  <main id="main">
+    <section id="section1">
+      <h2>멤버십 혜택</h2>
+      <strong>인플루언서 활동에 꼭 필요한<br>
+        네이버의 다양한 멤버십 혜택을 제공합니다.</strong>
+      <p>전국 파트너스퀘어의 스튜디오, 편집실 이용부터 네이버플러스 멤버십 이용권 1년 무료 혜택까지.<br>
+        네이버 인플루언서라면 네이버의 다양한 멤버십 혜택들을 누릴 수 있습니다.</p>
+    </section>
+    <section id="section2" class="section">
+      <div class="wrap">
+        <div class="contents">
+          <h2>어디에서든 나를 빛내줄<br>온라인 네임카드</h2>
+          <p>네이버 인플루언서라면 누구나 나만의 네임카드 다운받고<br>홈을 알릴 수 있습니다. 나를 더 예쁘고 멋지게 소개할 수<br>있도록 온라인 네임카드를 만들어보세요.</p>
+          <a class="btn" href="#">온라인 네임카드 만들기</a>
+        </div>
+        <img src="img/namecard_p@3x.png" alt="온라인 네임카드 이미지">
+      </div>
+      <div class="desc">
+        <div class="content">
+          <strong>신청 자격</strong>
+          <p>홈을 개설한 네이버 인플루언서라면 누구나</p>
+        </div>
+        <div class="content">
+          <strong>혜택 상세</strong>
+          <p>운영중인 다른 채널에 내 인플루언서 홈을 홍보할 수 있는 네임카드 이미지 소스를 제공합니다.</p>
+        </div>
+      </div>
+    </section>
+    <section id="section3" class="section">
+      <div class="wrap">
+        <img src="img/place_p@3x.png" alt="이미지">
+        <div class="contents">
+          <h2>전국 파트너스퀘어<br>스튜디오, 편집실 제공</h2>
+          <p>파트너스퀘어는 사진/동영상 컨텐츠를 보다 잘 만들 수<br>
+            있는 지원을 받는 곳입니다. 크리에이터를 위한 다양한<br>
+            스튜디오를 경험해보세요</p>
+          <a class="btn" href="#">파트너스퀘어 이용하기</a>
+        </div>
+      </div>
+      <div class="desc">
+        <div class="content">
+          <strong>신청 자격</strong>
+          <p>홈을 개설한 네이버 인플루언서라면 누구나</p>
+        </div>
+        <div class="content">
+          <strong>혜택 상세</strong>
+          <p>서울(역삼, 종로, 홍대, 상수), 부산, 광주에 위치한 파트너스퀘어 내 다양한 스튜디오 및 편집실을 이용할 수 있습니<br>다.
+            (단, <strong>홍대점은 전월 기준 팬수 1,000 이상</strong>인 경우에만 이용 가능합니다.)</p>
+        </div>
+        <div class="content">
+          <strong>이용 방법</strong>
+          <p>네이버 파트너스퀘어에서 창작자 인증을 해야합니다.<br>
+            (단, <strong>홍대점 경우 당월 인플루언서 승인 시 익월 15일</strong>에 이용 권한이 부여됩니다.)</p>
+        </div>
+    </section>
+    <section id="section4" class="section">
+      <div class="wrap">
+        <div class="contents">
+          <h2>네이버플러스 멤버십<br>
+            1년 무료 제공</h2>
+          <p>키워드 챌린지에 참여한 인플루언서들에게 네이버플러스<br>
+            멤버십을 선물로 드려요. 오디오클립, 웹툰, 클라우드,<br>
+            바이브 등 다양한 서비스를 이용해보세요.</p>
+          <a class="btn" href="#">내 멤버십 확인하기</a>
+          <a class="btn" href="#">지급조건 상세보기</a>
+        </div>
+        <img src="img/membership_plus_p@3x.png" alt="이미지">
+      </div>
+      <div class="desc">
+        <div class="content">
+          <strong>신청 자격</strong>
+          <p>키워드 챌린지에 참여한 네이버 인플루언서</p>
+        </div>
+        <div class="content">
+          <strong>혜택 상세</strong>
+          <p>쇼핑할 때마다 네이버페이 포인트 최대 5% 적립 가능한 네이버플러스 멤버십 12개월 무료 이용권을 드립니다.<br>
+            (1인당 최초 1회 지급)</p>
+        </div>
+        <div class="content">
+          <strong>이용 방법</strong>
+          <p>매월 1일자에 개별 이메일을 통해 이용권 지급이 안내됩니다.<br>
+            (이번 달에 자격 요건을 달성한 분들은 다음 달 1일자에 이용권이 지급됩니다.)</p>
+        </div>
+    </section>
+  </main>
+  <footer id="footer">
+    <button class="topbtn"><a href="#">top &#129045;</a></button>
+    <div class="footerCont">
+      <a class="footerLogin" href="#">로그인</a>
+      <div class="footerCopy">NAVER Copyright © NAVER Corp. All Rights Reserved.</div>
+      <a class="naverLink" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 74 16" aria-hidden="true" width="74" height="16">
+          <path
+            d="M21.897 1l-5.464 14h4.644l.66-1.853h5.237l.66 1.853h4.643L26.814 1h-4.917zm2.459 4.411l1.557 4.373h-3.115l1.558-4.373zM47.165 1v14H58.16v-3.431h-6.556V9.682h6.35V6.319h-6.35V4.43h6.419V1zm-6.078 0l-3.278 9.205L34.53 1h-4.643l5.463 14h4.917L45.73 1zM10.492 1v7.493L5.302 1H1v14h4.507V7.507L10.697 15h4.302V1zm56.545 6.52h-2.39V4.568h2.39c.81 0 1.468.661 1.468 1.476s-.657 1.476-1.468 1.476zm3.034 2.677l.422-.178c1.62-.68 2.443-2.154 2.443-4.024 0-1.769-.642-3.077-1.908-3.889C69.851 1.351 68.325 1 66.226 1h-5.882v14h4.371v-3.912h1.57L68.95 15h4.644l-3.522-4.803z">
+          </path>
+        </svg>
+      </a>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .container {
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin: 20px 0 10px;
+        }
+
+        header .container {
+            overflow: hidden;
+        }
+
+        header .logo {
+            float: left;
+            width: 100px;
+        }
+
+        header .logo img {
+            width: 100%;
+        }
+
+        header .menu {
+            float: right;
+            margin-top: 20px;
+        }
+
+        header .menu ul li {
+            display: inline-block;
+            font-weight: bold;
+            padding: 10px 0 10px 25px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        main {
+            padding-bottom: 50px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        main article {
+            margin-bottom: 20px;
+        }
+
+        article img {
+            width: 100%;
+        }
+
+        #section1 {
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        #section1 .tabMenu {
+            float: left;
+            width: 470px;
+            border: 1px solid #ccc;
+            padding: 34px;
+            box-sizing: border-box;
+        }
+
+        #section1 .tabMenu .tabMenuWrap {
+            overflow: hidden;
+        }
+
+        #section1 .tabMenuWrap .notice {
+            display: inline-block;
+            font-size: 18px;
+            font-weight: bold;
+            padding-right: 10px;
+            border-right: 2px solid #000;
+            cursor: pointer;
+        }
+
+        #section1 .tabMenuWrap .news {
+            display: inline-block;
+            font-size: 18px;
+            font-weight: bold;
+            padding-left: 10px;
+            color: #999;
+            cursor: pointer;
+        }
+
+        #section1 .tabMenuWrap .add {
+            display: block;
+            float: right;
+            padding-right: 20px;
+            position: relative;
+            line-height: 17px;
+            font-size: 12px;
+        }
+
+        #section1 .tabMenuWrap .add::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            background: url("img/plus.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-x: center;
+            width: 17px;
+            height: 17px;
+        }
+
+        #section1 .tabMenu ul {
+            padding: 0;
+        }
+
+        #section1 .tabMenu li {
+            overflow: hidden;
+            cursor: pointer;
+            margin-top: 8px;
+            font-size: 16px;
+        }
+
+        #section1 .tabMenu li span {
+            float: right;
+            font-size: 16px;
+        }
+
+        #section1 .section1Img {
+            float: right;
+            width: 470px;
+            cursor: pointer;
+        }
+
+        #section1 .section1Img img {
+            width: 100%;
+        }
+
+        #section2 .title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 18px;
+        }
+        #section2 .contents {
+            overflow: hidden;
+        }
+        #section2 .contents .content {
+            float: left;
+            width: 220px;
+            margin-left: 26px;
+        }
+        #section2 .contents .content:first-child{
+            margin-left: 0;
+        }
+        #section2 .contents .content img {
+            width: 100%;
+            margin-bottom: 25px;
+        }
+        #section2 .contents .content p {
+            margin: 0;
+            font-size: 15px;
+        }
+
+        footer {
+            margin: 30px 0 60px;
+            color: #999;
+        }
+        
+        footer ul {
+            width: 600px;
+            margin-bottom: 20px;
+        }
+        footer li {
+            display: inline-block;
+            padding: 0 13px;
+            font-size: 13px;
+            border-right: 1px solid #ccc;
+        }
+        footer li:nth-child(1),
+        footer li:nth-child(3){
+            padding-left: 0;
+        }
+        footer li:last-child {
+            border-right: 0;
+        }
+        footer span {
+            display: block;
+            font-size: 13px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.jpg" alt="로고">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li>즐길거리</li>
+                    <li>요금/우대혜택</li>
+                    <li>참여프로그램</li>
+                    <li>이용가이드</li>
+                    <li>소통서비스</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <article>
+            <div class="container">
+                <img src="img/banner.jpg" alt="미라클있수마수">
+            </div>
+        </article>
+        <section id="section1">
+            <div class="container">
+                <div class="tabMenu">
+                    <div class="tabMenuWrap">
+                        <div class="notice">롯데월드 소식</div>
+                        <div class="news">뉴스.공지</div>
+                        <div class="add">더보기</div>
+                    </div>
+                    <ul class="noticeList">
+                        <li>그럴싸진관 미라클<span>2018.11.19</span></li>
+                        <li>드림스테이지 ‘힘내 소중한 너’<span>2018.11.19</span></li>
+                        <li>‘힘내 소중한 너’ 음원 발매<span>2018.11.19</span></li>
+                        <li>이용 요금 조정 안내<span>2018.11.19</span></li>
+                    </ul>
+                    <ul class="newsList">
+                        <li>뉴스 리스트1<span>2018.11.19</span></li>
+                        <li>뉴스 리스트1<span>2018.11.19</span></li>
+                        <li>뉴스 리스트1<span>2018.11.19</span></li>
+                        <li>뉴스 리스트1<span>2018.11.19</span></li>
+                    </ul>
+                </div>
+                <div class="section1Img">
+                    <img src="img/main_img.jpg" alt="온종일 혜택 ON">
+                </div>
+            </div>
+        </section>
+        <section id="section2">
+            <div class="container">
+                <div class="title">특별한 경험</div>
+                <div class="contents">
+                    <div class="content">
+                        <img src="img/img01.jpg" alt="연간회원안내">
+                        <p>연간회원안내</p>
+                    </div>
+                    <div class="content">
+                        <img src="img/img02.jpg" alt="프리미엄투어">
+                        <p>프리미엄투어</p>
+                    </div>
+                    <div class="content">
+                        <img src="img/img03.jpg" alt="공연참여 프로그램">
+                        <p>공연참여 프로그램</p>
+                    </div>
+                    <div class="content">
+                        <img src="img/img04.jpg" alt="단체프로그램">
+                        <p>단체프로그램</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <ul>
+                <li>서울특별시 송파구 올림픽로 240 호텔롯데 롯데월드</li>
+                <li>대표자 : 박동기</li>
+                <li>사업자등록번호 : 219-85-00014</li>
+                <li>통신판매업신고번호 : 송파 제5513호</li>
+                <li>전화 : 1661-2000</li>
+            </ul>
+            <span class="copyright">COPYRIGHT 2018 LOTTEWORLD.ALL RIGHTS RESERVED</span>
+        </div>
+    </footer>
+
+    <script>
+        let notice = document.querySelector('.notice');
+        let news = document.querySelector('.news');
+        let noticeList = document.querySelector('.noticeList');
+        let newsList = document.querySelector('.newsList');
+
+        newsList.style.display = 'none';
+
+        function noticeClick(){
+            newsList.style.display = 'none';
+            noticeList.style.display = 'block';
+        };
+        function newsClick(){
+            noticeList.style.display = 'none';
+            newsList.style.display = 'block';
+        };
+
+        notice.addEventListener('click',noticeClick);
+        news.addEventListener('click',newsClick);
+
+
+    </script>
+</body>
+
+</html>

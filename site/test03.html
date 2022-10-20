@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>네이버 클로바</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css">
+
+  <!-- swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+  <!-- 나눔스퀘어 웹 폰트 -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+
+  <style>
+    /* 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제공할 때 */
+    .ir_so {
+      overflow: hidden;
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      clip: rect(0, 0, 0, 0);
+    }
+
+    body {
+      font-family: 'NanumSquare';
+    }
+
+    /* header */
+    #header {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      min-width: 1240px;
+      height: 86px;
+      text-align: center;
+      z-index: 100;
+      box-sizing: border-box;
+      background-color: #fff;
+      border-bottom: 1px solid rgba(0, 0, 0, .05);
+      padding: 0 140px;
+    }
+
+    #header .wrap {
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    #header .wrap #logo a {
+      background-position: -4px -62px;
+      background-repeat: no-repeat;
+      width: 145px;
+      height: 22px;
+      display: block;
+      background-size: 335px 311px;
+      background-image: linear-gradient(transparent, transparent), url(https://static-clova.pstatic.net/static/d15c0af/img/sprite/sp_svg_icon.svg);
+    }
+
+    #header .menu ul li {
+      display: inline-block;
+    }
+
+    #header .menu ul li a {
+      display: block;
+      height: 86px;
+      padding: 34px 36px;
+      color: rgba(0, 0, 0, .6);
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 16px;
+      box-sizing: border-box;
+    }
+
+    #header .menu ul li:hover a {
+      vertical-align: top;
+      text-decoration: underline;
+      color: #000;
+    }
+
+    #header .btn-area a {
+      display: inline-block;
+      padding: 8px 13px;
+      border: 1px solid rgba(0, 0, 0, .4);
+      border-radius: 3px;
+      box-sizing: border-box;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 14px;
+      color: rgba(0, 0, 0, .8);
+      text-align: center;
+      transition: all .3s ease;
+    }
+
+    #header .btn-area a+a {
+      margin-left: 8px;
+    }
+
+    #header .btn-area a:hover {
+      border-color: #05d685;
+      background-color: #05d685;
+      color: #fff;
+    }
+
+    /* main */
+    #main .wrap {
+      padding: 86px 0 0;
+    }
+
+    /* banner */
+    #main .banner {
+      position: relative;
+      width: 100%;
+      height: 390px;
+    }
+
+    #main .banner .img {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      pointer-events: none;
+      background-size: cover;
+      background-position: 50% 50%;
+    }
+
+    #main .banner .img1 {
+      background-image: url(https://static-clova.pstatic.net/static/d15c0af/img/bridge/bridge_banner_01.png);
+      animation: change_banner 10s ease-in-out 0s infinite;
+    }
+
+    #main .banner .img2 {
+      background-image: url(https://static-clova.pstatic.net/static/d15c0af/img/bridge/bridge_banner_02.png);
+      animation: change_banner 10s ease-in-out 5s infinite;
+    }
+
+
+    /* section */
+    #main .section {
+      margin-top: 149px;
+      text-align: center;
+    }
+
+    #main .section2 {
+      padding-bottom: 255px;
+    }
+
+    #main .section .title {
+      display: block;
+      background-repeat: no-repeat;
+      margin: 0 auto;
+      background-image: linear-gradient(transparent, transparent), url(https://static-clova.pstatic.net/static/d15c0af/img/sprite/sp_svg_product_bridge.svg);
+    }
+
+    #main .section1 .title {
+      background-size: 433px 277px;
+      background-position: -4px -44px;
+      width: 204px;
+      height: 50px;
+    }
+
+    #main .section2 .title {
+      background-position: -4px -4px;
+      background-repeat: no-repeat;
+      width: 274px;
+      height: 32px;
+    }
+
+    #main .section .title-desc {
+      margin-top: 8px;
+      font-size: 16px;
+      line-height: 26px;
+    }
+
+    #main .section .item-list {
+      width: 1203px;
+      margin: 44px auto 0;
+      padding-left: 27px;
+    }
+
+    #main .section .item-list::after {
+      display: block;
+      clear: both;
+      content: '';
+    }
+
+    #main .item-list .item {
+      float: left;
+      margin: 36px 27px 0 0;
+      border: 1px solid #eee;
+      border-radius: 5px;
+    }
+
+    #main .item-list .item img {
+      width: 371px;
+      height: 361px;
+    }
+
+    #main .item-list .item .info {
+      position: relative;
+      padding: 40px;
+      text-align: left;
+    }
+
+    /* section1 name */
+    .section .item-list .item .info .name {
+      background-image: linear-gradient(transparent, transparent), url(https://static-clova.pstatic.net/static/d15c0af/img/sprite/sp_svg_product_bridge.svg);
+      display: inline-block;
+      height: 22px;
+      background-size: 433px 277px;
+      background-repeat: no-repeat;
+    }
+
+    .section1 .item-list .item .info .name.clova_lamp {
+      background-position: -286px -4px;
+      width: 143px;
+    }
+
+    .section1 .item-list .item .info .name.clova_clock {
+      background-position: -286px -59px;
+      width: 136px;
+    }
+
+    .section1 .item-list .item .info .name.clova_friends {
+      background-position: -4px -231px;
+      width: 153px;
+    }
+
+    .section1 .item-list .item .info .name.clova_wave {
+      background-position: -286px -34px;
+      width: 139px;
+    }
+
+    .section1 .item-list .item .info .name.clova_friends_mini {
+      background-position: -4px -129px;
+      width: 200px;
+    }
+
+    .section1 .item-list .item .info .name.doraemon_edition {
+      background-position: -4px -102px;
+      width: 201px;
+    }
+
+    .section1 .item-list .item .info .name.minions_edition {
+      background-position: -4px -154px;
+      width: 185px;
+    }
+
+    /* section2 name */
+    .section2 .item-list .item .info .name {
+      display: block;
+      margin-top: 17px;
+    }
+
+    .section2 .item-list .item .info .name.clova_clock_plus2 {
+      background-position: -4px -206px;
+      width: 160px;
+    }
+
+    .section2 .item-list .item .info .name.clova_clock_plus {
+      background-position: -4px -256px;
+      width: 145px;
+    }
+
+    .section2 .item-list .item .info .name.clova_friends_plus {
+      background-position: -4px -181px;
+      width: 166px;
+    }
+
+    .section2 .item-list .item .info .name.clova_on {
+      background-position: -286px -84px;
+      width: 126px;
+    }
+
+    #main .item-list .item .info .tag {
+      display: inline-block;
+      width: 42px;
+      margin-left: 4px;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 11px;
+      line-height: 18px;
+      font-weight: 700;
+      letter-spacing: -.24px;
+      color: #fff;
+      text-align: center;
+      border-radius: 9px;
+      background-color: #fa615b;
+      vertical-align: top;
+    }
+
+    #main .section2 .item-list .item .info .tag {
+      margin: 0;
+      width: 69px;
+      background-color: #c20034;
+    }
+
+    #main .item .info .desc {
+      margin-top: 10px;
+      font-size: 17px;
+      line-height: 30px;
+      letter-spacing: -.5px;
+      color: #4a4a4a;
+    }
+
+    #main .item .info .btn {
+      display: inline-block;
+      width: 87px;
+      height: 32px;
+      margin-top: 15px;
+      padding: 8px 17px;
+      font-size: 14px;
+      line-height: 16px;
+      border-radius: 2px;
+      vertical-align: top;
+      box-sizing: border-box;
+      color: rgba(0, 0, 0, .6);
+      border: 1px solid #e3e3e3;
+    }
+
+    #main .item .info .btn.green {
+      margin-right: 6px;
+      font-weight: 700;
+      color: #fff;
+      background-color: #05d686;
+      border-color: #05d686;
+    }
+
+
+    /* 가이드 영역 */
+    .command_guide_area {
+      padding: 75px 0 70px;
+      border-top: 1px solid rgba(0, 0, 0, .1);
+      background-color: #f7f7f7;
+      text-align: center;
+    }
+
+    .command_guide_area .guide_name {
+      font-size: 32px;
+      line-height: 46px;
+    }
+
+    .command_guide_area .guide_desc {
+      margin-top: 12px;
+      font-size: 18px;
+      line-height: 20px;
+      color: rgba(0, 0, 0, .5);
+    }
+
+    .command_guide_area .guide_btn {
+      display: inline-block;
+      margin-top: 21px;
+      padding: 16px 30px;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      color: #fff;
+      text-align: center;
+      border-radius: 25px;
+      background-color: #2284f5;
+    }
+
+    /* footer */
+    #footer {
+      position: relative;
+      min-width: 1240px;
+      height: 132px;
+      background-color: #191919;
+      color: #666;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 14px;
+    }
+
+    #footer .wrap {
+      position: relative;
+      overflow: hidden;
+      width: 1140px;
+      padding: 40px 0;
+      margin: 0 auto;
+    }
+
+    #footer .info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    #footer .wrap .info+.info {
+      margin-top: 18px;
+    }
+
+    #footer .wrap .info .naver_clova {
+      background-image: linear-gradient(transparent, transparent), url(https://static-clova.pstatic.net/static/d15c0af/img/sprite/sp_svg_icon.svg);
+      background-size: 335px 311px;
+      background-position: -4px -34px;
+      background-repeat: no-repeat;
+      width: 145px;
+      height: 20px;
+      display: block;
+    }
+
+    #footer .wrap .info .sns_area a {
+      background-image: linear-gradient(transparent, transparent), url(https://static-clova.pstatic.net/static/d15c0af/img/sprite/sp_svg_icon.svg);
+      background-size: 335px 311px;
+      background-repeat: no-repeat;
+      display: inline-block;
+      vertical-align: top;
+      width: 18px;
+      height: 18px;
+      margin-left: 26px;
+    }
+
+    #footer .wrap .info .sns_area .blog {
+      margin-left: 0;
+      background-position: -128px -92px;
+      width: 21px;
+    }
+
+    #footer .wrap .info .sns_area .facebook {
+      background-position: -114px -244px;
+    }
+
+    #footer .wrap .info .sns_area .instargram {
+      background-position: -88px -244px;
+    }
+
+    #footer .wrap .info .sns_area .youtube {
+      background-position: -138px -218px;
+      width: 20px;
+      height: 14px;
+      margin-top: 3px;
+    }
+
+    #footer .wrap .info .text-area {
+      float: left;
+    }
+
+    #footer .info .text-area a.txt {
+      color: #666;
+    }
+
+    #footer .info .text-area .txt {
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 8px;
+    }
+
+    #footer .info .text-area .txt.call_time {
+      display: inline-block;
+      padding: 0 8px;
+      border-left: 1px solid #2c2c2c;
+    }
+
+    #footer .info .text-area .txt.copy {
+      margin-left: 185px;
+    }
+
+    .txt.copy strong {
+      font-weight: bold;
+    }
+
+    #footer .info .more_area a {
+      color: #666;
+      border-left: 1px solid #2c2c2c;
+      padding: 0 10px;
+    }
+
+    #footer .info .more_area a:first-child {
+      border-left: 0;
+    }
+
+    #footer .info .more_area a:last-child {
+      padding: 0 0 0 10px;
+    }
+
+
+    @keyframes change_banner {
+      0% {
+        opacity: 0;
+        pointer-events: none
+      }
+
+      20% {
+        opacity: 1;
+        pointer-events: initial
+      }
+
+      50% {
+        opacity: 1
+      }
+
+      80% {
+        opacity: 0;
+        pointer-events: none
+      }
+
+      100% {
+        opacity: 0
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header id="header">
+    <div class="wrap">
+      <h1 id="logo"><a href="test03.html"><span class="ir_so">naver clova</span></a></h1>
+      <div class="menu">
+        <ul>
+          <li><a href="#">기술 · 솔루션</a></li>
+          <li><a href="#">제품</a></li>
+          <li><a href="#">플랫폼</a></li>
+          <li><a href="#">파트너</a></li>
+          <li><a href="#">리서치</a></li>
+        </ul>
+      </div>
+      <div class="btn-area">
+        <a href="#">Biz Start</a>
+        <a href="#">비즈니스 문의</a>
+      </div>
+    </div>
+  </header>
+  <!-- header -->
+  <main id="main">
+    <div class="wrap">
+      <section class="banner">
+        <h2 class="ir_so">배너 이미지</h2>
+        <a href="#">
+          <div class="img img1"></div>
+        </a>
+        <a href="#">
+          <div class="img img2"></div>
+        </a>
+      </section>
+      <section class="section section1">
+        <h2 class="title"><span class="ir_so">AI Devices</span></h2>
+        <p class="title-desc">AI 기술이 집약된 제품으로 편리한 일상을 만나보세요.</p>
+
+        <ul class="item-list">
+          <li class="item">
+            <img src="https://static-clova.pstatic.net/static/d15c0af/img/bridge/img_clova_lamp.png" alt="">
+            <div class="info">
+              <div class="name clova_lamp">
+                <span class="ir_so">CLOVA Lamp</span>
+              </div>
+              <span class="tag">NEW</span>
+              <p class="desc">책을 읽어주는 아이 친구<br>
+                프리미엄 기능의 스마트 램프</p>
+              <a href="#" class="btn green">구매하기</a>
+              <a href="#" class="btn">알아보기</a>
+            </div>
+          </li>
+
+          <li class="item">
+            <img src="https://static-clova.pstatic.net/static/d15c0af/img/bridge/img_clova_clock.png" alt="">
+            <div class="info">
+              <div class="name clova_clock">
+                <span class="ir_so">CLOVA Clock</span>
+              </div>
+              <span class="tag">NEW</span>
+              <p class="desc">매일의 일상을 편리하게<br>
+                변화시켜줄 스마트 클락</p>
+              <a href="#" class="btn">알아보기</a>
+            </div>
+          </li>
+
+          <li class="item">
+            <img src="https://static-clova.pstatic.net/static/d15c0af/img/bridge/img_clova_friends.png" alt="">
+            <div class="info">
+              <div class="name clova_friends">
+                <span class="ir_so">CLOVA Freinds</span>
+              </div>
+              <p class="desc">음악 추천부터 네이버 검색까지<br>
+                다재다능한 스마트 스피커</p>
+              <a href="#" class="btn">알아보기</a>
+            </div>
+          </li>
+
+          <li class="item">
+            <img src="https://static-clova.pstatic.net/static/d15c0af/img/bridge/img_clova_wave.png" alt="">
+            <div class="info">
+              <div class="name clova_wave">
+                <span class="ir_so">CLOVA WAVE</span>
+              </div>
+              <p class="desc">풍부하고 선명한 사운드로 즐기는<br>
+                최적의 스마트홈 스피커</p>
+              <a href="#" class="btn">알아보기</a>
+            </div>
+          </li>
+
+          <li class="item">
+            <img src="https://static-clova.pstatic.net/static/d15c0af/img/bridge/img_clova_friends_mini.png" alt="">
+            <div class="info">
+              <div class="name clova_friends_mini">
+                <span class="ir_so">CLOVA Friends mini</span>
+              </div>
+              <p class="desc">더 작고 더 가벼워진<br>
+                스마트 스피커</p>
+              <a href="#" class="btn">알아보기</a>
+            </div>
+          </li>
+
+          <li class="item">
+            <img src="https://static-clova.pstatic.net/static/d15c0af/img/bridge/img_doraemon_edition.png" alt="">
+            <div class="info">
+              <div class="name doraemon_edition">
+                <span class="ir_so">Doraemon Edition</span>
+              </div>
+              <p class="desc">고양이형 만능 로봇 도라에몽을<br>
+                모티브로 한 스마트 스피커</p>
+              <a href="#" class="btn">알아보기</a>
+            </div>
+          </li>
+
+          <li class="item">
+            <img src="https://static-clova.pstatic.net/static/d15c0af/img/bridge/img_minions_edition.png" alt="">
+            <div class="info">
+              <div class="name minions_edition">
+                <span class="ir_so">Minions Edition</span>
+              </div>
+              <p class="desc">음악 추천부터 네이버 검색까지<br>
+                다재다능한 스마트 스피커</p>
+              <a href="#" class="btn">알아보기</a>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <!-- //section1 -->
+
+      <section class="section section2">
+        <h2 class="title"><span class="ir_so">With Partners</span></h2>
+        <p class="title-desc">파트너사와 함께 만든 클로바 스마트 디바이스들을 만나보세요.</p>
+
+        <ul class="item-list">
+          <li class="item">
+            <img src="https://static-clova.pstatic.net/static/d15c0af/img/bridge/img_clova_clock_plus2.png" alt="">
+            <div class="info">
+              <span class="tag">with LG U+</span>
+              <div class="name clova_clock_plus2">
+                <span class="ir_so">CLOVA Clock+2</span>
+              </div>
+              <p class="desc">집 안을 확장하고 연결하는<br>
+                우리 집 생활 필수품</p>
+              <a href="#" class="btn">알아보기</a>
+            </div>
+          </li>
+
+          <li class="item">
+            <img src="https://static-clova.pstatic.net/static/d15c0af/img/bridge/img_clova_clock_plus.png" alt="">
+            <div class="info">
+              <span class="tag">with LG U+</span>
+              <div class="name clova_clock_plus">
+                <span class="ir_so">CLOVA Clock+</span>
+              </div>
+              <p class="desc">매일의 일상을 편리하게<br>
+                변화시켜줄 스마트 클락</p>
+              <a href="#" class="btn">알아보기</a>
+            </div>
+          </li>
+
+          <li class="item">
+            <img src="https://static-clova.pstatic.net/static/d15c0af/img/bridge/img_clova_friends_plus.png" alt="">
+            <div class="info">
+              <span class="tag">with LG U+</span>
+              <div class="name clova_friends_plus">
+                <span class="ir_so">CLOVA Friends+</span>
+              </div>
+              <p class="desc">유플러스 전용 기능을<br>
+                더한 스마트 스피커</p>
+              <a href="#" class="btn">알아보기</a>
+            </div>
+          </li>
+
+          <li class="item">
+            <img src="https://static-clova.pstatic.net/static/d15c0af/img/bridge/img_clova_on.png" alt="">
+            <div class="info">
+              <span class="tag">with LG U+</span>
+              <div class="name clova_on">
+                <span class="ir_so">CLOVA ON+</span>
+              </div>
+              <p class="desc">미니멀 디자인의<br>
+                컴팩트 스마트 스피커</p>
+              <a href="#" class="btn">알아보기</a>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <!-- //section2 -->
+
+      <section class="command_guide_area">
+        <h2 class="ir_so">클로바 명령어 가이드</h2>
+        <h3 class="guide_name">인공지능 플랫폼 클로바와 함께<br>
+          당신의 일상이 더욱 편리해집니다.
+        </h3>
+        <p class="guide_desc">스마트 디바이스를 더욱 스마트하게 이용하는 명령어 가이드</p>
+        <a href="#" class="guide_btn">클로바 명령어 가이드</a>
+      </section>
+    </div>
+  </main>
+  <!-- main -->
+  <footer id="footer">
+    <div class="wrap">
+      <div class="info">
+        <a href="#" class="naver_clova"><span class="ir_so">NAVER Clova</span></a>
+        <div class="sns_area">
+          <a href="#" class="blog"><span class="ir_so">blog</span></a>
+          <a href="#" class="facebook"><span class="ir_so">facebook</span></a>
+          <a href="#" class="instargram"><span class="ir_so">instargram</span></a>
+          <a href="#" class="youtube"><span class="ir_so">youtube</span></a>
+        </div>
+      </div>
+      <div class="info">
+        <div class="text-area">
+          <a href="#" class="txt call">고객센터 1833-5387</a>
+          <span class="txt call_time">09:00 - 18:00 (주말, 공휴일 휴무)</span>
+          <div class="txt copy">Powered by <strong>NAVER · LINE</strong></div>
+        </div>
+        <div class="more_area">
+          <a href="#">공지사항</a>
+          <a href="#">이용약관</a>
+          <a href="#">CLOVA</a>
+          <a href="#">채용안내</a>
+          <a href="#">CLOVA JP</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- footer -->
+</body>
+
+</html>

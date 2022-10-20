@@ -1,0 +1,448 @@
+/* 카드 타입 유형 */
+
+body {
+  background-color: #f3f3f3;
+}
+
+.cardType {
+  margin: 150px 0;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+/* chadType01 */
+.cardType01 {
+  font-family: 'GmarketSans';
+  padding: 100px 0;
+}
+
+.cardType01 h2 {
+  font-weight: 500;
+  font-size: 50px;
+  margin-bottom: 7px;
+}
+
+.cardType01 p {
+  font-weight: 200;
+  font-size: 26px;
+  line-height: 1.28;
+  margin-bottom: 40px;
+}
+
+/* float을 이용한 레이아웃 */
+/* .card-wrap {
+  overflow: hidden;
+}
+.card-wrap>div {
+  float: left;
+  width: 387px;
+  margin-right: 19px;
+}
+.card-wrap>div:last-child {
+  margin-right: 0;
+} */
+
+/* flex를 이용한 레이아웃 */
+.cardType01 .card-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardType01 .card-wrap>div {
+  width: 387px;
+}
+
+.cardType01 .card {}
+
+.cardType01 .card .card-img {}
+
+.cardType01 .card .card-title {
+  display: block;
+  font-size: 32px;
+  /* 한 줄 효과 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cardType01 .card .card-desc {
+  display: block;
+  font-size: 20px;
+  font-weight: 300;
+  /* 두 줄 효과 */
+  overflow: hidden;
+  display: -webkit-box;
+  /* 벤터 프리픽스 */
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.cardType01 .card .card-keyword {
+  font-size: 16px;
+  font-weight: 300;
+  opacity: 0.5;
+}
+
+
+/* chadType02 */
+.cardType02 {
+  font-family: S-CoreDream;
+  padding: 97px 0 100px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.cardType02 h2 {
+  font-weight: 500;
+  font-size: 50px;
+  margin: 0 115px 22px 116px;
+  text-align: center;
+}
+
+.cardType02 p {
+  font-weight: 300;
+  font-size: 26px;
+  text-align: center;
+}
+
+.cardType02 .card-wrap {
+  display: grid;
+  grid-template-columns: repeat(4, 285px);
+  gap: 20px;
+}
+
+.cardType02 .card {
+  display: inline-block;
+  width: 285px;
+  height: 356px;
+  margin: 40px 20px 0 0;
+  padding: 15px 15px 16px 14px;
+  border-radius: 5px;
+  border: solid 1px #e6e6e6;
+  box-sizing: border-box;
+}
+
+.cardType02 .card:last-child {
+  margin: 40px 0 0 0;
+}
+
+.cardType02 .card a {}
+
+.cardType02 .card img {}
+
+.cardType02 .card .card-title {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 24px;
+  font-style: normal;
+  margin: 8px 0 6px 0;
+}
+
+.cardType02 .card .card-desc {
+  display: inline-block;
+  font-weight: 300;
+  font-size: 14px;
+  font-style: normal;
+}
+
+.cardType02 .card .card-word {}
+
+.cardType02 .card .card-word span {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 10px;
+  color: #fff;
+  padding: 4px 16px 3px;
+  margin-top: 6px;
+  border-radius: 20px;
+  background-color: #000;
+}
+
+/* cardType03 */
+
+.cardType03 {
+  font-family: 'NanumSquare';
+  padding: 100px 0;
+  position: relative;
+}
+
+.cardType03 h2 {
+  font-size: 50px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.cardType03 p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.28;
+  margin-bottom: 50px;
+}
+
+.cardType03 .popular {
+  position: absolute;
+  right: 0;
+  top: 180px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.28;
+}
+
+.cardType03 .card-wrap .card {
+  margin-bottom: 28px;
+}
+
+.cardType03 .card-wrap .card .card-img {
+  width: 285px;
+  height: 185px;
+  position: absolute;
+}
+
+.cardType03 .card-wrap .card .right {
+  padding-left: 305px;
+}
+
+.cardType03 .card-wrap .card .card-cate {
+  font-size: 14px;
+  font-weight: 800;
+  padding: 4px 14px 3px 15px;
+  color: #fff;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.cardType03 .card-wrap .card .card-cate.red {
+  background: #ff5151;
+}
+
+.cardType03 .card-wrap .card .card-cate.blue {
+  background: #5465ff;
+}
+
+.cardType03 .card-wrap .card .card-cate.green {
+  background: #11c865;
+}
+
+.cardType03 .card-wrap .card .card-tit {
+  display: block;
+  font-size: 26px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cardType03 .card-wrap .card .card-desc {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.53;
+  color: #555;
+  /* margin-top: 10px; */
+  /* 3줄로 맞춰줌 */
+  display: block;
+  display: -webkit-box;
+  overflow: hidden;
+  max-height: 4.59em;
+  /* 인터넷 익스플로러 호환 */
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+.cardType03 .card-wrap .card .card-date {
+  color: #555;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.4;
+  display: block;
+  text-decoration: underline;
+  margin-top: 20px;
+}
+
+
+/* cardType04 */
+.cardType04 {
+  font-family: 'NanumSquare';
+  padding: 100px 0;
+}
+
+.cardType04 h2 {
+  font-size: 55px;
+  font-weight: 800;
+  line-height: 1.3;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.cardType04 .card-wrap {
+  display: flex;
+  gap: 20px;
+}
+
+.cardType04 .card-wrap .card {
+  position: relative;
+}
+
+.cardType04 .card-wrap .card .card-desc {
+  position: absolute;
+  left: 45px;
+  top: 55px;
+  width: 280px;
+}
+
+.cardType04 .card-wrap .card .card-desc em {
+  display: block;
+  font-size: 15px;
+  font-weight: 800;
+  color: #A8ABAD;
+  margin-bottom: 15px;
+}
+
+.cardType04 .card-wrap .card .card-desc strong {
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 1.4;
+  word-break: keep-all;
+}
+
+
+/* cardType05 */
+.cardType05 {
+  font-family: 'NanumSquare';
+  padding: 100px 0;
+}
+
+.cardType05 .ai_devices {
+  width: 204px;
+  height: 50px;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+.cardType05 p {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.cardType05 .card-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.cardType05 .card-wrap .card {
+  width: 374px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.cardType05 .card-wrap .card .card-img {
+  height: 361px;
+}
+
+.cardType05 .card-wrap .card .card-info {
+  padding: 40px;
+  text-align: left;
+}
+
+.cardType05 .card-wrap .card .card-info .card-title {
+  width: 294px;
+  height: 22px;
+  margin-bottom: 10px;
+}
+
+.cardType05 .card-wrap .card .card-info .card-title .card-name {
+  height: 22px;
+  display: inline-block;
+}
+
+.cardType05 .card-wrap .card .card-info .card-title .card-name.lamp {
+  background-position: -286px -4px;
+  background-repeat: no-repeat;
+  width: 143px;
+  height: 22px;
+}
+
+.cardType05 .card-wrap .card .card-info .card-title .card-name.clock {
+  background-position: -286px -59px;
+  background-repeat: no-repeat;
+  width: 136px;
+  height: 17px;
+}
+
+.cardType05 .card-wrap .card .card-info .card-title .card-name.friends {
+  background-position: -4px -231px;
+  background-repeat: no-repeat;
+  width: 153px;
+  height: 17px;
+}
+
+.cardType05 .card-wrap .card .card-info .card-title .card-name.wave {
+  background-position: -286px -34px;
+  background-repeat: no-repeat;
+  width: 139px;
+  height: 17px;
+}
+
+.cardType05 .card-wrap .card .card-info .card-title .card-name.mini {
+  background-position: -4px -129px;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 17px;
+}
+
+.cardType05 .card-wrap .card .card-info .card-title .card-name.doraemon {
+  background-position: -4px -102px;
+  background-repeat: no-repeat;
+  width: 201px;
+  height: 19px;
+}
+
+.cardType05 .card-wrap .card .card-info .card-title .tag {
+  display: inline-block;
+  background-color: #FA615B;
+  border-radius: 50px;
+  color: #fff;
+  padding: 0 7px;
+  margin-left: 4px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 700;
+  vertical-align: top;
+}
+
+.cardType05 .card-wrap .card .card-info .card-desc {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.8;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.cardType05 .card-wrap .card .card-info .card-buy {
+  display: inline-block;
+  margin-right: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  color: #fff;
+  background-color: #05d686;
+  padding: 8px 17px;
+}
+
+.cardType05 .card-wrap .card .card-info .card-more-info {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.6);
+  border: 1px solid #e3e3e3;
+  padding: 8px 17px;
+}

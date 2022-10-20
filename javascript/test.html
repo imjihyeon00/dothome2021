@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js 연습</title>
+</head>
+
+<body>
+    <script>
+        const obj = {
+            a: 1000,
+            b: 2000,
+            c: 3000
+        };
+
+        const ojb2 = [
+            { a: 1000 },
+            { a: 2000 },
+            { a: 3000 }
+        ];
+
+        const obj3 = [1000, 2000, 3000, "a", "b", "c"];
+
+        //1000 2000 3000
+        obj.map(el => document.write(el.a));
+        document.write('<br/>');
+
+        //6000
+        document.write(obj[0].a + obj[1].a + obj[2].a);
+        document.write('<br/>');
+
+        //5000
+        document.write(obj[1].a + obj[2].a);
+        document.write('<br/>');
+
+        //4000
+        document.write(obj[0].a + obj[2].a);
+        document.write('<br/>');
+
+        //1 2 3
+        obj.map(el => document.write(el.a / obj[0].a));
+        document.write('<br/>');
+
+    </script>
+</body>
+
+</html>

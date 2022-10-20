@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COOKIT</title>
+
+    <style>
+        @font-face {
+            font-family: 'S-CoreDream';
+            font-weight: 400;
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'S-CoreDream';
+            font-weight: 500;
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff');
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'S-CoreDream';
+            font-weight: 600;
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'S-CoreDream';
+            font-weight: 700;
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-7ExtraBold.woff') format('woff');
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'S-CoreDream';
+            font-weight: 800;
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff');
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'S-CoreDream';
+            font-weight: 900;
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-9Black.woff') format('woff');
+            font-style: normal;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'S-CoreDream';
+            font-weight: 400;
+        }
+
+        .container {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+
+        header {
+            margin: 70px 0 15px;
+        }
+
+        header .container {
+            overflow: hidden;
+        }
+
+        header #logo {
+            width: 110px;
+            float: left;
+        }
+
+        header #logo img {
+            width: 100%;
+        }
+
+        header #menu {
+            float: right;
+        }
+
+        header #menu ul {
+            margin-bottom: 10px;
+        }
+
+        header #menu li {
+            list-style: none;
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        header #menu li a {
+            text-decoration: none;
+            color: #121212;
+            font-weight: 900;
+            font-size: 20px;
+            padding: 10px 20px;
+        }
+
+        #slider {
+            margin-bottom: 30px;
+        }
+
+        #slider .sliderWrap {
+            width: 100%;
+            height: 390px;
+        }
+
+        #slider .sliderInner {
+            position: relative;
+        }
+
+        #slider .slider {
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: all .4s;
+        }
+
+        #slider .slider:nth-child(1) {
+            z-index: 6;
+        }
+
+        #slider .slider:nth-child(2) {
+            z-index: 5;
+        }
+
+        #slider .slider:nth-child(3) {
+            z-index: 4;
+        }
+
+        #slider .slider:nth-child(4) {
+            z-index: 3;
+        }
+
+        #slider .slider:nth-child(5) {
+            z-index: 2;
+        }
+
+        #slider .slider:nth-child(6) {
+            z-index: 1;
+        }
+
+        #slider .slider img {
+            width: 100%;
+        }
+
+
+        #benner {
+            color: #181818;
+            margin-bottom: 45px;
+        }
+
+        #benner .bennerWrap {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        #benner .benner {
+            background-color: #F2F2F2;
+            width: 100%;
+            padding: 25px;
+        }
+
+        #benner .benner .top h3 {
+            font-size: 20px;
+            font-weight: 900;
+            line-height: 1;
+            margin: 0;
+        }
+
+        #benner .benner .top p {
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        #benner .benner .bottom {
+            font-size: 15px;
+            font-weight: 900;
+        }
+
+        #benner .benner1 {
+            background-image: url(img/coockit_icon1.jpg);
+            background-repeat: no-repeat;
+            background-size: 70px 60px;
+            background-position: right 28px center;
+        }
+
+        #benner .benner1 .bottom p {
+            position: relative;
+            padding-left: 20px;
+            display: inline-block;
+        }
+
+        #benner .benner1 .bottom p::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 15px;
+            height: 20px;
+            background-image: url(img/cookit_pic.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        #benner .benner2 {
+            background-image: url(img/coockit_car.jpg);
+            background-repeat: no-repeat;
+            background-size: 70px 60px;
+            background-position: right 28px center;
+        }
+
+        #benner .benner2 .bottom p {
+            position: relative;
+            padding-left: 24px;
+            display: inline-block;
+        }
+
+        #benner .benner2 .bottom p::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 18px;
+            height: 18px;
+            background-image: url(img/cookit_clock.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        #benner .benner2 .bottom span {
+            font-size: 12px;
+            color: #444;
+            margin-left: 8px;
+            font-weight: 400;
+        }
+
+        #item {
+            margin-bottom: 55px;
+        }
+
+        #item .title {
+            margin-bottom: 36px;
+        }
+
+        #item .title ul {
+            padding: 0;
+        }
+
+        #item .title li {
+            list-style: none;
+            display: inline-block;
+            font-size: 30px;
+            font-weight: 900;
+            padding: 0 17px;
+            line-height: 1;
+            color: #A0A0A0;
+        }
+
+        #item .title li:first-child {
+            padding-left: 0;
+            border-right: 3px solid #121212;
+        }
+
+        #item .title li.active {
+            color: #121212;
+        }
+
+        #item .itemWrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #item .item {
+            width: 310px;
+        }
+
+        #item .item img {
+            width: 100%;
+        }
+
+        #item .item .desc {
+            position: relative;
+        }
+
+        #item .item .desc h4 {
+            font-size: 14px;
+            font-weight: 800;
+
+        }
+
+        #item .item .desc p {
+            font-size: 16px;
+            font-weight: 900;
+            margin: 0;
+        }
+
+        #item .item .desc p span {
+            color: #5B5B5B;
+            font-weight: 400;
+            font-size: 14px;
+        }
+
+        #item .item .desc img {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 35px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #202020;
+            padding: 35px 0;
+        }
+
+        footer .container {
+            overflow: hidden;
+        }
+
+        footer .logo {
+            width: 185px;
+            float: left;
+        }
+
+        footer .logo img {
+            width: 100%;
+        }
+
+        footer .desc {
+            float: right;
+            width: 57%
+        }
+
+        footer .desc ul {
+            padding: 0;
+        }
+
+        footer .desc li {
+            list-style: none;
+            display: inline-block;
+            padding: 0 23px;
+            border-left: 2px solid #373737;
+        }
+        footer .desc li:first-child {
+            padding-left: 0;
+            border-left: none;
+        }
+
+        footer .desc li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 14;
+            font-weight: 900;
+        }
+
+        footer .info {
+            float: right;
+            width: 57%;
+        }
+
+        footer .info ul {
+            padding: 0;
+        }
+
+        footer .info li {
+            list-style: none;
+            display: inline-block;
+            color: #7B7B7B;
+            padding: 0 7px;
+            border-left: 2px solid #373737;
+            white-space: nowrap;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        footer .info li:nth-child(odd) {
+            padding-left: 0;
+            border-left: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div id="logo">
+                <img src="img/cookit_logo.jpg" alt="쿠킷 로고">
+            </div>
+            <nav id="menu">
+                <ul>
+                    <li><a href="#">COOKIT소개</a></li>
+                    <li><a href="#">COOKIT메뉴</a></li>
+                    <li><a href="#">리뷰</a></li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">MY쿡킷</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article id="slider">
+            <div class="container">
+                <div class="sliderWrap">
+                    <div class="sliderInner">
+                        <div class="slider"><img src="img/cookit_banner.jpg" alt="배너이미지1"></div>
+                        <div class="slider"><img src="img/cookit_banner2.jpg" alt="배너이미지2"></div>
+                        <div class="slider"><img src="img/cookit_banner.jpg" alt="배너이미지3"></div>
+                        <div class="slider"><img src="img/cookit_banner2.jpg" alt="배너이미지4"></div>
+                        <div class="slider"><img src="img/cookit_banner.jpg" alt="배너이미지5"></div>
+                        <div class="slider"><img src="img/cookit_banner2.jpg" alt="배너이미지6"></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <section id="benner">
+            <div class="container">
+                <div class="bennerWrap">
+                    <div class="benner benner1">
+                        <div class="top">
+                            <h3>우리집도 COOKIT 배송이 되나요?</h3>
+                            <p>배송이 가능한지 알려드려요.</p>
+                        </div>
+                        <div class="bottom">
+                            <p>배송지 검색</p>
+                        </div>
+                    </div>
+                    <div class="benner benner2">
+                        <div class="top">
+                            <h3>7월 30일(화)에 받을 수 있어요</h3>
+                            <p>오전 7시까지 주문하시면 다음날 배송됩니다.</p>
+                        </div>
+                        <div class="bottom">
+                            <p>63:28:32</p><span>남은시간</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="item">
+            <div class="container">
+                <div class="title">
+                    <ul>
+                        <li class="active">실시간베스트</li>
+                        <li>생생한 리뷰</li>
+                    </ul>
+                </div>
+                <div class="itemWrap">
+                    <div class="item">
+                        <img src="img/cookit_best1.jpg" alt="평양식 어복쟁반">
+                        <div class="desc">
+                            <h4>평양식 어복쟁반</h4>
+                            <p>33,800원 <span>/3인분</span></p>
+                            <img src="img/coockit_cart.jpg" alt="장바구니">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="img/cookit_best2.jpg" alt="새우쭈꾸미삼겹살">
+                        <div class="desc">
+                            <h4>새우쭈꾸미삼겹살</h4>
+                            <p>29,800원 <span>/3인분</span></p>
+                            <img src="img/coockit_cart.jpg" alt="장바구니">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="img/cookit_best3.jpg" alt="방풍나물 아귀찜">
+                        <div class="desc">
+                            <h4>방풍나물 아귀찜</h4>
+                            <p>332,800원 <span>/3인분</span></p>
+                            <img src="img/coockit_cart.jpg" alt="장바구니">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="logo">
+                <img src="img/cookit_logoW.jpg" alt="COOKIT">
+            </div>
+            <div class="desc">
+                <ul>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보처리 방침</a></li>
+                    <li><a href="#">법적고지</a></li>
+                    <li><a href="#">사업자정보 확인</a></li>
+                </ul>
+            </div>
+            <div class="info">
+                <ul>
+                    <li>씨제이제일제당(주)</li>
+                    <li>대표자:신현재</li>
+                    <li>주소:서울 중구 동호로 330 CJ제일제당 센터 (우)04560</li>
+                    <li>사업자 등록번호:104-86-09535</li>
+                    <li>통신판매업신고 중구 제 07767호</li>
+                    <li>개인정보보호책임자:류화정</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const sliderWrap = document.querySelector(".sliderWrap");
+        const sliderInner = sliderWrap.querySelector(".sliderInner");
+        const slider = sliderWrap.querySelectorAll(".slider");
+
+        let sliderCount = slider.length;
+        let currentIndex = 0;
+
+        setInterval(() => {
+            let nextIndex = (currentIndex + 1) % sliderCount;
+
+            slider[currentIndex].style.opacity = 0;
+            slider[nextIndex].style.opacity = 1;
+
+            currentIndex = nextIndex;
+        }, 3000);
+    </script>
+</body>
+
+</html>
