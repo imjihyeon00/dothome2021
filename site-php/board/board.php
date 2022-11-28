@@ -10,6 +10,11 @@ include "../connect/session.php";
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO -->
+  <meta name="author" content="imjihyeon" />
+  <meta name="description" content="PHP 포트폴리오 사이트입니다." />
+  <meta name="keywords" content="PHP, 포트폴리오, 웹표준, 웹접근성, 사이트만들기, 포트폴리오" />
+  <meta name="robots" content="all" />
   <title>게시판</title>
 
   <!-- style -->

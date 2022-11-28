@@ -3,8 +3,6 @@
   <h2 class="ir_so">메인 메뉴</h2>
   <ul>
     <li><a href="../comment/comment.php">댓글</a></li>
-    <li><a href="#">회원가입</a></li>
-    <li><a href="#">로그인</a></li>
     <li><a href="../board/board.php">게시판</a></li>
     <li><a href="../contact/contact.php">문의하기</a></li>
   </ul>

@@ -21,7 +21,7 @@
     $mail->Password = '비밀번호 입력';
     $mail->setFrom('jisuhyn94@naver.com', 'PHP Class');
     $mail->addReplyTo($contactFrom, '안녕하세요!');
-    $mail->addAddress('imjihyeon00@gmail.com', 'John Doe');
+    $mail->addAddress('imjihyeon00@gmail.com', 'jiji');
     $mail->Subject = $contactSubject;
     //$mail->msgHTML(file_get_contents('contents.html'), __DIR__);
     $mail->msgHTML($contactContent);
@@ -34,6 +34,6 @@
         echo 'Message sent!';
     }
 ?>
-<!-- <script>
+<script>
     location.href = "contactResult.php";
-</script> -->
+</script>

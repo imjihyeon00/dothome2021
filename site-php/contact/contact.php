@@ -10,9 +10,9 @@
     <title>PHP class</title>
 
     <!-- SEO -->
-    <meta name="author" content="webstoryboy" />
+    <meta name="author" content="imjihyeon" />
     <meta name="description" content="PHP 포트폴리오 사이트입니다." />
-    <meta name="keywords" content="PHP, 포트폴리오, 웹표준, 웹접근성, 사이트만들기, 포트폴리오, 웹스토리보이" />
+    <meta name="keywords" content="PHP, 포트폴리오, 웹표준, 웹접근성, 사이트만들기, 포트폴리오" />
     <meta name="robots" content="all" />
 
     <!-- 아이콘 -->

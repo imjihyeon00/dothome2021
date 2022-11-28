@@ -5,64 +5,55 @@
             <div>
                 <strong>페이지</strong>
                 <ul>
-                    <li><a href="../pages/main.php">main.html</a></li>
-                    <li><a href="../comment/comment.php">comment.html</a></li>
-                    <li><a href="#">contact.html</a></li>
+                    <li><a href="../pages/main.php">main.php</a></li>
+                    <li><a href="../comment/comment.php">comment.php</a></li>
+                    <li><a href="../contact/contact.php">contact.php</a></li>
                 </ul>
             </div>
             <div>
                 <strong>로그인</strong>
                 <ul>
-                    <li><a href="../login/join.php">join.html</a></li>
-                    <li><a href="../login/joinSave.php">joinSave.html</a></li>
-                    <li><a href="../login/login.php">login.html</a></li>
+                    <li><a href="../login/join.php">join.php</a></li>
+                    <li><a href="../login/joinSave.php">joinSave.php</a></li>
+                    <li><a href="../login/login.php">login.php</a></li>
                 </ul>
             </div>
             <div>
                 <strong>게시판</strong>
                 <ul>
-                    <li><a href="../board/board.php">board.html</a></li>
-                    <li><a href="../board/boardView.php">boardView.html</a></li>
-                    <li><a href="../board/boardWrite.php">boardWrite.html</a></li>
-                    <li><a href="../board/boardModify.php">boardModify.html</a></li>
-                    <li><a href="../board/boardSearch.php">boardSearch.html</a></li>
+                    <li><a href="../board/board.php">board.php</a></li>
+                    <li><a href="../board/boardView.php">boardView.php</a></li>
+                    <li><a href="../board/boardWrite.php">boardWrite.php</a></li>
+                    <li><a href="../board/boardModify.php">boardModify.php</a></li>
+                    <li><a href="../board/boardSearch.php">boardSearch.php</a></li>
                 </ul>
             </div>
             <div>
                 <strong>SNS</strong>
                 <ul>
-                    <li><a href="#">인플러언서</a></li>
-                    <li><a href="#">인스타그램</a></li>
-                    <li><a href="#">트위터</a></li>
-                    <li><a href="#">페이스북</a></li>
-                    <li><a href="#">블로그</a></li>
+                    <li><a href="https://mikang-luv.tistory.com/" target="_blank">티스토리</a></li>
                 </ul>
             </div>
             <div>
                 <strong>사이트</strong>
                 <ul>
-                    <li><a href="https://webzz.tistory.com/" target="_blank">레퍼런스</a></li>
-                    <li><a href="https://wtss.tistory.com/" target="_blank">튜토리얼</a></li>
-                    <li><a href="https://wess.tistory.com/" target="_blank">웹 폰트</a></li>
-                    <li><a href="https://wsss.tistory.com/" target="_blank">애니메이션</a></li>
-                    <li><a href="https://cafe.naver.com/crossbrowsing" target="_blank">스터디 신청</a></li>
+                    <li><a href="https://imjihyeon00.github.io/portfolio/index4.html" target="_blank">포트폴리오</a></li>
+                    <li><a href="https://github.com/imjihyeon00" target="_blank">Github</a></li>
                 </ul>
             </div>
         </div>
         <div class="info">
             <ul>
                 <li>Contact</li>
-                <li>webstroyboy@naver.com</li>
+                <li>imjihyeon00@gmail.com</li>
                 <li>KaKao</li>
-                <li>@webstupids</li>
-                <li>Phone</li>
-                <li>010-9999-0001</li>
+                <li>@jihyn0126</li>
             </ul>
         </div>
     </section>
     <section class="section-info">
         <h2 class="ir_so">서비스 이용정도</h2>
-        <address>&copy;webstoryboy. All rights reserved.</address>
+        <address>&copy;imjihyeon. All rights reserved.</address>
     </section>
 </div>
 <a href="#" class="link_top">
